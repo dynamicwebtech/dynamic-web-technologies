@@ -6,4 +6,42 @@
 
 import { CDNImgReturn } from "./CDNReturns";
 
-export {};
+const DISTINCT_PAINTING_LLC_IMG = CDNImgReturn(
+  "projects",
+  "distinctpaintingllc-display",
+  "webp"
+);
+const ELTYS_PREMIUM_PAINTING_IMG = CDNImgReturn(
+  "projects",
+  "eltys-premium-painting-display",
+  "webp"
+);
+const FIBER_COMPANY_IMG = CDNImgReturn(
+  "projects",
+  "fiber-company-display",
+  "webp"
+);
+const RADIANCE_GLOW_HSC_IMG = CDNImgReturn(
+  "projects",
+  "radiance-glow-hsc-display",
+  "webp"
+);
+const RTSYVISUALS_IMG = CDNImgReturn(
+  "projects",
+  "rtsyvisuals-display-new",
+  "webp"
+);
+const SOFT_SKILL_IT_COMMUNICATIONS_IMG = CDNImgReturn(
+  "projects",
+  "soft-skill-it-communications-display",
+  "webp"
+);
+
+export {
+  DISTINCT_PAINTING_LLC_IMG,
+  ELTYS_PREMIUM_PAINTING_IMG,
+  FIBER_COMPANY_IMG,
+  RADIANCE_GLOW_HSC_IMG,
+  RTSYVISUALS_IMG,
+  SOFT_SKILL_IT_COMMUNICATIONS_IMG,
+};
