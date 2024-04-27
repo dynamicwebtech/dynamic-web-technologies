@@ -1,24 +1,11 @@
 import { MongoClient } from "mongodb";
 
-let client;
-
-async function connectToDatabase() {
-  if (!client) {
-    client = new MongoClient(process.env.REVIEWS_DB_CONNECTION_URI, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
-    await client.connect();
-  }
-  return client
-    .db(process.env.REVIEWS_DB_NAME)
-    .collection(process.env.REVIEWS_DB_COLLECTION_NAME);
-}
+import reviewsConnection from "@/assets/db/connections/ReviewsConnection";
 
 export default async function handler(req, res) {
   let collection;
   try {
-    collection = await connectToDatabase();
+    collection = await reviewsConnection();
     if (req.method === "POST") {
       const { itemID, name, rating, img, date, location, review } = req.body;
       await collection.insertOne({
