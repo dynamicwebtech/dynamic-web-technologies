@@ -4,7 +4,12 @@
  *
  */
 
-import { CDNImgReturn } from "./CDNReturns";
+import { CDNIconReturn, CDNImgReturn } from "./CDNReturns";
+
+const NAV_LOGO =
+  "https://raw.githubusercontent.com/dynamicwebtech/client_CDNS/main/dynamic-web-technologies/icons/logo/logo-normal.png";
+const FOOTER_LOGO =
+  "https://raw.githubusercontent.com/dynamicwebtech/client_CDNS/main/dynamic-web-technologies/icons/logo/logo-white.png";
 
 const DISTINCT_PAINTING_LLC_IMG = CDNImgReturn(
   "projects",
@@ -37,6 +42,7 @@ const SOFT_SKILL_IT_COMMUNICATIONS_IMG = CDNImgReturn(
   "webp"
 );
 
+export { NAV_LOGO, FOOTER_LOGO };
 export {
   DISTINCT_PAINTING_LLC_IMG,
   ELTYS_PREMIUM_PAINTING_IMG,
