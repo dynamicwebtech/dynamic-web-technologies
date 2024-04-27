@@ -1,6 +1,8 @@
 // React/Next Imports
 import { useEffect } from "react";
 import { useRouter } from "next/router";
+import fs from "fs";
+import path from "path";
 
 // Library Imports
 
@@ -9,25 +11,53 @@ import checkAdminModeStatus from "@/assets/hooks/checkAdminModeStatus";
 import checkLocalHostStatus from "@/assets/hooks/checkLocalHostStatus";
 
 // Component Imports
+import { PageHead } from "@/assets/components/global/All/PageHead";
 
 // Style Imports
 import "../assets/styles/modules/About/About.module.css";
 
 export async function getServerSideProps({ req }) {
+  const PAGE_HEAD_DATA_DIRECTORY = "public/data/PageHead/";
+
+  const UTF8 = "utf-8";
+
+  const PH_ICONS_DATA_FP = path.join(
+    process.cwd(),
+    PAGE_HEAD_DATA_DIRECTORY,
+    "PH_Icons.json"
+  );
+  const PH_ABOUT_DATA_FP = path.join(
+    process.cwd(),
+    PAGE_HEAD_DATA_DIRECTORY,
+    "PH_About.json"
+  );
+
+  const PH_ICONS_DATA_FC = fs.readFileSync(PH_ICONS_DATA_FP, UTF8);
+  const PH_ABOUT_DATA_FC = fs.readFileSync(PH_ABOUT_DATA_FP, UTF8);
+
+  let PH_ICONS_DATA = undefined;
+  let PH_ABOUT_DATA = undefined;
+
   try {
+    PH_ICONS_DATA = JSON.parse(PH_ICONS_DATA_FC);
+    PH_ABOUT_DATA = JSON.parse(PH_ABOUT_DATA_FC);
+
     return {
-      props: {},
+      props: { PH_ICONS_DATA, PH_ABOUT_DATA },
     };
   } catch (error) {
     console.error("Error reading data:", error);
 
     return {
-      props: {},
+      props: {
+        PH_ICONS_DATA: null,
+        PH_ABOUT_DATA: null,
+      },
     };
   }
 }
 
-export default function About() {
+export default function About({ PH_ICONS_DATA, PH_ABOUT_DATA }) {
   const router = useRouter();
 
   const { onLocalHost } = checkLocalHostStatus();
@@ -38,7 +68,9 @@ export default function About() {
 
   return (
     <div id="PAGE" className="page">
-      <div id="PAGE_CNT" className="page-cnt"></div>
+      <PageHead page_head_data={PH_ABOUT_DATA} icons_data={PH_ICONS_DATA} />
+
+      <div id="PAGE_CNT"></div>
     </div>
   );
 }
