@@ -4,6 +4,7 @@
  *
  */
 
+import { useEffect } from "react";
 import { useRouter } from "next/router";
 
 import { Logo } from "../All/Logo";
@@ -12,6 +13,12 @@ import styles from "../../../styles/modules/Nav/Nav.module.css";
 
 export const DesktopNav = () => {
   const router = useRouter();
+
+  // Displaying link lines
+  useEffect(() => {
+    document.querySelector(".nav-link-lines").style.opacity = 1;
+    document.querySelector(".nav-link-lines").style.visibility = "visible";
+  }, []);
 
   return (
     <nav id="desktopNav" className={`${styles.desktop_nav}`}>
@@ -26,7 +33,7 @@ export const DesktopNav = () => {
               </div>
             </div>
             <div
-              className={`${styles.desktop_nav_inner_side} ${styles.desktop_nav_R} col-lg-4 col-md-4 col-sm-6 col-xs-6`}
+              className={`${styles.desktop_nav_inner_side} ${styles.desktop_nav_R} col-lg-8 col-md-8 col-sm-6 col-xs-6`}
             >
               <div className={`${styles.desktop_nav_inner_side_cnt}`}>
                 <ul>
@@ -37,16 +44,16 @@ export const DesktopNav = () => {
                         className="orientation-change-element half-second"
                       >
                         <span>Home</span>
-
-                        <div>
-                          <span className={`${styles.top_line}`} />
-                          <span className={`${styles.bottom_line}`} />
-                        </div>
                       </a>
                     </li>
                   ) : (
                     <li>
                       <span>Home</span>
+
+                      <div className="nav-link-lines">
+                        <span className={`${styles.top_line}`} />
+                        <span className={`${styles.bottom_line}`} />
+                      </div>
                     </li>
                   )}
 
@@ -57,16 +64,16 @@ export const DesktopNav = () => {
                         className="orientation-change-element half-second"
                       >
                         <span>About</span>
-
-                        <div>
-                          <span className={`${styles.top_line}`} />
-                          <span className={`${styles.bottom_line}`} />
-                        </div>
                       </a>
                     </li>
                   ) : (
                     <li>
                       <span>About</span>
+
+                      <div className="nav-link-lines">
+                        <span className={`${styles.top_line}`} />
+                        <span className={`${styles.bottom_line}`} />
+                      </div>
                     </li>
                   )}
 
@@ -77,16 +84,16 @@ export const DesktopNav = () => {
                         className="orientation-change-element half-second"
                       >
                         <span>Portfolio</span>
-
-                        <div>
-                          <span className={`${styles.top_line}`} />
-                          <span className={`${styles.bottom_line}`} />
-                        </div>
                       </a>
                     </li>
                   ) : (
                     <li>
                       <span>Portfolio</span>
+
+                      <div className="nav-link-lines">
+                        <span className={`${styles.top_line}`} />
+                        <span className={`${styles.bottom_line}`} />
+                      </div>
                     </li>
                   )}
 
@@ -97,16 +104,15 @@ export const DesktopNav = () => {
                         className="orientation-change-element half-second"
                       >
                         <span>Services</span>
-
-                        <div>
-                          <span className={`${styles.top_line}`} />
-                          <span className={`${styles.bottom_line}`} />
-                        </div>
                       </a>
                     </li>
                   ) : (
                     <li>
                       <span>Services</span>
+                      <div className="nav-link-lines">
+                        <span className={`${styles.top_line}`} />
+                        <span className={`${styles.bottom_line}`} />
+                      </div>
                     </li>
                   )}
 
@@ -117,16 +123,15 @@ export const DesktopNav = () => {
                         className="orientation-change-element half-second"
                       >
                         <span>Pricing</span>
-
-                        <div>
-                          <span className={`${styles.top_line}`} />
-                          <span className={`${styles.bottom_line}`} />
-                        </div>
                       </a>
                     </li>
                   ) : (
                     <li>
                       <span>Pricing</span>
+                      <div className="nav-link-lines">
+                        <span className={`${styles.top_line}`} />
+                        <span className={`${styles.bottom_line}`} />
+                      </div>
                     </li>
                   )}
 
@@ -137,16 +142,15 @@ export const DesktopNav = () => {
                         className="orientation-change-element half-second"
                       >
                         <span>Book/Contact</span>
-
-                        <div>
-                          <span className={`${styles.top_line}`} />
-                          <span className={`${styles.bottom_line}`} />
-                        </div>
                       </a>
                     </li>
                   ) : (
                     <li>
                       <span>Book/Contact</span>
+                      <div className="nav-link-lines">
+                        <span className={`${styles.top_line}`} />
+                        <span className={`${styles.bottom_line}`} />
+                      </div>
                     </li>
                   )}
                 </ul>
@@ -155,6 +159,9 @@ export const DesktopNav = () => {
           </div>
         </div>
       </div>
+
+      <div className={`${styles.blue_bar}`} />
+      <div className={`${styles.green_bar}`} />
     </nav>
   );
 };
