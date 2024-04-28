@@ -31,8 +31,9 @@ export const IndexTop = () => {
 
   return (
     <section id="indexTop" className={`${styles.index_top}`}>
-      {/**<div className={`${styles.bg}`} />*/}{" "}
-      <video
+      {/***/}
+      <div className={`${styles.bg}`} />{" "}
+      {/** <video
         src={VIDEO}
         muted
         autoPlay
@@ -44,7 +45,7 @@ export const IndexTop = () => {
             e.currentTarget.currentTime = 0;
           }
         }}
-      ></video>{" "}
+      ></video>*/}
       {/** */}
       <div className={`${styles.index_top_overlay}`}>
         <div className={`${styles.index_top_overlay_cnt}`}>
