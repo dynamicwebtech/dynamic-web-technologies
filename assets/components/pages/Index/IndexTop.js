@@ -6,10 +6,6 @@
 
 import { useState } from "react";
 
-import { INDEX_TOP_BG } from "@/assets/cdns/CDNBgs";
-
-import { LazyLoadBackgroundImage } from "../../global/All/LazyLoadBackgroundImage";
-
 import HeadingElement from "@/assets/functions/dom/elements/HeadingElement";
 
 import styles from "../../../styles/modules/Index/Index.module.css";
