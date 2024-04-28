@@ -4,7 +4,8 @@
  *
  */
 
-const SERVER = process.env.CDN_GLOBAL_PATH;
+const SERVER =
+  "https://raw.githubusercontent.com/dynamicwebtech/client_CDNS/main/dynamic-web-technologies/";
 
 function CDNBGReturn(bgSub, bgSubFile, fileExt) {
   let bgSrc;

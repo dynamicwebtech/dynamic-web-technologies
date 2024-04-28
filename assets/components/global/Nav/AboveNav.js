@@ -25,13 +25,13 @@ export const AboveNav = () => {
                 </span>
 
                 <a
-                  href="/contact#contactInfo"
+                  href="/book_contact#contactInfo"
                   className="orientation-change-element half-second"
                 >
                   <FaPhoneAlt className={`${styles.icon}`} />
                 </a>
                 <a
-                  href="/contact#contactForm"
+                  href="/book_contact#contactForm"
                   className={`${styles.email_link} orientation-change-element half-second`}
                 >
                   <MdEmail className={`${styles.icon}`} />
@@ -43,7 +43,7 @@ export const AboveNav = () => {
             >
               <div className={`${styles.above_nav_inner_side_cnt}`}>
                 <a
-                  href="/contact#contactInfo"
+                  href="/book_contact#contactInfo"
                   className="orientation-change-element half-second"
                 >
                   <span className="orientation-change-element half-second">
