@@ -14,6 +14,7 @@ import checkLocalHostStatus from "@/assets/hooks/checkLocalHostStatus";
 import { PageHead } from "@/assets/components/global/All/PageHead";
 import { AboveNav } from "../assets/components/global/Nav/AboveNav.js";
 import { DesktopNav } from "@/assets/components/global/Nav/DesktopNav.js";
+import { MobileNav } from "@/assets/components/global/Nav/MobileNav.js";
 
 // Style Imports
 import "../assets/styles/modules/Pricing/Pricing.module.css";
@@ -74,6 +75,7 @@ export default function Pricing({ PH_ICONS_DATA, PH_PRICING_DATA }) {
 
       <AboveNav />
       <DesktopNav />
+      <MobileNav />
 
       <div id="PAGE_CNT"></div>
     </div>
