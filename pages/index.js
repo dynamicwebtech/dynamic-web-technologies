@@ -17,6 +17,8 @@ import { AboveNav } from "../assets/components/global/Nav/AboveNav.js";
 import { DesktopNav } from "@/assets/components/global/Nav/DesktopNav.js";
 import { MobileNav } from "@/assets/components/global/Nav/MobileNav.js";
 
+import { IndexTop } from "@/assets/components/pages/Index/IndexTop.js";
+
 // Style Imports
 import "../assets/styles/modules/Index/Index.module.css";
 
@@ -79,7 +81,9 @@ export default function Home({ PH_ICONS_DATA, PH_INDEX_DATA }) {
       <DesktopNav />
       <MobileNav />
 
-      <div id="PAGE_CNT"></div>
+      <div id="PAGE_CNT">
+        <IndexTop />
+      </div>
     </div>
   );
 }
