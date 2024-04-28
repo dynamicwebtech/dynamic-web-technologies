@@ -233,6 +233,7 @@
   font-family: "Open Sans Bold";
   text-transform: uppercase;
   display: none;
+  z-index: 100;
 }
 .mobile_nav_holder .mobile_nav_links li {
   padding-left: 15px;
