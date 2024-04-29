@@ -4,12 +4,14 @@
  *
  */
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/router";
 
 import { MdEmail, MdAccountCircle, MdLogout } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
 import { BsChatTextFill } from "react-icons/bs";
+
+import { LoginPopup } from "../All/LoginPopup";
 
 import RemoveStorageVariable from "@/assets/functions/data/storage/RemoveStorageVariable";
 
@@ -17,6 +19,7 @@ import styles from "../../../styles/modules/Nav/Nav.module.css";
 
 export const AboveNav = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(null);
+  const [loginPopupOpened, setLoginPopupOpened] = useState(null);
 
   // Displaying/Hiding Login/Logout buttons
   useEffect(() => {
@@ -29,10 +32,40 @@ export const AboveNav = () => {
     }
   }, []);
 
+  const handleLoginCheckbox = (e) => {
+    const LOGIN_POPUP = document.getElementById("loginPopup");
+    const loginCheckbox = document.getElementById("loginCB");
+
+    if (loginCheckbox.checked) {
+      LOGIN_POPUP.style.display = "block";
+    } else {
+      LOGIN_POPUP.style.display = "none";
+    }
+  };
+
+  const aboveNavRef = useRef(null);
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (aboveNavRef.current && !aboveNavRef.current.contains(event.target)) {
+        const loginCheckbox = document.getElementById("loginCB");
+        if (loginCheckbox.checked) {
+          loginCheckbox.checked = false;
+          document.getElementById("loginPopup").style.display = "none";
+        }
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   const router = useRouter();
 
   return (
-    <section id="aboveNav" className={`${styles.above_nav}`}>
+    <section id="aboveNav" className={`${styles.above_nav}`} ref={aboveNavRef}>
       <div className={`${styles.above_nav_inner}`}>
         <div className={`${styles.above_nav_inner_box} container-fluid`}>
           <div className={`${styles.above_nav_inner_row} row`}>
@@ -92,12 +125,15 @@ export const AboveNav = () => {
                   ) : (
                     <button
                       className="orientation-change-element half-second"
-                      onClick={() => {
-                        const LOGIN_POPUP =
-                          document.getElementById("loginPopup");
-                      }}
                       id="loginBtn"
                     >
+                      <input
+                        type="checkbox"
+                        id="loginCB"
+                        onChange={(e) => {
+                          handleLoginCheckbox(e);
+                        }}
+                      />
                       <span>Login</span>
                       <MdAccountCircle className={`${styles.icon}`} />
                     </button>
@@ -107,6 +143,8 @@ export const AboveNav = () => {
             </div>
           </div>
         </div>
+
+        <LoginPopup />
       </div>
     </section>
   );

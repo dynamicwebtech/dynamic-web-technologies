@@ -4,7 +4,7 @@
  *
  */
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import axios from "axios";
 
 import styles from "../../../styles/modules/All/All.module.css";
