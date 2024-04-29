@@ -87,6 +87,18 @@
   position: relative;
   top: -2px;
 }
+.above_nav .above_nav_inner .above_nav_inner_box .above_nav_inner_row .above_nav_R .above_nav_inner_side_cnt button {
+  margin-left: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.above_nav .above_nav_inner .above_nav_inner_box .above_nav_inner_row .above_nav_R .above_nav_inner_side_cnt button .icon {
+  position: relative;
+  top: 3px;
+  color: white;
+  font-size: clamp(0.8rem, 0.24vw + 0.81rem, 1.04rem);
+}
 
 .desktop_nav .desktop_nav_inner {
   max-width: 1400px;

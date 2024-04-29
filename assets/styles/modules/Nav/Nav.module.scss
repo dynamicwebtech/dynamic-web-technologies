@@ -104,6 +104,19 @@
                 top: -2px;
               }
             }
+
+            button {
+              margin-left: 30px;
+              @include displayElement(flex, space-between, center);
+
+              .icon {
+                position: relative;
+                top: 3px;
+                color: white;
+                font-size: $SmallLink;
+                // margin-left: 10px;
+              }
+            }
           }
         }
       }
