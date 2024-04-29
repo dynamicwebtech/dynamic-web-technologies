@@ -19,8 +19,7 @@ export const IndexTop = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const videoRef = useRef(null);
 
-  const VIDEO_SRC =
-    "https://raw.githubusercontent.com/dynamicwebtech/client_CDNS/main/dynamic-web-technologies/videos/index-top-video.mp4";
+  const PUBLIC_INDEX_TOP_VIDEO = "/videos/index-top-video.mp4";
 
   useEffect(() => {
     const video = videoRef.current;
@@ -44,11 +43,12 @@ export const IndexTop = () => {
         ref={videoRef}
         // controls
         muted
+        loop
         autoPlay
         preload="metadata"
         style={{ display: !isLoaded ? "block" : "none" }}
       >
-        <source src={VIDEO_SRC} type="video/mp4" />
+        <source src={PUBLIC_INDEX_TOP_VIDEO} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       {/** <video
