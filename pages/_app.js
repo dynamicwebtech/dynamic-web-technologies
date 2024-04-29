@@ -32,6 +32,7 @@ let IS_PAYMENT_REQUIRED = false;
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
   const [updateUI, setUpdateUI] = useState(0);
+  const [isLoggedIn, setIsLoggedIn] = useState(null);
 
   //? GLOBALS
   //! Forget scroll position and force user back to top of page
@@ -50,6 +51,25 @@ function MyApp({ Component, pageProps }) {
       window.scrollTo({ top: 0, left: 0, behavior: "instant" });
 
       RemoveStorageVariable("session", "Reload Scroll");
+    }
+  }, []);
+
+  //! Displaying/Hiding Login Window
+  useEffect(() => {
+    const LOGGED_IN_VARIABLE = localStorage.getItem("Current User");
+
+    if (LOGGED_IN_VARIABLE) {
+      setIsLoggedIn(true);
+
+      if (document.getElementById("loginPopup")) {
+        document.getElementById("loginPopup").style.display = "none";
+      }
+    } else {
+      setIsLoggedIn(false);
+
+      if (document.getElementById("loginPopup")) {
+        document.getElementById("loginPopup").style.display = "block";
+      }
     }
   }, []);
 
