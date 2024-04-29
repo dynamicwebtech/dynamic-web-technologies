@@ -4,7 +4,9 @@
  *
  */
 
-export const handleLogin = async (e, username, password, router) => {
+import axios from "axios";
+
+export const handleLogin = async (e, username, password, formError, router) => {
   e.preventDefault();
 
   try {
@@ -20,7 +22,7 @@ export const handleLogin = async (e, username, password, router) => {
 
     router.reload();
   } catch (error) {
-    setError("Invalid credentials!");
+    formError("Invalid credentials!");
     console.error("Login error:", error);
   }
 };
