@@ -39,6 +39,14 @@
   display: none;
 
   .login_popup_inner {
+    .closer {
+      margin-left: auto;
+      margin-right: 0;
+      margin-bottom: 10px;
+      color: $EasternBlue;
+      @include displayElement(flex, center, center);
+    }
+
     form {
       .form_set {
         width: 100%;

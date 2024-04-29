@@ -30,6 +30,15 @@
   border: 2px solid #abc635;
   display: none;
 }
+.login_popup .login_popup_inner .closer {
+  margin-left: auto;
+  margin-right: 0;
+  margin-bottom: 10px;
+  color: #1684a7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .login_popup .login_popup_inner form .form_set {
   width: 100%;
   margin-bottom: 8px;

@@ -285,6 +285,10 @@
   color: #444444;
   text-decoration: none;
 }
+.mobile_nav_holder .mobile_nav_links li a:hover {
+  color: #1684a7;
+  background-color: rgba(190, 190, 190, 0.646);
+}
 
 @media all and (max-width: 991px) {
   .above_nav .above_nav_inner .above_nav_inner_box .above_nav_inner_row .above_nav_inner_side {
@@ -364,7 +368,7 @@
   }
   .mobile_nav_holder .mobile_nav .mobile_nav_inner {
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
   }
   .mobile_nav_holder .mobile_nav .mobile_nav_inner .mobile_nav_inner_box .mobile_nav_inner_row .mobile_nav_inner_side {
     height: 60px;
@@ -379,7 +383,7 @@
     justify-content: center;
   }
   .mobile_nav_holder .mobile_nav_links {
-    top: 243px;
+    top: 223px;
   }
 }
 @media all and (max-width: 419px) {

@@ -336,6 +336,11 @@
         padding-right: 15px;
         color: $Tundora;
         text-decoration: none;
+
+        &:hover {
+          color: $EasternBlue;
+          background-color: rgba(190, 190, 190, 0.646);
+        }
       }
     }
   }
@@ -483,7 +488,7 @@
     .mobile_nav {
       .mobile_nav_inner {
         padding-top: 20px;
-        padding-bottom: 20px;
+        padding-bottom: 10px;
 
         .mobile_nav_inner_box {
           .mobile_nav_inner_row {
@@ -508,7 +513,7 @@
     }
 
     .mobile_nav_links {
-      top: 243px;
+      top: 223px;
     }
   }
 }
