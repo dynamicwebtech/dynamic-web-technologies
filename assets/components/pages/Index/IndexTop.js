@@ -16,11 +16,12 @@ export const IndexTop = () => {
     "Engineering Tomorrow."
   );
 
+  // Video stuff
   const [isLoaded, setIsLoaded] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
   const videoRef = useRef(null);
-
+  const overlayRef = useRef(null);
   const PUBLIC_INDEX_TOP_VIDEO = "/videos/index-top-video.mp4";
-
   useEffect(() => {
     const video = videoRef.current;
 
@@ -35,6 +36,29 @@ export const IndexTop = () => {
     };
   }, []);
 
+  const handleVideoEnded = () => {
+    setIsPlaying(false);
+    videoRef.current.currentTime = 0;
+    fadeOutOverlay();
+  };
+
+  const handleVideoPlayed = () => {
+    setIsPlaying(true);
+    fadeInOverlay();
+  };
+
+  const fadeInOverlay = () => {
+    if (overlayRef.current) {
+      overlayRef.current.style.opacity = "1";
+    }
+  };
+
+  const fadeOutOverlay = () => {
+    if (overlayRef.current) {
+      overlayRef.current.style.opacity = "0";
+    }
+  };
+
   return (
     <section id="indexTop" className={`${styles.index_top}`}>
       {/***/}
@@ -47,6 +71,8 @@ export const IndexTop = () => {
         autoPlay
         preload="metadata"
         style={{ display: !isLoaded ? "block" : "none" }}
+        onEnded={handleVideoEnded}
+        onPlay={handleVideoPlayed}
       >
         <source src={PUBLIC_INDEX_TOP_VIDEO} type="video/mp4" />
         Your browser does not support the video tag.
@@ -66,7 +92,11 @@ export const IndexTop = () => {
       ></video>*/}
       {/** */}
       <div className={`${styles.index_top_overlay}`}>
-        <div className={`${styles.index_top_overlay_cnt}`}>
+        <div
+          ref={overlayRef}
+          className={`${styles.index_top_overlay_cnt}`}
+          style={{ opacity: "0", transition: "opacity 0.5s ease" }}
+        >
           <h1 className="orientation-change-element half-second">
             {MAIN_HEADING}
           </h1>
