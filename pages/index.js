@@ -16,7 +16,6 @@ import { PageHead } from "@/assets/components/global/All/PageHead";
 import { AboveNav } from "../assets/components/global/Nav/AboveNav.js";
 import { DesktopNav } from "@/assets/components/global/Nav/DesktopNav.js";
 import { MobileNav } from "@/assets/components/global/Nav/MobileNav.js";
-import { LoginPopup } from "@/assets/components/global/All/LoginPopup.js";
 
 import { IndexTop } from "@/assets/components/pages/Index/IndexTop.js";
 
@@ -81,7 +80,6 @@ export default function Home({ PH_ICONS_DATA, PH_INDEX_DATA }) {
       <AboveNav />
       <DesktopNav />
       <MobileNav />
-      <LoginPopup />
 
       <div id="PAGE_CNT">
         <IndexTop />
