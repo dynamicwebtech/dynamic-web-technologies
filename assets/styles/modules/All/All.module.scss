@@ -26,12 +26,77 @@
 }
 
 // Desktop
+.login_popup {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  z-index: 200;
+  background-color: $Alabaster;
+  width: 100%;
+  max-width: 300px;
+  padding: 15px;
+  border: 2px solid $Atlantis;
+  display: none;
+
+  .login_popup_inner {
+    form {
+      .form_set {
+        width: 100%;
+        margin-bottom: 8px;
+
+        input {
+          width: 100%;
+          font-family: "Open Sans Semi Bold";
+          border: 2px solid rgba(128, 128, 128, 0.378);
+          padding-left: 7px;
+          padding-right: 7px;
+          height: 34px;
+          background-color: white;
+          color: $MineShaft;
+        }
+      }
+
+      .login_error {
+        font-family: "Open Sans Semi Bold";
+        color: red;
+        font-size: 14px;
+      }
+
+      .form_btns {
+        margin-top: 15px;
+        @include displayElement(flex, flex-start, center);
+
+        button {
+          padding: 10px;
+          font-family: "Open Sans Bold";
+          color: white;
+          font-size: 14px;
+        }
+
+        .clear {
+          background-color: $Atlantis;
+          margin-right: 10px;
+        }
+
+        .login {
+          background-color: $EasternBlue;
+        }
+      }
+    }
+  }
+}
 
 // Responsive
 @media all and (max-width: 1995px) {
 }
 
 @media all and (max-width: 991px) {
+  .login_popup {
+    right: auto;
+    left: 50%;
+    top: 75px;
+    transform: translateX(-50%);
+  }
 }
 
 @media (min-width: 992px) {
@@ -39,10 +104,44 @@
 
 // Desktop Window (Smallest)
 @media all and (max-width: 768px) {
+  .login_popup {
+    right: auto;
+    left: 50%;
+    top: 75px;
+    transform: translateX(-50%);
+    padding: 10px;
+    max-width: 290px;
+  }
 }
 
 // Smaller Devices (Phones)
 @media all and (max-width: 419px) {
+  .login_popup {
+    right: auto;
+    left: 50%;
+    top: 60px;
+    transform: translateX(-50%);
+    padding: 10px;
+    max-width: 250px;
+
+    .login_popup_inner {
+      form {
+        .form_set {
+          input {
+            height: 30px;
+            font-size: 13px;
+          }
+        }
+
+        .form_btns {
+          button {
+            font-size: 12px;
+            padding: 6px;
+          }
+        }
+      }
+    }
+  }
 }
 
 // Pixel 2 XL

@@ -17,4 +17,91 @@
 @font-face {
   font-family: "Open Sans Regular";
   src: url("https://raw.githubusercontent.com/dynamicwebtech/client_CDNS/main/dynamic-web-technologies/fonts/OpenSans-Regular.ttf");
+}
+.login_popup {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  z-index: 200;
+  background-color: #fafafa;
+  width: 100%;
+  max-width: 300px;
+  padding: 15px;
+  border: 2px solid #abc635;
+  display: none;
+}
+.login_popup .login_popup_inner form .form_set {
+  width: 100%;
+  margin-bottom: 8px;
+}
+.login_popup .login_popup_inner form .form_set input {
+  width: 100%;
+  font-family: "Open Sans Semi Bold";
+  border: 2px solid rgba(128, 128, 128, 0.378);
+  padding-left: 7px;
+  padding-right: 7px;
+  height: 34px;
+  background-color: white;
+  color: #272727;
+}
+.login_popup .login_popup_inner form .login_error {
+  font-family: "Open Sans Semi Bold";
+  color: red;
+  font-size: 14px;
+}
+.login_popup .login_popup_inner form .form_btns {
+  margin-top: 15px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.login_popup .login_popup_inner form .form_btns button {
+  padding: 10px;
+  font-family: "Open Sans Bold";
+  color: white;
+  font-size: 14px;
+}
+.login_popup .login_popup_inner form .form_btns .clear {
+  background-color: #abc635;
+  margin-right: 10px;
+}
+.login_popup .login_popup_inner form .form_btns .login {
+  background-color: #1684a7;
+}
+
+@media all and (max-width: 991px) {
+  .login_popup {
+    right: auto;
+    left: 50%;
+    top: 75px;
+    transform: translateX(-50%);
+  }
+}
+@media all and (max-width: 768px) {
+  .login_popup {
+    right: auto;
+    left: 50%;
+    top: 75px;
+    transform: translateX(-50%);
+    padding: 10px;
+    max-width: 290px;
+  }
+}
+@media all and (max-width: 419px) {
+  .login_popup {
+    right: auto;
+    left: 50%;
+    top: 60px;
+    transform: translateX(-50%);
+    padding: 10px;
+    max-width: 250px;
+  }
+  .login_popup .login_popup_inner form .form_set input {
+    height: 30px;
+    font-size: 13px;
+  }
+  .login_popup .login_popup_inner form .form_btns button {
+    font-size: 12px;
+    padding: 6px;
+  }
 }/*# sourceMappingURL=All.module.css.map */
