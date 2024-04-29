@@ -4,13 +4,33 @@
  *
  */
 
-import { MdEmail } from "react-icons/md";
+import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
+
+import { MdEmail, MdAccountCircle, MdLogout } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
 import { BsChatTextFill } from "react-icons/bs";
+
+import RemoveStorageVariable from "@/assets/functions/data/storage/RemoveStorageVariable";
 
 import styles from "../../../styles/modules/Nav/Nav.module.css";
 
 export const AboveNav = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(null);
+
+  // Displaying/Hiding Login/Logout buttons
+  useEffect(() => {
+    const LOGGED_IN_VARIABLE = localStorage.getItem("Current User");
+
+    if (LOGGED_IN_VARIABLE) {
+      setIsLoggedIn(true);
+    } else {
+      setIsLoggedIn(false);
+    }
+  }, []);
+
+  const router = useRouter();
+
   return (
     <section id="aboveNav" className={`${styles.above_nav}`}>
       <div className={`${styles.above_nav_inner}`}>
@@ -52,6 +72,37 @@ export const AboveNav = () => {
 
                   <BsChatTextFill className={`${styles.icon}`} />
                 </a>
+
+                <div className={`${styles.login_btns}`}>
+                  {isLoggedIn ? (
+                    <button
+                      className="orientation-change-element half-second"
+                      onClick={(e) => {
+                        e.preventDefault();
+
+                        RemoveStorageVariable("local", "Current User");
+
+                        router.reload();
+                      }}
+                      id="logoutBtn"
+                    >
+                      <span>Logout</span>
+                      <MdLogout className={`${styles.icon}`} />
+                    </button>
+                  ) : (
+                    <button
+                      className="orientation-change-element half-second"
+                      onClick={() => {
+                        const LOGIN_POPUP =
+                          document.getElementById("loginPopup");
+                      }}
+                      id="loginBtn"
+                    >
+                      <span>Login</span>
+                      <MdAccountCircle className={`${styles.icon}`} />
+                    </button>
+                  )}
+                </div>
               </div>
             </div>
           </div>
