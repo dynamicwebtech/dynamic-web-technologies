@@ -67,9 +67,9 @@ function MyApp({ Component, pageProps }) {
     } else {
       setIsLoggedIn(false);
 
-      if (document.getElementById("loginPopup")) {
-        document.getElementById("loginPopup").style.display = "block";
-      }
+      // if (document.getElementById("loginPopup")) {
+      //   document.getElementById("loginPopup").style.display = "block";
+      // }
     }
   }, []);
 
