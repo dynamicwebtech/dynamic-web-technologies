@@ -7,6 +7,8 @@
 import { useState, useRef, useEffect } from "react";
 import axios from "axios";
 
+import { FaTimes } from "react-icons/fa";
+
 import styles from "../../../styles/modules/All/All.module.css";
 
 export const LoginPopup = () => {
@@ -37,7 +39,20 @@ export const LoginPopup = () => {
 
   return (
     <div id="loginPopup" className={`${styles.login_popup}`}>
-      <div className={`${styles.login_popup_inner}`}>
+      <div
+        className={`${styles.login_popup_inner}`}
+        onClick={(e) => {
+          const loginCheckbox = document.getElementById("loginCB");
+          loginCheckbox.checked = false;
+          document.getElementById("loginPopup").style.display = "none";
+        }}
+      >
+        <button
+          className={`${styles.closer} orientation-change-element half-second`}
+        >
+          <FaTimes />
+        </button>
+
         <form
           onSubmit={(e) => {
             handleLogin(e);
