@@ -4,7 +4,7 @@
  *
  */
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 import HeadingElement from "@/assets/functions/dom/elements/HeadingElement";
 
@@ -16,23 +16,41 @@ export const IndexTop = () => {
     "Engineering Tomorrow."
   );
 
-  const VIDEO =
+  const [isLoaded, setIsLoaded] = useState(false);
+  const videoRef = useRef(null);
+
+  const VIDEO_SRC =
     "https://raw.githubusercontent.com/dynamicwebtech/client_CDNS/main/dynamic-web-technologies/videos/index-top-video.mp4";
 
-  const [isVideoEnded, setIsVideoEnded] = useState(false);
+  useEffect(() => {
+    const video = videoRef.current;
 
-  const handleVideoEnded = () => {
-    setIsVideoEnded(true);
-  };
+    const handleLoadedMetadata = () => {
+      setIsLoaded(true);
+    };
 
-  const handleVideoPlayed = () => {
-    setIsVideoEnded(false);
-  };
+    video.addEventListener("loadedmetadata", handleLoadedMetadata);
+
+    return () => {
+      video.removeEventListener("loadedmetadata", handleLoadedMetadata);
+    };
+  }, []);
 
   return (
     <section id="indexTop" className={`${styles.index_top}`}>
       {/***/}
-      <div className={`${styles.bg}`} />{" "}
+
+      <video
+        ref={videoRef}
+        // controls
+        muted
+        autoPlay
+        preload="metadata"
+        style={{ display: !isLoaded ? "block" : "none" }}
+      >
+        <source src={VIDEO_SRC} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
       {/** <video
         src={VIDEO}
         muted
