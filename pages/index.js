@@ -1,5 +1,5 @@
 // React/Next Imports
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import fs from "fs";
 import path from "path";
@@ -16,8 +16,10 @@ import { PageHead } from "@/assets/components/global/All/PageHead";
 import { AboveNav } from "../assets/components/global/Nav/AboveNav.js";
 import { DesktopNav } from "@/assets/components/global/Nav/DesktopNav.js";
 import { MobileNav } from "@/assets/components/global/Nav/MobileNav.js";
+import { AdminModeIndicator } from "@/assets/components/global/All/AdminModeIndicator.js";
 
 import { IndexTop } from "@/assets/components/pages/Index/IndexTop.js";
+import { IndexAbout } from "@/assets/components/pages/Index/IndexAbout.js";
 
 // Style Imports
 import "../assets/styles/modules/Index/Index.module.css";
@@ -68,10 +70,23 @@ export default function Home({ PH_ICONS_DATA, PH_INDEX_DATA }) {
 
   const { reviews } = getDatabaseData();
   const { onLocalHost } = checkLocalHostStatus();
-  const { adminMode } = checkAdminModeStatus();
+  // const { adminMode } = checkAdminModeStatus();
 
-  console.log("Admin Mode Status: " + adminMode);
+  // console.log("Admin Mode Status: " + adminMode);
   console.log("Local Host Status: " + onLocalHost);
+
+  const [adminMode, setAdminMode] = useState(false);
+
+  // Admin Mode Display
+  useEffect(() => {
+    const CURRENT_USER_VARIABLE = localStorage.getItem("Current User");
+
+    if (CURRENT_USER_VARIABLE) {
+      setAdminMode(true);
+    } else {
+      setAdminMode(false);
+    }
+  }, []);
 
   return (
     <div id="PAGE" className="page">
@@ -80,9 +95,11 @@ export default function Home({ PH_ICONS_DATA, PH_INDEX_DATA }) {
       <AboveNav />
       <DesktopNav />
       <MobileNav />
+      {adminMode ? <AdminModeIndicator /> : null}
 
       <div id="PAGE_CNT">
         <IndexTop />
+        <IndexAbout />
       </div>
     </div>
   );

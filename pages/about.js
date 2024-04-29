@@ -1,5 +1,5 @@
 // React/Next Imports
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import fs from "fs";
 import path from "path";
@@ -16,6 +16,7 @@ import { AboveNav } from "../assets/components/global/Nav/AboveNav.js";
 import { DesktopNav } from "@/assets/components/global/Nav/DesktopNav.js";
 import { MobileNav } from "@/assets/components/global/Nav/MobileNav.js";
 import { LoginPopup } from "@/assets/components/global/All/LoginPopup.js";
+import { AdminModeIndicator } from "@/assets/components/global/All/AdminModeIndicator.js";
 
 // Style Imports
 import "../assets/styles/modules/About/About.module.css";
@@ -65,9 +66,23 @@ export default function About({ PH_ICONS_DATA, PH_ABOUT_DATA }) {
   const router = useRouter();
 
   const { onLocalHost } = checkLocalHostStatus();
-  const { adminMode } = checkAdminModeStatus();
+  // const { adminMode } = checkAdminModeStatus();
 
-  console.log("Admin Mode Status: " + adminMode);
+  // console.log("Admin Mode Status: " + adminMode);
+  console.log("Local Host Status: " + onLocalHost);
+
+  const [adminMode, setAdminMode] = useState(false);
+
+  // Admin Mode Display
+  useEffect(() => {
+    const CURRENT_USER_VARIABLE = localStorage.getItem("Current User");
+
+    if (CURRENT_USER_VARIABLE) {
+      setAdminMode(true);
+    } else {
+      setAdminMode(false);
+    }
+  }, []);
   console.log("Local Host Status: " + onLocalHost);
 
   return (
@@ -78,6 +93,7 @@ export default function About({ PH_ICONS_DATA, PH_ABOUT_DATA }) {
       <DesktopNav />
       <MobileNav />
       <LoginPopup />
+      {adminMode ? <AdminModeIndicator /> : null}
 
       <div id="PAGE_CNT"></div>
     </div>
