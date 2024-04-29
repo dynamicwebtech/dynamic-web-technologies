@@ -18,6 +18,22 @@
   font-family: "Open Sans Regular";
   src: url("https://raw.githubusercontent.com/dynamicwebtech/client_CDNS/main/dynamic-web-technologies/fonts/OpenSans-Regular.ttf");
 }
+.admin_mode_indicator {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: red;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: "Open Sans Bold";
+  z-index: 500;
+  font-size: 25px;
+}
+
 .login_popup {
   position: absolute;
   top: 45px;

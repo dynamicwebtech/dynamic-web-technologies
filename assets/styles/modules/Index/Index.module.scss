@@ -72,7 +72,7 @@
         color: white;
         font-family: "Open Sans Bold";
         font-size: $Heading;
-        line-height: 90px;
+        line-height: 100px;
       }
 
       p {
@@ -126,9 +126,127 @@
     }
   }
 }
+.index_about {
+  .index_about_inner {
+    .index_about_inner_box {
+      .index_about_inner_row {
+        .index_about_inner_side {
+          height: 800px;
+          display: flex;
+          align-items: center;
+        }
+
+        .index_about_L {
+          position: relative;
+          display: flex;
+          align-items: center;
+
+          .bg {
+            @include bGSU(cover, center);
+            background-image: url("https://raw.githubusercontent.com/dynamicwebtech/client_CDNS/main/dynamic-web-technologies/bgs/about/about-bg.webp");
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            filter: brightness(70%);
+          }
+
+          .blue_bar {
+            height: 100%;
+            width: 10px;
+            background-color: $EasternBlue;
+            display: block;
+            position: absolute;
+            right: 10px;
+          }
+
+          .green_bar {
+            height: 100%;
+            width: 10px;
+            background-color: $Atlantis;
+            display: block;
+            position: absolute;
+            right: 0;
+          }
+        }
+
+        .index_about_R {
+          justify-content: flex-start;
+
+          .index_about_inner_side_cnt {
+            padding-left: 30px;
+            padding-right: 30px;
+            overflow: hidden !important;
+            white-space: pre-wrap;
+            max-width: 800px;
+            @include quickCenter("relative");
+
+            h2 {
+              color: $MineShaft;
+              font-family: "Open Sans Bold";
+              font-size: $SubHeading;
+              line-height: 80px;
+
+              span {
+                display: none;
+              }
+            }
+
+            p {
+              font-family: "Open Sans Regular";
+              color: $MineShaft;
+              font-size: $SmallText;
+              margin-top: 25px;
+              margin-bottom: 40px;
+              max-width: 950px;
+              @include quickCenter("relative");
+              word-wrap: normal;
+            }
+
+            a {
+              @include displayElement(inline-flex, space-between, center);
+              height: 50px;
+              text-decoration: none;
+              color: $EasternBlue;
+              font-family: "Open Sans Bold";
+              border-radius: 5px;
+              padding-left: 12px;
+              padding-right: 12px;
+              border: 3px solid $EasternBlue;
+              width: 100%;
+              max-width: 150px;
+
+              &:hover {
+                background-color: $EasternBlue;
+                color: white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
 // Responsive
 @media all and (max-width: 1995px) {
+  .index_about {
+    .index_about_inner {
+      .index_about_inner_box {
+        .index_about_inner_row {
+          .index_about_R {
+            .index_about_inner_side_cnt {
+              h2 {
+                font-size: $MinorHeading;
+                line-height: 65px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @media all and (max-width: 991px) {

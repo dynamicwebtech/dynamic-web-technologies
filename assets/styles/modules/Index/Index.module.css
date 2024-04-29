@@ -67,7 +67,7 @@
   color: white;
   font-family: "Open Sans Bold";
   font-size: clamp(3.05rem, 3.54vw + 2.17rem, 5rem);
-  line-height: 90px;
+  line-height: 100px;
 }
 .index_top .index_top_overlay .index_top_overlay_cnt p {
   font-family: "Open Sans Regular";
@@ -116,6 +116,102 @@
   border-radius: 3px;
 }
 
+.index_about .index_about_inner .index_about_inner_box .index_about_inner_row .index_about_inner_side {
+  height: 800px;
+  display: flex;
+  align-items: center;
+}
+.index_about .index_about_inner .index_about_inner_box .index_about_inner_row .index_about_L {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.index_about .index_about_inner .index_about_inner_box .index_about_inner_row .index_about_L .bg {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("https://raw.githubusercontent.com/dynamicwebtech/client_CDNS/main/dynamic-web-technologies/bgs/about/about-bg.webp");
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: brightness(70%);
+}
+.index_about .index_about_inner .index_about_inner_box .index_about_inner_row .index_about_L .blue_bar {
+  height: 100%;
+  width: 10px;
+  background-color: #1684a7;
+  display: block;
+  position: absolute;
+  right: 10px;
+}
+.index_about .index_about_inner .index_about_inner_box .index_about_inner_row .index_about_L .green_bar {
+  height: 100%;
+  width: 10px;
+  background-color: #abc635;
+  display: block;
+  position: absolute;
+  right: 0;
+}
+.index_about .index_about_inner .index_about_inner_box .index_about_inner_row .index_about_R {
+  justify-content: flex-start;
+}
+.index_about .index_about_inner .index_about_inner_box .index_about_inner_row .index_about_R .index_about_inner_side_cnt {
+  padding-left: 30px;
+  padding-right: 30px;
+  overflow: hidden !important;
+  white-space: pre-wrap;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.index_about .index_about_inner .index_about_inner_box .index_about_inner_row .index_about_R .index_about_inner_side_cnt h2 {
+  color: #272727;
+  font-family: "Open Sans Bold";
+  font-size: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
+  line-height: 80px;
+}
+.index_about .index_about_inner .index_about_inner_box .index_about_inner_row .index_about_R .index_about_inner_side_cnt h2 span {
+  display: none;
+}
+.index_about .index_about_inner .index_about_inner_box .index_about_inner_row .index_about_R .index_about_inner_side_cnt p {
+  font-family: "Open Sans Regular";
+  color: #272727;
+  font-size: clamp(1rem, 0.54vw + 1rem, 1.33rem);
+  margin-top: 25px;
+  margin-bottom: 40px;
+  max-width: 950px;
+  margin-left: auto;
+  margin-right: auto;
+  word-wrap: normal;
+}
+.index_about .index_about_inner .index_about_inner_box .index_about_inner_row .index_about_R .index_about_inner_side_cnt a {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  text-decoration: none;
+  color: #1684a7;
+  font-family: "Open Sans Bold";
+  border-radius: 5px;
+  padding-left: 12px;
+  padding-right: 12px;
+  border: 3px solid #1684a7;
+  width: 100%;
+  max-width: 150px;
+}
+.index_about .index_about_inner .index_about_inner_box .index_about_inner_row .index_about_R .index_about_inner_side_cnt a:hover {
+  background-color: #1684a7;
+  color: white;
+}
+
+@media all and (max-width: 1995px) {
+  .index_about .index_about_inner .index_about_inner_box .index_about_inner_row .index_about_R .index_about_inner_side_cnt h2 {
+    font-size: clamp(1.84rem, 2.14vw + 1.65rem, 2.95rem);
+    line-height: 65px;
+  }
+}
 @media all and (max-width: 991px) {
   .index_top {
     height: 865px;

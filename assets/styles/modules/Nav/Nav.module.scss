@@ -28,8 +28,22 @@
 // Desktop
 .above_nav {
   background-color: $Tundora;
-  padding-top: 10px;
-  padding-bottom: 15px;
+
+  .admin_mode_hint {
+    background-color: red;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+    font-family: "Open Sans Semi Bold";
+    color: white;
+    font-size: $SmallLink;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
 
   .above_nav_inner {
     max-width: 1400px;
@@ -37,6 +51,8 @@
     @include quickCenter("relative");
     padding-left: 20px;
     padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 15px;
     position: relative;
 
     .above_nav_inner_box {

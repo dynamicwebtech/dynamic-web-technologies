@@ -20,8 +20,21 @@
 }
 .above_nav {
   background-color: #444444;
-  padding-top: 10px;
+}
+.above_nav .admin_mode_hint {
+  background-color: red;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 15px;
   padding-bottom: 15px;
+  text-align: center;
+  font-family: "Open Sans Semi Bold";
+  color: white;
+  font-size: clamp(0.8rem, 0.24vw + 0.81rem, 1.04rem);
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 .above_nav .above_nav_inner {
   max-width: 1400px;
@@ -30,6 +43,8 @@
   margin-right: auto;
   padding-left: 20px;
   padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 15px;
   position: relative;
 }
 .above_nav .above_nav_inner .above_nav_inner_box .above_nav_inner_row .above_nav_inner_side {

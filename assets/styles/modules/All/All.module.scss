@@ -26,6 +26,19 @@
 }
 
 // Desktop
+.admin_mode_indicator {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: red;
+  width: 40px;
+  height: 40px;
+  @include displayElement(flex, center, center);
+  color: white;
+  font-family: "Open Sans Bold";
+  z-index: 500;
+  font-size: 25px;
+}
 .login_popup {
   position: absolute;
   top: 45px;
