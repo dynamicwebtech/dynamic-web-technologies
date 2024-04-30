@@ -18,6 +18,7 @@ import RemoveStorageVariable from "@/assets/functions/data/storage/RemoveStorage
 import styles from "../../../styles/modules/Nav/Nav.module.css";
 
 export const AboveNav = () => {
+  const [adminMode, setAdminMode] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(null);
   const [loginPopupOpened, setLoginPopupOpened] = useState(null);
 
@@ -48,10 +49,12 @@ export const AboveNav = () => {
   useEffect(() => {
     function handleClickOutside(event) {
       if (aboveNavRef.current && !aboveNavRef.current.contains(event.target)) {
-        const loginCheckbox = document.getElementById("loginCB");
-        if (loginCheckbox.checked) {
-          loginCheckbox.checked = false;
-          document.getElementById("loginPopup").style.display = "none";
+        if (document.getElementById("loginCB")) {
+          const loginCheckbox = document.getElementById("loginCB");
+          if (loginCheckbox.checked) {
+            loginCheckbox.checked = false;
+            document.getElementById("loginPopup").style.display = "none";
+          }
         }
       }
     }
@@ -62,10 +65,27 @@ export const AboveNav = () => {
     };
   }, []);
 
+  // Admin Mode Display
+  useEffect(() => {
+    const CURRENT_USER_VARIABLE = localStorage.getItem("Current User");
+
+    if (CURRENT_USER_VARIABLE) {
+      setAdminMode(true);
+    } else {
+      setAdminMode(false);
+    }
+  }, []);
+
   const router = useRouter();
 
   return (
     <section id="aboveNav" className={`${styles.above_nav}`} ref={aboveNavRef}>
+      {adminMode ? (
+        <div id="adminModeHint" className={`${styles.admin_mode_hint}`}>
+          <span>ADMIN MODE</span>
+        </div>
+      ) : null}
+
       <div className={`${styles.above_nav_inner}`}>
         <div className={`${styles.above_nav_inner_box} container-fluid`}>
           <div className={`${styles.above_nav_inner_row} row`}>

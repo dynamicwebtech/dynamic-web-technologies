@@ -42,16 +42,18 @@ export const LoginPopup = () => {
       <div
         className={`${styles.login_popup_inner}`}
         onClick={(e) => {
-          const loginCheckbox = document.getElementById("loginCB");
-          loginCheckbox.checked = false;
-          document.getElementById("loginPopup").style.display = "none";
+          // const loginCheckbox = document.getElementById("loginCB");
+          // loginCheckbox.checked = false;
+          // document.getElementById("loginPopup").style.display = "none";
         }}
       >
+        {/**
         <button
           className={`${styles.closer} orientation-change-element half-second`}
         >
           <FaTimes />
         </button>
+        */}
 
         <form
           onSubmit={(e) => {
