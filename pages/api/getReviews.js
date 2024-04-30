@@ -1,6 +1,19 @@
 import { MongoClient } from "mongodb";
 
-import reviewsConnection from "@/assets/db/connections/ReviewsConnection";
+// import reviewsConnection from "@/assets/db/connections/ReviewsConnection";
+
+let client;
+
+async function connectToDatabase() {
+  if (!client) {
+    client = new MongoClient(process.env.REVIEWS_DB_CONNECTION_URI, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
+    await client.connect();
+  }
+  return client.db("site-reviews").collection("reviews");
+}
 
 export default async function handler(req, res) {
   let collection;

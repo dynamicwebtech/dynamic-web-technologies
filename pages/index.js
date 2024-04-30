@@ -20,9 +20,11 @@ import { AdminModeIndicator } from "@/assets/components/global/All/AdminModeIndi
 
 import { IndexTop } from "@/assets/components/pages/Index/IndexTop.js";
 import { IndexAbout } from "@/assets/components/pages/Index/IndexAbout.js";
+import { AddPortfolioProjectForm } from "@/assets/components/global/All/AddPortfolioProjectForm.js";
 
 // Style Imports
 import "../assets/styles/modules/Index/Index.module.css";
+import index_styles from "../assets/styles/modules/Index/Index.module.css";
 
 export async function getServerSideProps({ req }) {
   const PAGE_HEAD_DATA_DIRECTORY = "public/data/PageHead/";
@@ -70,23 +72,32 @@ export default function Home({ PH_ICONS_DATA, PH_INDEX_DATA }) {
 
   const { reviews } = getDatabaseData();
   const { onLocalHost } = checkLocalHostStatus();
-  // const { adminMode } = checkAdminModeStatus();
+  const { adminMode } = checkAdminModeStatus();
+
+  const [portfolioProjects, setPortfolioProjects] = useState([]);
+
+  const fetchPortfolioProjects = async () => {
+    try {
+      const response = await fetch("/api/getPortfolioProjects");
+      if (response.ok) {
+        const data = await response.json();
+        setPortfolioProjects(data);
+
+        // router.reload()
+      } else {
+        console.error("Failed to fetch portfolio projects");
+      }
+    } catch (error) {
+      console.error("Error fetching portfolio projects:", error);
+    }
+  };
+
+  useEffect(() => {
+    fetchPortfolioProjects("/api/getPortfolioProjects", setPortfolioProjects);
+  }, []);
 
   // console.log("Admin Mode Status: " + adminMode);
   console.log("Local Host Status: " + onLocalHost);
-
-  const [adminMode, setAdminMode] = useState(false);
-
-  // Admin Mode Display
-  useEffect(() => {
-    const CURRENT_USER_VARIABLE = localStorage.getItem("Current User");
-
-    if (CURRENT_USER_VARIABLE) {
-      setAdminMode(true);
-    } else {
-      setAdminMode(false);
-    }
-  }, []);
 
   return (
     <div id="PAGE" className="page">
@@ -100,6 +111,8 @@ export default function Home({ PH_ICONS_DATA, PH_INDEX_DATA }) {
       <div id="PAGE_CNT">
         <IndexTop />
         <IndexAbout />
+
+        {adminMode ? <AddPortfolioProjectForm styles={index_styles} /> : null}
       </div>
     </div>
   );

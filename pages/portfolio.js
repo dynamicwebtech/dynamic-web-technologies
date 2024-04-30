@@ -66,23 +66,9 @@ export default function Portfolio({ PH_ICONS_DATA, PH_PORTFOLIO_DATA }) {
   const router = useRouter();
 
   const { onLocalHost } = checkLocalHostStatus();
-  // const { adminMode } = checkAdminModeStatus();
+  const { adminMode } = checkAdminModeStatus();
 
-  // console.log("Admin Mode Status: " + adminMode);
-  console.log("Local Host Status: " + onLocalHost);
-
-  const [adminMode, setAdminMode] = useState(false);
-
-  // Admin Mode Display
-  useEffect(() => {
-    const CURRENT_USER_VARIABLE = localStorage.getItem("Current User");
-
-    if (CURRENT_USER_VARIABLE) {
-      setAdminMode(true);
-    } else {
-      setAdminMode(false);
-    }
-  }, []);
+  console.log("Admin Mode Status: " + adminMode);
   console.log("Local Host Status: " + onLocalHost);
 
   return (

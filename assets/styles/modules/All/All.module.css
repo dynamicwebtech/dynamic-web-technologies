@@ -32,6 +32,7 @@
   font-family: "Open Sans Bold";
   z-index: 500;
   font-size: 25px;
+  border-radius: 5px;
 }
 
 .login_popup {
@@ -95,6 +96,13 @@
 }
 
 @media all and (max-width: 991px) {
+  .admin_mode_indicator {
+    right: 10px;
+    bottom: 10px;
+    width: 35px;
+    height: 35px;
+    font-size: 22px;
+  }
   .login_popup {
     right: auto;
     left: 50%;
@@ -103,6 +111,13 @@
   }
 }
 @media all and (max-width: 768px) {
+  .admin_mode_indicator {
+    right: 5px;
+    bottom: 5px;
+    width: 35px;
+    height: 35px;
+    font-size: 22px;
+  }
   .login_popup {
     right: auto;
     left: 50%;

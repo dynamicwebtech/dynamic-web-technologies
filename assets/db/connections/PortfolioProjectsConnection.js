@@ -16,9 +16,7 @@ async function portfolioProjectsConnection() {
     });
     await client.connect();
   }
-  return client
-    .db(process.env.PORTFOLIO_PROJECTS_DB_NAME)
-    .collection(process.env.PORTFOLIO_PROJECTS_DB_COLLECTION_NAME);
+  return client.db("portfolio-projects").collection("projects");
 }
 
 export default portfolioProjectsConnection;

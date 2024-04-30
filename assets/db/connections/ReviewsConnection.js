@@ -16,9 +16,7 @@ async function reviewsConnection() {
     });
     await client.connect();
   }
-  return client
-    .db(process.env.REVIEWS_DB_NAME)
-    .collection(process.env.REVIEWS_DB_COLLECTION_NAME);
+  return client.db("site-reviews").collection("reviews");
 }
 
 export default reviewsConnection;

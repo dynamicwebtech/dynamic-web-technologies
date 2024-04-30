@@ -11,6 +11,8 @@ import { FaBars, FaTimes } from "react-icons/fa";
 
 import { Logo } from "../All/Logo";
 
+import checkAdminModeStatus from "@/assets/hooks/checkAdminModeStatus";
+
 import styles from "../../../styles/modules/Nav/Nav.module.css";
 
 export const MobileNav = () => {
@@ -46,6 +48,9 @@ export const MobileNav = () => {
 
     document.getElementById("mobileNavLinks").style.display = "none";
   };
+
+  // Adding class if in Admin Mode (To fix the responsiveness)
+  const { adminMode } = checkAdminModeStatus();
 
   return (
     <div
@@ -99,7 +104,12 @@ export const MobileNav = () => {
         <div className={`${styles.green_bar}`} />
       </nav>
 
-      <ul id="mobileNavLinks" className={`${styles.mobile_nav_links}`}>
+      <ul
+        id="mobileNavLinks"
+        className={`${styles.mobile_nav_links} ${
+          adminMode ? styles.mobile_nav_am_fix : ""
+        }`}
+      >
         {router.pathname !== "/" ? (
           <li>
             <a href="/" className="orientation-change-element half-second">

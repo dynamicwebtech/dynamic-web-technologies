@@ -263,6 +263,8 @@
 
       .mobile_nav_inner_box {
         .mobile_nav_inner_row {
+          justify-content: center;
+
           .mobile_nav_inner_side {
             height: 115px;
             display: flex;
@@ -446,6 +448,10 @@
     .mobile_nav_links {
       top: 243px;
     }
+
+    .mobile_nav_am_fix {
+      top: 280px;
+    }
   }
 }
 
@@ -530,6 +536,10 @@
 
     .mobile_nav_links {
       top: 223px;
+    }
+
+    .mobile_nav_am_fix {
+      top: 280px;
     }
   }
 }
@@ -630,6 +640,10 @@
           font-size: clamp(14px, 15px, 15px);
         }
       }
+    }
+
+    .mobile_nav_am_fix {
+      top: 230px;
     }
   }
 }
@@ -739,6 +753,10 @@
           font-size: clamp(14px, 15px, 15px);
         }
       }
+    }
+
+    .mobile_nav_am_fix {
+      top: 175px;
     }
   }
 }
@@ -850,6 +868,10 @@
         }
       }
     }
+
+    .mobile_nav_am_fix {
+      top: 205px;
+    }
   }
 }
 
@@ -958,6 +980,10 @@
           font-size: clamp(16px, 17px, 17px);
         }
       }
+    }
+
+    .mobile_nav_am_fix {
+      top: 205px;
     }
   }
 }

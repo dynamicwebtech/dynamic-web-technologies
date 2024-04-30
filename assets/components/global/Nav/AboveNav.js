@@ -13,14 +13,17 @@ import { BsChatTextFill } from "react-icons/bs";
 
 import { LoginPopup } from "../All/LoginPopup";
 
+import checkAdminModeStatus from "@/assets/hooks/checkAdminModeStatus";
 import RemoveStorageVariable from "@/assets/functions/data/storage/RemoveStorageVariable";
 
 import styles from "../../../styles/modules/Nav/Nav.module.css";
 
 export const AboveNav = () => {
-  const [adminMode, setAdminMode] = useState(false);
+  // const [adminMode, setAdminMode] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(null);
   const [loginPopupOpened, setLoginPopupOpened] = useState(null);
+
+  const { adminMode } = checkAdminModeStatus();
 
   // Displaying/Hiding Login/Logout buttons
   useEffect(() => {
@@ -67,13 +70,12 @@ export const AboveNav = () => {
 
   // Admin Mode Display
   useEffect(() => {
-    const CURRENT_USER_VARIABLE = localStorage.getItem("Current User");
-
-    if (CURRENT_USER_VARIABLE) {
-      setAdminMode(true);
-    } else {
-      setAdminMode(false);
-    }
+    // const CURRENT_USER_VARIABLE = localStorage.getItem("Current User");
+    // if (CURRENT_USER_VARIABLE) {
+    //   setAdminMode(true);
+    // } else {
+    //   setAdminMode(false);
+    // }
   }, []);
 
   const router = useRouter();
