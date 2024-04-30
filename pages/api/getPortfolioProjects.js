@@ -87,16 +87,21 @@ export default async function handler(req, res) {
     if (!itemID) {
       return res.status(400).json({ error: "itemID parameter is required" });
     }
-    const collection = await connectToDatabase();
-    const result = await collection.deleteOne({ itemID: itemID });
-    if (result.deletedCount === 1) {
-      const portfolioProjects = await collection.find().toArray();
-      return res.status(200).json({
-        portfolioProjects,
-        message: "Media item deleted successfully!",
-      });
-    } else {
-      return res.status(404).json({ error: "Media item not found.." });
+    try {
+      const collection = await connectToDatabase();
+      const result = await collection.deleteOne({ itemID: itemID });
+      if (result.deletedCount === 1) {
+        return res
+          .status(200)
+          .json({ message: "Portfolio project deleted successfully!" });
+      } else {
+        return res.status(404).json({ error: "Portfolio project not found" });
+      }
+    } catch (error) {
+      console.error("Error deleting Portfolio project:", error);
+      return res
+        .status(500)
+        .json({ error: "Failed to delete Portfolio project" });
     }
   } else if (req.method === "GET") {
     try {
