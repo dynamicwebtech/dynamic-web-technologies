@@ -10,6 +10,7 @@ import path from "path";
 import getDatabaseData from "@/assets/hooks/getDatabaseData";
 import checkAdminModeStatus from "@/assets/hooks/checkAdminModeStatus";
 import checkLocalHostStatus from "@/assets/hooks/checkLocalHostStatus";
+import { fetchPortfolioProjects } from "@/assets/functions/async/fetchers/fetchPortfolioProjects.js";
 
 // Component Imports
 import { PageHead } from "@/assets/components/global/All/PageHead";
@@ -76,21 +77,21 @@ export default function Home({ PH_ICONS_DATA, PH_INDEX_DATA }) {
 
   const [portfolioProjects, setPortfolioProjects] = useState([]);
 
-  const fetchPortfolioProjects = async () => {
-    try {
-      const response = await fetch("/api/getPortfolioProjects");
-      if (response.ok) {
-        const data = await response.json();
-        setPortfolioProjects(data);
+  // const fetchPortfolioProjects = async () => {
+  //   try {
+  //     const response = await fetch("/api/getPortfolioProjects");
+  //     if (response.ok) {
+  //       const data = await response.json();
+  //       setPortfolioProjects(data);
 
-        // router.reload()
-      } else {
-        console.error("Failed to fetch portfolio projects");
-      }
-    } catch (error) {
-      console.error("Error fetching portfolio projects:", error);
-    }
-  };
+  //       // router.reload()
+  //     } else {
+  //       console.error("Failed to fetch portfolio projects");
+  //     }
+  //   } catch (error) {
+  //     console.error("Error fetching portfolio projects:", error);
+  //   }
+  // };
 
   useEffect(() => {
     fetchPortfolioProjects("/api/getPortfolioProjects", setPortfolioProjects);
@@ -113,6 +114,36 @@ export default function Home({ PH_ICONS_DATA, PH_INDEX_DATA }) {
         <IndexAbout />
 
         {adminMode ? <AddPortfolioProjectForm styles={index_styles} /> : null}
+
+        {adminMode ? (
+          <div>
+            <br />
+            <br />
+            <br />
+            <br />
+            {portfolioProjects.map((project) => (
+              <div>
+                <br />
+                <span>Project Name: {project.projectName}</span>
+                <br />
+                <span>Client Name: {project.clientName}</span>
+                <br />
+                <img src={project.src} />
+                <br />
+                <span>Creation Date: {project.creationDate}</span>
+                <br />
+                <a href={project.demoLink}>
+                  Link To Project: {project.demoLink}
+                </a>
+                <br />
+                <span>Project Description: {project.description}</span>
+                <br />
+                <span>Client Review: {project.review}</span>
+                <br />
+              </div>
+            ))}
+          </div>
+        ) : null}
       </div>
     </div>
   );
