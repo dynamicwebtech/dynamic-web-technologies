@@ -39,12 +39,12 @@ export const IndexTop = () => {
   const handleVideoEnded = () => {
     setIsPlaying(false);
     videoRef.current.currentTime = 0;
-    fadeOutOverlay();
+    // fadeOutOverlay();
   };
 
   const handleVideoPlayed = () => {
     setIsPlaying(true);
-    fadeInOverlay();
+    // fadeInOverlay();
   };
 
   const fadeInOverlay = () => {
@@ -93,9 +93,9 @@ export const IndexTop = () => {
       {/** */}
       <div className={`${styles.index_top_overlay}`}>
         <div
-          ref={overlayRef}
+          // ref={overlayRef}
           className={`${styles.index_top_overlay_cnt}`}
-          style={{ opacity: "0", transition: "opacity 0.5s ease" }}
+          // style={{ opacity: "0", transition: "opacity 0.5s ease" }}
         >
           <h1 className="orientation-change-element half-second">
             {MAIN_HEADING}
