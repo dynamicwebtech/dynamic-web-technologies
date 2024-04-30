@@ -122,7 +122,7 @@ export default function Home({ PH_ICONS_DATA, PH_INDEX_DATA }) {
             <br />
             <br />
             {portfolioProjects.map((project) => (
-              <div>
+              <div key={project.itemID}>
                 <br />
                 <span>Project Name: {project.projectName}</span>
                 <br />
