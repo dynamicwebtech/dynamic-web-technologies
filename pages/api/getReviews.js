@@ -20,12 +20,11 @@ export default async function handler(req, res) {
   try {
     collection = await reviewsConnection();
     if (req.method === "POST") {
-      const { itemID, name, rating, img, date, location, review } = req.body;
+      const { itemID, name, rating, date, location, review } = req.body;
       await collection.insertOne({
         itemID,
         name,
         rating,
-        img,
         date,
         location,
         review,
