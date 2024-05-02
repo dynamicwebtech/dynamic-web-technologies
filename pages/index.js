@@ -21,12 +21,13 @@ import { AdminModeIndicator } from "@/assets/components/global/All/AdminModeIndi
 
 import { IndexTop } from "@/assets/components/pages/Index/IndexTop.js";
 import { IndexAbout } from "@/assets/components/pages/Index/IndexAbout.js";
+import { IndexPortfolioProjects } from "@/assets/components/pages/Index/IndexPortfolioProjects.js";
 import { AddPortfolioProjectForm } from "@/assets/components/global/All/AddPortfolioProjectForm.js";
 
 // Style Imports
 import "../assets/styles/modules/Index/Index.module.css";
 import index_styles from "../assets/styles/modules/Index/Index.module.css";
-import { IndexPortfolioProjects } from "@/assets/components/pages/Index/IndexPortfolioProjects.js";
+import { fetchReviews } from "@/assets/functions/async/fetchers/fetchReviews.js";
 
 export async function getServerSideProps({ req }) {
   const PAGE_HEAD_DATA_DIRECTORY = "public/data/PageHead/";
@@ -72,30 +73,16 @@ export async function getServerSideProps({ req }) {
 export default function Home({ PH_ICONS_DATA, PH_INDEX_DATA }) {
   const router = useRouter();
 
-  const { reviews } = getDatabaseData();
+  /* const { reviews } = getDatabaseData(); */
   const { onLocalHost } = checkLocalHostStatus();
   const { adminMode } = checkAdminModeStatus();
 
+  const [reviews, setReviews] = useState([]);
   const [portfolioProjects, setPortfolioProjects] = useState([]);
-
-  // const fetchPortfolioProjects = async () => {
-  //   try {
-  //     const response = await fetch("/api/getPortfolioProjects");
-  //     if (response.ok) {
-  //       const data = await response.json();
-  //       setPortfolioProjects(data);
-
-  //       // router.reload()
-  //     } else {
-  //       console.error("Failed to fetch portfolio projects");
-  //     }
-  //   } catch (error) {
-  //     console.error("Error fetching portfolio projects:", error);
-  //   }
-  // };
 
   useEffect(() => {
     fetchPortfolioProjects("/api/getPortfolioProjects", setPortfolioProjects);
+    fetchReviews("/api/getReviews", setReviews);
   }, []);
 
   // console.log("Admin Mode Status: " + adminMode);
