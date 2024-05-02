@@ -104,13 +104,13 @@ export default function Home({ PH_ICONS_DATA, PH_INDEX_DATA }) {
       <div id="PAGE_CNT">
         <IndexTop />
         <IndexPortfolioProjects portfolioProjects={portfolioProjects} />
+        {adminMode ? <AddPortfolioProjectForm styles={index_styles} /> : null}
+
         <IndexAbout />
         <IndexPricing />
         <IndexBooking />
         <IndexServices />
         <IndexContact />
-
-        {adminMode ? <AddPortfolioProjectForm styles={index_styles} /> : null}
       </div>
     </div>
   );
