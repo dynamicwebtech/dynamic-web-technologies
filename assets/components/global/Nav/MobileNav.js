@@ -134,7 +134,8 @@ export const MobileNav = () => {
           </li>
         )}
 
-        {router.pathname !== "/portfolio" ? (
+        {router.pathname !== "/portfolio" &&
+        !router.pathname.startsWith("/portfolio/") ? (
           <li>
             <a
               href="/portfolio"

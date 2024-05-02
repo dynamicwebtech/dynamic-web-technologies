@@ -16,8 +16,10 @@ export const DesktopNav = () => {
 
   // Displaying link lines
   useEffect(() => {
-    document.querySelector(".nav-link-lines").style.opacity = 1;
-    document.querySelector(".nav-link-lines").style.visibility = "visible";
+    if (document.querySelector(".nav-link-lines")) {
+      document.querySelector(".nav-link-lines").style.opacity = 1;
+      document.querySelector(".nav-link-lines").style.visibility = "visible";
+    }
   }, []);
 
   return (
@@ -77,7 +79,8 @@ export const DesktopNav = () => {
                     </li>
                   )}
 
-                  {router.pathname !== "/portfolio" ? (
+                  {router.pathname !== "/portfolio" &&
+                  !router.pathname.startsWith("/portfolio/") ? (
                     <li>
                       <a
                         href="/portfolio"
