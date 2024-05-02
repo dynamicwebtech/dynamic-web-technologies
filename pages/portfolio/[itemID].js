@@ -13,6 +13,7 @@ import checkLocalHostStatus from "@/assets/hooks/checkLocalHostStatus";
 import { AboveNav } from "../../assets/components/global/Nav/AboveNav";
 import { DesktopNav } from "@/assets/components/global/Nav/DesktopNav.js";
 import { MobileNav } from "@/assets/components/global/Nav/MobileNav.js";
+import { Footer } from "@/assets/components/global/Footer/Footer.js";
 import { AdminModeIndicator } from "@/assets/components/global/All/AdminModeIndicator.js";
 
 // Style Imports
@@ -311,6 +312,8 @@ export default function PortfolioProject() {
           </div>
         )}
       </div>
+
+      <Footer />
     </div>
   );
 }

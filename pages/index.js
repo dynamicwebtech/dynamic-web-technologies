@@ -18,6 +18,7 @@ import { PageHead } from "@/assets/components/global/All/PageHead";
 import { AboveNav } from "../assets/components/global/Nav/AboveNav.js";
 import { DesktopNav } from "@/assets/components/global/Nav/DesktopNav.js";
 import { MobileNav } from "@/assets/components/global/Nav/MobileNav.js";
+import { Footer } from "@/assets/components/global/Footer/Footer.js";
 import { AdminModeIndicator } from "@/assets/components/global/All/AdminModeIndicator.js";
 
 import { IndexTop } from "@/assets/components/pages/Index/IndexTop.js";
@@ -112,6 +113,8 @@ export default function Home({ PH_ICONS_DATA, PH_INDEX_DATA }) {
         <IndexServices />
         <IndexContact />
       </div>
+
+      <Footer />
     </div>
   );
 }

@@ -15,6 +15,7 @@ import { PageHead } from "@/assets/components/global/All/PageHead";
 import { AboveNav } from "../assets/components/global/Nav/AboveNav.js";
 import { DesktopNav } from "@/assets/components/global/Nav/DesktopNav.js";
 import { MobileNav } from "@/assets/components/global/Nav/MobileNav.js";
+import { Footer } from "@/assets/components/global/Footer/Footer.js";
 import { LoginPopup } from "@/assets/components/global/All/LoginPopup.js";
 import { AdminModeIndicator } from "@/assets/components/global/All/AdminModeIndicator.js";
 
@@ -82,6 +83,8 @@ export default function About({ PH_ICONS_DATA, PH_ABOUT_DATA }) {
       {adminMode ? <AdminModeIndicator /> : null}
 
       <div id="PAGE_CNT"></div>
+
+      <Footer />
     </div>
   );
 }
