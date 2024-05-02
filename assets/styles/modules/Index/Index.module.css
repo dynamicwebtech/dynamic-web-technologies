@@ -220,7 +220,7 @@
 }
 .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_top {
   text-align: center;
-  margin-bottom: 80px;
+  margin-bottom: 0px;
 }
 .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_top .index_portfolio_projects_inner_top_cnt {
   margin-bottom: 80px;
@@ -277,16 +277,18 @@
   display: block;
 }
 .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_main {
-  margin-top: 50px;
+  margin-top: 0px;
   width: 100%;
   max-width: 100%;
   border-radius: 5px;
   border: 2px solid rgba(201, 201, 201, 0.249);
+  background-color: #ffffff;
 }
 .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_main .project_inner {
   max-width: 1450px;
   margin-left: auto;
   margin-right: auto;
+  background-color: #ffffff;
 }
 .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_main .project_inner .project_inner_box .project_inner_row .project_inner_side {
   height: 600px;
@@ -474,6 +476,113 @@
   color: white;
 }
 
+.index_services {
+  padding-top: 240px;
+  padding-bottom: 240px;
+}
+.index_services .index_services_inner {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden !important;
+  white-space: pre-wrap;
+}
+.index_services .index_services_inner .index_services_inner_top {
+  text-align: center;
+}
+.index_services .index_services_inner .index_services_inner_top .index_services_inner_top_cnt {
+  margin-bottom: 80px;
+}
+.index_services .index_services_inner .index_services_inner_top .index_services_inner_top_cnt h2 {
+  color: #272727;
+  font-family: "Open Sans Bold";
+  font-size: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
+  line-height: 80px;
+}
+.index_services .index_services_inner .index_services_inner_top .index_services_inner_top_cnt h2 span {
+  display: none;
+}
+.index_services .index_services_inner .index_services_inner_top .index_services_inner_top_cnt p {
+  font-family: "Open Sans Regular";
+  color: #272727;
+  font-size: clamp(1rem, 0.54vw + 1rem, 1.33rem);
+  margin-top: 25px;
+  margin-bottom: 40px;
+  max-width: 950px;
+  margin-left: auto;
+  margin-right: auto;
+  word-wrap: normal;
+}
+.index_services .index_services_inner .index_services_inner_top .index_services_inner_top_cnt a {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  text-decoration: none;
+  color: #1684a7;
+  font-family: "Open Sans Bold";
+  border-radius: 5px;
+  padding-left: 12px;
+  padding-right: 12px;
+  border: 3px solid #1684a7;
+  width: 100%;
+  max-width: 150px;
+}
+.index_services .index_services_inner .index_services_inner_top .index_services_inner_top_cnt a:hover {
+  background-color: #1684a7;
+  color: white;
+}
+.index_services .index_services_inner .index_services_inner_main {
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.index_services .index_services_inner .index_services_inner_main .index_services_inner_main_box .index_services_inner_main_row .service {
+  margin-bottom: 50px;
+}
+.index_services .index_services_inner .index_services_inner_main .index_services_inner_main_box .index_services_inner_main_row .service .service_inner {
+  text-align: center;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.index_services .index_services_inner .index_services_inner_main .index_services_inner_main_box .index_services_inner_main_row .service .service_inner .bg {
+  height: 300px;
+  width: 100%;
+  display: block;
+}
+.index_services .index_services_inner .index_services_inner_main .index_services_inner_main_box .index_services_inner_main_row .service .service_inner .service_name {
+  font-family: "Open Sans Bold";
+  font-size: 25px;
+  margin-top: 30px;
+  display: block;
+}
+.index_services .index_services_inner .index_services_inner_main .index_services_inner_main_box .index_services_inner_main_row .service .service_inner p {
+  font-family: "Open Sans Regular";
+  font-size: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.index_services .index_services_inner .index_services_inner_main .index_services_inner_main_box .index_services_inner_main_row .service .service_inner a {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  text-decoration: none;
+  color: #abc635;
+  font-family: "Open Sans Bold";
+  border-radius: 5px;
+  padding-left: 12px;
+  padding-right: 12px;
+  border: 3px solid #abc635;
+  width: 100%;
+  max-width: 150px;
+}
+.index_services .index_services_inner .index_services_inner_main .index_services_inner_main_box .index_services_inner_main_row .service .service_inner a:hover {
+  background-color: #abc635;
+  color: white;
+}
+
 .index_contact .index_contact_inner .index_contact_inner_box .index_contact_inner_row .index_contact_inner_side {
   height: 800px;
   display: flex;
@@ -600,6 +709,19 @@
     font-size: clamp(1.84rem, 2.14vw + 1.65rem, 2.95rem);
     line-height: 65px;
   }
+  .index_services {
+    padding-top: 120px;
+    padding-bottom: 100px;
+  }
+  .index_services .index_services_inner {
+    max-width: 1250px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .index_services .index_services_inner .index_services_inner_top .index_services_inner_top_cnt h2 {
+    font-size: clamp(1.84rem, 2.14vw + 1.65rem, 2.95rem);
+    line-height: 65px;
+  }
   .index_contact .index_contact_inner .index_contact_inner_box .index_contact_inner_row .index_contact_R .index_contact_inner_side_cnt h2 {
     font-size: clamp(1.84rem, 2.14vw + 1.65rem, 2.95rem);
     line-height: 65px;
@@ -685,12 +807,12 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 0;
-    max-width: 500px;
+    max-width: 700px;
   }
   .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_top .index_portfolio_projects_inner_top_cnt {
     margin-left: auto;
     margin-right: auto;
-    max-width: 450px;
+    max-width: 650px;
   }
   .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_top .index_portfolio_projects_inner_top_cnt h2 {
     text-align: center;
@@ -707,7 +829,7 @@
     display: flex;
   }
   .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_main {
-    max-width: 500px;
+    max-width: 700px;
     margin-left: auto;
     margin-right: auto;
     border-radius: 0;
@@ -791,6 +913,37 @@
     margin-left: auto;
     margin-right: auto;
     display: flex;
+  }
+  .index_services {
+    padding-top: 80px;
+    padding-bottom: 30px;
+  }
+  .index_services .index_services_inner {
+    max-width: 650px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .index_services .index_services_inner .index_services_inner_top .index_services_inner_top_cnt h2 {
+    text-align: center;
+    font-size: 45px;
+    line-height: 60px;
+  }
+  .index_services .index_services_inner .index_services_inner_top .index_services_inner_top_cnt p {
+    text-align: center;
+    font-size: 18px;
+  }
+  .index_services .index_services_inner .index_services_inner_top .index_services_inner_top_cnt a {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+  }
+  .index_services .index_services_inner .index_services_inner_main .index_services_inner_main_box .index_services_inner_main_row .service {
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 65px;
+  }
+  .index_services .index_services_inner .index_services_inner_main .index_services_inner_main_box .index_services_inner_main_row .service .service_inner {
+    max-width: 450px;
   }
   .index_contact .index_contact_inner {
     max-width: 100%;
@@ -1040,6 +1193,47 @@
     margin-left: auto;
     margin-right: auto;
     display: flex;
+    font-size: 16px;
+  }
+  .index_services {
+    padding-top: 80px;
+    padding-bottom: 0px;
+  }
+  .index_services .index_services_inner {
+    max-width: 650px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .index_services .index_services_inner .index_services_inner_top .index_services_inner_top_cnt h2 {
+    text-align: center;
+    font-size: 35px;
+    line-height: 50px;
+  }
+  .index_services .index_services_inner .index_services_inner_top .index_services_inner_top_cnt p {
+    text-align: center;
+    font-size: 17px;
+  }
+  .index_services .index_services_inner .index_services_inner_top .index_services_inner_top_cnt a {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    font-size: 16px;
+  }
+  .index_services .index_services_inner .index_services_inner_main .index_services_inner_main_box .index_services_inner_main_row .service {
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 65px;
+  }
+  .index_services .index_services_inner .index_services_inner_main .index_services_inner_main_box .index_services_inner_main_row .service .service_inner {
+    max-width: 300px;
+  }
+  .index_services .index_services_inner .index_services_inner_main .index_services_inner_main_box .index_services_inner_main_row .service .service_inner .bg {
+    height: 230px;
+  }
+  .index_services .index_services_inner .index_services_inner_main .index_services_inner_main_box .index_services_inner_main_row .service .service_inner .service_name {
+    font-size: 22px;
+  }
+  .index_services .index_services_inner .index_services_inner_main .index_services_inner_main_box .index_services_inner_main_row .service .service_inner a {
     font-size: 16px;
   }
   .index_contact .index_contact_inner {
@@ -1325,6 +1519,53 @@
     font-size: 15px;
     max-width: 165px;
   }
+  .index_services {
+    padding-top: 80px;
+    padding-bottom: 0px;
+  }
+  .index_services .index_services_inner {
+    max-width: 650px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .index_services .index_services_inner .index_services_inner_top .index_services_inner_top_cnt h2 {
+    text-align: center;
+    font-size: 25px;
+    line-height: 35px;
+  }
+  .index_services .index_services_inner .index_services_inner_top .index_services_inner_top_cnt p {
+    text-align: center;
+    font-size: 16px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  .index_services .index_services_inner .index_services_inner_top .index_services_inner_top_cnt a {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    height: 45px;
+    font-size: 15px;
+  }
+  .index_services .index_services_inner .index_services_inner_main .index_services_inner_main_box .index_services_inner_main_row .service {
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 65px;
+  }
+  .index_services .index_services_inner .index_services_inner_main .index_services_inner_main_box .index_services_inner_main_row .service .service_inner {
+    max-width: 300px;
+  }
+  .index_services .index_services_inner .index_services_inner_main .index_services_inner_main_box .index_services_inner_main_row .service .service_inner .bg {
+    height: 200px;
+  }
+  .index_services .index_services_inner .index_services_inner_main .index_services_inner_main_box .index_services_inner_main_row .service .service_inner .service_name {
+    font-size: 20px;
+  }
+  .index_services .index_services_inner .index_services_inner_main .index_services_inner_main_box .index_services_inner_main_row .service .service_inner a {
+    font-size: 15px;
+    height: 45px;
+  }
   .index_contact .index_contact_inner {
     max-width: 100%;
     padding-left: 0px;
@@ -1477,6 +1718,34 @@
     font-size: 15px;
     max-width: 140px;
   }
+  .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_top .index_portfolio_projects_inner_top_cnt {
+    max-width: 500px;
+    margin-bottom: 30px;
+  }
+  .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_top .index_portfolio_projects_inner_top_cnt h2 {
+    text-align: center;
+    font-size: 25px;
+    line-height: 35px;
+  }
+  .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_top .index_portfolio_projects_inner_top_cnt p {
+    text-align: center;
+    font-size: 16px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_top .index_portfolio_projects_inner_top_cnt a {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    height: 45px;
+    font-size: 15px;
+    max-width: 120px;
+  }
+  .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_main .project_inner_box .project_inner_row .project_L .project_inner_side_cnt img {
+    max-width: 100%;
+  }
   .index_booking .index_booking_inner {
     max-width: 100%;
     padding-left: 0px;
@@ -1536,6 +1805,53 @@
     height: 45px;
     font-size: 15px;
     max-width: 160px;
+  }
+  .index_services {
+    padding-top: 80px;
+    padding-bottom: 0px;
+  }
+  .index_services .index_services_inner {
+    max-width: 450px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .index_services .index_services_inner .index_services_inner_top .index_services_inner_top_cnt h2 {
+    text-align: center;
+    font-size: 25px;
+    line-height: 35px;
+  }
+  .index_services .index_services_inner .index_services_inner_top .index_services_inner_top_cnt p {
+    text-align: center;
+    font-size: 16px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  .index_services .index_services_inner .index_services_inner_top .index_services_inner_top_cnt a {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    height: 45px;
+    font-size: 15px;
+  }
+  .index_services .index_services_inner .index_services_inner_main .index_services_inner_main_box .index_services_inner_main_row .service {
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 65px;
+  }
+  .index_services .index_services_inner .index_services_inner_main .index_services_inner_main_box .index_services_inner_main_row .service .service_inner {
+    max-width: 300px;
+  }
+  .index_services .index_services_inner .index_services_inner_main .index_services_inner_main_box .index_services_inner_main_row .service .service_inner .bg {
+    height: 200px;
+  }
+  .index_services .index_services_inner .index_services_inner_main .index_services_inner_main_box .index_services_inner_main_row .service .service_inner .service_name {
+    font-size: 20px;
+  }
+  .index_services .index_services_inner .index_services_inner_main .index_services_inner_main_box .index_services_inner_main_row .service .service_inner a {
+    font-size: 15px;
+    height: 45px;
   }
   .index_contact .index_contact_inner {
     max-width: 100%;
@@ -1692,6 +2008,44 @@
     height: 45px;
     max-width: 150px;
   }
+  .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_top {
+    max-width: 550px;
+    margin-bottom: 0;
+  }
+  .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_top .index_portfolio_projects_inner_top_cnt {
+    max-width: 550px;
+    margin-bottom: 30px;
+  }
+  .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_top .index_portfolio_projects_inner_top_cnt h2 {
+    text-align: center;
+    font-size: 35px;
+    line-height: 50px;
+  }
+  .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_top .index_portfolio_projects_inner_top_cnt p {
+    text-align: center;
+    font-size: 17px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_top .index_portfolio_projects_inner_top_cnt a {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    font-size: 16px;
+    height: 45px;
+    max-width: 115px;
+  }
+  .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_main {
+    max-width: 550px;
+  }
+  .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_main .project_inner .project_inner_box .project_inner_row .project_L .project_inner_side_cnt img {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
   .index_booking .index_booking_inner {
     max-width: 100%;
     padding-left: 0px;
@@ -1751,6 +2105,59 @@
     font-size: 16px;
     height: 45px;
     max-width: 180px;
+  }
+  .index_services {
+    padding-top: 110px;
+    padding-bottom: 70px;
+  }
+  .index_services .index_services_inner {
+    max-width: 750px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .index_services .index_services_inner .index_services_inner_top {
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .index_services .index_services_inner .index_services_inner_top .index_services_inner_top_cnt h2 {
+    text-align: center;
+    font-size: 35px;
+    line-height: 50px;
+  }
+  .index_services .index_services_inner .index_services_inner_top .index_services_inner_top_cnt p {
+    text-align: center;
+    font-size: 17px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  .index_services .index_services_inner .index_services_inner_top .index_services_inner_top_cnt a {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    font-size: 16px;
+    height: 45px;
+    max-width: 145px;
+  }
+  .index_services .index_services_inner .index_services_inner_main .index_services_inner_main_box .index_services_inner_main_row .service {
+    max-width: 50%;
+    width: 100%;
+    margin-bottom: 65px;
+  }
+  .index_services .index_services_inner .index_services_inner_main .index_services_inner_main_box .index_services_inner_main_row .service .service_inner {
+    max-width: 300px;
+  }
+  .index_services .index_services_inner .index_services_inner_main .index_services_inner_main_box .index_services_inner_main_row .service .service_inner .bg {
+    height: 200px;
+  }
+  .index_services .index_services_inner .index_services_inner_main .index_services_inner_main_box .index_services_inner_main_row .service .service_inner .service_name {
+    font-size: 22px;
+  }
+  .index_services .index_services_inner .index_services_inner_main .index_services_inner_main_box .index_services_inner_main_row .service .service_inner a {
+    font-size: 16px;
+    height: 45px;
   }
   .index_contact .index_contact_inner {
     max-width: 100%;
@@ -1907,6 +2314,50 @@
     height: 45px;
     max-width: 150px;
   }
+  .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_top {
+    max-width: 550px;
+  }
+  .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_top .index_portfolio_projects_inner_top_cnt {
+    max-width: 550px;
+    margin-bottom: 30px;
+  }
+  .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_top .index_portfolio_projects_inner_top_cnt h2 {
+    text-align: center;
+    font-size: 35px;
+    line-height: 50px;
+  }
+  .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_top .index_portfolio_projects_inner_top_cnt p {
+    text-align: center;
+    font-size: 17px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_top .index_portfolio_projects_inner_top_cnt a {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    font-size: 16px;
+    height: 45px;
+    max-width: 115px;
+  }
+  .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_main {
+    max-width: 550px;
+  }
+  .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_main .project_inner .project_inner_box .project_inner_row .project_L .project_inner_side_cnt img {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_main .project_inner .project_inner_box .project_inner_row .project_R .project_inner_side_cnt ul {
+    display: flex !important;
+    justify-content: space-evenly;
+  }
+  .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_main .project_inner .project_inner_box .project_inner_row .project_R .project_inner_side_cnt ul li .demo_link {
+    margin-bottom: 0 !important;
+  }
   .index_booking .index_booking_inner {
     max-width: 100%;
     padding-left: 0px;
@@ -1966,6 +2417,59 @@
     font-size: 16px;
     height: 45px;
     max-width: 180px;
+  }
+  .index_services {
+    padding-top: 110px;
+    padding-bottom: 70px;
+  }
+  .index_services .index_services_inner {
+    max-width: 750px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .index_services .index_services_inner .index_services_inner_top {
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .index_services .index_services_inner .index_services_inner_top .index_services_inner_top_cnt h2 {
+    text-align: center;
+    font-size: 35px;
+    line-height: 50px;
+  }
+  .index_services .index_services_inner .index_services_inner_top .index_services_inner_top_cnt p {
+    text-align: center;
+    font-size: 17px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  .index_services .index_services_inner .index_services_inner_top .index_services_inner_top_cnt a {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    font-size: 16px;
+    height: 45px;
+    max-width: 145px;
+  }
+  .index_services .index_services_inner .index_services_inner_main .index_services_inner_main_box .index_services_inner_main_row .service {
+    max-width: 50%;
+    width: 100%;
+    margin-bottom: 65px;
+  }
+  .index_services .index_services_inner .index_services_inner_main .index_services_inner_main_box .index_services_inner_main_row .service .service_inner {
+    max-width: 300px;
+  }
+  .index_services .index_services_inner .index_services_inner_main .index_services_inner_main_box .index_services_inner_main_row .service .service_inner .bg {
+    height: 200px;
+  }
+  .index_services .index_services_inner .index_services_inner_main .index_services_inner_main_box .index_services_inner_main_row .service .service_inner .service_name {
+    font-size: 22px;
+  }
+  .index_services .index_services_inner .index_services_inner_main .index_services_inner_main_box .index_services_inner_main_row .service .service_inner a {
+    font-size: 16px;
+    height: 45px;
   }
   .index_contact .index_contact_inner {
     max-width: 100%;
@@ -2121,6 +2625,66 @@
     font-size: 17px;
     height: 45px;
   }
+  .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_top {
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+  .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_top .index_portfolio_projects_inner_top_cnt {
+    max-width: 850px;
+    margin-bottom: 30px;
+  }
+  .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_top .index_portfolio_projects_inner_top_cnt h2 {
+    text-align: center;
+    font-size: 35px;
+    line-height: 50px;
+  }
+  .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_top .index_portfolio_projects_inner_top_cnt p {
+    text-align: center;
+    font-size: 17px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_top .index_portfolio_projects_inner_top_cnt a {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    font-size: 16px;
+    height: 45px;
+    max-width: 115px;
+  }
+  .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_main {
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+  }
+  .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_main .project_inner .project_inner_box .project_inner_row .project_inner_side {
+    height: 400px;
+  }
+  .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_main .project_inner .project_inner_box .project_inner_row .project_L {
+    max-width: 50%;
+  }
+  .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_main .project_inner .project_inner_box .project_inner_row .project_L .project_inner_side_cnt img {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_main .project_inner .project_inner_box .project_inner_row .project_R {
+    max-width: 50%;
+  }
+  .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_main .project_inner .project_inner_box .project_inner_row .project_R .project_inner_side_cnt ul {
+    display: flex !important;
+    justify-content: flex-start;
+  }
+  .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_main .project_inner .project_inner_box .project_inner_row .project_R .project_inner_side_cnt ul li .demo_link {
+    margin-right: 20px;
+    margin-bottom: 0 !important;
+  }
   .index_booking .index_booking_inner {
     max-width: 100%;
     padding-left: 0px;
@@ -2178,6 +2742,59 @@
     margin-left: 0;
     display: flex;
     font-size: 17px;
+    height: 45px;
+  }
+  .index_services {
+    padding-top: 130px;
+    padding-bottom: 110px;
+  }
+  .index_services .index_services_inner {
+    max-width: 860px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .index_services .index_services_inner .index_services_inner_top {
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .index_services .index_services_inner .index_services_inner_top .index_services_inner_top_cnt h2 {
+    text-align: center;
+    font-size: 35px;
+    line-height: 50px;
+  }
+  .index_services .index_services_inner .index_services_inner_top .index_services_inner_top_cnt p {
+    text-align: center;
+    font-size: 17px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  .index_services .index_services_inner .index_services_inner_top .index_services_inner_top_cnt a {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    font-size: 16px;
+    height: 45px;
+    max-width: 145px;
+  }
+  .index_services .index_services_inner .index_services_inner_main .index_services_inner_main_box .index_services_inner_main_row .service {
+    max-width: 50%;
+    width: 100%;
+    margin-bottom: 65px;
+  }
+  .index_services .index_services_inner .index_services_inner_main .index_services_inner_main_box .index_services_inner_main_row .service .service_inner {
+    max-width: 600px;
+  }
+  .index_services .index_services_inner .index_services_inner_main .index_services_inner_main_box .index_services_inner_main_row .service .service_inner .bg {
+    height: 200px;
+  }
+  .index_services .index_services_inner .index_services_inner_main .index_services_inner_main_box .index_services_inner_main_row .service .service_inner .service_name {
+    font-size: 24px;
+  }
+  .index_services .index_services_inner .index_services_inner_main .index_services_inner_main_box .index_services_inner_main_row .service .service_inner a {
+    font-size: 16px;
     height: 45px;
   }
   .index_contact .index_contact_inner {
@@ -2333,6 +2950,63 @@
     font-size: 17px;
     height: 45px;
   }
+  .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_top {
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+  .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_top .index_portfolio_projects_inner_top_cnt {
+    max-width: 850px;
+    margin-bottom: 30px;
+  }
+  .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_top .index_portfolio_projects_inner_top_cnt h2 {
+    text-align: center;
+    font-size: 35px;
+    line-height: 50px;
+  }
+  .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_top .index_portfolio_projects_inner_top_cnt p {
+    text-align: center;
+    font-size: 17px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_top .index_portfolio_projects_inner_top_cnt a {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    font-size: 16px;
+    height: 45px;
+    max-width: 115px;
+  }
+  .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_main {
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+  }
+  .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_main .project_inner .project_inner_box .project_inner_row .project_inner_side {
+    height: 400px;
+  }
+  .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_main .project_inner .project_inner_box .project_inner_row .project_L {
+    max-width: 50%;
+  }
+  .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_main .project_inner .project_inner_box .project_inner_row .project_L .project_inner_side_cnt img {
+    max-width: 100%;
+  }
+  .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_main .project_inner .project_inner_box .project_inner_row .project_R {
+    max-width: 50%;
+  }
+  .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_main .project_inner .project_inner_box .project_inner_row .project_R .project_inner_side_cnt ul {
+    display: flex !important;
+    justify-content: flex-start;
+  }
+  .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_main .project_inner .project_inner_box .project_inner_row .project_R .project_inner_side_cnt ul li .demo_link {
+    margin-right: 20px;
+    margin-bottom: 0 !important;
+  }
   .index_booking .index_booking_inner {
     max-width: 100%;
     padding-left: 0px;
@@ -2390,6 +3064,59 @@
     margin-left: 0;
     display: flex;
     font-size: 17px;
+    height: 45px;
+  }
+  .index_services {
+    padding-top: 130px;
+    padding-bottom: 110px;
+  }
+  .index_services .index_services_inner {
+    max-width: 860px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .index_services .index_services_inner .index_services_inner_top {
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .index_services .index_services_inner .index_services_inner_top .index_services_inner_top_cnt h2 {
+    text-align: center;
+    font-size: 35px;
+    line-height: 50px;
+  }
+  .index_services .index_services_inner .index_services_inner_top .index_services_inner_top_cnt p {
+    text-align: center;
+    font-size: 17px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  .index_services .index_services_inner .index_services_inner_top .index_services_inner_top_cnt a {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    font-size: 16px;
+    height: 45px;
+    max-width: 145px;
+  }
+  .index_services .index_services_inner .index_services_inner_main .index_services_inner_main_box .index_services_inner_main_row .service {
+    max-width: 50%;
+    width: 100%;
+    margin-bottom: 65px;
+  }
+  .index_services .index_services_inner .index_services_inner_main .index_services_inner_main_box .index_services_inner_main_row .service .service_inner {
+    max-width: 600px;
+  }
+  .index_services .index_services_inner .index_services_inner_main .index_services_inner_main_box .index_services_inner_main_row .service .service_inner .bg {
+    height: 200px;
+  }
+  .index_services .index_services_inner .index_services_inner_main .index_services_inner_main_box .index_services_inner_main_row .service .service_inner .service_name {
+    font-size: 24px;
+  }
+  .index_services .index_services_inner .index_services_inner_main .index_services_inner_main_box .index_services_inner_main_row .service .service_inner a {
+    font-size: 16px;
     height: 45px;
   }
   .index_contact .index_contact_inner {
@@ -2546,6 +3273,64 @@
     height: 45px;
     max-width: 150px;
   }
+  .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_top {
+    max-width: 1150px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_top .index_portfolio_projects_inner_top_cnt {
+    max-width: 1150px;
+    margin-bottom: 30px;
+  }
+  .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_top .index_portfolio_projects_inner_top_cnt h2 {
+    text-align: center;
+    font-size: 38px;
+    line-height: 47px;
+  }
+  .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_top .index_portfolio_projects_inner_top_cnt p {
+    text-align: center;
+    font-size: 18px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_top .index_portfolio_projects_inner_top_cnt a {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    font-size: 17px;
+    height: 45px;
+    max-width: 130px;
+  }
+  .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_main {
+    max-width: 1150px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_main .project_inner .project_inner_box .project_inner_row .project_inner_side {
+    height: 400px;
+  }
+  .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_main .project_inner .project_inner_box .project_inner_row .project_L {
+    max-width: 50%;
+  }
+  .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_main .project_inner .project_inner_box .project_inner_row .project_L .project_inner_side_cnt img {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_main .project_inner .project_inner_box .project_inner_row .project_R {
+    max-width: 50%;
+  }
+  .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_main .project_inner .project_inner_box .project_inner_row .project_R .project_inner_side_cnt ul {
+    display: flex !important;
+    justify-content: flex-start;
+  }
+  .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_main .project_inner .project_inner_box .project_inner_row .project_R .project_inner_side_cnt ul li .demo_link {
+    margin-right: 20px;
+    margin-bottom: 0 !important;
+  }
   .index_booking .index_booking_inner {
     max-width: 100%;
     padding-left: 0px;
@@ -2605,6 +3390,59 @@
     font-size: 17px;
     height: 45px;
     max-width: 180px;
+  }
+  .index_services {
+    padding-top: 130px;
+    padding-bottom: 110px;
+  }
+  .index_services .index_services_inner {
+    max-width: 860px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .index_services .index_services_inner .index_services_inner_top {
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .index_services .index_services_inner .index_services_inner_top .index_services_inner_top_cnt h2 {
+    text-align: center;
+    font-size: 38px;
+    line-height: 47px;
+  }
+  .index_services .index_services_inner .index_services_inner_top .index_services_inner_top_cnt p {
+    text-align: center;
+    font-size: 18px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  .index_services .index_services_inner .index_services_inner_top .index_services_inner_top_cnt a {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    font-size: 17px;
+    height: 45px;
+    max-width: 165px;
+  }
+  .index_services .index_services_inner .index_services_inner_main .index_services_inner_main_box .index_services_inner_main_row .service {
+    max-width: 50%;
+    width: 100%;
+    margin-bottom: 65px;
+  }
+  .index_services .index_services_inner .index_services_inner_main .index_services_inner_main_box .index_services_inner_main_row .service .service_inner {
+    max-width: 600px;
+  }
+  .index_services .index_services_inner .index_services_inner_main .index_services_inner_main_box .index_services_inner_main_row .service .service_inner .bg {
+    height: 200px;
+  }
+  .index_services .index_services_inner .index_services_inner_main .index_services_inner_main_box .index_services_inner_main_row .service .service_inner .service_name {
+    font-size: 24px;
+  }
+  .index_services .index_services_inner .index_services_inner_main .index_services_inner_main_box .index_services_inner_main_row .service .service_inner a {
+    font-size: 16px;
+    height: 45px;
   }
   .index_contact .index_contact_inner {
     max-width: 100%;

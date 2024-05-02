@@ -241,7 +241,7 @@
 
     .index_portfolio_projects_inner_top {
       text-align: center;
-      margin-bottom: 80px;
+      margin-bottom: 0px;
 
       .index_portfolio_projects_inner_top_cnt {
         margin-bottom: 80px;
@@ -304,15 +304,17 @@
     }
 
     .index_portfolio_projects_inner_main {
-      margin-top: 50px;
+      margin-top: 0px;
       width: 100%;
       max-width: 100%;
       border-radius: 5px;
       border: 2px solid rgba(201, 201, 201, 0.249);
+      background-color: #ffffff;
 
       .project_inner {
         max-width: 1450px;
         @include quickCenter("relative");
+        background-color: #ffffff;
 
         .project_inner_box {
           .project_inner_row {
@@ -538,6 +540,124 @@
     }
   }
 }
+.index_services {
+  padding-top: 240px;
+  padding-bottom: 240px;
+
+  .index_services_inner {
+    max-width: 1600px;
+    @include quickCenter("relative");
+    overflow: hidden !important;
+    white-space: pre-wrap;
+
+    .index_services_inner_top {
+      text-align: center;
+
+      .index_services_inner_top_cnt {
+        margin-bottom: 80px;
+
+        h2 {
+          color: $MineShaft;
+          font-family: "Open Sans Bold";
+          font-size: $SubHeading;
+          line-height: 80px;
+
+          span {
+            display: none;
+          }
+        }
+
+        p {
+          font-family: "Open Sans Regular";
+          color: $MineShaft;
+          font-size: $SmallText;
+          margin-top: 25px;
+          margin-bottom: 40px;
+          max-width: 950px;
+          @include quickCenter("relative");
+          word-wrap: normal;
+        }
+
+        a {
+          @include displayElement(inline-flex, space-between, center);
+          height: 50px;
+          text-decoration: none;
+          color: $EasternBlue;
+          font-family: "Open Sans Bold";
+          border-radius: 5px;
+          padding-left: 12px;
+          padding-right: 12px;
+          border: 3px solid $EasternBlue;
+          width: 100%;
+          max-width: 150px;
+
+          &:hover {
+            background-color: $EasternBlue;
+            color: white;
+          }
+        }
+      }
+    }
+
+    .index_services_inner_main {
+      max-width: 1120px;
+      @include quickCenter("relative");
+
+      .index_services_inner_main_box {
+        .index_services_inner_main_row {
+          .service {
+            margin-bottom: 50px;
+
+            .service_inner {
+              text-align: center;
+              max-width: 500px;
+              @include quickCenter("relative");
+
+              .bg {
+                height: 300px;
+                width: 100%;
+                display: block;
+              }
+
+              .service_name {
+                font-family: "Open Sans Bold";
+                font-size: clamp(23px, 25px, 25px);
+                margin-top: 30px;
+                display: block;
+              }
+
+              p {
+                font-family: "Open Sans Regular";
+                font-size: $Link;
+                margin-top: 20px;
+                margin-bottom: 20px;
+              }
+
+              a {
+                @include displayElement(inline-flex, space-between, center);
+                height: 50px;
+                text-decoration: none;
+                color: $Atlantis;
+                font-family: "Open Sans Bold";
+                border-radius: 5px;
+                padding-left: 12px;
+                padding-right: 12px;
+                border: 3px solid $Atlantis;
+                width: 100%;
+                max-width: 150px;
+
+                &:hover {
+                  background-color: $Atlantis;
+                  color: white;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 .index_contact {
   .index_contact_inner {
     .index_contact_inner_box {
@@ -725,6 +845,25 @@
       }
     }
   }
+  .index_services {
+    padding-top: 120px;
+    padding-bottom: 100px;
+
+    .index_services_inner {
+      max-width: 1250px;
+      padding-left: 30px;
+      padding-right: 30px;
+
+      .index_services_inner_top {
+        .index_services_inner_top_cnt {
+          h2 {
+            font-size: $MinorHeading;
+            line-height: 65px;
+          }
+        }
+      }
+    }
+  }
   .index_contact {
     .index_contact_inner {
       .index_contact_inner_box {
@@ -844,11 +983,11 @@
       .index_portfolio_projects_inner_top {
         @include quickCenter("relative");
         margin-bottom: 0;
-        max-width: 500px;
+        max-width: 700px;
 
         .index_portfolio_projects_inner_top_cnt {
           @include quickCenter("relative");
-          max-width: 450px;
+          max-width: 650px;
 
           h2 {
             text-align: center;
@@ -869,7 +1008,7 @@
       }
 
       .index_portfolio_projects_inner_main {
-        max-width: 500px;
+        max-width: 700px;
         @include quickCenter("relative");
         border-radius: 0;
         margin-top: 0;
@@ -979,6 +1118,52 @@
               a {
                 @include quickCenter("relative");
                 display: flex;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .index_services {
+    padding-top: 80px;
+    padding-bottom: 30px;
+
+    .index_services_inner {
+      max-width: 650px;
+      padding-left: 30px;
+      padding-right: 30px;
+
+      .index_services_inner_top {
+        .index_services_inner_top_cnt {
+          h2 {
+            text-align: center;
+            font-size: 45px;
+            line-height: 60px;
+          }
+
+          p {
+            text-align: center;
+            font-size: 18px;
+          }
+
+          a {
+            @include quickCenter("relative");
+            display: flex;
+          }
+        }
+      }
+
+      .index_services_inner_main {
+        .index_services_inner_main_box {
+          .index_services_inner_main_row {
+            .service {
+              max-width: 100%;
+              width: 100%;
+              margin-bottom: 65px;
+
+              .service_inner {
+                max-width: 450px;
               }
             }
           }
@@ -1303,6 +1488,65 @@
                 @include quickCenter("relative");
                 display: flex;
                 font-size: 16px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .index_services {
+    padding-top: 80px;
+    padding-bottom: 0px;
+
+    .index_services_inner {
+      max-width: 650px;
+      padding-left: 30px;
+      padding-right: 30px;
+
+      .index_services_inner_top {
+        .index_services_inner_top_cnt {
+          h2 {
+            text-align: center;
+            font-size: 35px;
+            line-height: 50px;
+          }
+
+          p {
+            text-align: center;
+            font-size: 17px;
+          }
+
+          a {
+            @include quickCenter("relative");
+            display: flex;
+            font-size: 16px;
+          }
+        }
+      }
+
+      .index_services_inner_main {
+        .index_services_inner_main_box {
+          .index_services_inner_main_row {
+            .service {
+              max-width: 100%;
+              width: 100%;
+              margin-bottom: 65px;
+
+              .service_inner {
+                max-width: 300px;
+
+                .bg {
+                  height: 230px;
+                }
+
+                .service_name {
+                  font-size: clamp(20px, 22px, 22px);
+                }
+
+                a {
+                  font-size: 16px;
+                }
               }
             }
           }
@@ -1662,6 +1906,71 @@
       }
     }
   }
+  .index_services {
+    padding-top: 80px;
+    padding-bottom: 0px;
+
+    .index_services_inner {
+      max-width: 650px;
+      padding-left: 20px;
+      padding-right: 20px;
+
+      .index_services_inner_top {
+        .index_services_inner_top_cnt {
+          h2 {
+            text-align: center;
+            font-size: 25px;
+            line-height: 35px;
+          }
+
+          p {
+            text-align: center;
+            font-size: 16px;
+            padding-left: 10px;
+            padding-right: 10px;
+            margin-top: 20px;
+            margin-bottom: 30px;
+          }
+
+          a {
+            @include quickCenter("relative");
+            display: flex;
+            height: 45px;
+            font-size: 15px;
+          }
+        }
+      }
+
+      .index_services_inner_main {
+        .index_services_inner_main_box {
+          .index_services_inner_main_row {
+            .service {
+              max-width: 100%;
+              width: 100%;
+              margin-bottom: 65px;
+
+              .service_inner {
+                max-width: 300px;
+
+                .bg {
+                  height: 200px;
+                }
+
+                .service_name {
+                  font-size: clamp(18px, 20px, 20px);
+                }
+
+                a {
+                  font-size: 15px;
+                  height: 45px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
   .index_contact {
     .index_contact_inner {
       max-width: 100%;
@@ -1851,6 +2160,52 @@
     }
   }
   .index_portfolio_projects {
+    .index_portfolio_projects_inner {
+      .index_portfolio_projects_inner_top {
+        .index_portfolio_projects_inner_top_cnt {
+          max-width: 500px;
+          margin-bottom: 30px;
+
+          h2 {
+            text-align: center;
+            font-size: 25px;
+            line-height: 35px;
+          }
+
+          p {
+            text-align: center;
+            font-size: 16px;
+            padding-left: 0px;
+            padding-right: 0px;
+            margin-top: 20px;
+            margin-bottom: 30px;
+          }
+
+          a {
+            @include quickCenter("relative");
+            // margin-left: 0;
+            display: flex;
+            height: 45px;
+            font-size: 15px;
+            max-width: 120px;
+          }
+        }
+      }
+
+      .index_portfolio_projects_inner_main {
+        .project_inner_box {
+          .project_inner_row {
+            .project_L {
+              .project_inner_side_cnt {
+                img {
+                  max-width: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
   .index_booking {
     .index_booking_inner {
@@ -1918,6 +2273,71 @@
                 height: 45px;
                 font-size: 15px;
                 max-width: 160px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .index_services {
+    padding-top: 80px;
+    padding-bottom: 0px;
+
+    .index_services_inner {
+      max-width: 450px;
+      padding-left: 20px;
+      padding-right: 20px;
+
+      .index_services_inner_top {
+        .index_services_inner_top_cnt {
+          h2 {
+            text-align: center;
+            font-size: 25px;
+            line-height: 35px;
+          }
+
+          p {
+            text-align: center;
+            font-size: 16px;
+            padding-left: 10px;
+            padding-right: 10px;
+            margin-top: 20px;
+            margin-bottom: 30px;
+          }
+
+          a {
+            @include quickCenter("relative");
+            display: flex;
+            height: 45px;
+            font-size: 15px;
+          }
+        }
+      }
+
+      .index_services_inner_main {
+        .index_services_inner_main_box {
+          .index_services_inner_main_row {
+            .service {
+              max-width: 100%;
+              width: 100%;
+              margin-bottom: 65px;
+
+              .service_inner {
+                max-width: 300px;
+
+                .bg {
+                  height: 200px;
+                }
+
+                .service_name {
+                  font-size: clamp(18px, 20px, 20px);
+                }
+
+                a {
+                  font-size: 15px;
+                  height: 45px;
+                }
               }
             }
           }
@@ -2117,6 +2537,61 @@
     }
   }
   .index_portfolio_projects {
+    .index_portfolio_projects_inner {
+      .index_portfolio_projects_inner_top {
+        max-width: 550px;
+        margin-bottom: 0;
+
+        .index_portfolio_projects_inner_top_cnt {
+          max-width: 550px;
+          margin-bottom: 30px;
+
+          h2 {
+            text-align: center;
+            font-size: 35px;
+            line-height: 50px;
+          }
+
+          p {
+            text-align: center;
+            font-size: 17px;
+            padding-left: 0px;
+            padding-right: 0px;
+            margin-top: 20px;
+            margin-bottom: 30px;
+          }
+
+          a {
+            @include quickCenter("relative");
+            // margin-left: 0;
+            display: flex;
+            font-size: 16px;
+            height: 45px;
+            max-width: 115px;
+          }
+        }
+      }
+
+      .index_portfolio_projects_inner_main {
+        max-width: 550px;
+
+        .project_inner {
+          .project_inner_box {
+            .project_inner_row {
+              .project_L {
+                .project_inner_side_cnt {
+                  img {
+                    max-width: 80%;
+                    @include quickCenter("relative");
+                    display: block;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
   .index_booking {
     .index_booking_inner {
@@ -2184,6 +2659,76 @@
                 font-size: 16px;
                 height: 45px;
                 max-width: 180px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .index_services {
+    padding-top: 110px;
+    padding-bottom: 70px;
+
+    .index_services_inner {
+      max-width: 750px;
+      padding-left: 20px;
+      padding-right: 20px;
+
+      .index_services_inner_top {
+        max-width: 550px;
+        @include quickCenter("relative");
+
+        .index_services_inner_top_cnt {
+          h2 {
+            text-align: center;
+            font-size: 35px;
+            line-height: 50px;
+          }
+
+          p {
+            text-align: center;
+            font-size: 17px;
+            padding-left: 0px;
+            padding-right: 0px;
+            margin-top: 20px;
+            margin-bottom: 30px;
+          }
+
+          a {
+            @include quickCenter("relative");
+            // margin-left: 0;
+            display: flex;
+            font-size: 16px;
+            height: 45px;
+            max-width: 145px;
+          }
+        }
+      }
+
+      .index_services_inner_main {
+        .index_services_inner_main_box {
+          .index_services_inner_main_row {
+            .service {
+              max-width: 50%;
+              width: 100%;
+              margin-bottom: 65px;
+
+              .service_inner {
+                max-width: 300px;
+
+                .bg {
+                  height: 200px;
+                }
+
+                .service_name {
+                  font-size: clamp(20px, 22px, 22px);
+                }
+
+                a {
+                  font-size: 16px;
+                  height: 45px;
+                }
               }
             }
           }
@@ -2382,6 +2927,75 @@
     }
   }
   .index_portfolio_projects {
+    .index_portfolio_projects_inner {
+      .index_portfolio_projects_inner_top {
+        max-width: 550px;
+
+        .index_portfolio_projects_inner_top_cnt {
+          max-width: 550px;
+          margin-bottom: 30px;
+
+          h2 {
+            text-align: center;
+            font-size: 35px;
+            line-height: 50px;
+          }
+
+          p {
+            text-align: center;
+            font-size: 17px;
+            padding-left: 0px;
+            padding-right: 0px;
+            margin-top: 20px;
+            margin-bottom: 30px;
+          }
+
+          a {
+            @include quickCenter("relative");
+            // margin-left: 0;
+            display: flex;
+            font-size: 16px;
+            height: 45px;
+            max-width: 115px;
+          }
+        }
+      }
+
+      .index_portfolio_projects_inner_main {
+        max-width: 550px;
+
+        .project_inner {
+          .project_inner_box {
+            .project_inner_row {
+              .project_L {
+                .project_inner_side_cnt {
+                  img {
+                    max-width: 80%;
+                    @include quickCenter("relative");
+                    display: block;
+                  }
+                }
+              }
+
+              .project_R {
+                .project_inner_side_cnt {
+                  ul {
+                    display: flex !important;
+                    justify-content: space-evenly;
+
+                    li {
+                      .demo_link {
+                        margin-bottom: 0 !important;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
   .index_booking {
     .index_booking_inner {
@@ -2449,6 +3063,76 @@
                 font-size: 16px;
                 height: 45px;
                 max-width: 180px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .index_services {
+    padding-top: 110px;
+    padding-bottom: 70px;
+
+    .index_services_inner {
+      max-width: 750px;
+      padding-left: 20px;
+      padding-right: 20px;
+
+      .index_services_inner_top {
+        max-width: 550px;
+        @include quickCenter("relative");
+
+        .index_services_inner_top_cnt {
+          h2 {
+            text-align: center;
+            font-size: 35px;
+            line-height: 50px;
+          }
+
+          p {
+            text-align: center;
+            font-size: 17px;
+            padding-left: 0px;
+            padding-right: 0px;
+            margin-top: 20px;
+            margin-bottom: 30px;
+          }
+
+          a {
+            @include quickCenter("relative");
+            // margin-left: 0;
+            display: flex;
+            font-size: 16px;
+            height: 45px;
+            max-width: 145px;
+          }
+        }
+      }
+
+      .index_services_inner_main {
+        .index_services_inner_main_box {
+          .index_services_inner_main_row {
+            .service {
+              max-width: 50%;
+              width: 100%;
+              margin-bottom: 65px;
+
+              .service_inner {
+                max-width: 300px;
+
+                .bg {
+                  height: 200px;
+                }
+
+                .service_name {
+                  font-size: clamp(20px, 22px, 22px);
+                }
+
+                a {
+                  font-size: 16px;
+                  height: 45px;
+                }
               }
             }
           }
@@ -2647,6 +3331,87 @@
     }
   }
   .index_portfolio_projects {
+    .index_portfolio_projects_inner {
+      .index_portfolio_projects_inner_top {
+        max-width: 850px;
+        @include quickCenter("relative");
+        margin-bottom: 0;
+
+        .index_portfolio_projects_inner_top_cnt {
+          max-width: 850px;
+          margin-bottom: 30px;
+
+          h2 {
+            text-align: center;
+            font-size: 35px;
+            line-height: 50px;
+          }
+
+          p {
+            text-align: center;
+            font-size: 17px;
+            padding-left: 0px;
+            padding-right: 0px;
+            margin-top: 20px;
+            margin-bottom: 30px;
+          }
+
+          a {
+            @include quickCenter("relative");
+            // margin-left: 0;
+            display: flex;
+            font-size: 16px;
+            height: 45px;
+            max-width: 115px;
+          }
+        }
+      }
+
+      .index_portfolio_projects_inner_main {
+        max-width: 850px;
+        @include quickCenter("relative");
+        margin-top: 0;
+
+        .project_inner {
+          .project_inner_box {
+            .project_inner_row {
+              .project_inner_side {
+                height: 400px;
+              }
+
+              .project_L {
+                max-width: 50%;
+
+                .project_inner_side_cnt {
+                  img {
+                    max-width: 100%;
+                    @include quickCenter("relative");
+                    display: block;
+                  }
+                }
+              }
+
+              .project_R {
+                max-width: 50%;
+                .project_inner_side_cnt {
+                  ul {
+                    display: flex !important;
+                    justify-content: flex-start;
+
+                    li {
+                      .demo_link {
+                        margin-right: 20px;
+                        margin-bottom: 0 !important;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
   .index_booking {
     .index_booking_inner {
@@ -2713,6 +3478,76 @@
                 display: flex;
                 font-size: 17px;
                 height: 45px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .index_services {
+    padding-top: 130px;
+    padding-bottom: 110px;
+
+    .index_services_inner {
+      max-width: 860px;
+      padding-left: 20px;
+      padding-right: 20px;
+
+      .index_services_inner_top {
+        max-width: 550px;
+        @include quickCenter("relative");
+
+        .index_services_inner_top_cnt {
+          h2 {
+            text-align: center;
+            font-size: 35px;
+            line-height: 50px;
+          }
+
+          p {
+            text-align: center;
+            font-size: 17px;
+            padding-left: 0px;
+            padding-right: 0px;
+            margin-top: 20px;
+            margin-bottom: 30px;
+          }
+
+          a {
+            @include quickCenter("relative");
+            // margin-left: 0;
+            display: flex;
+            font-size: 16px;
+            height: 45px;
+            max-width: 145px;
+          }
+        }
+      }
+
+      .index_services_inner_main {
+        .index_services_inner_main_box {
+          .index_services_inner_main_row {
+            .service {
+              max-width: 50%;
+              width: 100%;
+              margin-bottom: 65px;
+
+              .service_inner {
+                max-width: 600px;
+
+                .bg {
+                  height: 200px;
+                }
+
+                .service_name {
+                  font-size: clamp(22px, 24px, 24px);
+                }
+
+                a {
+                  font-size: 16px;
+                  height: 45px;
+                }
               }
             }
           }
@@ -2909,6 +3744,85 @@
     }
   }
   .index_portfolio_projects {
+    .index_portfolio_projects_inner {
+      .index_portfolio_projects_inner_top {
+        max-width: 850px;
+        @include quickCenter("relative");
+        margin-bottom: 0;
+
+        .index_portfolio_projects_inner_top_cnt {
+          max-width: 850px;
+          margin-bottom: 30px;
+
+          h2 {
+            text-align: center;
+            font-size: 35px;
+            line-height: 50px;
+          }
+
+          p {
+            text-align: center;
+            font-size: 17px;
+            padding-left: 0px;
+            padding-right: 0px;
+            margin-top: 20px;
+            margin-bottom: 30px;
+          }
+
+          a {
+            @include quickCenter("relative");
+            // margin-left: 0;
+            display: flex;
+            font-size: 16px;
+            height: 45px;
+            max-width: 115px;
+          }
+        }
+      }
+
+      .index_portfolio_projects_inner_main {
+        max-width: 850px;
+        @include quickCenter("relative");
+        margin-top: 0;
+
+        .project_inner {
+          .project_inner_box {
+            .project_inner_row {
+              .project_inner_side {
+                height: 400px;
+              }
+
+              .project_L {
+                max-width: 50%;
+
+                .project_inner_side_cnt {
+                  img {
+                    max-width: 100%;
+                  }
+                }
+              }
+
+              .project_R {
+                max-width: 50%;
+                .project_inner_side_cnt {
+                  ul {
+                    display: flex !important;
+                    justify-content: flex-start;
+
+                    li {
+                      .demo_link {
+                        margin-right: 20px;
+                        margin-bottom: 0 !important;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
   .index_booking {
     .index_booking_inner {
@@ -2975,6 +3889,76 @@
                 display: flex;
                 font-size: 17px;
                 height: 45px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .index_services {
+    padding-top: 130px;
+    padding-bottom: 110px;
+
+    .index_services_inner {
+      max-width: 860px;
+      padding-left: 20px;
+      padding-right: 20px;
+
+      .index_services_inner_top {
+        max-width: 550px;
+        @include quickCenter("relative");
+
+        .index_services_inner_top_cnt {
+          h2 {
+            text-align: center;
+            font-size: 35px;
+            line-height: 50px;
+          }
+
+          p {
+            text-align: center;
+            font-size: 17px;
+            padding-left: 0px;
+            padding-right: 0px;
+            margin-top: 20px;
+            margin-bottom: 30px;
+          }
+
+          a {
+            @include quickCenter("relative");
+            // margin-left: 0;
+            display: flex;
+            font-size: 16px;
+            height: 45px;
+            max-width: 145px;
+          }
+        }
+      }
+
+      .index_services_inner_main {
+        .index_services_inner_main_box {
+          .index_services_inner_main_row {
+            .service {
+              max-width: 50%;
+              width: 100%;
+              margin-bottom: 65px;
+
+              .service_inner {
+                max-width: 600px;
+
+                .bg {
+                  height: 200px;
+                }
+
+                .service_name {
+                  font-size: clamp(22px, 24px, 24px);
+                }
+
+                a {
+                  font-size: 16px;
+                  height: 45px;
+                }
               }
             }
           }
@@ -3173,6 +4157,85 @@
     }
   }
   .index_portfolio_projects {
+    .index_portfolio_projects_inner {
+      .index_portfolio_projects_inner_top {
+        max-width: 1150px;
+        @include quickCenter("relative");
+
+        .index_portfolio_projects_inner_top_cnt {
+          max-width: 1150px;
+          margin-bottom: 30px;
+
+          h2 {
+            text-align: center;
+            font-size: 38px;
+            line-height: 47px;
+          }
+
+          p {
+            text-align: center;
+            font-size: 18px;
+            padding-left: 0px;
+            padding-right: 0px;
+            margin-top: 20px;
+            margin-bottom: 30px;
+          }
+
+          a {
+            @include quickCenter("relative");
+            // margin-left: 0;
+            display: flex;
+            font-size: 17px;
+            height: 45px;
+            max-width: 130px;
+          }
+        }
+      }
+
+      .index_portfolio_projects_inner_main {
+        max-width: 1150px;
+        @include quickCenter("relative");
+
+        .project_inner {
+          .project_inner_box {
+            .project_inner_row {
+              .project_inner_side {
+                height: 400px;
+              }
+
+              .project_L {
+                max-width: 50%;
+
+                .project_inner_side_cnt {
+                  img {
+                    max-width: 80%;
+                    @include quickCenter("relative");
+                    display: block;
+                  }
+                }
+              }
+
+              .project_R {
+                max-width: 50%;
+                .project_inner_side_cnt {
+                  ul {
+                    display: flex !important;
+                    justify-content: flex-start;
+
+                    li {
+                      .demo_link {
+                        margin-right: 20px;
+                        margin-bottom: 0 !important;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
   .index_booking {
     .index_booking_inner {
@@ -3240,6 +4303,76 @@
                 font-size: 17px;
                 height: 45px;
                 max-width: 180px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .index_services {
+    padding-top: 130px;
+    padding-bottom: 110px;
+
+    .index_services_inner {
+      max-width: 860px;
+      padding-left: 20px;
+      padding-right: 20px;
+
+      .index_services_inner_top {
+        max-width: 750px;
+        @include quickCenter("relative");
+
+        .index_services_inner_top_cnt {
+          h2 {
+            text-align: center;
+            font-size: 38px;
+            line-height: 47px;
+          }
+
+          p {
+            text-align: center;
+            font-size: 18px;
+            padding-left: 0px;
+            padding-right: 0px;
+            margin-top: 20px;
+            margin-bottom: 30px;
+          }
+
+          a {
+            @include quickCenter("relative");
+            // margin-left: 0;
+            display: flex;
+            font-size: 17px;
+            height: 45px;
+            max-width: 165px;
+          }
+        }
+      }
+
+      .index_services_inner_main {
+        .index_services_inner_main_box {
+          .index_services_inner_main_row {
+            .service {
+              max-width: 50%;
+              width: 100%;
+              margin-bottom: 65px;
+
+              .service_inner {
+                max-width: 600px;
+
+                .bg {
+                  height: 200px;
+                }
+
+                .service_name {
+                  font-size: clamp(22px, 24px, 24px);
+                }
+
+                a {
+                  font-size: 16px;
+                  height: 45px;
+                }
               }
             }
           }
