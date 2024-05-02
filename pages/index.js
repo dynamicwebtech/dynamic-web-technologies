@@ -11,6 +11,7 @@ import getDatabaseData from "@/assets/hooks/getDatabaseData";
 import checkAdminModeStatus from "@/assets/hooks/checkAdminModeStatus";
 import checkLocalHostStatus from "@/assets/hooks/checkLocalHostStatus";
 import { fetchPortfolioProjects } from "@/assets/functions/async/fetchers/fetchPortfolioProjects.js";
+import { fetchReviews } from "@/assets/functions/async/fetchers/fetchReviews.js";
 
 // Component Imports
 import { PageHead } from "@/assets/components/global/All/PageHead";
@@ -23,11 +24,14 @@ import { IndexTop } from "@/assets/components/pages/Index/IndexTop.js";
 import { IndexAbout } from "@/assets/components/pages/Index/IndexAbout.js";
 import { IndexPortfolioProjects } from "@/assets/components/pages/Index/IndexPortfolioProjects.js";
 import { AddPortfolioProjectForm } from "@/assets/components/global/All/AddPortfolioProjectForm.js";
+import { IndexBooking } from "@/assets/components/pages/Index/IndexBooking.js";
+import { IndexServices } from "@/assets/components/pages/Index/IndexServices.js";
+import { IndexPricing } from "@/assets/components/pages/Index/IndexPricing.js";
+import { IndexContact } from "@/assets/components/pages/Index/IndexContact.js";
 
 // Style Imports
 import "../assets/styles/modules/Index/Index.module.css";
 import index_styles from "../assets/styles/modules/Index/Index.module.css";
-import { fetchReviews } from "@/assets/functions/async/fetchers/fetchReviews.js";
 
 export async function getServerSideProps({ req }) {
   const PAGE_HEAD_DATA_DIRECTORY = "public/data/PageHead/";
@@ -99,8 +103,12 @@ export default function Home({ PH_ICONS_DATA, PH_INDEX_DATA }) {
 
       <div id="PAGE_CNT">
         <IndexTop />
-        <IndexAbout />
         <IndexPortfolioProjects portfolioProjects={portfolioProjects} />
+        <IndexAbout />
+        <IndexPricing />
+        <IndexBooking />
+        <IndexServices />
+        <IndexContact />
 
         {adminMode ? <AddPortfolioProjectForm styles={index_styles} /> : null}
       </div>

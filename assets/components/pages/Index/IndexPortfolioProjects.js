@@ -145,12 +145,13 @@ export const IndexPortfolioProjects = (props) => {
 
                           {adminMode ? (
                             <button
+                              className={`${styles.delete} orientation-change-element half-second`}
                               onClick={() => {
                                 deletePortfolioProject(project.itemID);
                                 router.reload();
                               }}
                             >
-                              Delete Project
+                              <span>Delete Project</span>
                             </button>
                           ) : null}
                         </div>
