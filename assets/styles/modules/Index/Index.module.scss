@@ -3,7 +3,7 @@
 @import "../../tools/themes/themes.scss";
 @import "../../tools/variables/variable.scss";
 
-// Fonts
+// Font#e0e0e078
 @font-face {
   font-family: "Open Sans Extra Bold";
   src: url("https://raw.githubusercontent.com/dynamicwebtech/client_CDNS/main/dynamic-web-technologies/fonts/OpenSans-ExtraBold.ttf");
@@ -173,6 +173,7 @@
 
         .index_about_R {
           justify-content: flex-start;
+          background-color: $Alto;
 
           .index_about_inner_side_cnt {
             padding-left: 30px;
@@ -225,6 +226,79 @@
           }
         }
       }
+    }
+  }
+}
+.index_portfolio_projects {
+  padding-top: 240px;
+  padding-bottom: 240px;
+
+  .index_portfolio_projects_inner {
+    max-width: 1600px;
+    @include quickCenter("relative");
+
+    .index_portfolio_projects_inner_top {
+      text-align: center;
+      margin-bottom: 80px;
+
+      .index_portfolio_projects_inner_top_cnt {
+        margin-bottom: 80px;
+
+        h2 {
+          color: $MineShaft;
+          font-family: "Open Sans Bold";
+          font-size: $SubHeading;
+          line-height: 80px;
+
+          span {
+            display: none;
+          }
+        }
+
+        p {
+          font-family: "Open Sans Regular";
+          color: $MineShaft;
+          font-size: $SmallText;
+          margin-top: 25px;
+          margin-bottom: 40px;
+          max-width: 950px;
+          @include quickCenter("relative");
+          word-wrap: normal;
+        }
+
+        a {
+          @include displayElement(inline-flex, space-between, center);
+          height: 50px;
+          text-decoration: none;
+          color: $EasternBlue;
+          font-family: "Open Sans Bold";
+          border-radius: 5px;
+          padding-left: 12px;
+          padding-right: 12px;
+          border: 3px solid $EasternBlue;
+          width: 100%;
+          max-width: 120px;
+
+          &:hover {
+            background-color: $EasternBlue;
+            color: white;
+          }
+        }
+      }
+    }
+
+    .blue_bar {
+      height: 10px;
+      width: 100%;
+      background-color: $EasternBlue;
+      display: block;
+    }
+
+    .green_bar {
+      height: 10px;
+      width: 100%;
+      background-color: $Atlantis;
+      display: block;
     }
   }
 }

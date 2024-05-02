@@ -156,6 +156,7 @@
 }
 .index_about .index_about_inner .index_about_inner_box .index_about_inner_row .index_about_R {
   justify-content: flex-start;
+  background-color: rgba(224, 224, 224, 0.4666666667);
 }
 .index_about .index_about_inner .index_about_inner_box .index_about_inner_row .index_about_R .index_about_inner_side_cnt {
   padding-left: 30px;
@@ -204,6 +205,74 @@
 .index_about .index_about_inner .index_about_inner_box .index_about_inner_row .index_about_R .index_about_inner_side_cnt a:hover {
   background-color: #1684a7;
   color: white;
+}
+
+.index_portfolio_projects {
+  padding-top: 240px;
+  padding-bottom: 240px;
+}
+.index_portfolio_projects .index_portfolio_projects_inner {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_top {
+  text-align: center;
+  margin-bottom: 80px;
+}
+.index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_top .index_portfolio_projects_inner_top_cnt {
+  margin-bottom: 80px;
+}
+.index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_top .index_portfolio_projects_inner_top_cnt h2 {
+  color: #272727;
+  font-family: "Open Sans Bold";
+  font-size: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
+  line-height: 80px;
+}
+.index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_top .index_portfolio_projects_inner_top_cnt h2 span {
+  display: none;
+}
+.index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_top .index_portfolio_projects_inner_top_cnt p {
+  font-family: "Open Sans Regular";
+  color: #272727;
+  font-size: clamp(1rem, 0.54vw + 1rem, 1.33rem);
+  margin-top: 25px;
+  margin-bottom: 40px;
+  max-width: 950px;
+  margin-left: auto;
+  margin-right: auto;
+  word-wrap: normal;
+}
+.index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_top .index_portfolio_projects_inner_top_cnt a {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  text-decoration: none;
+  color: #1684a7;
+  font-family: "Open Sans Bold";
+  border-radius: 5px;
+  padding-left: 12px;
+  padding-right: 12px;
+  border: 3px solid #1684a7;
+  width: 100%;
+  max-width: 120px;
+}
+.index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_top .index_portfolio_projects_inner_top_cnt a:hover {
+  background-color: #1684a7;
+  color: white;
+}
+.index_portfolio_projects .index_portfolio_projects_inner .blue_bar {
+  height: 10px;
+  width: 100%;
+  background-color: #1684a7;
+  display: block;
+}
+.index_portfolio_projects .index_portfolio_projects_inner .green_bar {
+  height: 10px;
+  width: 100%;
+  background-color: #abc635;
+  display: block;
 }
 
 @media all and (max-width: 1995px) {
