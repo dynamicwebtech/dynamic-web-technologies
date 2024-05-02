@@ -102,10 +102,14 @@ export const IndexServices = () => {
                   className={`${styles.service} col-lg-6 col-md-6 col-sm-12 col-xs-12`}
                 >
                   <div className={`${styles.service_inner}`}>
-                    <LazyLoadImage
-                      style={{ maxWidth: "200px" }}
-                      src={service.serviceImg}
-                      alt={`DynamicWebTechnologies - ${service.serviceName} Image.`}
+                    <div
+                      className={`${styles.bg}`}
+                      style={{
+                        background: `url(${service.serviceImg})`,
+                        backgroundPosition: "center",
+                        backgroundSize: "cover",
+                        backgroundRepeat: "no-repeat",
+                      }}
                     />
 
                     <span
