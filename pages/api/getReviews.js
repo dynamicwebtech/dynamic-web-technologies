@@ -1,7 +1,5 @@
 import { MongoClient } from "mongodb";
 
-// import reviewsConnection from "@/assets/db/connections/ReviewsConnection";
-
 async function connectToDatabase(uri) {
   const client = new MongoClient(uri, {
     useNewUrlParser: true,
@@ -18,9 +16,15 @@ async function connectToDatabase(uri) {
 }
 
 export default async function handler(req, res) {
-  let collection; // Declare collection outside the try block
+  let client = null; // Declare client variable outside the try-catch block
+  let collection = null; // Declare collection variable outside the try-catch block
 
   try {
+    // Assign the client instance returned by connectToDatabase to the client variable
+    client = new MongoClient(process.env.REVIEWS_DB_CONNECTION_URI, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
     collection = await connectToDatabase(process.env.REVIEWS_DB_CONNECTION_URI);
 
     if (req.method === "POST") {
@@ -61,8 +65,8 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal Server Error" });
   } finally {
     // Close the MongoDB connection after handling the request
-    if (collection) {
-      await collection.client.close();
+    if (client) {
+      await client.close();
       console.log("CLOSED connection to Reviews DB");
     }
   }
