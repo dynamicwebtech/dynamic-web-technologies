@@ -4,14 +4,12 @@
  *
  */
 
-const fetchPortfolioProjects = async (fetch_path, setter, router) => {
+const fetchPortfolioProjects = async (fetch_path, setter) => {
   try {
     const response = await fetch(fetch_path);
     if (response.ok) {
       const data = await response.json();
       setter(data);
-
-      // router.reload()
     } else {
       console.error("Failed to fetch portfolio projects");
     }
