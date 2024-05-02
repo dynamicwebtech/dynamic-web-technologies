@@ -2,23 +2,27 @@ import { MongoClient } from "mongodb";
 
 // import reviewsConnection from "@/assets/db/connections/ReviewsConnection";
 
-let client;
+async function connectToDatabase(uri) {
+  const client = new MongoClient(uri, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  });
 
-async function connectToDatabase() {
-  if (!client) {
-    client = new MongoClient(process.env.REVIEWS_DB_CONNECTION_URI, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+  try {
     await client.connect();
+    return client.db().collection("reviews");
+  } catch (error) {
+    console.error("Error connecting to database:", error);
+    throw error;
   }
-  return client.db("site-reviews").collection("reviews");
 }
 
 export default async function handler(req, res) {
-  let collection;
+  let collection; // Declare collection outside the try block
+
   try {
-    collection = await reviewsConnection();
+    collection = await connectToDatabase(process.env.REVIEWS_DB_CONNECTION_URI);
+
     if (req.method === "POST") {
       const { itemID, name, rating, date, location, review } = req.body;
       await collection.insertOne({
@@ -57,9 +61,9 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal Server Error" });
   } finally {
     // Close the MongoDB connection after handling the request
-    if (client) {
-      await client.close();
-      client = null; // Reset the client after closing the connection
+    if (collection) {
+      await collection.client.close();
+      console.log("CLOSED connection to Reviews DB");
     }
   }
 }
