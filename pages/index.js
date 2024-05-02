@@ -88,30 +88,6 @@ export default function Home({ PH_ICONS_DATA, PH_INDEX_DATA }) {
   // console.log("Admin Mode Status: " + adminMode);
   console.log("Local Host Status: " + onLocalHost);
 
-  const deletePortfolioProject = async (itemID, projects) => {
-    try {
-      // // axios.delete(`/api/getReviews?id=${id}`);
-      const RESPONSE = await fetch(
-        `/api/getPortfolioProjects?itemID=${itemID}`,
-        {
-          method: "DELETE",
-        }
-      );
-
-      if (RESPONSE.ok) {
-        console.log("Portfolio project deleted successfully!");
-        setPortfolioProjects((prevProjects) =>
-          prevProjects.filter((project) => project.itemID !== itemID)
-        );
-        router.reload();
-      } else {
-        console.error("Failed to delete media:", RESPONSE.statusText);
-      }
-    } catch (error) {
-      console.error("Error deleting media:", error);
-    }
-  };
-
   return (
     <div id="PAGE" className="page">
       <PageHead page_head_data={PH_INDEX_DATA} icons_data={PH_ICONS_DATA} />
@@ -127,46 +103,6 @@ export default function Home({ PH_ICONS_DATA, PH_INDEX_DATA }) {
         <IndexPortfolioProjects portfolioProjects={portfolioProjects} />
 
         {adminMode ? <AddPortfolioProjectForm styles={index_styles} /> : null}
-
-        {/**
-        {adminMode ? (
-          <div>
-            <br />
-            <br />
-            <br />
-            <br />
-            {portfolioProjects.map((project) => (
-              <div key={project.itemID}>
-                <br />
-                <span>Project Name: {project.projectName}</span>
-                <br />
-                <span>Client Name: {project.clientName}</span>
-                <br />
-                <img src={project.src} />
-                <br />
-                <span>Creation Date: {project.creationDate}</span>
-                <br />
-                <a href={project.demoLink}>
-                  Link To Project: {project.demoLink}
-                </a>
-                <br />
-                <span>Project Description: {project.description}</span>
-                <br />
-                <span>Client Review: {project.review}</span>
-                <br />
-                <button
-                  className="media-delete"
-                  onClick={() => {
-                    deletePortfolioProject(project.itemID);
-                  }}
-                >
-                  Delete
-                </button>{" "}
-              </div>
-            ))}
-          </div>
-        ) : null}
-        */}
       </div>
     </div>
   );
