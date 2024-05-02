@@ -1976,6 +1976,7 @@
                 @include quickCenter("relative");
                 display: flex;
                 font-size: 16px;
+                max-width: 140px;
               }
             }
           }
@@ -2508,7 +2509,7 @@
                 display: flex;
                 height: 45px;
                 font-size: 15px;
-                max-width: 145px;
+                max-width: 135px;
               }
             }
           }
