@@ -385,6 +385,181 @@
   padding: 10px;
 }
 
+.index_pricing {
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+.index_pricing .index_pricing_inner {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden !important;
+  white-space: pre-wrap;
+}
+.index_pricing .index_pricing_inner .index_pricing_inner_top {
+  margin-bottom: 150px;
+}
+.index_pricing .index_pricing_inner .index_pricing_inner_top .index_pricing_inner_top_cnt {
+  text-align: center;
+}
+.index_pricing .index_pricing_inner .index_pricing_inner_top .index_pricing_inner_top_cnt h2 {
+  color: #272727;
+  font-family: "Open Sans Bold";
+  font-size: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
+  line-height: 80px;
+}
+.index_pricing .index_pricing_inner .index_pricing_inner_top .index_pricing_inner_top_cnt h2 span {
+  display: none;
+}
+.index_pricing .index_pricing_inner .index_pricing_inner_top .index_pricing_inner_top_cnt p {
+  font-family: "Open Sans Regular";
+  color: #272727;
+  font-size: clamp(1rem, 0.54vw + 1rem, 1.33rem);
+  margin-top: 25px;
+  margin-bottom: 40px;
+  max-width: 950px;
+  margin-left: auto;
+  margin-right: auto;
+  word-wrap: normal;
+}
+.index_pricing .index_pricing_inner .index_pricing_inner_top .index_pricing_inner_top_cnt a {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  text-decoration: none;
+  color: #1684a7;
+  font-family: "Open Sans Bold";
+  border-radius: 5px;
+  padding-left: 12px;
+  padding-right: 12px;
+  border: 3px solid #1684a7;
+  width: 100%;
+  max-width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.index_pricing .index_pricing_inner .index_pricing_inner_top .index_pricing_inner_top_cnt a:hover {
+  background-color: #1684a7;
+  color: white;
+}
+.index_pricing .index_pricing_inner .index_pricing_inner_main {
+  text-align: center;
+}
+.index_pricing .index_pricing_inner .index_pricing_inner_main .index_pricing_main_inner .index_pricing_main_inner_box .index_pricing_main_inner_row .pricing_plan {
+  height: 100%;
+}
+.index_pricing .index_pricing_inner .index_pricing_inner_main .index_pricing_main_inner .index_pricing_main_inner_box .index_pricing_main_inner_row .pricing_plan .pricing_plan_inner {
+  border-top: 3px solid #abc635;
+  border-bottom: 3px solid #abc635;
+  border-left: 3px solid #1684a7;
+  border-right: 3px solid #1684a7;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  border-radius: 5px;
+}
+.index_pricing .index_pricing_inner .index_pricing_inner_main .index_pricing_main_inner .index_pricing_main_inner_box .index_pricing_main_inner_row .pricing_plan .pricing_plan_inner .pricing_plan_inner_cnt .plan_type {
+  font-family: "Open Sans Semi Bold";
+  font-size: 19px;
+  display: block;
+}
+.index_pricing .index_pricing_inner .index_pricing_inner_main .index_pricing_main_inner .index_pricing_main_inner_box .index_pricing_main_inner_row .pricing_plan .pricing_plan_inner .pricing_plan_inner_cnt .plan_price {
+  font-family: "Open Sans Bold";
+  font-size: 30px;
+  display: block;
+  margin-bottom: 10px;
+}
+.index_pricing .index_pricing_inner .index_pricing_inner_main .index_pricing_main_inner .index_pricing_main_inner_box .index_pricing_main_inner_row .pricing_plan .pricing_plan_inner .pricing_plan_inner_cnt .hosting_price {
+  font-family: "Open Sans Bold";
+  font-size: 15px;
+  display: block;
+  margin-bottom: 30px;
+}
+.index_pricing .index_pricing_inner .index_pricing_inner_main .index_pricing_main_inner .index_pricing_main_inner_box .index_pricing_main_inner_row .pricing_plan .pricing_plan_inner .pricing_plan_inner_cnt .included_heading {
+  margin-top: 50px;
+  margin-bottom: 25px;
+  display: block;
+  font-family: "Open Sans Semi Bold";
+}
+.index_pricing .index_pricing_inner .index_pricing_inner_main .index_pricing_main_inner .index_pricing_main_inner_box .index_pricing_main_inner_row .pricing_plan .pricing_plan_inner .pricing_plan_inner_cnt ul {
+  list-style: disc;
+  text-align: justify;
+  font-family: "Open Sans Medium";
+  font-size: 15px;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+}
+.index_pricing .index_pricing_inner .index_pricing_inner_main .index_pricing_main_inner .index_pricing_main_inner_box .index_pricing_main_inner_row .pricing_plan .pricing_plan_inner .pricing_plan_inner_cnt ul li {
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.index_pricing .index_pricing_inner .index_pricing_inner_main .index_pricing_main_inner .index_pricing_main_inner_box .index_pricing_main_inner_row .pricing_plan .pricing_plan_inner .pricing_plan_inner_cnt a {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  text-decoration: none;
+  color: #1684a7;
+  font-family: "Open Sans Bold";
+  border-radius: 5px;
+  padding-left: 12px;
+  padding-right: 12px;
+  border: 3px solid #1684a7;
+  width: 100%;
+  max-width: 160px;
+}
+.index_pricing .index_pricing_inner .index_pricing_inner_main .index_pricing_main_inner .index_pricing_main_inner_box .index_pricing_main_inner_row .pricing_plan .pricing_plan_inner .pricing_plan_inner_cnt a:hover {
+  background-color: #1684a7;
+  color: white;
+}
+.index_pricing .index_pricing_inner .index_pricing_inner_add_ons {
+  margin-top: 140px;
+}
+.index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner h2 {
+  color: #272727;
+  font-family: "Open Sans Bold";
+  font-size: clamp(1.84rem, 2.14vw + 1.65rem, 2.95rem);
+  line-height: 65px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner .index_pricing_inner_add_ons_inner_box {
+  background-color: rgba(224, 224, 224, 0.4666666667);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+  border-radius: 5px;
+}
+.index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner .index_pricing_inner_add_ons_inner_box .add_on .add_on_side {
+  height: 100px;
+  display: flex;
+  align-items: center;
+}
+.index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner .index_pricing_inner_add_ons_inner_box .add_on .add_on_L {
+  justify-content: flex-start;
+}
+.index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner .index_pricing_inner_add_ons_inner_box .add_on .add_on_L span {
+  font-family: "Open Sans Semi Bold";
+  font-size: 21px;
+  display: block;
+}
+.index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner .index_pricing_inner_add_ons_inner_box .add_on .add_on_R {
+  justify-content: flex-end;
+}
+.index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner .index_pricing_inner_add_ons_inner_box .add_on .add_on_R span {
+  font-family: "Open Sans Bold";
+  font-size: 21px;
+  display: block;
+}
+
 .index_booking .index_booking_inner .index_booking_inner_box .index_booking_inner_row .index_booking_inner_side {
   height: 800px;
   display: flex;
@@ -870,6 +1045,61 @@
     margin-right: 0;
     margin-bottom: 10px;
   }
+  .index_pricing {
+    padding-top: 80px;
+    padding-bottom: 30px;
+  }
+  .index_pricing .index_pricing_inner {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_top {
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 70px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_top .index_pricing_inner_top_cnt h2 {
+    text-align: center;
+    font-size: 45px;
+    line-height: 60px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_top .index_pricing_inner_top_cnt p {
+    text-align: center;
+    font-size: 18px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_top .index_pricing_inner_top_cnt a {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_main {
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_main .index_pricing_main_inner .index_pricing_main_inner_box .index_pricing_main_inner_row .pricing_plan {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 40px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons {
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner .index_pricing_inner_add_ons_inner_box {
+    max-width: 470px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner .index_pricing_inner_add_ons_inner_box .add_on {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner .index_pricing_inner_add_ons_inner_box .add_on .add_on_side {
+    justify-content: center;
+    height: 100%;
+    max-width: 100%;
+    width: 100%;
+  }
   .index_booking .index_booking_inner {
     max-width: 100%;
     margin-left: auto;
@@ -1147,6 +1377,71 @@
   .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_main .project_inner .project_inner_box .project_inner_row .project_R .project_inner_side_cnt ul li .demo_link {
     margin-right: 0;
     margin-bottom: 10px;
+  }
+  .index_pricing {
+    padding-top: 80px;
+    padding-bottom: 0px;
+  }
+  .index_pricing .index_pricing_inner {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_top {
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 70px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_top .index_pricing_inner_top_cnt h2 {
+    font-size: clamp(1.84rem, 2.14vw + 1.65rem, 2.95rem);
+    line-height: 65px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_top .index_pricing_inner_top_cnt p {
+    text-align: center;
+    font-size: 18px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_top .index_pricing_inner_top_cnt a {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_main {
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_main .index_pricing_main_inner .index_pricing_main_inner_box .index_pricing_main_inner_row .pricing_plan {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 40px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons {
+    margin-top: 40px;
+    margin-bottom: 50px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner h2 {
+    font-size: clamp(1.44rem, 2vw + 1.25rem, 2.15rem);
+    line-height: 55px;
+    margin-bottom: 20px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner .index_pricing_inner_add_ons_inner_box {
+    max-width: 470px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner .index_pricing_inner_add_ons_inner_box .add_on {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner .index_pricing_inner_add_ons_inner_box .add_on .add_on_side {
+    justify-content: center;
+    height: 100%;
+    max-width: 100%;
+    width: 100%;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner .index_pricing_inner_add_ons_inner_box .add_on .add_on_L span {
+    font-size: 17px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner .index_pricing_inner_add_ons_inner_box .add_on .add_on_R span {
+    font-size: 21px;
   }
   .index_booking .index_booking_inner {
     max-width: 100%;
@@ -1462,6 +1757,83 @@
     margin-right: 0;
     margin-bottom: 10px;
   }
+  .index_pricing {
+    padding-top: 50px;
+    padding-bottom: 0px;
+  }
+  .index_pricing .index_pricing_inner {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_top {
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 70px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_top .index_pricing_inner_top_cnt h2 {
+    text-align: center;
+    font-size: 25px;
+    line-height: 35px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_top .index_pricing_inner_top_cnt p {
+    text-align: center;
+    font-size: 16px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_top .index_pricing_inner_top_cnt a {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    height: 45px;
+    font-size: 15px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_main {
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_main .index_pricing_main_inner .index_pricing_main_inner_box .index_pricing_main_inner_row .pricing_plan {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_main .index_pricing_main_inner .index_pricing_main_inner_box .index_pricing_main_inner_row .pricing_plan .pricing_plan_inner .pricing_plan_inner_cnt a {
+    font-size: 15px;
+    height: 45px;
+    max-width: 140px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons {
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner h2 {
+    font-size: 23px;
+    line-height: 35px;
+    margin-bottom: 20px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner .index_pricing_inner_add_ons_inner_box {
+    max-width: 80%;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner .index_pricing_inner_add_ons_inner_box .add_on {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner .index_pricing_inner_add_ons_inner_box .add_on .add_on_side {
+    justify-content: center;
+    height: 100%;
+    max-width: 100%;
+    width: 100%;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner .index_pricing_inner_add_ons_inner_box .add_on .add_on_L span {
+    font-size: 15px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner .index_pricing_inner_add_ons_inner_box .add_on .add_on_R span {
+    font-size: 19px;
+  }
   .index_booking .index_booking_inner {
     max-width: 100%;
     padding-left: 0px;
@@ -1745,6 +2117,88 @@
   }
   .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_main .project_inner_box .project_inner_row .project_L .project_inner_side_cnt img {
     max-width: 100%;
+  }
+  .index_pricing {
+    padding-top: 50px;
+    padding-bottom: 0px;
+  }
+  .index_pricing .index_pricing_inner {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_top {
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 70px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_top .index_pricing_inner_top_cnt h2 {
+    text-align: center;
+    font-size: 25px;
+    line-height: 35px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_top .index_pricing_inner_top_cnt p {
+    text-align: center;
+    font-size: 16px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_top .index_pricing_inner_top_cnt a {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    height: 45px;
+    font-size: 15px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_main {
+    max-width: 410px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_main .index_pricing_main_inner .index_pricing_main_inner_box .index_pricing_main_inner_row .pricing_plan {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_main .index_pricing_main_inner .index_pricing_main_inner_box .index_pricing_main_inner_row .pricing_plan .pricing_plan_inner .pricing_plan_inner_cnt a {
+    font-size: 15px;
+    height: 45px;
+    max-width: 140px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons {
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner h2 {
+    font-size: 25px;
+    line-height: 35px;
+    margin-bottom: 20px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner .index_pricing_inner_add_ons_inner_box {
+    max-width: 80%;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner .index_pricing_inner_add_ons_inner_box .add_on {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner .index_pricing_inner_add_ons_inner_box .add_on .add_on_side {
+    height: 100%;
+    max-width: 50%;
+    width: 100%;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner .index_pricing_inner_add_ons_inner_box .add_on .add_on_L {
+    justify-content: flex-start;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner .index_pricing_inner_add_ons_inner_box .add_on .add_on_L span {
+    font-size: 16px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner .index_pricing_inner_add_ons_inner_box .add_on .add_on_R {
+    justify-content: flex-end;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner .index_pricing_inner_add_ons_inner_box .add_on .add_on_R span {
+    font-size: 16px;
   }
   .index_booking .index_booking_inner {
     max-width: 100%;
@@ -2045,6 +2499,89 @@
     margin-left: auto;
     margin-right: auto;
     display: block;
+  }
+  .index_pricing {
+    padding-top: 100px;
+    padding-bottom: 70px;
+  }
+  .index_pricing .index_pricing_inner {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_top {
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 70px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_top .index_pricing_inner_top_cnt h2 {
+    text-align: center;
+    font-size: 35px;
+    line-height: 50px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_top .index_pricing_inner_top_cnt p {
+    text-align: center;
+    font-size: 17px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_top .index_pricing_inner_top_cnt a {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    font-size: 16px;
+    height: 45px;
+    max-width: 145px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_main {
+    max-width: 410px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_main .index_pricing_main_inner .index_pricing_main_inner_box .index_pricing_main_inner_row .pricing_plan {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_main .index_pricing_main_inner .index_pricing_main_inner_box .index_pricing_main_inner_row .pricing_plan .pricing_plan_inner .pricing_plan_inner_cnt a {
+    font-size: 15px;
+    height: 45px;
+    max-width: 140px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons {
+    margin-top: 70px;
+    margin-bottom: 50px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner h2 {
+    font-size: 35px;
+    line-height: 35px;
+    margin-bottom: 40px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner .index_pricing_inner_add_ons_inner_box {
+    max-width: 75%;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner .index_pricing_inner_add_ons_inner_box .add_on {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner .index_pricing_inner_add_ons_inner_box .add_on .add_on_side {
+    height: 100%;
+    max-width: 50%;
+    width: 100%;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner .index_pricing_inner_add_ons_inner_box .add_on .add_on_L {
+    justify-content: flex-start;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner .index_pricing_inner_add_ons_inner_box .add_on .add_on_L span {
+    font-size: 19px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner .index_pricing_inner_add_ons_inner_box .add_on .add_on_R {
+    justify-content: flex-end;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner .index_pricing_inner_add_ons_inner_box .add_on .add_on_R span {
+    font-size: 19px;
   }
   .index_booking .index_booking_inner {
     max-width: 100%;
@@ -2357,6 +2894,89 @@
   }
   .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_main .project_inner .project_inner_box .project_inner_row .project_R .project_inner_side_cnt ul li .demo_link {
     margin-bottom: 0 !important;
+  }
+  .index_pricing {
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
+  .index_pricing .index_pricing_inner {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_top {
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 70px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_top .index_pricing_inner_top_cnt h2 {
+    text-align: center;
+    font-size: 35px;
+    line-height: 50px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_top .index_pricing_inner_top_cnt p {
+    text-align: center;
+    font-size: 17px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_top .index_pricing_inner_top_cnt a {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    font-size: 16px;
+    height: 45px;
+    max-width: 145px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_main {
+    max-width: 410px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_main .index_pricing_main_inner .index_pricing_main_inner_box .index_pricing_main_inner_row .pricing_plan {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_main .index_pricing_main_inner .index_pricing_main_inner_box .index_pricing_main_inner_row .pricing_plan .pricing_plan_inner .pricing_plan_inner_cnt a {
+    font-size: 15px;
+    height: 45px;
+    max-width: 140px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons {
+    margin-top: 70px;
+    margin-bottom: 50px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner h2 {
+    font-size: 35px;
+    line-height: 35px;
+    margin-bottom: 40px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner .index_pricing_inner_add_ons_inner_box {
+    max-width: 75%;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner .index_pricing_inner_add_ons_inner_box .add_on {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner .index_pricing_inner_add_ons_inner_box .add_on .add_on_side {
+    height: 100%;
+    max-width: 50%;
+    width: 100%;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner .index_pricing_inner_add_ons_inner_box .add_on .add_on_L {
+    justify-content: flex-start;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner .index_pricing_inner_add_ons_inner_box .add_on .add_on_L span {
+    font-size: 19px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner .index_pricing_inner_add_ons_inner_box .add_on .add_on_R {
+    justify-content: flex-end;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner .index_pricing_inner_add_ons_inner_box .add_on .add_on_R span {
+    font-size: 19px;
   }
   .index_booking .index_booking_inner {
     max-width: 100%;
@@ -2685,6 +3305,89 @@
     margin-right: 20px;
     margin-bottom: 0 !important;
   }
+  .index_pricing {
+    padding-top: 110px;
+    padding-bottom: 50px;
+  }
+  .index_pricing .index_pricing_inner {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_top {
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 70px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_top .index_pricing_inner_top_cnt h2 {
+    text-align: center;
+    font-size: 35px;
+    line-height: 50px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_top .index_pricing_inner_top_cnt p {
+    text-align: center;
+    font-size: 17px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_top .index_pricing_inner_top_cnt a {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    font-size: 16px;
+    height: 45px;
+    max-width: 145px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_main {
+    max-width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_main .index_pricing_main_inner .index_pricing_main_inner_box .index_pricing_main_inner_row .pricing_plan {
+    width: 100%;
+    max-width: 33.33%;
+    margin-bottom: 20px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_main .index_pricing_main_inner .index_pricing_main_inner_box .index_pricing_main_inner_row .pricing_plan .pricing_plan_inner .pricing_plan_inner_cnt a {
+    font-size: 15px;
+    height: 45px;
+    max-width: 140px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons {
+    margin-top: 70px;
+    margin-bottom: 50px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner h2 {
+    font-size: 35px;
+    line-height: 35px;
+    margin-bottom: 40px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner .index_pricing_inner_add_ons_inner_box {
+    max-width: 65%;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner .index_pricing_inner_add_ons_inner_box .add_on {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner .index_pricing_inner_add_ons_inner_box .add_on .add_on_side {
+    height: 100%;
+    max-width: 50%;
+    width: 100%;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner .index_pricing_inner_add_ons_inner_box .add_on .add_on_L {
+    justify-content: flex-start;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner .index_pricing_inner_add_ons_inner_box .add_on .add_on_L span {
+    font-size: 19px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner .index_pricing_inner_add_ons_inner_box .add_on .add_on_R {
+    justify-content: flex-end;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner .index_pricing_inner_add_ons_inner_box .add_on .add_on_R span {
+    font-size: 19px;
+  }
   .index_booking .index_booking_inner {
     max-width: 100%;
     padding-left: 0px;
@@ -3006,6 +3709,89 @@
   .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_main .project_inner .project_inner_box .project_inner_row .project_R .project_inner_side_cnt ul li .demo_link {
     margin-right: 20px;
     margin-bottom: 0 !important;
+  }
+  .index_pricing {
+    padding-top: 110px;
+    padding-bottom: 50px;
+  }
+  .index_pricing .index_pricing_inner {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_top {
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 70px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_top .index_pricing_inner_top_cnt h2 {
+    text-align: center;
+    font-size: 35px;
+    line-height: 50px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_top .index_pricing_inner_top_cnt p {
+    text-align: center;
+    font-size: 17px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_top .index_pricing_inner_top_cnt a {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    font-size: 16px;
+    height: 45px;
+    max-width: 145px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_main {
+    max-width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_main .index_pricing_main_inner .index_pricing_main_inner_box .index_pricing_main_inner_row .pricing_plan {
+    width: 100%;
+    max-width: 33.33%;
+    margin-bottom: 20px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_main .index_pricing_main_inner .index_pricing_main_inner_box .index_pricing_main_inner_row .pricing_plan .pricing_plan_inner .pricing_plan_inner_cnt a {
+    font-size: 15px;
+    height: 45px;
+    max-width: 140px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons {
+    margin-top: 70px;
+    margin-bottom: 50px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner h2 {
+    font-size: 35px;
+    line-height: 35px;
+    margin-bottom: 40px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner .index_pricing_inner_add_ons_inner_box {
+    max-width: 65%;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner .index_pricing_inner_add_ons_inner_box .add_on {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner .index_pricing_inner_add_ons_inner_box .add_on .add_on_side {
+    height: 100%;
+    max-width: 50%;
+    width: 100%;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner .index_pricing_inner_add_ons_inner_box .add_on .add_on_L {
+    justify-content: flex-start;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner .index_pricing_inner_add_ons_inner_box .add_on .add_on_L span {
+    font-size: 19px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner .index_pricing_inner_add_ons_inner_box .add_on .add_on_R {
+    justify-content: flex-end;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner .index_pricing_inner_add_ons_inner_box .add_on .add_on_R span {
+    font-size: 19px;
   }
   .index_booking .index_booking_inner {
     max-width: 100%;
@@ -3330,6 +4116,89 @@
   .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_main .project_inner .project_inner_box .project_inner_row .project_R .project_inner_side_cnt ul li .demo_link {
     margin-right: 20px;
     margin-bottom: 0 !important;
+  }
+  .index_pricing {
+    padding-top: 110px;
+    padding-bottom: 75px;
+  }
+  .index_pricing .index_pricing_inner {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_top {
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 70px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_top .index_pricing_inner_top_cnt h2 {
+    text-align: center;
+    font-size: 38px;
+    line-height: 47px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_top .index_pricing_inner_top_cnt p {
+    text-align: center;
+    font-size: 18px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_top .index_pricing_inner_top_cnt a {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    font-size: 17px;
+    height: 45px;
+    max-width: 155px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_main {
+    max-width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_main .index_pricing_main_inner .index_pricing_main_inner_box .index_pricing_main_inner_row .pricing_plan {
+    width: 100%;
+    max-width: 33.33%;
+    margin-bottom: 20px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_main .index_pricing_main_inner .index_pricing_main_inner_box .index_pricing_main_inner_row .pricing_plan .pricing_plan_inner .pricing_plan_inner_cnt a {
+    font-size: 15px;
+    height: 45px;
+    max-width: 140px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons {
+    margin-top: 70px;
+    margin-bottom: 50px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner h2 {
+    font-size: 35px;
+    line-height: 35px;
+    margin-bottom: 40px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner .index_pricing_inner_add_ons_inner_box {
+    max-width: 650px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner .index_pricing_inner_add_ons_inner_box .add_on {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner .index_pricing_inner_add_ons_inner_box .add_on .add_on_side {
+    height: 100%;
+    max-width: 50%;
+    width: 100%;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner .index_pricing_inner_add_ons_inner_box .add_on .add_on_L {
+    justify-content: flex-start;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner .index_pricing_inner_add_ons_inner_box .add_on .add_on_L span {
+    font-size: 19px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner .index_pricing_inner_add_ons_inner_box .add_on .add_on_R {
+    justify-content: flex-end;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner .index_pricing_inner_add_ons_inner_box .add_on .add_on_R span {
+    font-size: 19px;
   }
   .index_booking .index_booking_inner {
     max-width: 100%;
