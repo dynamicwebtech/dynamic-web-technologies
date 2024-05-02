@@ -300,6 +300,127 @@
       background-color: $Atlantis;
       display: block;
     }
+
+    .index_portfolio_projects_inner_main {
+      margin-top: 50px;
+      width: 100%;
+      max-width: 100%;
+      border-radius: 5px;
+      border: 2px solid rgba(201, 201, 201, 0.249);
+
+      .project_inner {
+        max-width: 1450px;
+        @include quickCenter("relative");
+
+        .project_inner_box {
+          .project_inner_row {
+            .project_inner_side {
+              height: 600px;
+              display: flex;
+              align-items: center;
+            }
+
+            .project_L {
+              justify-content: flex-start;
+
+              .project_inner_side_cnt {
+                // padding: 20px;
+
+                img {
+                  max-width: 100%;
+                  border: 2px solid rgba(201, 201, 201, 0.049);
+                }
+              }
+            }
+
+            .project_R {
+              justify-content: center;
+
+              .project_inner_side_cnt {
+                padding-left: 30px;
+                padding-right: 30px;
+
+                .item_id {
+                  display: block;
+                  font-family: "Open Sans Semi Bold";
+                  color: $MineShaft;
+                  font-size: $SmallLink;
+                  opacity: 0.6;
+                  margin-bottom: 12px;
+                }
+
+                .creation_date {
+                  display: block;
+                  font-family: "Open Sans Semi Bold";
+                  color: $MineShaft;
+                  font-size: $Link;
+                  opacity: 0.6;
+                  margin-bottom: 12px;
+                }
+
+                .project_name {
+                  display: block;
+                  font-family: "Open Sans Bold";
+                  color: $MineShaft;
+                  font-size: $Logo;
+                  margin-bottom: 12px;
+                }
+
+                .client_name {
+                  display: block;
+                  font-family: "Open Sans Medium";
+                  color: $MineShaft;
+                  font-size: $Link;
+                  opacity: 0.8;
+                  margin-bottom: 40px;
+                }
+
+                ul {
+                  @include displayElement(flex, flex-start, center);
+                  max-width: 550px;
+                  // @include quickCenter("relative");
+                  font-size: clamp(14px, 15px, 15px);
+
+                  li {
+                    a {
+                      @include displayElement(flex, center, center);
+                      height: 45px;
+                      text-decoration: none;
+                      // color: white;
+                      font-family: "Open Sans Bold";
+                      border-radius: 5px;
+                      padding-left: 12px;
+                      padding-right: 12px;
+                    }
+
+                    .demo_link {
+                      border: 3px solid $Atlantis;
+                      color: $Atlantis;
+                      margin-right: 12px;
+
+                      &:hover {
+                        background-color: $Atlantis;
+                        color: white;
+                      }
+                    }
+
+                    .portfolio_link {
+                      border: 3px solid $EasternBlue;
+                      color: $EasternBlue;
+
+                      &:hover {
+                        background-color: $EasternBlue;
+                        color: white;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 
