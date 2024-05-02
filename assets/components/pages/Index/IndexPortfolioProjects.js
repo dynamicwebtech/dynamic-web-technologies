@@ -4,6 +4,9 @@
  *
  */
 
+import { useState } from "react";
+import { useRouter } from "next/router";
+
 import { FaChevronRight } from "react-icons/fa";
 import { MdError } from "react-icons/md";
 
@@ -14,9 +17,37 @@ import checkAdminModeStatus from "@/assets/hooks/checkAdminModeStatus";
 import styles from "../../../styles/modules/Index/Index.module.css";
 
 export const IndexPortfolioProjects = (props) => {
+  const router = useRouter();
+
   const PORTFOLIO_PROJECTS = props.portfolioProjects;
+  const [portfolioProjects, setPortfolioProjects] =
+    useState(PORTFOLIO_PROJECTS);
 
   const { adminMode } = checkAdminModeStatus();
+
+  const deletePortfolioProject = async (itemID) => {
+    try {
+      const RESPONSE = await fetch(
+        `/api/getPortfolioProjects?itemID=${itemID}`,
+        {
+          method: "DELETE",
+        }
+      );
+
+      if (RESPONSE.ok) {
+        console.log("Portfolio project deleted successfully!");
+        setPortfolioProjects((prevProjects) =>
+          prevProjects.filter((project) => project.itemID !== itemID)
+        );
+
+        // router.reload();
+      } else {
+        console.error("Failed to delete media:", RESPONSE.statusText);
+      }
+    } catch (error) {
+      console.error("Error deleting media:", error);
+    }
+  };
 
   return (
     <section
@@ -111,6 +142,17 @@ export const IndexPortfolioProjects = (props) => {
                               </a>
                             </li>
                           </ul>
+
+                          {adminMode ? (
+                            <button
+                              onClick={() => {
+                                deletePortfolioProject(project.itemID);
+                                router.reload();
+                              }}
+                            >
+                              Delete Project
+                            </button>
+                          ) : null}
                         </div>
                       </div>
                     </div>
