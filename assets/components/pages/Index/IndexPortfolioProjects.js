@@ -61,7 +61,7 @@ export const IndexPortfolioProjects = (props) => {
               Previous Client Projects.
             </h2>
             <p className="orientation-change-element half-second">
-              Get a look at the previous projects DynamicWebTechnologies has
+              Get a look at the previous projects Dynamic Web Technologies has
               done over the years below.
             </p>
 

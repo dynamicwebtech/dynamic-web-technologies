@@ -34,7 +34,7 @@ export const IndexContact = () => {
                 </h2>
 
                 <p className="orientation-change-element half-second">
-                  DynamicWebTechnologies prioritizes customer experience,
+                  Dynamic Web Technologies prioritizes customer experience,
                   mirroring the renowned hospitality of North Carolina. We're
                   always here to help with any issue or question, ensuring your
                   journey with us is smooth and satisfying.

@@ -13,46 +13,53 @@ export const IndexPricing = () => {
     {
       planID: "P_1",
       planName: "Starter",
-      planPrice: 389.99,
-      planHostingPrice: 35.0,
+      planPrice: 399,
+      planHostingPrice: 29,
       planIncluded: [
         "1 Month Free Hosting!",
+        "WordPress or Shopify",
         "1-2 Pages",
         "Responsive Design",
         "Business Email",
-        "Full Creative Control",
         "24/7 Support",
       ],
+      hostingIncluded: ["5 Annual Revision", "Web Maintenance"],
       planLink: "/pricing#starter",
     },
     {
       planID: "P_2",
       planName: "Basic",
-      planPrice: 769.99,
-      planHostingPrice: 40.0,
+      planPrice: 799,
+      planHostingPrice: 29,
       planIncluded: [
         "2 Month Free Hosting!",
         "3-5 Pages",
+        "WordPress or Shopify or Hand Coded",
         "Everything Starter offers",
         "Website Logo",
-        "Full Creative Control",
         "24/7 Support",
+        "Shopify Option For Additional Fee",
+      ],
+      hostingIncluded: [
+        "8 Annual Revision (included w/ Hosting)",
+        "Web Maintenance",
       ],
       planLink: "/pricing#basic",
     },
     {
       planID: "P_3",
       planName: "Professional",
-      planPrice: 1159.99,
-      planHostingPrice: 45.0,
+      planPrice: 1499,
+      planHostingPrice: 29,
       planIncluded: [
         "3 Month Free Hosting!",
         "5+ Pages",
         "Everything Basic offers",
         "Content Writing",
-        "Full Creative Control",
         "24/7 Support",
+        "Shopify Option For NO Additional Fee",
       ],
+      hostingIncluded: ["Unlimited Revisions", "Web Maintenance"],
       planLink: "/pricing#professional",
     },
   ];
@@ -61,18 +68,18 @@ export const IndexPricing = () => {
     {
       addOnID: "AO_1",
       addOnName: "Logo Making",
-      addOnPrice: 34.99,
+      addOnPrice: 99,
     },
     {
       addOnID: "AO_2",
       addOnName: "Business Email",
-      addOnPrice: 14.99,
+      addOnPrice: 23,
     },
-    {
-      addOnID: "AO_3",
-      addOnName: "Content Writing",
-      addOnPrice: 24.99,
-    },
+    // {
+    //   addOnID: "AO_3",
+    //   addOnName: "Content Writing",
+    //   addOnPrice: 24,
+    // },
   ];
 
   return (
@@ -82,7 +89,7 @@ export const IndexPricing = () => {
           <div className={`${styles.index_pricing_inner_top_cnt}`}>
             <h2>Our Project Pricing.</h2>
             <p className="orientation-change-element half-second">
-              At DynamicWebTechnologies, our pricing is not just competitive;
+              At Dynamic Web Technologies, our pricing is not just competitive;
               it's among the best in all of North Carolina. Plus, it's highly
               negotiable based on the project scope. Contact us today to
               discover unbeatable value for your web design needs!
@@ -130,11 +137,23 @@ export const IndexPricing = () => {
                         <span
                           className={`${styles.included_heading} orientation-change-element half-second`}
                         >
-                          What is included?
+                          Included in Plan
                         </span>
 
                         <ul>
                           {plan.planIncluded.map((item) => (
+                            <li>{item}</li>
+                          ))}
+                        </ul>
+
+                        <span
+                          className={`${styles.included_heading} orientation-change-element half-second`}
+                        >
+                          Included in Hosting
+                        </span>
+
+                        <ul>
+                          {plan.hostingIncluded.map((item) => (
                             <li>{item}</li>
                           ))}
                         </ul>

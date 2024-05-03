@@ -39,9 +39,10 @@ export const IndexAbout = () => {
                 </h2>
 
                 <p className="orientation-change-element half-second">
-                  Discover the captivating story behind DynamicWebTechnologies,
-                  based right here in scenic North Carolina. Learn why we're the
-                  ultimate choice to bring your dream website to life.
+                  Discover the captivating story behind Dynamic Web
+                  Technologies, based right here in scenic North Carolina. Learn
+                  why we're the ultimate choice to bring your dream website to
+                  life.
                 </p>
 
                 <a
