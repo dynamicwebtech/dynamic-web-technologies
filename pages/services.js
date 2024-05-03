@@ -20,6 +20,7 @@ import { LoginPopup } from "@/assets/components/global/All/LoginPopup.js";
 import { AdminModeIndicator } from "@/assets/components/global/All/AdminModeIndicator.js";
 
 import { TopHero } from "@/assets/components/pages/All/TopHero.js";
+import { ServicesMain } from "@/assets/components/pages/Services/ServicesMain.js";
 
 // Style Imports
 import "../assets/styles/modules/Services/Services.module.css";
@@ -94,6 +95,7 @@ export default function Services({ PH_ICONS_DATA, PH_SERVICES_DATA }) {
 
       <div id="PAGE_CNT">
         <TopHero object={TOP_HERO_OBJECT} />
+        <ServicesMain />
       </div>
 
       <Footer />
