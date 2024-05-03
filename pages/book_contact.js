@@ -19,8 +19,11 @@ import { Footer } from "@/assets/components/global/Footer/Footer.js";
 import { LoginPopup } from "@/assets/components/global/All/LoginPopup.js";
 import { AdminModeIndicator } from "@/assets/components/global/All/AdminModeIndicator.js";
 
+import { TopHero } from "@/assets/components/pages/All/TopHero.js";
+
 // Style Imports
 import "../assets/styles/modules/Book_Contact/Book_Contact.module.css";
+import styles from "../assets/styles/modules/Book_Contact/Book_Contact.module.css";
 
 export async function getServerSideProps({ req }) {
   const PAGE_HEAD_DATA_DIRECTORY = "public/data/PageHead/";
@@ -75,6 +78,13 @@ export default function Book_Contact({ PH_ICONS_DATA, PH_BOOK_CONTACT_DATA }) {
   console.log("Admin Mode Status: " + adminMode);
   console.log("Local Host Status: " + onLocalHost);
 
+  const TOP_HERO_OBJECT = {
+    styles: styles,
+    bg: "https://raw.githubusercontent.com/dynamicwebtech/client_CDNS/main/dynamic-web-technologies/bgs/book-contact/contact-bg.webp",
+    heading: "Book/Contact.",
+    text: "Get your business started with a high-quality website and our other services. If you have an issue or would like to speak with a member of the Dynamic Web Technologies team, we would be happy to help!",
+  };
+
   return (
     <div id="PAGE" className="page">
       <PageHead
@@ -88,7 +98,9 @@ export default function Book_Contact({ PH_ICONS_DATA, PH_BOOK_CONTACT_DATA }) {
       <LoginPopup />
       {adminMode ? <AdminModeIndicator /> : null}
 
-      <div id="PAGE_CNT"></div>
+      <div id="PAGE_CNT">
+        <TopHero object={TOP_HERO_OBJECT} />
+      </div>
 
       <Footer />
     </div>

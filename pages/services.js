@@ -19,8 +19,11 @@ import { Footer } from "@/assets/components/global/Footer/Footer.js";
 import { LoginPopup } from "@/assets/components/global/All/LoginPopup.js";
 import { AdminModeIndicator } from "@/assets/components/global/All/AdminModeIndicator.js";
 
+import { TopHero } from "@/assets/components/pages/All/TopHero.js";
+
 // Style Imports
 import "../assets/styles/modules/Services/Services.module.css";
+import styles from "../assets/styles/modules/Services/Services.module.css";
 
 export async function getServerSideProps({ req }) {
   const PAGE_HEAD_DATA_DIRECTORY = "public/data/PageHead/";
@@ -72,6 +75,13 @@ export default function Services({ PH_ICONS_DATA, PH_SERVICES_DATA }) {
   console.log("Admin Mode Status: " + adminMode);
   console.log("Local Host Status: " + onLocalHost);
 
+  const TOP_HERO_OBJECT = {
+    styles: styles,
+    bg: "https://raw.githubusercontent.com/dynamicwebtech/client_CDNS/main/dynamic-web-technologies/bgs/portfolio/portfolio-top-bg.webp",
+    heading: "Services/Add-Ons.",
+    text: "Dynamic Web Technologies provides many different services that are or can be included with your website. From business emails to logo making to Shopify websites, we can get what your website needs!",
+  };
+
   return (
     <div id="PAGE" className="page">
       <PageHead page_head_data={PH_SERVICES_DATA} icons_data={PH_ICONS_DATA} />
@@ -82,7 +92,9 @@ export default function Services({ PH_ICONS_DATA, PH_SERVICES_DATA }) {
       <LoginPopup />
       {adminMode ? <AdminModeIndicator /> : null}
 
-      <div id="PAGE_CNT"></div>
+      <div id="PAGE_CNT">
+        <TopHero object={TOP_HERO_OBJECT} />
+      </div>
 
       <Footer />
     </div>

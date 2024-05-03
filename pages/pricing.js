@@ -19,8 +19,11 @@ import { Footer } from "@/assets/components/global/Footer/Footer.js";
 import { LoginPopup } from "@/assets/components/global/All/LoginPopup.js";
 import { AdminModeIndicator } from "@/assets/components/global/All/AdminModeIndicator.js";
 
+import { TopHero } from "@/assets/components/pages/All/TopHero.js";
+
 // Style Imports
 import "../assets/styles/modules/Pricing/Pricing.module.css";
+import styles from "../assets/styles/modules/Pricing/Pricing.module.css";
 
 export async function getServerSideProps({ req }) {
   const PAGE_HEAD_DATA_DIRECTORY = "public/data/PageHead/";
@@ -72,6 +75,13 @@ export default function Pricing({ PH_ICONS_DATA, PH_PRICING_DATA }) {
   console.log("Admin Mode Status: " + adminMode);
   console.log("Local Host Status: " + onLocalHost);
 
+  const TOP_HERO_OBJECT = {
+    styles: styles,
+    bg: "https://raw.githubusercontent.com/dynamicwebtech/client_CDNS/main/dynamic-web-technologies/bgs/pricing/pricing-top-bg.webp",
+    heading: "Project Pricing.",
+    text: "At Dynamic Web Technologies, we understand everyone is worried about the cost when it comes to having a website made. That is why we provide some of the best pricing along with awesome add-ons.",
+  };
+
   return (
     <div id="PAGE" className="page">
       <PageHead page_head_data={PH_PRICING_DATA} icons_data={PH_ICONS_DATA} />
@@ -82,7 +92,9 @@ export default function Pricing({ PH_ICONS_DATA, PH_PRICING_DATA }) {
       <LoginPopup />
       {adminMode ? <AdminModeIndicator /> : null}
 
-      <div id="PAGE_CNT"></div>
+      <div id="PAGE_CNT">
+        <TopHero object={TOP_HERO_OBJECT} />
+      </div>
 
       <Footer />
     </div>
