@@ -62,6 +62,7 @@
         font-family: "Open Sans Bold";
         font-size: $Heading;
         color: white;
+        word-wrap: break-word;
       }
 
       p {
@@ -73,11 +74,138 @@
     }
   }
 }
+.services_main {
+  padding-top: 160px;
+  padding-bottom: 160px;
+
+  .services_main_inner {
+    max-width: 1600px;
+    @include quickCenter("relative");
+
+    .blue_bar {
+      height: 10px;
+      width: 100%;
+      background-color: $EasternBlue;
+      display: block;
+    }
+
+    .green_bar {
+      height: 10px;
+      width: 100%;
+      background-color: $Atlantis;
+      display: block;
+    }
+
+    .services_main_inner_box {
+      .service {
+        margin-top: 25px;
+        background-color: $Alto;
+
+        &:first-child {
+          margin-top: 0;
+        }
+
+        .service_side {
+          height: 650px;
+          display: flex;
+          align-items: center;
+          overflow: hidden !important;
+          white-space: pre-wrap;
+          position: relative;
+        }
+
+        .service_L {
+          .bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            @include bGSU(cover, center);
+          }
+        }
+
+        .service_R {
+          .service_side_cnt {
+            padding-left: 40px;
+            padding-right: 40px;
+            text-align: left;
+
+            .service_name {
+              font-family: "Open Sans Bold";
+              font-size: $MinorHeading;
+            }
+
+            p {
+              margin-top: 20px;
+              margin-bottom: 40px;
+              font-size: $SmallText;
+              font-family: "Open Sans Regular";
+            }
+
+            ul {
+              @include displayElement(flex, flex-start, center);
+
+              li {
+                a {
+                  @include displayElement(flex, center, center);
+                  height: 50px;
+                  text-decoration: none;
+                  font-family: "Open Sans Bold";
+                  border-radius: 5px;
+                  padding-left: 12px;
+                  padding-right: 12px;
+                }
+
+                .booking_link {
+                  border: 3px solid $EasternBlue;
+                  color: $EasternBlue;
+                  margin-right: 15px;
+
+                  &:hover {
+                    background-color: $EasternBlue;
+                    color: white;
+                  }
+                }
+
+                .pricing_link {
+                  border: 3px solid $Atlantis;
+                  color: $Atlantis;
+
+                  &:hover {
+                    background-color: $Atlantis;
+                    color: white;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
 // Responsive
 @media all and (max-width: 1995px) {
   .top_hero {
     height: 550px;
+  }
+  .services_main {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 40px;
+    padding-right: 40px;
+
+    .services_main_inner {
+      .services_main_inner_box {
+        .service {
+          .service_side {
+            height: 600px;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -95,6 +223,63 @@
 
         p {
           font-size: 18px;
+        }
+      }
+    }
+  }
+  .services_main {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    .services_main_inner {
+      max-width: 670px;
+
+      .services_main_inner_box {
+        .service {
+          .service_side {
+            height: 100%;
+            max-width: 100%;
+            width: 100%;
+          }
+
+          .service_L {
+            height: 350px;
+          }
+
+          .service_R {
+            padding-top: 70px;
+            padding-bottom: 50px;
+
+            .service_side_cnt {
+              text-align: center;
+
+              .service_name {
+                font-size: clamp(35px, 38px, 38px);
+              }
+
+              p {
+                font-size: clamp(18px, 20px, 20px);
+              }
+
+              ul {
+                display: grid;
+                justify-content: center;
+
+                li {
+                  a {
+                    font-size: clamp(15px, 17px, 17px);
+                  }
+
+                  .booking_link {
+                    margin-right: 0;
+                    margin-bottom: 15px;
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }
@@ -123,23 +308,141 @@
       }
     }
   }
+  .services_main {
+    padding-top: 45px;
+    padding-bottom: 45px;
+    padding-left: 25px;
+    padding-right: 25px;
+
+    .services_main_inner {
+      max-width: 500px;
+
+      .services_main_inner_box {
+        .service {
+          .service_side {
+            height: 100%;
+            max-width: 100%;
+            width: 100%;
+          }
+
+          .service_L {
+            height: 250px;
+          }
+
+          .service_R {
+            padding-top: 50px;
+            padding-bottom: 50px;
+
+            .service_side_cnt {
+              text-align: center;
+
+              .service_name {
+                font-size: clamp(30px, 33px, 33px);
+              }
+
+              p {
+                font-size: clamp(16px, 18px, 18px);
+              }
+
+              ul {
+                display: grid;
+                justify-content: center;
+
+                li {
+                  a {
+                    font-size: clamp(14px, 16px, 16px);
+                  }
+
+                  .booking_link {
+                    margin-right: 0;
+                    margin-bottom: 15px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 // Smaller Devices (Phones)
 @media all and (max-width: 419px) {
   .top_hero {
-    height: 320px;
+    height: 370px;
 
     .overlay {
       .overlay_cnt {
-        max-width: 300px;
+        max-width: 260px;
 
         h2 {
           font-size: 37px;
+          max-width: 180px;
+          @include quickCenter("relative");
         }
 
         p {
           font-size: 16px;
+        }
+      }
+    }
+  }
+  .services_main {
+    padding-top: 35px;
+    padding-bottom: 35px;
+    padding-left: 25px;
+    padding-right: 25px;
+
+    .services_main_inner {
+      max-width: 500px;
+
+      .services_main_inner_box {
+        .service {
+          .service_side {
+            height: 100%;
+            max-width: 100%;
+            width: 100%;
+          }
+
+          .service_L {
+            height: 200px;
+          }
+
+          .service_R {
+            padding-top: 40px;
+            padding-bottom: 40px;
+
+            .service_side_cnt {
+              text-align: center;
+              padding-left: 20px;
+              padding-right: 20px;
+
+              .service_name {
+                font-size: clamp(25px, 28px, 28px);
+              }
+
+              p {
+                font-size: clamp(15px, 17px, 17px);
+              }
+
+              ul {
+                display: grid;
+                justify-content: center;
+
+                li {
+                  a {
+                    font-size: clamp(13px, 15px, 15px);
+                  }
+
+                  .booking_link {
+                    margin-right: 0;
+                    margin-bottom: 15px;
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }
@@ -166,6 +469,65 @@
       }
     }
   }
+  .services_main {
+    padding-top: 35px;
+    padding-bottom: 35px;
+    padding-left: 25px;
+    padding-right: 25px;
+
+    .services_main_inner {
+      max-width: 420px;
+
+      .services_main_inner_box {
+        .service {
+          .service_side {
+            height: 100%;
+            max-width: 100%;
+            width: 100%;
+          }
+
+          .service_L {
+            height: 200px;
+          }
+
+          .service_R {
+            padding-top: 60px;
+            padding-bottom: 60px;
+
+            .service_side_cnt {
+              text-align: center;
+              padding-left: 25px;
+              padding-right: 25px;
+
+              .service_name {
+                font-size: clamp(25px, 28px, 28px);
+              }
+
+              p {
+                font-size: clamp(15px, 17px, 17px);
+              }
+
+              ul {
+                display: flex;
+                justify-content: space-evenly;
+
+                li {
+                  a {
+                    font-size: clamp(13px, 15px, 15px);
+                  }
+
+                  .booking_link {
+                    margin-right: 8px;
+                    margin-bottom: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 // Ipad
@@ -187,6 +549,59 @@
       }
     }
   }
+  .services_main {
+    padding-top: 55px;
+    padding-bottom: 55px;
+    padding-left: 35px;
+    padding-right: 35px;
+
+    .services_main_inner {
+      max-width: 720px;
+
+      .services_main_inner_box {
+        .service {
+          .service_side {
+            height: 470px;
+            max-width: 50%;
+            width: 100%;
+          }
+
+          .service_R {
+            .service_side_cnt {
+              text-align: left;
+              padding-left: 25px;
+              padding-right: 25px;
+
+              .service_name {
+                font-size: clamp(25px, 28px, 28px);
+              }
+
+              p {
+                font-size: clamp(15px, 17px, 17px);
+                margin-bottom: 30px;
+              }
+
+              ul {
+                display: flex;
+                justify-content: flex-start;
+
+                li {
+                  a {
+                    font-size: clamp(13px, 15px, 15px);
+                  }
+
+                  .booking_link {
+                    margin-right: 8px;
+                    margin-bottom: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
@@ -204,6 +619,59 @@
         p {
           font-size: 17px;
           margin-top: 20px;
+        }
+      }
+    }
+  }
+  .services_main {
+    padding-top: 55px;
+    padding-bottom: 55px;
+    padding-left: 35px;
+    padding-right: 35px;
+
+    .services_main_inner {
+      max-width: 720px;
+
+      .services_main_inner_box {
+        .service {
+          .service_side {
+            height: 470px;
+            max-width: 50%;
+            width: 100%;
+          }
+
+          .service_R {
+            .service_side_cnt {
+              text-align: left;
+              padding-left: 25px;
+              padding-right: 25px;
+
+              .service_name {
+                font-size: clamp(25px, 28px, 28px);
+              }
+
+              p {
+                font-size: clamp(15px, 17px, 17px);
+                margin-bottom: 30px;
+              }
+
+              ul {
+                display: flex;
+                justify-content: flex-start;
+
+                li {
+                  a {
+                    font-size: clamp(13px, 15px, 15px);
+                  }
+
+                  .booking_link {
+                    margin-right: 8px;
+                    margin-bottom: 0;
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }
@@ -230,6 +698,59 @@
       }
     }
   }
+  .services_main {
+    padding-top: 55px;
+    padding-bottom: 55px;
+    padding-left: 35px;
+    padding-right: 35px;
+
+    .services_main_inner {
+      max-width: 860px;
+
+      .services_main_inner_box {
+        .service {
+          .service_side {
+            height: 500px;
+            max-width: 50%;
+            width: 100%;
+          }
+
+          .service_R {
+            .service_side_cnt {
+              text-align: left;
+              padding-left: 25px;
+              padding-right: 25px;
+
+              .service_name {
+                font-size: clamp(27px, 30px, 30px);
+              }
+
+              p {
+                font-size: clamp(16px, 19px, 19px);
+                margin-bottom: 40px;
+              }
+
+              ul {
+                display: flex;
+                justify-content: flex-start;
+
+                li {
+                  a {
+                    font-size: clamp(14px, 16px, 16px);
+                  }
+
+                  .booking_link {
+                    margin-right: 12px;
+                    margin-bottom: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
@@ -247,6 +768,59 @@
         p {
           font-size: 18px;
           margin-top: 20px;
+        }
+      }
+    }
+  }
+  .services_main {
+    padding-top: 75px;
+    padding-bottom: 75px;
+    padding-left: 35px;
+    padding-right: 35px;
+
+    .services_main_inner {
+      max-width: 860px;
+
+      .services_main_inner_box {
+        .service {
+          .service_side {
+            height: 470px;
+            max-width: 50%;
+            width: 100%;
+          }
+
+          .service_R {
+            .service_side_cnt {
+              text-align: left;
+              padding-left: 25px;
+              padding-right: 25px;
+
+              .service_name {
+                font-size: clamp(27px, 30px, 30px);
+              }
+
+              p {
+                font-size: clamp(16px, 19px, 19px);
+                margin-bottom: 40px;
+              }
+
+              ul {
+                display: flex;
+                justify-content: flex-start;
+
+                li {
+                  a {
+                    font-size: clamp(14px, 16px, 16px);
+                  }
+
+                  .booking_link {
+                    margin-right: 12px;
+                    margin-bottom: 0;
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }
@@ -269,6 +843,59 @@
         p {
           font-size: 18px;
           margin-top: 20px;
+        }
+      }
+    }
+  }
+  .services_main {
+    padding-top: 85px;
+    padding-bottom: 85px;
+    padding-left: 35px;
+    padding-right: 35px;
+
+    .services_main_inner {
+      max-width: 1110px;
+
+      .services_main_inner_box {
+        .service {
+          .service_side {
+            height: 500px;
+            max-width: 50%;
+            width: 100%;
+          }
+
+          .service_R {
+            .service_side_cnt {
+              text-align: left;
+              padding-left: 25px;
+              padding-right: 25px;
+
+              .service_name {
+                font-size: clamp(30px, 33px, 33px);
+              }
+
+              p {
+                font-size: clamp(17px, 20px, 20px);
+                margin-bottom: 40px;
+              }
+
+              ul {
+                display: flex;
+                justify-content: flex-start;
+
+                li {
+                  a {
+                    font-size: clamp(15px, 17px, 17px);
+                  }
+
+                  .booking_link {
+                    margin-right: 12px;
+                    margin-bottom: 0;
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }
