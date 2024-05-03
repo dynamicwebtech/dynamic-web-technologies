@@ -611,7 +611,7 @@
 
           .add_on {
             .add_on_side {
-              height: 100px;
+              height: 80px;
               display: flex;
               align-items: center;
             }
@@ -952,7 +952,7 @@
               padding-right: 12px;
               border: 3px solid $EasternBlue;
               width: 100%;
-              max-width: 180px;
+              max-width: 150px;
 
               &:hover {
                 background-color: $EasternBlue;

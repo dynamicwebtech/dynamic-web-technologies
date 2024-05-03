@@ -539,7 +539,7 @@
   border-radius: 5px;
 }
 .index_pricing .index_pricing_inner .index_pricing_inner_add_ons .index_pricing_inner_add_ons_inner .index_pricing_inner_add_ons_inner_box .add_on .add_on_side {
-  height: 100px;
+  height: 80px;
   display: flex;
   align-items: center;
 }
@@ -842,7 +842,7 @@
   padding-right: 12px;
   border: 3px solid #1684a7;
   width: 100%;
-  max-width: 180px;
+  max-width: 150px;
 }
 .index_contact .index_contact_inner .index_contact_inner_box .index_contact_inner_row .index_contact_R .index_contact_inner_side_cnt a:hover {
   background-color: #1684a7;
