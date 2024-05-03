@@ -21,6 +21,7 @@ import { AdminModeIndicator } from "@/assets/components/global/All/AdminModeIndi
 
 import { TopHero } from "@/assets/components/pages/All/TopHero.js";
 import { AboutTeam } from "@/assets/components/pages/About/AboutTeam.js";
+import { AboutMain } from "@/assets/components/pages/About/AboutMain.js";
 
 // Style Imports
 import "../assets/styles/modules/About/About.module.css";
@@ -96,6 +97,7 @@ export default function About({ PH_ICONS_DATA, PH_ABOUT_DATA }) {
       <div id="PAGE_CNT">
         <TopHero object={TOP_HERO_OBJECT} />
         <AboutTeam />
+        <AboutMain />
       </div>
 
       <Footer />
