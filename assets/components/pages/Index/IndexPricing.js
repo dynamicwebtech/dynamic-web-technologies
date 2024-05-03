@@ -14,7 +14,7 @@ export const IndexPricing = () => {
       planID: "P_1",
       planName: "Starter",
       planPrice: 399,
-      planHostingPrice: 29,
+      planHostingPrice: 29.99,
       planIncluded: [
         "1 Month Free Hosting!",
         "WordPress or Shopify",
@@ -30,7 +30,7 @@ export const IndexPricing = () => {
       planID: "P_2",
       planName: "Basic",
       planPrice: 799,
-      planHostingPrice: 29,
+      planHostingPrice: 29.99,
       planIncluded: [
         "2 Month Free Hosting!",
         "3-5 Pages",
@@ -40,17 +40,14 @@ export const IndexPricing = () => {
         "24/7 Support",
         "Shopify Option For Additional Fee",
       ],
-      hostingIncluded: [
-        "8 Annual Revision (included w/ Hosting)",
-        "Web Maintenance",
-      ],
+      hostingIncluded: ["8 Annual Revision", "Web Maintenance"],
       planLink: "/pricing#basic",
     },
     {
       planID: "P_3",
       planName: "Professional",
       planPrice: 1499,
-      planHostingPrice: 29,
+      planHostingPrice: 29.99,
       planIncluded: [
         "3 Month Free Hosting!",
         "5+ Pages",
@@ -90,8 +87,7 @@ export const IndexPricing = () => {
             <h2>Our Project Pricing.</h2>
             <p className="orientation-change-element half-second">
               At Dynamic Web Technologies, our pricing is not just competitive;
-              it's among the best in all of North Carolina. Plus, it's highly
-              negotiable based on the project scope. Contact us today to
+              it's among the best in all of North Carolina. Contact us today to
               discover unbeatable value for your web design needs!
             </p>
             <a
