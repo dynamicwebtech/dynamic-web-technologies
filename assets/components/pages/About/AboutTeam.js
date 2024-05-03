@@ -10,6 +10,10 @@ export const AboutTeam = () => {
   const PLACEHOLDER_IMG =
     "https://raw.githubusercontent.com/dynamicwebtech/client_CDNS/main/dynamic-web-technologies/bgs/about/placeholder-user.jpg";
 
+  const COLLIN_PIC = "";
+  const PARKER_PIC =
+    "https://raw.githubusercontent.com/dynamicwebtech/client_CDNS/main/dynamic-web-technologies/bgs/about/img_of_parker.jpg";
+
   const TEAM = [
     {
       teamID: "T_1",
@@ -21,7 +25,7 @@ export const AboutTeam = () => {
       teamID: "T_2",
       teamName: "Parker Phelps",
       teamRole: "(Co-Owner/Lead Developer)",
-      teamImg: PLACEHOLDER_IMG,
+      teamImg: PARKER_PIC,
     },
   ];
 
