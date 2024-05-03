@@ -3351,6 +3351,9 @@
     max-width: 33.33%;
     margin-bottom: 20px;
   }
+  .index_pricing .index_pricing_inner .index_pricing_inner_main .index_pricing_main_inner .index_pricing_main_inner_box .index_pricing_main_inner_row .pricing_plan .pricing_plan_inner .pricing_plan_inner_cnt ul {
+    text-align: center;
+  }
   .index_pricing .index_pricing_inner .index_pricing_inner_main .index_pricing_main_inner .index_pricing_main_inner_box .index_pricing_main_inner_row .pricing_plan .pricing_plan_inner .pricing_plan_inner_cnt a {
     font-size: 15px;
     height: 45px;
@@ -3755,6 +3758,9 @@
     width: 100%;
     max-width: 33.33%;
     margin-bottom: 20px;
+  }
+  .index_pricing .index_pricing_inner .index_pricing_inner_main .index_pricing_main_inner .index_pricing_main_inner_box .index_pricing_main_inner_row .pricing_plan .pricing_plan_inner .pricing_plan_inner_cnt ul {
+    text-align: center;
   }
   .index_pricing .index_pricing_inner .index_pricing_inner_main .index_pricing_main_inner .index_pricing_main_inner_box .index_pricing_main_inner_row .pricing_plan .pricing_plan_inner .pricing_plan_inner_cnt a {
     font-size: 15px;
