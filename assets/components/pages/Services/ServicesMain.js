@@ -75,7 +75,12 @@ export const ServicesMain = () => {
               >
                 <div
                   className={`${styles.bg}`}
-                  style={{ background: `url(${service.serviceImg})` }}
+                  style={{
+                    background: `url(${service.serviceImg})`,
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "cover",
+                  }}
                 />
               </div>
               <div
@@ -117,8 +122,8 @@ export const ServicesMain = () => {
           ))}
         </div>
 
-        <div className={`${styles.blue_bar}`} />
         <div className={`${styles.green_bar}`} />
+        <div className={`${styles.blue_bar}`} />
       </div>
     </section>
   );
