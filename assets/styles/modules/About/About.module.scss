@@ -147,11 +147,211 @@
     }
   }
 }
+.about_main {
+  padding-bottom: 150px;
+
+  .about_main_inner {
+    max-width: 1550px;
+    @include quickCenter("relative");
+
+    .about_main_inner_box {
+      .about_main_inner_row {
+        .about_main_inner_side {
+          height: 600px;
+          position: relative;
+          word-wrap: break-word;
+          overflow: hidden !important;
+          white-space: pre-wrap;
+          @include displayElement(flex, flex-start, center);
+
+          .about_main_inner_side_cnt {
+            h2 {
+              font-family: "Open Sans Bold";
+              font-size: $MinorHeading;
+              margin-bottom: 30px;
+            }
+
+            p {
+              font-family: "Open Sans Regular";
+              font-size: $SmallText;
+              margin-bottom: 30px;
+            }
+
+            a {
+              @include displayElement(inline-flex, center, center);
+              height: 50px;
+              text-decoration: none;
+              font-family: "Open Sans Bold";
+              border-radius: 5px;
+              padding-left: 12px;
+              padding-right: 12px;
+              border: 3px solid $Atlantis;
+              color: $Atlantis;
+              margin-top: 15px;
+
+              &:hover {
+                background-color: $Atlantis;
+                color: white;
+              }
+            }
+          }
+        }
+      }
+
+      .about_background {
+        .about_main_L {
+          .blue_bar {
+            height: 10px;
+            width: 100%;
+            background-color: $EasternBlue;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 20;
+          }
+
+          .green_bar {
+            height: 10px;
+            width: 100%;
+            background-color: $Atlantis;
+            display: block;
+            position: absolute;
+            top: 10px;
+            left: 0;
+            z-index: 20;
+          }
+
+          .bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+          }
+        }
+
+        .about_main_R {
+          .about_main_inner_side_cnt {
+            max-width: 650px;
+            margin-left: auto;
+          }
+        }
+      }
+
+      .about_goals {
+        .about_main_MOBILE_SIDE {
+          display: none;
+
+          .bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+          }
+        }
+
+        .about_main_R {
+          .bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+          }
+        }
+
+        .about_main_L {
+          .about_main_inner_side_cnt {
+            max-width: 600px;
+            margin-right: auto;
+          }
+        }
+      }
+
+      .about_achievements {
+        .about_main_L {
+          .blue_bar {
+            height: 10px;
+            width: 100%;
+            background-color: $EasternBlue;
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 20;
+          }
+
+          .green_bar {
+            height: 10px;
+            width: 100%;
+            background-color: $Atlantis;
+            display: block;
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            z-index: 20;
+          }
+
+          .bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+          }
+        }
+
+        .about_main_R {
+          .about_main_inner_side_cnt {
+            max-width: 650px;
+            margin-left: auto;
+          }
+        }
+      }
+    }
+  }
+}
 
 // Responsive
 @media all and (max-width: 1995px) {
   .top_hero {
     height: 550px;
+  }
+  .about_main {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 130px;
+
+    .about_main_inner {
+      .about_main_inner_box {
+        .about_main_inner_row {
+          .about_main_inner_side {
+            .about_main_inner_side_cnt {
+              h2 {
+                font-size: 40px;
+              }
+            }
+          }
+        }
+
+        .about_background,
+        .about_achievements {
+          .about_main_R {
+            padding-left: 30px;
+            padding-right: 30px;
+          }
+        }
+
+        .about_goals {
+          .about_main_L {
+            padding-left: 10px;
+            padding-right: 30px;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -190,6 +390,72 @@
             height: 100%;
             padding-top: 40px;
             padding-bottom: 40px;
+          }
+        }
+      }
+    }
+  }
+  .about_main {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 55px;
+
+    .about_main_inner {
+      max-width: 540px;
+      @include quickCenter("relative");
+
+      .about_main_inner_box {
+        .about_main_inner_row {
+          .about_main_inner_side {
+            max-width: 100%;
+            width: 100%;
+            height: 100%;
+
+            .about_main_inner_side_cnt {
+              @include quickCenter("relative");
+
+              h2 {
+                font-size: 40px;
+              }
+
+              p {
+                font-size: clamp(17px, 19px, 19px);
+              }
+            }
+          }
+        }
+
+        .about_background,
+        .about_achievements {
+          .about_main_L {
+            height: 400px;
+          }
+
+          .about_main_R {
+            padding-top: 60px;
+            padding-bottom: 60px;
+            padding-left: 0px;
+            padding-right: 0px;
+            text-align: center;
+          }
+        }
+
+        .about_goals {
+          .about_main_MOBILE_SIDE {
+            display: flex;
+            height: 400px;
+          }
+
+          .about_main_L {
+            padding-top: 60px;
+            padding-bottom: 60px;
+            padding-left: 0px;
+            padding-right: 0px;
+            text-align: center;
+          }
+
+          .about_main_R {
+            display: none;
           }
         }
       }
@@ -262,6 +528,79 @@
       }
     }
   }
+  .about_main {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 25px;
+
+    .about_main_inner {
+      max-width: 540px;
+      @include quickCenter("relative");
+
+      .about_main_inner_box {
+        .about_main_inner_row {
+          .about_main_inner_side {
+            max-width: 100%;
+            width: 100%;
+            height: 100%;
+
+            .about_main_inner_side_cnt {
+              @include quickCenter("relative");
+
+              h2 {
+                font-size: 35px;
+                margin-bottom: 20px;
+              }
+
+              p {
+                font-size: clamp(16px, 18px, 18px);
+                margin-bottom: 20px;
+              }
+
+              a {
+                font-size: clamp(15px, 16px, 16px);
+                height: 45px;
+              }
+            }
+          }
+        }
+
+        .about_background,
+        .about_achievements {
+          .about_main_L {
+            height: 270px;
+          }
+
+          .about_main_R {
+            padding-top: 65px;
+            padding-bottom: 65px;
+            padding-left: 0px;
+            padding-right: 0px;
+            text-align: center;
+          }
+        }
+
+        .about_goals {
+          .about_main_MOBILE_SIDE {
+            display: flex;
+            height: 270px;
+          }
+
+          .about_main_L {
+            padding-top: 65px;
+            padding-bottom: 65px;
+            padding-left: 0px;
+            padding-right: 0px;
+            text-align: center;
+          }
+
+          .about_main_R {
+            display: none;
+          }
+        }
+      }
+    }
+  }
 }
 
 // Smaller Devices (Phones)
@@ -325,6 +664,81 @@
                 }
               }
             }
+          }
+        }
+      }
+    }
+  }
+  .about_main {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 5px;
+
+    .about_main_inner {
+      max-width: 540px;
+      @include quickCenter("relative");
+
+      .about_main_inner_box {
+        .about_main_inner_row {
+          .about_main_inner_side {
+            max-width: 100%;
+            width: 100%;
+            height: 100%;
+
+            .about_main_inner_side_cnt {
+              @include quickCenter("relative");
+
+              h2 {
+                font-size: 30px;
+                margin-bottom: 20px;
+                max-width: 230px;
+                @include quickCenter("relative");
+              }
+
+              p {
+                font-size: clamp(15px, 17px, 17px);
+                margin-bottom: 20px;
+              }
+
+              a {
+                font-size: clamp(14px, 15px, 15px);
+                height: 40px;
+              }
+            }
+          }
+        }
+
+        .about_background,
+        .about_achievements {
+          .about_main_L {
+            height: 180px;
+          }
+
+          .about_main_R {
+            padding-top: 45px;
+            padding-bottom: 45px;
+            padding-left: 0px;
+            padding-right: 0px;
+            text-align: center;
+          }
+        }
+
+        .about_goals {
+          .about_main_MOBILE_SIDE {
+            display: flex;
+            height: 180px;
+          }
+
+          .about_main_L {
+            padding-top: 45px;
+            padding-bottom: 45px;
+            padding-left: 0px;
+            padding-right: 0px;
+            text-align: center;
+          }
+
+          .about_main_R {
+            display: none;
           }
         }
       }
@@ -414,6 +828,82 @@
       }
     }
   }
+  .about_main {
+    padding-top: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 5px;
+
+    .about_main_inner {
+      max-width: 440px;
+      @include quickCenter("relative");
+
+      .about_main_inner_box {
+        .about_main_inner_row {
+          .about_main_inner_side {
+            max-width: 100%;
+            width: 100%;
+            height: 100%;
+
+            .about_main_inner_side_cnt {
+              @include quickCenter("relative");
+
+              h2 {
+                font-size: 30px;
+                margin-bottom: 20px;
+                max-width: 530px;
+                @include quickCenter("relative");
+              }
+
+              p {
+                font-size: clamp(15px, 17px, 17px);
+                margin-bottom: 20px;
+              }
+
+              a {
+                font-size: clamp(14px, 15px, 15px);
+                height: 40px;
+              }
+            }
+          }
+        }
+
+        .about_background,
+        .about_achievements {
+          .about_main_L {
+            height: 180px;
+          }
+
+          .about_main_R {
+            padding-top: 45px;
+            padding-bottom: 45px;
+            padding-left: 0px;
+            padding-right: 0px;
+            text-align: center;
+          }
+        }
+
+        .about_goals {
+          .about_main_MOBILE_SIDE {
+            display: flex;
+            height: 180px;
+          }
+
+          .about_main_L {
+            padding-top: 45px;
+            padding-bottom: 45px;
+            padding-left: 0px;
+            padding-right: 0px;
+            text-align: center;
+          }
+
+          .about_main_R {
+            display: none;
+          }
+        }
+      }
+    }
+  }
 }
 
 // Ipad
@@ -498,6 +988,82 @@
       }
     }
   }
+  .about_main {
+    padding-top: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 5px;
+
+    .about_main_inner {
+      max-width: 540px;
+      @include quickCenter("relative");
+
+      .about_main_inner_box {
+        .about_main_inner_row {
+          .about_main_inner_side {
+            max-width: 100%;
+            width: 100%;
+            height: 100%;
+
+            .about_main_inner_side_cnt {
+              @include quickCenter("relative");
+
+              h2 {
+                font-size: 34px;
+                margin-bottom: 20px;
+                max-width: 530px;
+                @include quickCenter("relative");
+              }
+
+              p {
+                font-size: clamp(16px, 18px, 18px);
+                margin-bottom: 20px;
+              }
+
+              a {
+                font-size: clamp(15px, 16px, 16px);
+                height: 45px;
+              }
+            }
+          }
+        }
+
+        .about_background,
+        .about_achievements {
+          .about_main_L {
+            height: 200px;
+          }
+
+          .about_main_R {
+            padding-top: 55px;
+            padding-bottom: 55px;
+            padding-left: 0px;
+            padding-right: 0px;
+            text-align: center;
+          }
+        }
+
+        .about_goals {
+          .about_main_MOBILE_SIDE {
+            display: flex;
+            height: 200px;
+          }
+
+          .about_main_L {
+            padding-top: 55px;
+            padding-bottom: 55px;
+            padding-left: 0px;
+            padding-right: 0px;
+            text-align: center;
+          }
+
+          .about_main_R {
+            display: none;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
@@ -577,6 +1143,82 @@
                 }
               }
             }
+          }
+        }
+      }
+    }
+  }
+  .about_main {
+    padding-top: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 5px;
+
+    .about_main_inner {
+      max-width: 540px;
+      @include quickCenter("relative");
+
+      .about_main_inner_box {
+        .about_main_inner_row {
+          .about_main_inner_side {
+            max-width: 100%;
+            width: 100%;
+            height: 100%;
+
+            .about_main_inner_side_cnt {
+              @include quickCenter("relative");
+
+              h2 {
+                font-size: 34px;
+                margin-bottom: 20px;
+                max-width: 530px;
+                @include quickCenter("relative");
+              }
+
+              p {
+                font-size: clamp(16px, 18px, 18px);
+                margin-bottom: 20px;
+              }
+
+              a {
+                font-size: clamp(15px, 16px, 16px);
+                height: 45px;
+              }
+            }
+          }
+        }
+
+        .about_background,
+        .about_achievements {
+          .about_main_L {
+            height: 200px;
+          }
+
+          .about_main_R {
+            padding-top: 55px;
+            padding-bottom: 55px;
+            padding-left: 0px;
+            padding-right: 0px;
+            text-align: center;
+          }
+        }
+
+        .about_goals {
+          .about_main_MOBILE_SIDE {
+            display: flex;
+            height: 200px;
+          }
+
+          .about_main_L {
+            padding-top: 55px;
+            padding-bottom: 55px;
+            padding-left: 0px;
+            padding-right: 0px;
+            text-align: center;
+          }
+
+          .about_main_R {
+            display: none;
           }
         }
       }
@@ -667,6 +1309,82 @@
       }
     }
   }
+  .about_main {
+    padding-top: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 5px;
+
+    .about_main_inner {
+      max-width: 640px;
+      @include quickCenter("relative");
+
+      .about_main_inner_box {
+        .about_main_inner_row {
+          .about_main_inner_side {
+            max-width: 100%;
+            width: 100%;
+            height: 100%;
+
+            .about_main_inner_side_cnt {
+              @include quickCenter("relative");
+
+              h2 {
+                font-size: 38px;
+                margin-bottom: 20px;
+                max-width: 530px;
+                @include quickCenter("relative");
+              }
+
+              p {
+                font-size: clamp(17px, 18px, 18px);
+                margin-bottom: 20px;
+              }
+
+              a {
+                font-size: clamp(16px, 17px, 17px);
+                height: 50px;
+              }
+            }
+          }
+        }
+
+        .about_background,
+        .about_achievements {
+          .about_main_L {
+            height: 240px;
+          }
+
+          .about_main_R {
+            padding-top: 75px;
+            padding-bottom: 75px;
+            padding-left: 0px;
+            padding-right: 0px;
+            text-align: center;
+          }
+        }
+
+        .about_goals {
+          .about_main_MOBILE_SIDE {
+            display: flex;
+            height: 240px;
+          }
+
+          .about_main_L {
+            padding-top: 75px;
+            padding-bottom: 75px;
+            padding-left: 0px;
+            padding-right: 0px;
+            text-align: center;
+          }
+
+          .about_main_R {
+            display: none;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
@@ -746,6 +1464,82 @@
                 }
               }
             }
+          }
+        }
+      }
+    }
+  }
+  .about_main {
+    padding-top: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 5px;
+
+    .about_main_inner {
+      max-width: 640px;
+      @include quickCenter("relative");
+
+      .about_main_inner_box {
+        .about_main_inner_row {
+          .about_main_inner_side {
+            max-width: 100%;
+            width: 100%;
+            height: 100%;
+
+            .about_main_inner_side_cnt {
+              @include quickCenter("relative");
+
+              h2 {
+                font-size: 38px;
+                margin-bottom: 20px;
+                max-width: 530px;
+                @include quickCenter("relative");
+              }
+
+              p {
+                font-size: clamp(17px, 18px, 18px);
+                margin-bottom: 20px;
+              }
+
+              a {
+                font-size: clamp(16px, 17px, 17px);
+                height: 50px;
+              }
+            }
+          }
+        }
+
+        .about_background,
+        .about_achievements {
+          .about_main_L {
+            height: 240px;
+          }
+
+          .about_main_R {
+            padding-top: 75px;
+            padding-bottom: 75px;
+            padding-left: 0px;
+            padding-right: 0px;
+            text-align: center;
+          }
+        }
+
+        .about_goals {
+          .about_main_MOBILE_SIDE {
+            display: flex;
+            height: 240px;
+          }
+
+          .about_main_L {
+            padding-top: 75px;
+            padding-bottom: 75px;
+            padding-left: 0px;
+            padding-right: 0px;
+            text-align: center;
+          }
+
+          .about_main_R {
+            display: none;
           }
         }
       }
@@ -831,6 +1625,83 @@
                 }
               }
             }
+          }
+        }
+      }
+    }
+  }
+  .about_main {
+    padding-top: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 55px;
+
+    .about_main_inner {
+      max-width: 840px;
+      @include quickCenter("relative");
+
+      .about_main_inner_box {
+        .about_main_inner_row {
+          .about_main_inner_side {
+            max-width: 100%;
+            width: 100%;
+            height: 100%;
+
+            .about_main_inner_side_cnt {
+              @include quickCenter("relative");
+              max-width: 100%;
+
+              h2 {
+                font-size: 38px;
+                margin-bottom: 20px;
+                max-width: 530px;
+                @include quickCenter("relative");
+              }
+
+              p {
+                font-size: clamp(17px, 18px, 18px);
+                margin-bottom: 20px;
+              }
+
+              a {
+                font-size: clamp(16px, 17px, 17px);
+                height: 50px;
+              }
+            }
+          }
+        }
+
+        .about_background,
+        .about_achievements {
+          .about_main_L {
+            height: 240px;
+          }
+
+          .about_main_R {
+            padding-top: 75px;
+            padding-bottom: 75px;
+            padding-left: 0px;
+            padding-right: 0px;
+            text-align: center;
+          }
+        }
+
+        .about_goals {
+          .about_main_MOBILE_SIDE {
+            display: flex;
+            height: 240px;
+          }
+
+          .about_main_L {
+            padding-top: 75px;
+            padding-bottom: 75px;
+            padding-left: 0px;
+            padding-right: 0px;
+            text-align: center;
+          }
+
+          .about_main_R {
+            display: none;
           }
         }
       }
