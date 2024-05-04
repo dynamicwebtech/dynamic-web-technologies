@@ -20,6 +20,16 @@ import {
 import styles from "../../../styles/modules/Index/Index.module.css";
 
 export const IndexServices = () => {
+  const getColumnClasses = (index, totalColumns) => {
+    const isOddNumber = totalColumns % 2 !== 0;
+
+    if (isOddNumber && index === totalColumns - 1) {
+      return "col-lg-6 col-md-6 col-sm-6 col-xs-12 offset-lg-3"; // Center the last column if odd number of columns
+    } else {
+      return "col-lg-6 col-md-6 col-sm-6 col-xs-12"; // Your existing classes for two columns
+    }
+  };
+
   const SERVICES = [
     {
       serviceID: "S_1",
@@ -61,14 +71,14 @@ export const IndexServices = () => {
         "Looking to start an e-commerce website? Let us get you started by providing you with a Shopify website.",
       serviceLink: "/services#shopifyWebsites",
     },
-    {
-      serviceID: "S_6",
-      serviceName: "Content Writing",
-      serviceImg: CONTENT_WRITING,
-      serviceText:
-        "Show your users that you mean business. Let us provide you with high quality content that will grab the readers eye.",
-      serviceLink: "/services#contentWriting",
-    },
+    // {
+    //   serviceID: "S_6",
+    //   serviceName: "Content Writing",
+    //   serviceImg: CONTENT_WRITING,
+    //   serviceText:
+    //     "Show your users that you mean business. Let us provide you with high quality content that will grab the readers eye.",
+    //   serviceLink: "/services#contentWriting",
+    // },
   ];
 
   return (
@@ -97,9 +107,12 @@ export const IndexServices = () => {
             className={`${styles.index_services_inner_main_box} container-fluid`}
           >
             <div className={`${styles.index_services_inner_main_row} row`}>
-              {SERVICES.map((service) => (
+              {SERVICES.map((service, index) => (
                 <div
-                  className={`${styles.service} col-lg-6 col-md-6 col-sm-12 col-xs-12`}
+                  className={`${styles.service} ${getColumnClasses(
+                    index,
+                    SERVICES.length
+                  )} col-lg-6 col-md-6 col-sm-12 col-xs-12`}
                 >
                   <div className={`${styles.service_inner}`}>
                     <div

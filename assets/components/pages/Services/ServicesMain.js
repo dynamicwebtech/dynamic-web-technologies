@@ -52,13 +52,13 @@ export const ServicesMain = () => {
       serviceDesc:
         "Our experienced Shopify experts collaborate with you to grasp your business goals, target audience, and unique selling points. We utilize Shopify's robust platform to craft a tailored website that effectively showcases your products or services.",
     },
-    {
-      serviceID: "S_6",
-      serviceName: "Content Writing",
-      serviceImg: CONTENT_WRITING,
-      serviceDesc:
-        "Our skilled content writers create engaging content that drives action. From website copy to blog posts, product descriptions, and social media content, we tailor our writing to your brand voice and objectives.",
-    },
+    // {
+    //   serviceID: "S_6",
+    //   serviceName: "Content Writing",
+    //   serviceImg: CONTENT_WRITING,
+    //   serviceDesc:
+    //     "Our skilled content writers create engaging content that drives action. From website copy to blog posts, product descriptions, and social media content, we tailor our writing to your brand voice and objectives.",
+    // },
   ];
 
   return (
