@@ -85,9 +85,20 @@ export default function Home({ PH_ICONS_DATA, PH_INDEX_DATA }) {
   const [reviews, setReviews] = useState([]);
   const [portfolioProjects, setPortfolioProjects] = useState([]);
 
+  // Storing localStorage data with useState
   useEffect(() => {
-    fetchPortfolioProjects("/api/getPortfolioProjects", setPortfolioProjects);
-    fetchReviews("/api/getReviews", setReviews);
+    const STORED_PORTFOLIO_PROJECTS =
+      localStorage.getItem("Portfolio Projects");
+    const PORTFOLIO_PROJECTS = STORED_PORTFOLIO_PROJECTS
+      ? JSON.parse(STORED_PORTFOLIO_PROJECTS)
+      : [];
+    const STORED_SITE_REVIEWS = localStorage.getItem("Site Reviews");
+    const SITE_REVIEWS = STORED_SITE_REVIEWS
+      ? JSON.parse(STORED_SITE_REVIEWS)
+      : [];
+
+    setPortfolioProjects(PORTFOLIO_PROJECTS);
+    setReviews(SITE_REVIEWS);
   }, []);
 
   // console.log("Admin Mode Status: " + adminMode);

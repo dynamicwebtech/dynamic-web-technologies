@@ -17,6 +17,8 @@ import DeclareStorageVariable from "../assets/functions/data/storage/DeclareStor
 import RemoveStorageVariable from "../assets/functions/data/storage/RemoveStorageVariable";
 import CheckUserDevice from "../assets/functions/dom/checkers/CheckUserDevice";
 import CheckScreenOrientation from "../assets/functions/dom/checkers/CheckScreenOrientation";
+import { fetchPortfolioProjects } from "@/assets/functions/async/fetchers/fetchPortfolioProjects";
+import { fetchReviews } from "@/assets/functions/async/fetchers/fetchReviews";
 
 // Component Imports
 
@@ -33,6 +35,8 @@ function MyApp({ Component, pageProps }) {
   const router = useRouter();
   const [updateUI, setUpdateUI] = useState(0);
   const [isLoggedIn, setIsLoggedIn] = useState(null);
+  const [portfolioProjects, setPortfolioProjects] = useState([]);
+  const [siteReviews, setSiteReviews] = useState([]);
 
   //? GLOBALS
   //! Forget scroll position and force user back to top of page
@@ -112,6 +116,16 @@ function MyApp({ Component, pageProps }) {
   }, [router]);
 
   //? DATA
+  //! Fetching data
+  useEffect(() => {
+    fetchPortfolioProjects(
+      "/api/getPortfolioProjects",
+      setPortfolioProjects,
+      "Portfolio Projects"
+    );
+    fetchReviews("/api/getReviews", setSiteReviews, "Site Reviews");
+  }, []);
+
   //! Session/Local Storage Clearing
   useEffect(() => {
     if (!sessionStorage.getItem("EA Fix")) {

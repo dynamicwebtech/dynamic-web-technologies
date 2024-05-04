@@ -73,11 +73,239 @@
     }
   }
 }
+.portfolio_projects {
+  padding-top: 240px;
+  padding-bottom: 240px;
+
+  .portfolio_projects_inner {
+    max-width: 1600px;
+    @include quickCenter("relative");
+    overflow: hidden !important;
+    white-space: pre-wrap;
+
+    .blue_bar {
+      height: 10px;
+      width: 100%;
+      background-color: $EasternBlue;
+      display: block;
+    }
+
+    .green_bar {
+      height: 10px;
+      width: 100%;
+      background-color: $Atlantis;
+      display: block;
+    }
+
+    .portfolio_projects_inner_main {
+      margin-top: 0px;
+      width: 100%;
+      max-width: 100%;
+      border-radius: 5px;
+      border: 2px solid rgba(201, 201, 201, 0.249);
+      background-color: #ffffff;
+
+      .project_inner {
+        max-width: 1450px;
+        @include quickCenter("relative");
+        background-color: #ffffff;
+
+        .project_inner_box {
+          .project_inner_row {
+            .project_inner_side {
+              height: 600px;
+              display: flex;
+              align-items: center;
+            }
+
+            .project_L {
+              justify-content: flex-start;
+
+              .project_inner_side_cnt {
+                // padding: 20px;
+
+                img {
+                  max-width: 100%;
+                  border: 2px solid rgba(201, 201, 201, 0.049);
+                }
+              }
+            }
+
+            .project_R {
+              justify-content: center;
+
+              .project_inner_side_cnt {
+                padding-left: 30px;
+                padding-right: 30px;
+                margin-left: 0;
+                margin-right: auto;
+
+                .item_id {
+                  display: block;
+                  font-family: "Open Sans Semi Bold";
+                  color: $MineShaft;
+                  font-size: $SmallLink;
+                  opacity: 0.6;
+                  margin-bottom: 12px;
+                }
+
+                .creation_date {
+                  display: block;
+                  font-family: "Open Sans Semi Bold";
+                  color: $MineShaft;
+                  font-size: $Link;
+                  opacity: 0.6;
+                  margin-bottom: 12px;
+                }
+
+                .project_name {
+                  display: block;
+                  font-family: "Open Sans Bold";
+                  color: $MineShaft;
+                  font-size: $Logo;
+                  margin-bottom: 12px;
+                }
+
+                .client_name {
+                  display: block;
+                  font-family: "Open Sans Medium";
+                  color: $MineShaft;
+                  font-size: $Link;
+                  opacity: 0.8;
+                  margin-bottom: 40px;
+                }
+
+                ul {
+                  @include displayElement(flex, flex-start, center);
+                  max-width: 550px;
+                  // @include quickCenter("relative");
+                  font-size: clamp(14px, 15px, 15px);
+
+                  li {
+                    a {
+                      @include displayElement(flex, center, center);
+                      height: 45px;
+                      text-decoration: none;
+                      // color: white;
+                      font-family: "Open Sans Bold";
+                      border-radius: 5px;
+                      padding-left: 12px;
+                      padding-right: 12px;
+                    }
+
+                    .demo_link {
+                      border: 3px solid $Atlantis;
+                      color: $Atlantis;
+                      margin-right: 12px;
+
+                      &:hover {
+                        background-color: $Atlantis;
+                        color: white;
+                      }
+                    }
+
+                    .portfolio_link {
+                      border: 3px solid $EasternBlue;
+                      color: $EasternBlue;
+
+                      &:hover {
+                        background-color: $EasternBlue;
+                        color: white;
+                      }
+                    }
+                  }
+                }
+
+                .delete {
+                  margin-top: 30px;
+                  font-family: "Open Sans Bold";
+                  background-color: red;
+                  color: white;
+                  padding: 10px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
 // Responsive
 @media all and (max-width: 1995px) {
   .top_hero {
     height: 550px;
+  }
+  .portfolio_projects {
+    padding-top: 80px;
+    padding-bottom: 100px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    .portfolio_projects_inner {
+      max-width: 100%;
+      @include quickCenter("relative");
+
+      .portfolio_projects_inner_main {
+        max-width: 700px;
+        @include quickCenter("relative");
+        border-radius: 0;
+        margin-top: 0;
+
+        .project_inner {
+          .project_inner_box {
+            .project_inner_row {
+              .project_inner_side {
+                width: 100%;
+                max-width: 100%;
+                height: 100%;
+              }
+
+              .project_L {
+                justify-content: center;
+                padding-top: 50px;
+                padding-bottom: 30px;
+
+                .project_inner_side_cnt {
+                  img {
+                    max-width: 420px;
+                    @include quickCenter("relative");
+                  }
+                }
+              }
+
+              .project_R {
+                padding-top: 20px;
+                padding-bottom: 50px;
+
+                .project_inner_side_cnt {
+                  margin-left: auto;
+                  margin-right: auto;
+                  text-align: center;
+
+                  .project_name {
+                    font-size: clamp(25px, 27px, 27px);
+                  }
+
+                  ul {
+                    display: grid;
+                    justify-content: space-evenly;
+
+                    li {
+                      .demo_link {
+                        margin-right: 0;
+                        margin-bottom: 10px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -95,6 +323,76 @@
 
         p {
           font-size: 18px;
+        }
+      }
+    }
+  }
+  .portfolio_projects {
+    padding-top: 80px;
+    padding-bottom: 100px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    .portfolio_projects_inner {
+      max-width: 100%;
+      @include quickCenter("relative");
+
+      .portfolio_projects_inner_main {
+        max-width: 440px;
+        @include quickCenter("relative");
+        border-radius: 0;
+        margin-top: 0;
+
+        .project_inner {
+          .project_inner_box {
+            .project_inner_row {
+              .project_inner_side {
+                width: 100%;
+                max-width: 100%;
+                height: 100%;
+              }
+
+              .project_L {
+                justify-content: center;
+                padding-top: 50px;
+                padding-bottom: 30px;
+
+                .project_inner_side_cnt {
+                  img {
+                    max-width: 340px;
+                    @include quickCenter("relative");
+                  }
+                }
+              }
+
+              .project_R {
+                padding-top: 20px;
+                padding-bottom: 50px;
+
+                .project_inner_side_cnt {
+                  margin-left: auto;
+                  margin-right: auto;
+                  text-align: center;
+
+                  .project_name {
+                    font-size: clamp(22px, 24px, 24px);
+                  }
+
+                  ul {
+                    display: grid;
+                    justify-content: space-evenly;
+
+                    li {
+                      .demo_link {
+                        margin-right: 0;
+                        margin-bottom: 10px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }
@@ -123,6 +421,76 @@
       }
     }
   }
+  .portfolio_projects {
+    padding-top: 50px;
+    padding-bottom: 70px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    .portfolio_projects_inner {
+      max-width: 100%;
+      @include quickCenter("relative");
+
+      .portfolio_projects_inner_main {
+        max-width: 440px;
+        @include quickCenter("relative");
+        border-radius: 0;
+        margin-top: 0;
+
+        .project_inner {
+          .project_inner_box {
+            .project_inner_row {
+              .project_inner_side {
+                width: 100%;
+                max-width: 100%;
+                height: 100%;
+              }
+
+              .project_L {
+                justify-content: center;
+                padding-top: 50px;
+                padding-bottom: 30px;
+
+                .project_inner_side_cnt {
+                  img {
+                    max-width: 340px;
+                    @include quickCenter("relative");
+                  }
+                }
+              }
+
+              .project_R {
+                padding-top: 20px;
+                padding-bottom: 50px;
+
+                .project_inner_side_cnt {
+                  margin-left: auto;
+                  margin-right: auto;
+                  text-align: center;
+
+                  .project_name {
+                    font-size: clamp(22px, 24px, 24px);
+                  }
+
+                  ul {
+                    display: grid;
+                    justify-content: space-evenly;
+
+                    li {
+                      .demo_link {
+                        margin-right: 0;
+                        margin-bottom: 10px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 // Smaller Devices (Phones)
@@ -140,6 +508,79 @@
 
         p {
           font-size: 16px;
+        }
+      }
+    }
+  }
+  .portfolio_projects {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    .portfolio_projects_inner {
+      max-width: 100%;
+      @include quickCenter("relative");
+
+      .portfolio_projects_inner_main {
+        max-width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+        @include quickCenter("relative");
+        border-radius: 0;
+        margin-top: 0;
+        border: none;
+
+        .project_inner {
+          .project_inner_box {
+            .project_inner_row {
+              .project_inner_side {
+                width: 100%;
+                max-width: 100%;
+                height: 100%;
+              }
+
+              .project_L {
+                justify-content: center;
+                padding-top: 30px;
+                padding-bottom: 30px;
+
+                .project_inner_side_cnt {
+                  img {
+                    max-width: 100%;
+                    @include quickCenter("relative");
+                  }
+                }
+              }
+
+              .project_R {
+                padding-top: 20px;
+                padding-bottom: 30px;
+
+                .project_inner_side_cnt {
+                  margin-left: auto;
+                  margin-right: auto;
+                  text-align: center;
+
+                  .project_name {
+                    font-size: clamp(18px, 20px, 20px);
+                  }
+
+                  ul {
+                    display: grid;
+                    justify-content: space-evenly;
+
+                    li {
+                      .demo_link {
+                        margin-right: 0;
+                        margin-bottom: 10px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }
@@ -162,6 +603,23 @@
         p {
           font-size: 17px;
           margin-top: 20px;
+        }
+      }
+    }
+  }
+  .portfolio_projects {
+    .portfolio_projects_inner {
+      .portfolio_projects_inner_main {
+        .project_inner_box {
+          .project_inner_row {
+            .project_L {
+              .project_inner_side_cnt {
+                img {
+                  max-width: 100%;
+                }
+              }
+            }
+          }
         }
       }
     }

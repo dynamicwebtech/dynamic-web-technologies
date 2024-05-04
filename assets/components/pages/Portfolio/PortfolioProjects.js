@@ -1,30 +1,24 @@
 /**
  *
- *  This is the Index Portfolio Projects
+ *  This is the Portfolio Projects
  *
  */
 
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 
-import { FaChevronRight } from "react-icons/fa";
 import { MdError } from "react-icons/md";
-
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 import checkAdminModeStatus from "@/assets/hooks/checkAdminModeStatus";
 
-import styles from "../../../styles/modules/Index/Index.module.css";
+import styles from "../../../styles/modules/Portfolio/Portfolio.module.css";
 
-export const IndexPortfolioProjects = (props) => {
+export const PortfolioProjects = () => {
   const router = useRouter();
 
-  const PORTFOLIO_PROJECTS = props.portfolioProjects;
-  const [portfolioProjects, setPortfolioProjects] =
-    useState(PORTFOLIO_PROJECTS);
-  const [loading, setLoading] = useState(false);
-
-  const { adminMode } = checkAdminModeStatus();
+  const [loading, setLoading] = useState(true);
+  const [portfolioProjects, setPortfolioProjects] = useState([]);
 
   // Displaying projects
   useEffect(() => {
@@ -46,6 +40,8 @@ export const IndexPortfolioProjects = (props) => {
     };
   }, []);
 
+  const { adminMode } = checkAdminModeStatus();
+
   const deletePortfolioProject = async (itemID) => {
     try {
       const RESPONSE = await fetch(
@@ -57,6 +53,8 @@ export const IndexPortfolioProjects = (props) => {
 
       if (RESPONSE.ok) {
         console.log("Portfolio project deleted successfully!");
+
+        router.reload();
       } else {
         console.error("Failed to delete media:", RESPONSE.statusText);
       }
@@ -66,35 +64,17 @@ export const IndexPortfolioProjects = (props) => {
   };
 
   return (
-    <section
-      id="indexPortfolioProjects"
-      className={`${styles.index_portfolio_projects}`}
-    >
-      <div className={`${styles.index_portfolio_projects_inner}`}>
-        <div className={`${styles.index_portfolio_projects_inner_top}`}>
-          <div className={`${styles.index_portfolio_projects_inner_top_cnt}`}>
-            <h2 className="orientation-change-element half-second">
-              Previous Client Projects.
-            </h2>
-            <p className="orientation-change-element half-second">
-              Get a look at the previous projects Dynamic Web Technologies has
-              done over the years below.
-            </p>
+    <section id="portfolioProjects" className={`${styles.portfolio_projects}`}>
+      <div className={`${styles.portfolio_projects_inner}`}>
+        {/**
+            
 
-            <a
-              href="/portfolio"
-              className="orientation-change-element half-second"
-            >
-              <span>View All</span>
-              <FaChevronRight />
-            </a>
-          </div>
+        */}
 
+        <div className={styles.portfolio_projects_inner_main}>
           <div className={`${styles.blue_bar}`} />
           <div className={`${styles.green_bar}`} />
-        </div>
 
-        <div className={`${styles.index_portfolio_projects_inner_main}`}>
           {loading ? (
             <div
               className={`${styles.loading_text}`}
@@ -110,7 +90,7 @@ export const IndexPortfolioProjects = (props) => {
           ) : (
             <>
               {portfolioProjects.length > 0 ? (
-                portfolioProjects.slice(0, 3).map((project) => (
+                portfolioProjects.map((project) => (
                   <div key={project.itemID} className={`${styles.project}`}>
                     <div className={`${styles.project_inner}`}>
                       <div
@@ -203,6 +183,9 @@ export const IndexPortfolioProjects = (props) => {
               )}
             </>
           )}
+
+          <div className={`${styles.green_bar}`} />
+          <div className={`${styles.blue_bar}`} />
         </div>
       </div>
     </section>

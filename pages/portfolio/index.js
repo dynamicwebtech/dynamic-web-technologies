@@ -9,6 +9,7 @@ import path from "path";
 // Data/Functions/Images Imports
 import checkAdminModeStatus from "@/assets/hooks/checkAdminModeStatus";
 import checkLocalHostStatus from "@/assets/hooks/checkLocalHostStatus";
+import { fetchPortfolioProjects } from "@/assets/functions/async/fetchers/fetchPortfolioProjects";
 
 // Component Imports
 import { PageHead } from "@/assets/components/global/All/PageHead";
@@ -20,6 +21,7 @@ import { LoginPopup } from "@/assets/components/global/All/LoginPopup.js";
 import { AdminModeIndicator } from "@/assets/components/global/All/AdminModeIndicator.js";
 
 import { TopHero } from "@/assets/components/pages/All/TopHero";
+import { PortfolioProjects } from "@/assets/components/pages/Portfolio/PortfolioProjects";
 
 // Style Imports
 import "../../assets/styles/modules/Portfolio/Portfolio.module.css";
@@ -94,6 +96,8 @@ export default function Portfolio({ PH_ICONS_DATA, PH_PORTFOLIO_DATA }) {
 
       <div id="PAGE_CNT">
         <TopHero object={TOP_HERO_OBJECT} />
+
+        <PortfolioProjects />
       </div>
 
       <Footer />
