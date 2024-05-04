@@ -57,6 +57,8 @@ export const IndexPortfolioProjects = (props) => {
 
       if (RESPONSE.ok) {
         console.log("Portfolio project deleted successfully!");
+
+        window.location.reload();
       } else {
         console.error("Failed to delete media:", RESPONSE.statusText);
       }

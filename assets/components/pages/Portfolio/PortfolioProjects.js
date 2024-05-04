@@ -54,7 +54,7 @@ export const PortfolioProjects = () => {
       if (RESPONSE.ok) {
         console.log("Portfolio project deleted successfully!");
 
-        router.reload();
+        window.location.reload();
       } else {
         console.error("Failed to delete media:", RESPONSE.statusText);
       }
