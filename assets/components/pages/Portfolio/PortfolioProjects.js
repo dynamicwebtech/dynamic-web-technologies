@@ -118,11 +118,13 @@ export const PortfolioProjects = () => {
                                   ItemID: {project.itemID}
                                 </span>
                               ) : null}
+                              {/**
                               <span
                                 className={`${styles.creation_date} orientation-change-element half-second`}
                               >
                                 {project.creationDate}
                               </span>
+                              */}
                               <span
                                 className={`${styles.project_name} orientation-change-element half-second`}
                               >

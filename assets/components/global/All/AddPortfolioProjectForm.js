@@ -12,7 +12,7 @@ export const AddPortfolioProjectForm = (props) => {
   const [projectName, setProjectName] = useState("");
   const [clientName, setClientName] = useState("");
   const [file, setFile] = useState(null);
-  const [creationDate, setCreationDate] = useState("");
+  // const [creationDate, setCreationDate] = useState("");
   const [demoLink, setDemoLink] = useState("");
   const [description, setDescription] = useState("");
   const [review, setReview] = useState("");
@@ -70,7 +70,7 @@ export const AddPortfolioProjectForm = (props) => {
         formData.append("projectName", projectName);
         formData.append("clientName", clientName);
         formData.append("file", file);
-        formData.append("creationDate", creationDate);
+        // formData.append("creationDate", creationDate);
         formData.append("demoLink", demoLink);
         formData.append("description", description);
         formData.append("review", review);
@@ -89,7 +89,7 @@ export const AddPortfolioProjectForm = (props) => {
           setProjectName("");
           setClientName("");
           setFile(null);
-          setCreationDate("");
+          // setCreationDate("");
           setDemoLink("");
           setDescription("");
           setReview("");
@@ -125,7 +125,7 @@ export const AddPortfolioProjectForm = (props) => {
             setProjectName("");
             setClientName("");
             setFile(null);
-            setCreationDate("");
+            // setCreationDate("");
             setDemoLink("");
             setDescription("");
             setReview("");
@@ -172,6 +172,7 @@ export const AddPortfolioProjectForm = (props) => {
               onChange={handleFileChange}
             />
           </div>
+          {/**
           <div className={`${STYLES.form_set}`}>
             <span>Creation Date:</span>
             <input
@@ -185,6 +186,7 @@ export const AddPortfolioProjectForm = (props) => {
               }}
             />
           </div>
+          */}
           <div className={`${STYLES.form_set}`}>
             <span>Link To Project:</span>
             <input

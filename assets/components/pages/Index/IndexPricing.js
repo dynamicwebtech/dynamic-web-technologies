@@ -30,7 +30,7 @@ export const IndexPricing = () => {
       planID: "P_2",
       planName: "Basic",
       planPrice: 799,
-      planHostingPrice: 29.99,
+      planHostingPrice: 34.99,
       planIncluded: [
         "2 Month Free Hosting!",
         "3-5 Pages",
@@ -47,7 +47,7 @@ export const IndexPricing = () => {
       planID: "P_3",
       planName: "Professional",
       planPrice: 1499,
-      planHostingPrice: 29.99,
+      planHostingPrice: 39.99,
       planIncluded: [
         "3 Month Free Hosting!",
         "5+ Pages",
