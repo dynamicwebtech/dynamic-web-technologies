@@ -332,6 +332,12 @@ export default function PortfolioProjectItemID() {
           <PortfolioProject project={project} />
         ) : (
           <div
+            style={{
+              textAlign: "center",
+              fontFamily: "Open Sans Semi Bold",
+              paddingTop: "30px",
+              paddingBottom: "30px",
+            }}
             className={`${styles.loading_text} orientation-change-element half-second`}
           >
             Loading Project..

@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import { FaChevronRight } from "react-icons/fa";
 
 import {
   featuresDataArray_ELTYS,
@@ -95,64 +96,55 @@ export const PortfolioProject = ({ project }) => {
     <section id="portfolioProject" className={`${styles.portfolio_project}`}>
       <div className={`${styles.portfolio_project_inner}`}>
         <div className={`${styles.portfolio_project_inner_top}`}>
-          <div
-            className={`${styles.portfolio_project_inner_top_box} container-fluid`}
+          {adminMode ? (
+            <span
+              className={`${styles.item_id} orientation-change-element half-second`}
+            >
+              {itemID}
+            </span>
+          ) : null}
+
+          <LazyLoadImage
+            src={src}
+            alt={`DyanmicWebTechnologies - Image of ${projectName}.`}
+          />
+
+          <span
+            className={`${styles.project_name} orientation-change-element half-second`}
           >
-            {adminMode ? (
-              <span
-                className={`${styles.item_id} orientation-change-element half-second`}
-              >
-                {itemID}
-              </span>
-            ) : null}
-            {adminMode ? (
-              <span
-                className={`${styles.project_name_id} orientation-change-element half-second`}
-              >
-                {projectNameID}
-              </span>
-            ) : null}
+            {projectName}
+          </span>
 
-            <LazyLoadImage
-              src={src}
-              alt={`DyanmicWebTechnologies - Image of ${projectName}.`}
-            />
+          <span
+            className={`${styles.client_name} orientation-change-element half-second`}
+          >
+            {clientName}
+          </span>
 
-            <span
-              className={`${styles.project_name} orientation-change-element half-second`}
+          <p className="orientation-change-element half-second">
+            {description}
+          </p>
+
+          <a
+            href={`${demoLink}`}
+            className={`${styles.demo_link} orientation-change-element half-second`}
+          >
+            <span>Visit Website</span>
+          </a>
+
+          {adminMode ? <br /> : null}
+
+          {adminMode ? (
+            <button
+              className={`${styles.delete} orientation-change-element half-second`}
+              onClick={() => {
+                deletePortfolioProject(itemID);
+                // router.reload();
+              }}
             >
-              {projectName}
-            </span>
-
-            <span
-              className={`${styles.client_name} orientation-change-element half-second`}
-            >
-              {clientName}
-            </span>
-
-            <p className="orientation-change-element half-second">
-              {description}
-            </p>
-
-            <a
-              href={`${demoLink}`}
-              className={`${styles.demo_link} orientation-change-element half-second`}
-            >
-              <span>Visit Website</span>
-            </a>
-
-            {adminMode ? (
-              <button
-                className={`${styles.delete} orientation-change-element half-second`}
-                onClick={() => {
-                  deletePortfolioProject(itemID);
-                  // router.reload();
-                }}
-              >
-                <span>Delete Project</span>
-              </button>
-            ) : null}
-          </div>
+              <span>Delete Project</span>
+            </button>
+          ) : null}
         </div>
 
         <div className={`${styles.portfolio_project_inner_middle}`}>
@@ -163,7 +155,19 @@ export const PortfolioProject = ({ project }) => {
               What Did They Think?
             </span>
 
-            <p className="orientation-change-element half-second">{review}</p>
+            <p className="orientation-change-element half-second">
+              <span>“</span>{" "}
+              <span className={`${styles.text_holder}`}>{review}</span>{" "}
+              <span>”</span>
+            </p>
+
+            <a
+              href="/book_contact#bookForm"
+              className="orientation-change-element half-second"
+            >
+              <span>Book A Project</span>
+              <FaChevronRight className={`${styles.icon}`} />
+            </a>
           </div>
         </div>
 
@@ -197,15 +201,15 @@ export const PortfolioProject = ({ project }) => {
                       </ul>
                     </div>
                   )}
-                  {projectNameID === "PNID_eltyspremiumpainting" && (
+                  {projectNameID === "PNID_radianceglowhsc" && (
                     <div className={`${styles.list_set}`}>
                       <span
                         className={`${styles.list_set_name} orientation-change-element half-second`}
                       >
-                        Achievements:
+                        Features:
                       </span>
                       <ul>
-                        {achievementsArray_ELTYS.map((item) => (
+                        {featuresDataArray_RADIANCEGLOW.map((item) => (
                           <li
                             key={item.id}
                             className="orientation-change-element half-second"
@@ -216,7 +220,7 @@ export const PortfolioProject = ({ project }) => {
                       </ul>
                     </div>
                   )}
-                  {projectNameID === "PNID_radianceglowhsc" && (
+                  {projectNameID === "PNID_fibercompany" && (
                     <div className={`${styles.list_set}`}>
                       <span
                         className={`${styles.list_set_name} orientation-change-element half-second`}
@@ -224,7 +228,72 @@ export const PortfolioProject = ({ project }) => {
                         Features:
                       </span>
                       <ul>
-                        {featuresDataArray_RADIANCEGLOW.map((item) => (
+                        {featuresDataArray_FIBERCOMPANY.map((item) => (
+                          <li
+                            key={item.id}
+                            className="orientation-change-element half-second"
+                          >
+                            <span>{item.text}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                  {projectNameID === "PNID_softskillitcommunications" && (
+                    <div className={`${styles.list_set}`}>
+                      <span
+                        className={`${styles.list_set_name} orientation-change-element half-second`}
+                      >
+                        Features:
+                      </span>
+                      <ul>
+                        {featuresDataArray_SOFTSKILLIT.map((item) => (
+                          <li
+                            key={item.id}
+                            className="orientation-change-element half-second"
+                          >
+                            <span>{item.text}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                  {projectNameID === "PNID_rtsyvisuals" && (
+                    <div className={`${styles.list_set}`}>
+                      <span
+                        className={`${styles.list_set_name} orientation-change-element half-second`}
+                      >
+                        Features:
+                      </span>
+                      <ul>
+                        {featuresDataArray_RTSYVISUALS.map((item) => (
+                          <li
+                            key={item.id}
+                            className="orientation-change-element half-second"
+                          >
+                            <span>{item.text}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                </div>
+              </div>
+              <div
+                className={`${styles.portfolio_project_inner_bottom_side} ${styles.portfolio_project_bottom_L} col-lg-6 col-md-6 col-sm-12 col-xs-12`}
+              >
+                <div
+                  className={`${styles.portfolio_project_inner_bottom_side_cnt}`}
+                >
+                  {projectNameID === "PNID_eltyspremiumpainting" && (
+                    <div className={`${styles.list_set}`}>
+                      <span
+                        className={`${styles.list_set_name} orientation-change-element half-second`}
+                      >
+                        Achievements:
+                      </span>
+                      <ul>
+                        {achievementsArray_ELTYS.map((item) => (
                           <li
                             key={item.id}
                             className="orientation-change-element half-second"
@@ -259,25 +328,6 @@ export const PortfolioProject = ({ project }) => {
                       <span
                         className={`${styles.list_set_name} orientation-change-element half-second`}
                       >
-                        Features:
-                      </span>
-                      <ul>
-                        {featuresDataArray_FIBERCOMPANY.map((item) => (
-                          <li
-                            key={item.id}
-                            className="orientation-change-element half-second"
-                          >
-                            <span>{item.text}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
-                  {projectNameID === "PNID_fibercompany" && (
-                    <div className={`${styles.list_set}`}>
-                      <span
-                        className={`${styles.list_set_name} orientation-change-element half-second`}
-                      >
                         Achievements:
                       </span>
                       <ul>
@@ -297,48 +347,10 @@ export const PortfolioProject = ({ project }) => {
                       <span
                         className={`${styles.list_set_name} orientation-change-element half-second`}
                       >
-                        Features:
-                      </span>
-                      <ul>
-                        {featuresDataArray_SOFTSKILLIT.map((item) => (
-                          <li
-                            key={item.id}
-                            className="orientation-change-element half-second"
-                          >
-                            <span>{item.text}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
-                  {projectNameID === "PNID_softskillitcommunications" && (
-                    <div className={`${styles.list_set}`}>
-                      <span
-                        className={`${styles.list_set_name} orientation-change-element half-second`}
-                      >
                         Achievements:
                       </span>
                       <ul>
                         {achievementsDataArray_SOFTSKILLIT.map((item) => (
-                          <li
-                            key={item.id}
-                            className="orientation-change-element half-second"
-                          >
-                            <span>{item.text}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
-                  {projectNameID === "PNID_rtsyvisuals" && (
-                    <div className={`${styles.list_set}`}>
-                      <span
-                        className={`${styles.list_set_name} orientation-change-element half-second`}
-                      >
-                        Features:
-                      </span>
-                      <ul>
-                        {featuresDataArray_RTSYVISUALS.map((item) => (
                           <li
                             key={item.id}
                             className="orientation-change-element half-second"
