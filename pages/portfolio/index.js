@@ -100,7 +100,7 @@ export default function Portfolio({ PH_ICONS_DATA, PH_PORTFOLIO_DATA }) {
 
         <PortfolioProjects />
 
-        <AddPortfolioProjectForm styles={styles} />
+        {adminMode ? <AddPortfolioProjectForm styles={styles} /> : null}
       </div>
 
       <Footer />
