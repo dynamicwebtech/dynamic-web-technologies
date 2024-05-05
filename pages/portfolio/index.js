@@ -22,6 +22,7 @@ import { AdminModeIndicator } from "@/assets/components/global/All/AdminModeIndi
 
 import { TopHero } from "@/assets/components/pages/All/TopHero";
 import { PortfolioProjects } from "@/assets/components/pages/Portfolio/PortfolioProjects";
+import { AddPortfolioProjectForm } from "@/assets/components/global/All/AddPortfolioProjectForm";
 
 // Style Imports
 import "../../assets/styles/modules/Portfolio/Portfolio.module.css";
@@ -98,6 +99,8 @@ export default function Portfolio({ PH_ICONS_DATA, PH_PORTFOLIO_DATA }) {
         <TopHero object={TOP_HERO_OBJECT} />
 
         <PortfolioProjects />
+
+        <AddPortfolioProjectForm styles={styles} />
       </div>
 
       <Footer />

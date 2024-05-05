@@ -46,6 +46,7 @@ export default async function handler(req, res) {
           const {
             itemID,
             projectName,
+            projectNameID,
             clientName,
             // creationDate,
             demoLink,
@@ -66,6 +67,7 @@ export default async function handler(req, res) {
           await collection.insertOne({
             itemID,
             projectName,
+            projectNameID,
             clientName,
             src,
             // creationDate,

@@ -4,6 +4,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 
 // Library Imports
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 // Data/Functions/Images Imports
 import checkAdminModeStatus from "@/assets/hooks/checkAdminModeStatus";
@@ -16,11 +17,13 @@ import { MobileNav } from "@/assets/components/global/Nav/MobileNav.js";
 import { Footer } from "@/assets/components/global/Footer/Footer.js";
 import { AdminModeIndicator } from "@/assets/components/global/All/AdminModeIndicator.js";
 
+import { PortfolioProject } from "@/assets/components/pages/Portfolio/PortfolioProject";
+
 // Style Imports
 import "../../assets/styles/modules/Portfolio/Portfolio.module.css";
-import { LazyLoadImage } from "react-lazy-load-image-component";
+import styles from "../../assets/styles/modules/Portfolio/Portfolio.module.css";
 
-export default function PortfolioProject() {
+export default function PortfolioProjectItemID() {
   const router = useRouter();
 
   const { itemID } = router.query;
@@ -235,6 +238,7 @@ export default function PortfolioProject() {
       {adminMode ? <AdminModeIndicator /> : null}
 
       <div id="PAGE_CNT">
+        {/** 
         {project && (
           <div>
             <br />
@@ -251,11 +255,21 @@ export default function PortfolioProject() {
               Project ID: {itemID}
             </span>
             <br />
+            <span
+              style={{
+                fontSize: "15px",
+                fontFamily: "Open Sans",
+              }}
+            >
+              Project Name ID: {project.projectNameID}
+            </span>
+            <br />
             <LazyLoadImage
               src={project.src}
               alt={`DyanmicWebTechnologies - Image of ${project.projectName}.`}
             />
             <br />
+            
             <span
               style={{
                 fontSize: "15px",
@@ -264,6 +278,7 @@ export default function PortfolioProject() {
             >
               {project.creationDate}
             </span>
+          
             <br />
             <h1
               style={{
@@ -309,6 +324,17 @@ export default function PortfolioProject() {
             >
               {project.review}
             </p>
+          </div>
+        )}
+        */}
+
+        {project ? (
+          <PortfolioProject project={project} />
+        ) : (
+          <div
+            className={`${styles.loading_text} orientation-change-element half-second`}
+          >
+            Loading Project..
           </div>
         )}
       </div>

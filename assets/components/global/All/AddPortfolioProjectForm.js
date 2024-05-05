@@ -10,6 +10,7 @@ export const AddPortfolioProjectForm = (props) => {
     "PROJECTID_" + Math.random().toString(36).substring(2, 10)
   );
   const [projectName, setProjectName] = useState("");
+  const [projectNameID, setProjectNameID] = useState("");
   const [clientName, setClientName] = useState("");
   const [file, setFile] = useState(null);
   // const [creationDate, setCreationDate] = useState("");
@@ -68,6 +69,7 @@ export const AddPortfolioProjectForm = (props) => {
         const formData = new FormData();
         formData.append("itemID", itemID);
         formData.append("projectName", projectName);
+        formData.append("projectNameID", projectNameID);
         formData.append("clientName", clientName);
         formData.append("file", file);
         // formData.append("creationDate", creationDate);
@@ -86,6 +88,7 @@ export const AddPortfolioProjectForm = (props) => {
           console.log("Portfolio Project submitted successfully");
 
           setItemID("PROJECTID_" + Math.random().toString(36).substring(2, 10));
+          setProjectNameID("");
           setProjectName("");
           setClientName("");
           setFile(null);
@@ -123,6 +126,7 @@ export const AddPortfolioProjectForm = (props) => {
               "PROJECTID_" + Math.random().toString(36).substring(2, 10)
             );
             setProjectName("");
+            setProjectNameID("");
             setClientName("");
             setFile(null);
             // setCreationDate("");
@@ -143,7 +147,12 @@ export const AddPortfolioProjectForm = (props) => {
               placeholder="Project Name"
               value={projectName}
               onChange={(e) => {
-                setProjectName(e.target.value);
+                const updatedProjectName = e.target.value.replace(/["']/g, ""); // Remove quotation marks
+                setProjectName(updatedProjectName);
+                setProjectNameID(
+                  "PNID_" +
+                    updatedProjectName.toLowerCase().replace(/[\s,]/g, "")
+                );
               }}
             />
           </div>
