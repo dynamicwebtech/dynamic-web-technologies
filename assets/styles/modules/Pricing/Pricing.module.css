@@ -787,7 +787,7 @@
     margin-bottom: 0;
   }
   .pricing_packages .pricing_packages_inner .pricing_package .pricing_package_box .pricing_package_row .pricing_package_R .pricing_package_side_cnt .links_list li .contact_link {
-    max-width: 120px;
+    max-width: 135px;
   }
   .pricing_add_ons {
     padding-top: 5px;
@@ -850,7 +850,7 @@
     margin-right: 20px;
   }
   .pricing_add_ons .pricing_add_ons_inner .pricing_add_ons_inner_main .pricing_add_ons_inner_box ul li .contact_link {
-    max-width: 120px;
+    max-width: 130px;
   }
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
@@ -939,7 +939,7 @@
     margin-bottom: 0;
   }
   .pricing_packages .pricing_packages_inner .pricing_package .pricing_package_box .pricing_package_row .pricing_package_R .pricing_package_side_cnt .links_list li .contact_link {
-    max-width: 120px;
+    max-width: 130px;
   }
   .pricing_add_ons {
     padding-top: 5px;
