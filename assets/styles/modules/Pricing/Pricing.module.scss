@@ -73,11 +73,307 @@
     }
   }
 }
+.pricing_packages {
+  padding-top: 180px;
+  padding-bottom: 180px;
+
+  .pricing_packages_inner {
+    max-width: 1550px;
+    @include quickCenter("relative");
+    overflow: hidden !important;
+    white-space: pre-wrap;
+
+    .pricing_package {
+      margin-bottom: 50px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .pricing_package_box {
+        max-width: 1250px;
+        @include quickCenter("relative");
+
+        .pricing_package_row {
+          .pricing_package_side {
+            display: flex;
+            align-items: center;
+          }
+
+          .pricing_package_L {
+            justify-content: center;
+            border-top: 3px solid $Atlantis;
+            border-bottom: 3px solid $Atlantis;
+            border-left: 3px solid $EasternBlue;
+            border-right: 3px solid $EasternBlue;
+
+            .pricing_package_side_cnt {
+              text-align: center;
+
+              .pricing_package_side_cnt_text {
+                span {
+                  display: block;
+                }
+
+                .plan_name {
+                  font-family: "Open Sans Semi Bold";
+                  font-size: $Text;
+                  opacity: 0.7;
+                }
+
+                .plan_price {
+                  font-family: "Open Sans Bold";
+                  font-size: $MinorHeading;
+                  margin-top: 12px;
+                  margin-bottom: 21px;
+                }
+
+                .plan_hosting_price {
+                  font-family: "Open Sans Bold";
+                  font-size: $Link;
+
+                  span {
+                    font-family: "Open Sans Semi Bold";
+                    font-size: $SmallLink;
+                    display: block;
+                    margin-bottom: 10px;
+                  }
+                }
+              }
+            }
+          }
+
+          .pricing_package_R {
+            padding-top: 50px;
+            padding-bottom: 50px;
+            padding-left: 25px;
+            padding-right: 25px;
+
+            .pricing_package_side_cnt {
+              max-width: 90%;
+              @include quickCenter("relative");
+
+              p {
+                font-family: "Open Sans Regular";
+                font-size: $SmallText;
+                margin-bottom: 30px;
+              }
+
+              .included_heading {
+                font-family: "Open Sans Semi Bold";
+                font-size: clamp(20px, 21px, 21px);
+                margin-bottom: 12px;
+                display: block;
+              }
+
+              .included_list {
+                list-style: disc;
+                text-align: justify;
+                font-family: "Open Sans Medium";
+                font-size: clamp(13px, 15px, 15px);
+                // max-width: 300px;
+                // @include quickCenter("relative");
+                margin-bottom: 30px;
+                display: grid;
+                grid-template-columns: repeat(2, auto);
+
+                li {
+                  margin-bottom: 12px;
+                  display: flex;
+                  justify-content: flex-start;
+                  align-items: center;
+                  text-indent: -5px;
+
+                  &::before {
+                    content: "-    ";
+                    text-indent: 5px;
+                  }
+                }
+              }
+
+              .links_list {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                margin-top: 20px;
+
+                li {
+                  a {
+                    @include displayElement(inline-flex, center, center);
+                    height: 50px;
+                    text-decoration: none;
+                    // color: $Atlantis;
+                    font-family: "Open Sans Bold";
+                    border-radius: 5px;
+                    padding-left: 12px;
+                    padding-right: 12px;
+                    // border: 3px solid $Atlantis;
+                    width: 100%;
+                  }
+
+                  .booking_link {
+                    margin-right: 20px;
+                    border: 3px solid $EasternBlue;
+                    color: $EasternBlue;
+                    max-width: 150px;
+
+                    &:hover {
+                      background-color: $EasternBlue;
+                      color: white;
+                    }
+                  }
+
+                  .contact_link {
+                    margin-right: 20px;
+                    border: 3px solid $Atlantis;
+                    color: $Atlantis;
+                    max-width: 130px;
+
+                    &:hover {
+                      background-color: $Atlantis;
+                      color: white;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.pricing_add_ons {
+  padding-top: 40px;
+  padding-bottom: 180px;
+
+  .pricing_add_ons_inner {
+    max-width: 1550px;
+    @include quickCenter("relative");
+    overflow: hidden !important;
+    white-space: pre-wrap;
+
+    h2 {
+      color: $MineShaft;
+      font-family: "Open Sans Bold";
+      font-size: $SubHeading;
+      line-height: 80px;
+      text-align: center;
+    }
+
+    .pricing_add_ons_inner_main {
+      background-color: $Alto;
+      max-width: 1250px;
+      @include quickCenter("relative");
+      margin-top: 40px;
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-top: 20px;
+      padding-bottom: 45px;
+
+      .pricing_add_ons_inner_box {
+        margin-bottom: 20px;
+        padding-bottom: 45px;
+        border-bottom: 2px solid rgba(128, 128, 128, 0.205);
+
+        &:last-child {
+          margin-bottom: 0;
+          padding-bottom: 0;
+          border-bottom: none;
+        }
+
+        .pricing_add_ons_inner_top {
+          .pricing_add_ons_inner_top_side {
+            height: 90px;
+            display: flex;
+            align-items: center;
+          }
+
+          .pricing_add_ons_top_L {
+            justify-content: flex-start;
+            font-family: "Open Sans Semi Bold";
+            font-size: $Text;
+          }
+
+          .pricing_add_ons_top_R {
+            font-size: $Text;
+            justify-content: flex-end;
+            font-family: "Open Sans Bold";
+          }
+        }
+
+        p {
+          font-family: "Open Sans Regular";
+          font-size: $Link;
+          margin-bottom: 30px;
+        }
+
+        ul {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          margin-top: 40px;
+
+          li {
+            a {
+              @include displayElement(inline-flex, center, center);
+              height: 50px;
+              text-decoration: none;
+              // color: $Atlantis;
+              font-family: "Open Sans Bold";
+              border-radius: 5px;
+              padding-left: 12px;
+              padding-right: 12px;
+              // border: 3px solid $Atlantis;
+              width: 100%;
+            }
+
+            .booking_link {
+              margin-right: 20px;
+              border: 3px solid $EasternBlue;
+              color: $EasternBlue;
+              max-width: 150px;
+
+              &:hover {
+                background-color: $EasternBlue;
+                color: white;
+              }
+            }
+
+            .contact_link {
+              margin-right: 20px;
+              border: 3px solid $Atlantis;
+              color: $Atlantis;
+              max-width: 130px;
+
+              &:hover {
+                background-color: $Atlantis;
+                color: white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
 // Responsive
 @media all and (max-width: 1995px) {
   .top_hero {
     height: 550px;
+  }
+  .pricing_packages {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .pricing_add_ons {
+    padding-top: 90px;
+    padding-bottom: 150px;
+    padding-left: 50px;
+    padding-right: 50px;
   }
 }
 
@@ -95,6 +391,122 @@
 
         p {
           font-size: 18px;
+        }
+      }
+    }
+  }
+  .pricing_packages {
+    padding-top: 90px;
+    padding-bottom: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    .pricing_packages_inner {
+      .pricing_package {
+        .pricing_package_box {
+          max-width: 650px;
+
+          .pricing_package_row {
+            .pricing_package_side {
+              width: 100%;
+              max-width: 100%;
+            }
+
+            .pricing_package_L {
+              padding-top: 40px;
+              padding-bottom: 40px;
+              max-width: 520px;
+              @include quickCenter("relative");
+
+              .pricing_package_side_cnt {
+                .pricing_package_side_cnt_text {
+                  .plan_name {
+                    font-size: clamp(20px, 21px, 21px);
+                  }
+
+                  .plan_price {
+                    font-size: clamp(36px, 38px, 38px);
+                  }
+                }
+              }
+            }
+
+            .pricing_package_R {
+              .pricing_package_side_cnt {
+                text-align: center;
+
+                p {
+                  font-size: 18px;
+                }
+
+                .included_heading {
+                  margin-bottom: 22px;
+                }
+
+                .included_list {
+                  justify-content: space-evenly;
+                  text-align: center;
+                }
+
+                .links_list {
+                  margin-top: 40px;
+                  justify-content: center;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .pricing_add_ons {
+    padding-top: 5px;
+    padding-bottom: 95px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    .pricing_add_ons_inner {
+      h2 {
+        text-align: center;
+        font-size: 45px;
+        line-height: 60px;
+      }
+
+      .pricing_add_ons_inner_main {
+        max-width: 650px;
+
+        .pricing_add_ons_inner_box {
+          .pricing_add_ons_inner_top {
+            margin-top: 30px;
+            margin-bottom: 30px;
+
+            .pricing_add_ons_inner_top_side {
+              width: 100%;
+              max-width: 100%;
+              height: 100%;
+            }
+
+            .pricing_add_ons_top_L {
+              justify-content: center;
+              font-size: 22px;
+            }
+            .pricing_add_ons_top_R {
+              justify-content: center;
+              margin-top: 20px;
+              font-size: 24px;
+            }
+          }
+
+          p {
+            text-align: center;
+            font-size: 18px;
+          }
+
+          ul {
+            justify-content: space-evenly;
+            max-width: 400px;
+            @include quickCenter("relative");
+          }
         }
       }
     }
@@ -123,6 +535,163 @@
       }
     }
   }
+  .pricing_packages {
+    padding-top: 90px;
+    padding-bottom: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    .pricing_packages_inner {
+      .pricing_package {
+        .pricing_package_box {
+          max-width: 550px;
+
+          .pricing_package_row {
+            .pricing_package_side {
+              width: 100%;
+              max-width: 100%;
+            }
+
+            .pricing_package_L {
+              padding-top: 40px;
+              padding-bottom: 40px;
+              max-width: 450px;
+              @include quickCenter("relative");
+
+              .pricing_package_side_cnt {
+                .pricing_package_side_cnt_text {
+                  .plan_name {
+                    font-size: clamp(18px, 20px, 20px);
+                  }
+
+                  .plan_price {
+                    font-size: clamp(33px, 35px, 35px);
+                  }
+                }
+              }
+            }
+
+            .pricing_package_R {
+              .pricing_package_side_cnt {
+                text-align: center;
+
+                p {
+                  font-size: 17px;
+                }
+
+                .included_heading {
+                  margin-bottom: 20px;
+                }
+
+                .included_list {
+                  justify-content: space-evenly;
+                  text-align: center;
+                  grid-template-columns: repeat(1, auto);
+
+                  li {
+                    justify-content: center;
+                  }
+                }
+
+                .links_list {
+                  margin-top: 40px;
+                  display: grid;
+                  justify-content: center;
+
+                  li {
+                    .booking_link,
+                    .contact_link {
+                      margin-right: 0;
+                    }
+
+                    .booking_link {
+                      margin-bottom: 12px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .pricing_add_ons {
+    padding-top: 5px;
+    padding-bottom: 55px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    .pricing_add_ons_inner {
+      h2 {
+        text-align: center;
+        font-size: 35px;
+        line-height: 50px;
+        max-width: 250px;
+        @include quickCenter("relative");
+      }
+
+      .pricing_add_ons_inner_main {
+        max-width: 650px;
+
+        .pricing_add_ons_inner_box {
+          .pricing_add_ons_inner_top {
+            margin-top: 30px;
+            margin-bottom: 30px;
+
+            .pricing_add_ons_inner_top_side {
+              width: 100%;
+              max-width: 100%;
+              height: 100%;
+            }
+
+            .pricing_add_ons_top_L {
+              justify-content: center;
+              font-size: clamp(18px, 20px, 20px);
+            }
+            .pricing_add_ons_top_R {
+              justify-content: center;
+              margin-top: 20px;
+              font-size: clamp(23px, 25px, 25px);
+            }
+          }
+
+          p {
+            text-align: center;
+            font-size: 17px;
+          }
+
+          ul {
+            margin-top: 40px;
+            display: grid;
+            justify-content: center;
+
+            li {
+              display: flex;
+              justify-content: center;
+
+              a {
+                @include quickCenter("relative");
+              }
+
+              .booking_link,
+              .contact_link {
+                margin-right: auto;
+              }
+
+              .booking_link {
+                margin-bottom: 12px;
+              }
+
+              .contact_link {
+                @include quickCenter("relative");
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 // Smaller Devices (Phones)
@@ -140,6 +709,180 @@
 
         p {
           font-size: 16px;
+        }
+      }
+    }
+  }
+  .pricing_packages {
+    padding-top: 60px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    .pricing_packages_inner {
+      .pricing_package {
+        margin-bottom: 20px;
+
+        .pricing_package_box {
+          max-width: 550px;
+
+          .pricing_package_row {
+            .pricing_package_side {
+              width: 100%;
+              max-width: 100%;
+            }
+
+            .pricing_package_L {
+              padding-top: 40px;
+              padding-bottom: 40px;
+              max-width: 250px;
+              @include quickCenter("relative");
+
+              .pricing_package_side_cnt {
+                .pricing_package_side_cnt_text {
+                  .plan_name {
+                    font-size: clamp(18px, 20px, 20px);
+                  }
+
+                  .plan_price {
+                    font-size: clamp(33px, 35px, 35px);
+                  }
+                }
+              }
+            }
+
+            .pricing_package_R {
+              padding-left: 15px;
+              padding-right: 15px;
+
+              .pricing_package_side_cnt {
+                text-align: center;
+
+                p {
+                  font-size: 16px;
+                }
+
+                .included_heading {
+                  margin-bottom: 20px;
+                  font-size: 17px;
+                }
+
+                .included_list {
+                  justify-content: space-evenly;
+                  text-align: center;
+                  grid-template-columns: repeat(1, auto);
+                  font-size: 14px;
+
+                  li {
+                    justify-content: center;
+                    text-indent: 0;
+
+                    &::before {
+                      content: "";
+                    }
+                  }
+                }
+
+                .links_list {
+                  margin-top: 30px;
+                  display: grid;
+                  justify-content: center;
+
+                  li {
+                    a {
+                      font-size: 15px;
+                      height: 45px;
+                    }
+
+                    .booking_link,
+                    .contact_link {
+                      margin-right: 0;
+                    }
+
+                    .booking_link {
+                      margin-bottom: 12px;
+                    }
+                    .contact_link {
+                      max-width: 120px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .pricing_add_ons {
+    padding-top: 5px;
+    padding-bottom: 55px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    .pricing_add_ons_inner {
+      h2 {
+        text-align: center;
+        font-size: 30px;
+        line-height: 45px;
+        max-width: 220px;
+        @include quickCenter("relative");
+      }
+
+      .pricing_add_ons_inner_main {
+        max-width: 650px;
+        padding-left: 20px;
+        padding-right: 20px;
+
+        .pricing_add_ons_inner_box {
+          .pricing_add_ons_inner_top {
+            margin-top: 30px;
+            margin-bottom: 30px;
+
+            .pricing_add_ons_inner_top_side {
+              width: 100%;
+              max-width: 100%;
+              height: 100%;
+            }
+
+            .pricing_add_ons_top_L {
+              justify-content: center;
+              font-size: clamp(18px, 20px, 20px);
+            }
+            .pricing_add_ons_top_R {
+              justify-content: center;
+              margin-top: 10px;
+              font-size: clamp(20px, 23px, 23px);
+            }
+          }
+
+          p {
+            text-align: center;
+            font-size: 16px;
+          }
+
+          ul {
+            margin-top: 40px;
+            display: grid;
+            justify-content: center;
+
+            li {
+              display: flex;
+              justify-content: center;
+
+              a {
+                font-size: 15px;
+                height: 45px;
+              }
+
+              .booking_link {
+                margin-bottom: 12px;
+              }
+              .contact_link {
+                max-width: 120px;
+              }
+            }
+          }
         }
       }
     }
@@ -166,6 +909,184 @@
       }
     }
   }
+  .pricing_packages {
+    padding-top: 60px;
+    padding-bottom: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    .pricing_packages_inner {
+      .pricing_package {
+        margin-bottom: 20px;
+
+        .pricing_package_box {
+          max-width: 550px;
+
+          .pricing_package_row {
+            .pricing_package_side {
+              width: 100%;
+              max-width: 100%;
+            }
+
+            .pricing_package_L {
+              padding-top: 40px;
+              padding-bottom: 40px;
+              max-width: 350px;
+              @include quickCenter("relative");
+
+              .pricing_package_side_cnt {
+                .pricing_package_side_cnt_text {
+                  .plan_name {
+                    font-size: clamp(18px, 20px, 20px);
+                  }
+
+                  .plan_price {
+                    font-size: clamp(33px, 35px, 35px);
+                  }
+                }
+              }
+            }
+
+            .pricing_package_R {
+              padding-left: 15px;
+              padding-right: 15px;
+
+              .pricing_package_side_cnt {
+                text-align: center;
+
+                p {
+                  font-size: 16px;
+                }
+
+                .included_heading {
+                  margin-bottom: 20px;
+                  font-size: 19px;
+                }
+
+                .included_list {
+                  justify-content: space-evenly;
+                  text-align: center;
+                  grid-template-columns: repeat(1, auto);
+                  font-size: 14px;
+
+                  li {
+                    justify-content: center;
+                    text-indent: 0;
+
+                    &::before {
+                      content: "";
+                    }
+                  }
+                }
+
+                .links_list {
+                  margin-top: 30px;
+                  display: flex;
+                  justify-content: space-evenly;
+
+                  li {
+                    a {
+                      font-size: 15px;
+                      height: 45px;
+                    }
+
+                    .booking_link,
+                    .contact_link {
+                      margin-right: 0;
+                    }
+
+                    .booking_link {
+                      margin-bottom: 0;
+                    }
+                    .contact_link {
+                      max-width: 120px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .pricing_add_ons {
+    padding-top: 5px;
+    padding-bottom: 55px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    .pricing_add_ons_inner {
+      h2 {
+        text-align: center;
+        font-size: 30px;
+        line-height: 45px;
+        max-width: 420px;
+        @include quickCenter("relative");
+      }
+
+      .pricing_add_ons_inner_main {
+        max-width: 650px;
+        padding-left: 20px;
+        padding-right: 20px;
+
+        .pricing_add_ons_inner_box {
+          .pricing_add_ons_inner_top {
+            margin-top: 30px;
+            margin-bottom: 30px;
+
+            .pricing_add_ons_inner_top_side {
+              width: 100%;
+              // max-width: 100%;
+              height: 45px;
+            }
+
+            .pricing_add_ons_top_L {
+              max-width: 60%;
+              justify-content: flex-start;
+              font-size: clamp(20px, 21px, 21px);
+            }
+            .pricing_add_ons_top_R {
+              max-width: 40%;
+              justify-content: flex-end;
+              margin-top: 0;
+              font-size: clamp(20px, 21px, 21px);
+            }
+          }
+
+          p {
+            text-align: left;
+            font-size: 16px;
+          }
+
+          ul {
+            margin-top: 40px;
+            display: flex;
+            justify-content: flex-start;
+            margin-left: 0;
+
+            li {
+              display: flex;
+              justify-content: center;
+
+              a {
+                font-size: 15px;
+                height: 45px;
+              }
+
+              .booking_link {
+                margin-bottom: 0;
+                margin-right: 20px;
+              }
+              .contact_link {
+                max-width: 120px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 // Ipad
@@ -187,6 +1108,184 @@
       }
     }
   }
+  .pricing_packages {
+    padding-top: 90px;
+    padding-bottom: 60px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    .pricing_packages_inner {
+      .pricing_package {
+        margin-bottom: 40px;
+
+        .pricing_package_box {
+          max-width: 550px;
+
+          .pricing_package_row {
+            .pricing_package_side {
+              width: 100%;
+              max-width: 100%;
+            }
+
+            .pricing_package_L {
+              padding-top: 40px;
+              padding-bottom: 40px;
+              max-width: 450px;
+              @include quickCenter("relative");
+
+              .pricing_package_side_cnt {
+                .pricing_package_side_cnt_text {
+                  .plan_name {
+                    font-size: clamp(18px, 20px, 20px);
+                  }
+
+                  .plan_price {
+                    font-size: clamp(33px, 35px, 35px);
+                  }
+                }
+              }
+            }
+
+            .pricing_package_R {
+              padding-left: 15px;
+              padding-right: 15px;
+
+              .pricing_package_side_cnt {
+                text-align: center;
+
+                p {
+                  font-size: 17px;
+                }
+
+                .included_heading {
+                  margin-bottom: 20px;
+                  font-size: 20px;
+                }
+
+                .included_list {
+                  justify-content: space-evenly;
+                  text-align: center;
+                  grid-template-columns: repeat(1, auto);
+                  font-size: 15px;
+
+                  li {
+                    justify-content: center;
+                    text-indent: 0;
+
+                    &::before {
+                      content: "";
+                    }
+                  }
+                }
+
+                .links_list {
+                  margin-top: 30px;
+                  display: flex;
+                  justify-content: space-evenly;
+
+                  li {
+                    a {
+                      font-size: 15px;
+                      height: 45px;
+                    }
+
+                    .booking_link,
+                    .contact_link {
+                      margin-right: 0;
+                    }
+
+                    .booking_link {
+                      margin-bottom: 0;
+                    }
+                    .contact_link {
+                      max-width: 120px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .pricing_add_ons {
+    padding-top: 5px;
+    padding-bottom: 75px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    .pricing_add_ons_inner {
+      h2 {
+        text-align: center;
+        font-size: 30px;
+        line-height: 45px;
+        max-width: 420px;
+        @include quickCenter("relative");
+      }
+
+      .pricing_add_ons_inner_main {
+        max-width: 550px;
+        padding-left: 20px;
+        padding-right: 20px;
+
+        .pricing_add_ons_inner_box {
+          .pricing_add_ons_inner_top {
+            margin-top: 30px;
+            margin-bottom: 30px;
+
+            .pricing_add_ons_inner_top_side {
+              width: 100%;
+              // max-width: 100%;
+              height: 45px;
+            }
+
+            .pricing_add_ons_top_L {
+              max-width: 60%;
+              justify-content: flex-start;
+              font-size: clamp(20px, 21px, 21px);
+            }
+            .pricing_add_ons_top_R {
+              max-width: 40%;
+              justify-content: flex-end;
+              margin-top: 0;
+              font-size: clamp(20px, 21px, 21px);
+            }
+          }
+
+          p {
+            text-align: left;
+            font-size: 16px;
+          }
+
+          ul {
+            margin-top: 40px;
+            display: flex;
+            justify-content: flex-start;
+            margin-left: 0;
+
+            li {
+              display: flex;
+              justify-content: center;
+
+              a {
+                font-size: 15px;
+                height: 45px;
+              }
+
+              .booking_link {
+                margin-bottom: 0;
+                margin-right: 20px;
+              }
+              .contact_link {
+                max-width: 120px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
@@ -204,6 +1303,185 @@
         p {
           font-size: 17px;
           margin-top: 20px;
+        }
+      }
+    }
+  }
+  .pricing_packages {
+    padding-top: 90px;
+    padding-bottom: 60px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    .pricing_packages_inner {
+      .pricing_package {
+        margin-bottom: 40px;
+
+        .pricing_package_box {
+          max-width: 650px;
+
+          .pricing_package_row {
+            .pricing_package_side {
+              width: 100%;
+              max-width: 100%;
+            }
+
+            .pricing_package_L {
+              padding-top: 40px;
+              padding-bottom: 40px;
+              max-width: 450px;
+              @include quickCenter("relative");
+
+              .pricing_package_side_cnt {
+                .pricing_package_side_cnt_text {
+                  .plan_name {
+                    font-size: clamp(18px, 20px, 20px);
+                  }
+
+                  .plan_price {
+                    font-size: clamp(33px, 35px, 35px);
+                  }
+                }
+              }
+            }
+
+            .pricing_package_R {
+              padding-left: 15px;
+              padding-right: 15px;
+
+              .pricing_package_side_cnt {
+                text-align: center;
+
+                p {
+                  font-size: 17px;
+                  margin-bottom: 40px;
+                }
+
+                .included_heading {
+                  margin-bottom: 20px;
+                  font-size: 20px;
+                }
+
+                .included_list {
+                  justify-content: space-evenly;
+                  text-align: justify;
+                  grid-template-columns: repeat(2, auto);
+                  font-size: 15px;
+
+                  li {
+                    justify-content: flex-start;
+                    text-indent: 0;
+
+                    &::before {
+                      content: "";
+                    }
+                  }
+                }
+
+                .links_list {
+                  margin-top: 30px;
+                  display: flex;
+                  justify-content: space-evenly;
+
+                  li {
+                    a {
+                      font-size: 15px;
+                      height: 45px;
+                    }
+
+                    .booking_link,
+                    .contact_link {
+                      margin-right: 0;
+                    }
+
+                    .booking_link {
+                      margin-bottom: 0;
+                    }
+                    .contact_link {
+                      max-width: 120px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .pricing_add_ons {
+    padding-top: 5px;
+    padding-bottom: 75px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    .pricing_add_ons_inner {
+      h2 {
+        text-align: center;
+        font-size: 30px;
+        line-height: 45px;
+        max-width: 420px;
+        @include quickCenter("relative");
+      }
+
+      .pricing_add_ons_inner_main {
+        max-width: 550px;
+        padding-left: 20px;
+        padding-right: 20px;
+
+        .pricing_add_ons_inner_box {
+          .pricing_add_ons_inner_top {
+            margin-top: 30px;
+            margin-bottom: 30px;
+
+            .pricing_add_ons_inner_top_side {
+              width: 100%;
+              // max-width: 100%;
+              height: 45px;
+            }
+
+            .pricing_add_ons_top_L {
+              max-width: 60%;
+              justify-content: flex-start;
+              font-size: clamp(20px, 21px, 21px);
+            }
+            .pricing_add_ons_top_R {
+              max-width: 40%;
+              justify-content: flex-end;
+              margin-top: 0;
+              font-size: clamp(20px, 21px, 21px);
+            }
+          }
+
+          p {
+            text-align: left;
+            font-size: 16px;
+          }
+
+          ul {
+            margin-top: 40px;
+            display: flex;
+            justify-content: flex-start;
+            margin-left: 0;
+
+            li {
+              display: flex;
+              justify-content: center;
+
+              a {
+                font-size: 15px;
+                height: 45px;
+              }
+
+              .booking_link {
+                margin-bottom: 0;
+                margin-right: 20px;
+              }
+              .contact_link {
+                max-width: 120px;
+              }
+            }
+          }
         }
       }
     }
@@ -230,6 +1508,187 @@
       }
     }
   }
+  .pricing_packages {
+    padding-top: 90px;
+    padding-bottom: 60px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    .pricing_packages_inner {
+      .pricing_package {
+        margin-bottom: 70px;
+
+        .pricing_package_box {
+          max-width: 850px;
+
+          .pricing_package_row {
+            .pricing_package_side {
+              width: 100%;
+              max-width: 100%;
+            }
+
+            .pricing_package_L {
+              padding-top: 40px;
+              padding-bottom: 40px;
+              max-width: 450px;
+              @include quickCenter("relative");
+
+              .pricing_package_side_cnt {
+                .pricing_package_side_cnt_text {
+                  .plan_name {
+                    font-size: clamp(18px, 20px, 20px);
+                  }
+
+                  .plan_price {
+                    font-size: clamp(33px, 35px, 35px);
+                  }
+                }
+              }
+            }
+
+            .pricing_package_R {
+              padding-left: 15px;
+              padding-right: 15px;
+
+              .pricing_package_side_cnt {
+                text-align: center;
+
+                p {
+                  font-size: 17px;
+                  margin-bottom: 40px;
+                }
+
+                .included_heading {
+                  margin-bottom: 20px;
+                  font-size: 20px;
+                }
+
+                .included_list {
+                  justify-content: space-evenly;
+                  text-align: justify;
+                  grid-template-columns: repeat(2, auto);
+                  font-size: 15px;
+
+                  li {
+                    justify-content: flex-start;
+                    text-indent: -5px;
+
+                    &::before {
+                      content: "-   ";
+                    }
+                  }
+                }
+
+                .links_list {
+                  margin-top: 30px;
+                  display: flex;
+                  justify-content: space-evenly;
+                  max-width: 450px;
+                  @include quickCenter("relative");
+
+                  li {
+                    a {
+                      font-size: 15px;
+                      height: 45px;
+                    }
+
+                    .booking_link,
+                    .contact_link {
+                      margin-right: 0;
+                    }
+
+                    .booking_link {
+                      margin-bottom: 0;
+                    }
+                    .contact_link {
+                      max-width: 120px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .pricing_add_ons {
+    padding-top: 5px;
+    padding-bottom: 95px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    .pricing_add_ons_inner {
+      h2 {
+        text-align: center;
+        font-size: 40px;
+        line-height: 60px;
+        max-width: 620px;
+        @include quickCenter("relative");
+      }
+
+      .pricing_add_ons_inner_main {
+        max-width: 650px;
+        padding-left: 20px;
+        padding-right: 20px;
+
+        .pricing_add_ons_inner_box {
+          .pricing_add_ons_inner_top {
+            margin-top: 30px;
+            margin-bottom: 30px;
+
+            .pricing_add_ons_inner_top_side {
+              width: 100%;
+              // max-width: 100%;
+              height: 55px;
+            }
+
+            .pricing_add_ons_top_L {
+              max-width: 60%;
+              justify-content: flex-start;
+              font-size: clamp(21px, 23px, 23px);
+            }
+            .pricing_add_ons_top_R {
+              max-width: 40%;
+              justify-content: flex-end;
+              margin-top: 0;
+              font-size: clamp(25px, 25px, 25px);
+            }
+          }
+
+          p {
+            text-align: left;
+            font-size: 16px;
+          }
+
+          ul {
+            margin-top: 40px;
+            display: flex;
+            justify-content: flex-start;
+            margin-left: 0;
+
+            li {
+              display: flex;
+              justify-content: center;
+
+              a {
+                font-size: 15px;
+                height: 50px;
+              }
+
+              .booking_link {
+                margin-bottom: 0;
+                margin-right: 20px;
+              }
+              .contact_link {
+                max-width: 120px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
@@ -247,6 +1706,189 @@
         p {
           font-size: 18px;
           margin-top: 20px;
+        }
+      }
+    }
+  }
+  .pricing_packages {
+    padding-top: 110px;
+    padding-bottom: 110px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    .pricing_packages_inner {
+      .pricing_package {
+        margin-bottom: 70px;
+
+        .pricing_package_box {
+          max-width: 850px;
+
+          .pricing_package_row {
+            .pricing_package_side {
+              width: 100%;
+              // max-width: 100%;
+            }
+
+            .pricing_package_L {
+              padding-top: 0px;
+              padding-bottom: 0px;
+              max-width: 40%;
+              // @include quickCenter("relative");
+
+              .pricing_package_side_cnt {
+                .pricing_package_side_cnt_text {
+                  .plan_name {
+                    font-size: clamp(18px, 20px, 20px);
+                  }
+
+                  .plan_price {
+                    font-size: clamp(33px, 35px, 35px);
+                  }
+                }
+              }
+            }
+
+            .pricing_package_R {
+              padding-left: 15px;
+              padding-right: 15px;
+              max-width: 60%;
+
+              .pricing_package_side_cnt {
+                text-align: left;
+
+                p {
+                  font-size: 17px;
+                  margin-bottom: 40px;
+                }
+
+                .included_heading {
+                  margin-bottom: 20px;
+                  font-size: 20px;
+                }
+
+                .included_list {
+                  justify-content: flex-start;
+                  text-align: justify;
+                  grid-template-columns: repeat(1, auto);
+                  font-size: 15px;
+
+                  li {
+                    justify-content: flex-start;
+                    text-indent: -5px;
+
+                    &::before {
+                      content: "-   ";
+                    }
+                  }
+                }
+
+                .links_list {
+                  margin-top: 30px;
+                  display: flex;
+                  justify-content: flex-start;
+                  max-width: 450px;
+                  @include quickCenter("relative");
+                  margin-left: 0;
+
+                  li {
+                    a {
+                      font-size: 15px;
+                      height: 45px;
+                    }
+
+                    .booking_link,
+                    .contact_link {
+                      margin-right: 30px;
+                    }
+
+                    .booking_link {
+                      margin-bottom: 0;
+                    }
+                    .contact_link {
+                      max-width: 120px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .pricing_add_ons {
+    padding-top: 5px;
+    padding-bottom: 115px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    .pricing_add_ons_inner {
+      h2 {
+        text-align: center;
+        font-size: 40px;
+        line-height: 60px;
+        max-width: 620px;
+        @include quickCenter("relative");
+      }
+
+      .pricing_add_ons_inner_main {
+        max-width: 850px;
+        padding-left: 20px;
+        padding-right: 20px;
+
+        .pricing_add_ons_inner_box {
+          .pricing_add_ons_inner_top {
+            margin-top: 30px;
+            margin-bottom: 30px;
+
+            .pricing_add_ons_inner_top_side {
+              width: 100%;
+              // max-width: 100%;
+              height: 55px;
+            }
+
+            .pricing_add_ons_top_L {
+              max-width: 60%;
+              justify-content: flex-start;
+              font-size: clamp(21px, 23px, 23px);
+            }
+            .pricing_add_ons_top_R {
+              max-width: 40%;
+              justify-content: flex-end;
+              margin-top: 0;
+              font-size: clamp(25px, 25px, 25px);
+            }
+          }
+
+          p {
+            text-align: left;
+            font-size: 16px;
+          }
+
+          ul {
+            margin-top: 40px;
+            display: flex;
+            justify-content: flex-start;
+            margin-left: 0;
+
+            li {
+              display: flex;
+              justify-content: center;
+
+              a {
+                font-size: 15px;
+                height: 50px;
+              }
+
+              .booking_link {
+                margin-bottom: 0;
+                margin-right: 20px;
+              }
+              .contact_link {
+                max-width: 120px;
+              }
+            }
+          }
         }
       }
     }
@@ -269,6 +1911,190 @@
         p {
           font-size: 18px;
           margin-top: 20px;
+        }
+      }
+    }
+  }
+  .pricing_packages {
+    padding-top: 110px;
+    padding-bottom: 110px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    .pricing_packages_inner {
+      .pricing_package {
+        margin-bottom: 70px;
+
+        .pricing_package_box {
+          max-width: 1150px;
+
+          .pricing_package_row {
+            .pricing_package_side {
+              width: 100%;
+              // max-width: 100%;
+            }
+
+            .pricing_package_L {
+              padding-top: 0px;
+              padding-bottom: 0px;
+              max-width: 40%;
+              // @include quickCenter("relative");
+
+              .pricing_package_side_cnt {
+                .pricing_package_side_cnt_text {
+                  .plan_name {
+                    font-size: clamp(21px, 24px, 24px);
+                  }
+
+                  .plan_price {
+                    font-size: clamp(37px, 40px, 40px);
+                  }
+                }
+              }
+            }
+
+            .pricing_package_R {
+              padding-left: 15px;
+              padding-right: 15px;
+              max-width: 60%;
+
+              .pricing_package_side_cnt {
+                text-align: left;
+
+                p {
+                  font-size: 18px;
+                  margin-bottom: 40px;
+                }
+
+                .included_heading {
+                  margin-bottom: 20px;
+                  font-size: 20px;
+                }
+
+                .included_list {
+                  justify-content: flex-start;
+                  text-align: justify;
+                  grid-template-columns: repeat(1, auto);
+                  font-size: 16px;
+
+                  li {
+                    justify-content: flex-start;
+                    text-indent: -5px;
+
+                    &::before {
+                      content: "-   ";
+                    }
+                  }
+                }
+
+                .links_list {
+                  margin-top: 30px;
+                  display: flex;
+                  justify-content: flex-start;
+                  max-width: 450px;
+                  @include quickCenter("relative");
+                  margin-left: 0;
+
+                  li {
+                    a {
+                      font-size: 16px;
+                      height: 50px;
+                    }
+
+                    .booking_link,
+                    .contact_link {
+                      margin-right: 30px;
+                    }
+
+                    .booking_link {
+                      margin-bottom: 0;
+                    }
+                    .contact_link {
+                      max-width: 130px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .pricing_add_ons {
+    padding-top: 65px;
+    padding-bottom: 115px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    .pricing_add_ons_inner {
+      h2 {
+        text-align: center;
+        font-size: 50px;
+        line-height: 70px;
+        max-width: 720px;
+        @include quickCenter("relative");
+      }
+
+      .pricing_add_ons_inner_main {
+        max-width: 1150px;
+        padding-left: 20px;
+        padding-right: 20px;
+
+        .pricing_add_ons_inner_box {
+          .pricing_add_ons_inner_top {
+            margin-top: 30px;
+            margin-bottom: 30px;
+
+            .pricing_add_ons_inner_top_side {
+              width: 100%;
+              // max-width: 100%;
+              height: 65px;
+            }
+
+            .pricing_add_ons_top_L {
+              max-width: 60%;
+              justify-content: flex-start;
+              font-size: clamp(24px, 26px, 26px);
+            }
+            .pricing_add_ons_top_R {
+              max-width: 40%;
+              justify-content: flex-end;
+              margin-top: 0;
+              font-size: clamp(27px, 28px, 28px);
+            }
+          }
+
+          p {
+            text-align: left;
+            font-size: 18px;
+          }
+
+          ul {
+            margin-top: 40px;
+            display: flex;
+            justify-content: flex-start;
+            margin-left: 0;
+
+            li {
+              display: flex;
+              justify-content: center;
+
+              a {
+                font-size: 17px;
+                height: 50px;
+              }
+
+              .booking_link {
+                margin-bottom: 0;
+                margin-right: 20px;
+                max-width: 170px;
+              }
+              .contact_link {
+                max-width: 140px;
+              }
+            }
+          }
         }
       }
     }

@@ -24,6 +24,8 @@ import { TopHero } from "@/assets/components/pages/All/TopHero.js";
 // Style Imports
 import "../assets/styles/modules/Pricing/Pricing.module.css";
 import styles from "../assets/styles/modules/Pricing/Pricing.module.css";
+import { PricingPackages } from "@/assets/components/pages/Pricing/PricingPackages.js";
+import { PricingAddOns } from "@/assets/components/pages/Pricing/PricingAddOns.js";
 
 export async function getServerSideProps({ req }) {
   const PAGE_HEAD_DATA_DIRECTORY = "public/data/PageHead/";
@@ -94,6 +96,8 @@ export default function Pricing({ PH_ICONS_DATA, PH_PRICING_DATA }) {
 
       <div id="PAGE_CNT">
         <TopHero object={TOP_HERO_OBJECT} />
+        <PricingPackages />
+        <PricingAddOns />
       </div>
 
       <Footer />
