@@ -20,10 +20,13 @@ import { LoginPopup } from "@/assets/components/global/All/LoginPopup.js";
 import { AdminModeIndicator } from "@/assets/components/global/All/AdminModeIndicator.js";
 
 import { TopHero } from "@/assets/components/pages/All/TopHero.js";
+import { BookContactForm } from "@/assets/components/pages/BookContact/BookContactForm.js";
+import { BookContactInfo } from "@/assets/components/pages/BookContact/BookContactInfo.js";
 
 // Style Imports
 import "../assets/styles/modules/Book_Contact/Book_Contact.module.css";
 import styles from "../assets/styles/modules/Book_Contact/Book_Contact.module.css";
+import RemoveStorageVariable from "@/assets/functions/data/storage/RemoveStorageVariable.js";
 
 export async function getServerSideProps({ req }) {
   const PAGE_HEAD_DATA_DIRECTORY = "public/data/PageHead/";
@@ -85,6 +88,16 @@ export default function Book_Contact({ PH_ICONS_DATA, PH_BOOK_CONTACT_DATA }) {
     text: "Get your business started with a high-quality website and our other services. If you have an issue or would like to speak with a member of the Dynamic Web Technologies team, we would be happy to help!",
   };
 
+  useEffect(() => {
+    if (sessionStorage.getItem("Book/Contact Submission Sent")) {
+      alert(
+        "We have recieved your message. We will get back with you shortly!"
+      );
+
+      RemoveStorageVariable("session", "Book/Contact Submission Sent");
+    }
+  }, []);
+
   return (
     <div id="PAGE" className="page">
       <PageHead
@@ -100,6 +113,21 @@ export default function Book_Contact({ PH_ICONS_DATA, PH_BOOK_CONTACT_DATA }) {
 
       <div id="PAGE_CNT">
         <TopHero object={TOP_HERO_OBJECT} />
+
+        <div className={`${styles.book_contact_box} container-fluid`}>
+          <div className={`${styles.book_contact_row} row`}>
+            <div
+              className={`${styles.book_contact_side} ${styles.book_contact_L} col-lg-7 col-md-7 col-sm-12 col-xs-12`}
+            >
+              <BookContactForm />
+            </div>
+            <div
+              className={`${styles.book_contact_side} ${styles.book_contact_R} col-lg-5 col-md-5 col-sm-12 col-xs-12`}
+            >
+              <BookContactInfo />
+            </div>
+          </div>
+        </div>
       </div>
 
       <Footer />
