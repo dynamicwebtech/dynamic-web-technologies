@@ -12,7 +12,7 @@ import checkLocalHostStatus from "@/assets/hooks/checkLocalHostStatus";
 import "../../assets/styles/modules/Blog/Blog.module.css";
 import styles from "../../assets/styles/modules/Blog/Blog.module.css";
 
-export const BlogPost = () => {
+export default function BlogPost() {
   const router = useRouter();
 
   const { blogID } = router.query;
@@ -58,4 +58,4 @@ export const BlogPost = () => {
   console.log("Project State:", project);
 
   return <div id="blogPost"></div>;
-};
+}
