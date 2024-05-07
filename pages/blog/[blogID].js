@@ -54,7 +54,7 @@ export default function BlogPost() {
     };
 
     fetchData();
-  }, [itemID]);
+  }, [blogID]);
 
   console.log("Project State:", project);
 
