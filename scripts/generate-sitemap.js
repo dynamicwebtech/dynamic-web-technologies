@@ -5,8 +5,8 @@ const PATH = require("path");
 
 SITEMAP({
   baseUrl: "PUT_PATH_HERE",
-  pagesDirectory: PATH.resolve(__dirname, "../out/"),
-  targetDirectory: PATH.resolve(__dirname, "../out/"),
+  pagesDirectory: PATH.resolve(__dirname, "../sitemap/"),
+  targetDirectory: PATH.resolve(__dirname, "../sitemap/"),
   ignoredExtensions: [
     "js",
     "map",
