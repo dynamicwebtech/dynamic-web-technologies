@@ -43,7 +43,7 @@ export default function BlogPost() {
             );
             console.log("Selected Blog Post:", selectedBlogPost); // Log selected project for debugging
 
-            setProject(selectedBlogPost);
+            setBlogPost(selectedBlogPost);
           } else {
             console.error("Failed to fetch portfolio project.");
           }
@@ -56,7 +56,7 @@ export default function BlogPost() {
     fetchData();
   }, [blogID]);
 
-  console.log("Project State:", project);
+  console.log("Blog Post State:", blogPost);
 
   return <div id="blogPost"></div>;
 }
