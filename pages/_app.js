@@ -27,6 +27,7 @@ import "../assets/styles/tools/global_classnames/global_classnames.css";
 import "../assets/styles/tools/overrides/overrides.css";
 import "../assets/styles/tools/resets/resets.css";
 import "../assets/styles/tools/library_styles/nprogress/nprogress.css";
+import { fetchBlogPosts } from "@/assets/functions/async/fetchers/fetchBlogPosts";
 
 //TODO: This is used to indicate if the client has not paid for the project and/or the monthly invoice(s)
 let IS_PAYMENT_REQUIRED = false;
@@ -37,6 +38,7 @@ function MyApp({ Component, pageProps }) {
   const [isLoggedIn, setIsLoggedIn] = useState(null);
   const [portfolioProjects, setPortfolioProjects] = useState([]);
   const [siteReviews, setSiteReviews] = useState([]);
+  const [blogPosts, setBlogPosts] = useState([]);
 
   //? GLOBALS
   //! Forget scroll position and force user back to top of page
@@ -124,6 +126,7 @@ function MyApp({ Component, pageProps }) {
       "Portfolio Projects"
     );
     fetchReviews("/api/getReviews", setSiteReviews, "Site Reviews");
+    fetchBlogPosts("/api/getBlogPosts", setBlogPosts, "Blog Posts");
   }, []);
 
   //! Session/Local Storage Clearing

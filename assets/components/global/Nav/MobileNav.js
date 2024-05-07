@@ -180,6 +180,18 @@ export const MobileNav = () => {
           </li>
         )}
 
+        {router.pathname !== "/blog" ? (
+          <li>
+            <a href="/blog" className="orientation-change-element half-second">
+              <span>Blog</span>
+            </a>
+          </li>
+        ) : (
+          <li>
+            <span>Blog</span>
+          </li>
+        )}
+
         {router.pathname !== "/book_contact" ? (
           <li>
             <a

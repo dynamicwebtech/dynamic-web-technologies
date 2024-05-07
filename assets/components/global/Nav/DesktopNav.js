@@ -138,6 +138,25 @@ export const DesktopNav = () => {
                     </li>
                   )}
 
+                  {router.pathname !== "/blog" ? (
+                    <li>
+                      <a
+                        href="/blog"
+                        className="orientation-change-element half-second"
+                      >
+                        <span>Blog</span>
+                      </a>
+                    </li>
+                  ) : (
+                    <li>
+                      <span>Blog</span>
+                      <div className="nav-link-lines">
+                        <span className={`${styles.top_line}`} />
+                        <span className={`${styles.bottom_line}`} />
+                      </div>
+                    </li>
+                  )}
+
                   {router.pathname !== "/book_contact" ? (
                     <li>
                       <a

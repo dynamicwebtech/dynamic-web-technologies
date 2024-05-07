@@ -1,0 +1,276 @@
+// Imports
+@import "../../tools/mixins/mixins.scss";
+@import "../../tools/themes/themes.scss";
+@import "../../tools/variables/variable.scss";
+
+// Fonts
+@font-face {
+  font-family: "Open Sans Extra Bold";
+  src: url("https://raw.githubusercontent.com/dynamicwebtech/client_CDNS/main/dynamic-web-technologies/fonts/OpenSans-ExtraBold.ttf");
+}
+@font-face {
+  font-family: "Open Sans Bold";
+  src: url("https://raw.githubusercontent.com/dynamicwebtech/client_CDNS/main/dynamic-web-technologies/fonts/OpenSans-Bold.ttf");
+}
+@font-face {
+  font-family: "Open Sans Semi Bold";
+  src: url("https://raw.githubusercontent.com/dynamicwebtech/client_CDNS/main/dynamic-web-technologies/fonts/OpenSans-SemiBold.ttf");
+}
+@font-face {
+  font-family: "Open Sans Medium";
+  src: url("https://raw.githubusercontent.com/dynamicwebtech/client_CDNS/main/dynamic-web-technologies/fonts/OpenSans-Medium.ttf");
+}
+@font-face {
+  font-family: "Open Sans Regular";
+  src: url("https://raw.githubusercontent.com/dynamicwebtech/client_CDNS/main/dynamic-web-technologies/fonts/OpenSans-Regular.ttf");
+}
+
+// Desktop
+.top_hero {
+  height: 600px;
+  width: 100%;
+  position: relative;
+
+  .bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-position: center top !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    @include displayElement(flex, center, center);
+    text-align: center;
+
+    .overlay_cnt {
+      max-width: 850px;
+      @include quickCenter("relative");
+      overflow: hidden !important;
+      white-space: pre-wrap;
+
+      h2 {
+        font-family: "Open Sans Bold";
+        font-size: $Heading;
+        color: white;
+      }
+
+      p {
+        font-family: "Open Sans Regular";
+        font-size: $Text;
+        color: white;
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+// Responsive
+@media all and (max-width: 1995px) {
+  .top_hero {
+    height: 550px;
+  }
+}
+
+@media all and (max-width: 991px) {  
+.top_hero {
+    height: 450px;
+
+    .overlay {
+      .overlay_cnt {
+        max-width: 500px;
+
+        h2 {
+          font-size: 55px;
+        }
+
+        p {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+}
+
+// Desktop Window (Smallest)
+@media all and (max-width: 768px) {  
+.top_hero {
+    height: 350px;
+
+    .overlay {
+      .overlay_cnt {
+        max-width: 450px;
+
+        h2 {
+          font-size: 47px;
+        }
+
+        p {
+          font-size: 17px;
+        }
+      }
+    }
+  }
+}
+
+// Smaller Devices (Phones)
+@media all and (max-width: 419px) {
+.top_hero {
+      height: 320px;
+  
+      .overlay {
+        .overlay_cnt {
+          max-width: 300px;
+  
+          h2 {
+            font-size: 37px;
+          }
+  
+          p {
+            font-size: 16px;
+          }
+        }
+      }
+ }
+}
+
+// Pixel 2 XL
+@media only screen and (min-device-width: 411px) and (max-device-width: 823px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .top_hero {
+    height: 300px;
+
+    .overlay {
+      .overlay_cnt {
+        max-width: 500px;
+
+        h2 {
+          font-size: 40px;
+        }
+
+        p {
+          font-size: 17px;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}
+
+// Ipad
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+  .top_hero {
+    height: 350px;
+
+    .overlay {
+      .overlay_cnt {
+        max-width: 500px;
+
+        h2 {
+          font-size: 45px;
+        }
+
+        p {
+          font-size: 17px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+  .top_hero {
+    height: 350px;
+
+    .overlay {
+      .overlay_cnt {
+        max-width: 500px;
+
+        h2 {
+          font-size: 45px;
+        }
+
+        p {
+          font-size: 17px;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}
+
+// iPad Pro
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .top_hero {
+    height: 450px;
+
+    .overlay {
+      .overlay_cnt {
+        max-width: 600px;
+
+        h2 {
+          font-size: 50px;
+        }
+
+        p {
+          font-size: 18px;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .top_hero {
+    height: 450px;
+
+    .overlay {
+      .overlay_cnt {
+        max-width: 600px;
+
+        h2 {
+          font-size: 50px;
+        }
+
+        p {
+          font-size: 18px;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}
+
+// Laptops
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+  .top_hero {
+    height: 450px;
+
+    .overlay {
+      .overlay_cnt {
+        max-width: 600px;
+
+        h2 {
+          font-size: 55px;
+        }
+
+        p {
+          font-size: 18px;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}

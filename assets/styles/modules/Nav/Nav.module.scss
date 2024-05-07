@@ -151,7 +151,7 @@
 }
 .desktop_nav {
   .desktop_nav_inner {
-    max-width: 1400px;
+    max-width: 1600px;
     width: 100%;
     @include quickCenter("relative");
     padding-left: 20px;
@@ -187,7 +187,7 @@
             ul {
               @include displayElement(flex, space-between, center);
               width: 100%;
-              max-width: 550px;
+              max-width: 650px;
               font-family: "Open Sans Bold";
               text-transform: uppercase;
 
@@ -366,6 +366,23 @@
 
 // Responsive
 @media all and (max-width: 1995px) {
+  .desktop_nav {
+    .desktop_nav_inner {
+      .desktop_nav_inner_box {
+        .desktop_nav_inner_row {
+          .desktop_nav_L {
+            .desktop_nav_inner_side_cnt {
+              .logo {
+                img {
+                  max-width: 290px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @media all and (max-width: 991px) {
