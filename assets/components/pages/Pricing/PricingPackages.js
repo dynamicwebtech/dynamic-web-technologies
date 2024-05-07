@@ -33,8 +33,8 @@ export const PricingPackages = () => {
       planName: "Basic",
       planDesc:
         "The Basic package will give you the best of both worlds (starter and professional). We will supply you with 3-5 page website (either WordPress, Shopify) along with a professionally made logo for your website as well as a business email. You will also be given two full free months of hosting!",
-      planPrice: 799,
-      planHostingPrice: 46.99,
+      planPrice: 999,
+      planHostingPrice: 39.99,
       planIncluded: [
         "1 Month Free Hosting!",
         "4 Pages",
@@ -78,7 +78,7 @@ export const PricingPackages = () => {
       planDesc:
         "The Enterprise package, designed to kickstart your journey to success. Gain access to a dynamic 5+ page website, built on either WordPress, Shopify, or meticulously handcrafted coding. Enhance your brand presence with a bespoke logo and dedicated business email. Plus, enjoy the advantage of three months of complimentary hosting!",
       planPrice: 2499 + "+",
-      planHostingPrice: 31.99,
+      planHostingPrice: 39.99,
       planIncluded: [
         "1 Month Free Hosting!",
         "6-10 Pages",
