@@ -81,8 +81,8 @@
   }
 }
 
-@media all and (max-width: 991px) {  
-.top_hero {
+@media all and (max-width: 991px) {
+  .top_hero {
     height: 450px;
 
     .overlay {
@@ -105,8 +105,8 @@
 }
 
 // Desktop Window (Smallest)
-@media all and (max-width: 768px) {  
-.top_hero {
+@media all and (max-width: 768px) {
+  .top_hero {
     height: 350px;
 
     .overlay {
@@ -127,23 +127,23 @@
 
 // Smaller Devices (Phones)
 @media all and (max-width: 419px) {
-.top_hero {
-      height: 320px;
-  
-      .overlay {
-        .overlay_cnt {
-          max-width: 300px;
-  
-          h2 {
-            font-size: 37px;
-          }
-  
-          p {
-            font-size: 16px;
-          }
+  .top_hero {
+    height: 320px;
+
+    .overlay {
+      .overlay_cnt {
+        max-width: 300px;
+
+        h2 {
+          font-size: 37px;
+        }
+
+        p {
+          font-size: 16px;
         }
       }
- }
+    }
+  }
 }
 
 // Pixel 2 XL
