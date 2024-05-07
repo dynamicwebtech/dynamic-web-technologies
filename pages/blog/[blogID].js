@@ -4,6 +4,7 @@
  *
  */
 
+import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 
 import checkAdminModeStatus from "@/assets/hooks/checkAdminModeStatus";
