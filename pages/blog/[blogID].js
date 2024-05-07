@@ -24,7 +24,7 @@ export default function BlogPost() {
 
   console.log("Admin Mode Status: " + adminMode);
   console.log("Local Host Status: " + onLocalHost);
-  console.log("Item ID:", itemID);
+  console.log("Blog ID:", blogID);
 
   useEffect(() => {
     const fetchData = async () => {
