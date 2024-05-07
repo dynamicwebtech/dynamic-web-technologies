@@ -22,6 +22,13 @@ export const PricingAddOns = () => {
         "Business emails are always a good choice to show professionalism when starting a business. Let us help you get one!",
       addOnPrice: 23.99 + "/month",
     },
+    {
+      addOnID: "AO_3",
+      addOnName: "Additional Page(s)",
+      addOnDesc:
+        "We can provide you with more pages than what our packages offer for a additional fee per page.",
+      addOnPrice: 149.99,
+    },
     // {
     //   addOnID: "AO_3",
     //   addOnName: "Content Writing",

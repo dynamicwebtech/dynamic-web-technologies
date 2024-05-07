@@ -13,52 +13,86 @@ export const IndexPricing = () => {
     {
       planID: "P_1",
       planName: "Starter",
-      planPrice: 399,
+      planDesc:
+        "The Starter package is the best option for those who want to gain the most bang for their buck. We will supply you with a 1-2 page website (either that be WordPress) along with a professional business email. You will also be given a free full month of hosting!",
+      planPrice: 499,
       planHostingPrice: 29.99,
       planIncluded: [
         "1 Month Free Hosting!",
-        "WordPress or Shopify",
+        "WordPress",
         "1-2 Pages",
         "Responsive Design",
-        "Business Email",
-        "24/7 Support",
       ],
-      hostingIncluded: ["5 Annual Revision", "Web Maintenance"],
-      planLink: "/pricing#starter",
+      hostingIncluded: [
+        "5 Annual Revisions",
+        "Web Maintenance",
+        "Business Email",
+        "Reliable Customer Support",
+      ],
     },
     {
       planID: "P_2",
       planName: "Basic",
+      planDesc:
+        "The Basic package will give you the best of both worlds (starter and professional). We will supply you with 3-5 page website (either WordPress, Shopify) along with a professionally made logo for your website as well as a business email. You will also be given two full free months of hosting!",
       planPrice: 799,
-      planHostingPrice: 34.99,
+      planHostingPrice: 46.99,
       planIncluded: [
-        "2 Month Free Hosting!",
-        "3-5 Pages",
-        "WordPress or Shopify or Hand Coded",
+        "1 Month Free Hosting!",
+        "4 Pages",
+        "WordPress or Shopify",
         "Everything Starter offers",
         "Website Logo",
-        "24/7 Support",
-        "Shopify Option For Additional Fee",
+        "Shopify Option * $59.99/month *",
       ],
-      hostingIncluded: ["8 Annual Revision", "Web Maintenance"],
-      planLink: "/pricing#basic",
+      hostingIncluded: [
+        "10 Annual Revisions",
+        "Web Maintenance",
+        "Business Email",
+        "Reliable Customer Support",
+      ],
     },
     {
       planID: "P_3",
       planName: "Professional",
+      planDesc:
+        "The Professional package will give your company the best start for its success. We will supply you with a 5+ page website (either WordPress, Shopify or Handcoded) along with a logo and business email. You will also get 3 full free months of hosting!",
       planPrice: 1499,
       planHostingPrice: 39.99,
       planIncluded: [
-        "3 Month Free Hosting!",
-        "5+ Pages",
-        "Everything Basic offers",
+        "1 Month Free Hosting!",
+        "5-6 Pages",
+        "Website Logo",
         //"Content Writing",
-        "24/7 Support",
-        "Shopify Option For NO Additional Fee",
-        "⠀⠀",
+        "On-Page SEO",
+        "Shopify Option * $49.99/month *",
       ],
-      hostingIncluded: ["Unlimited Revisions", "Web Maintenance"],
-      planLink: "/pricing#professional",
+      hostingIncluded: [
+        "15 Annual Revisions",
+        "Web Maintenance",
+        "Business Email",
+        "Reliable Customer Support",
+      ],
+    },
+    {
+      planID: "P_4",
+      planName: "Enterprise",
+      planDesc:
+        "The Enterprise package, designed to kickstart your journey to success. Gain access to a dynamic 5+ page website, built on either WordPress, Shopify, or meticulously handcrafted coding. Enhance your brand presence with a bespoke logo and dedicated business email. Plus, enjoy the advantage of three months of complimentary hosting!",
+      planPrice: 2499 + "+",
+      planHostingPrice: 31.99,
+      planIncluded: [
+        "1 Month Free Hosting!",
+        "6-10 Pages",
+        "Website Logo",
+        "Shopify Option * $44.99/month *",
+      ],
+      hostingIncluded: [
+        "Unlimited Revisions",
+        "Web Maintenance",
+        "Business Email",
+        "Reliable Customer Support",
+      ],
     },
   ];
 
@@ -66,12 +100,23 @@ export const IndexPricing = () => {
     {
       addOnID: "AO_1",
       addOnName: "Logo Making",
-      addOnPrice: 99,
+      addOnDesc:
+        "We can provide you with a very high-quality, professional-looking logo that fits your business.",
+      addOnPrice: 99.99,
     },
     {
       addOnID: "AO_2",
       addOnName: "Business Email",
-      addOnPrice: 23,
+      addOnDesc:
+        "Business emails are always a good choice to show professionalism when starting a business. Let us help you get one!",
+      addOnPrice: 23.99 + "/month",
+    },
+    {
+      addOnID: "AO_3",
+      addOnName: "Additional Page(s)",
+      addOnDesc:
+        "We can provide you with more pages than what our packages offer for a additional fee per page.",
+      addOnPrice: 149.99,
     },
     // {
     //   addOnID: "AO_3",
@@ -110,7 +155,7 @@ export const IndexPricing = () => {
                 {PRICING_PLANS.map((plan) => (
                   <div
                     key={plan.planID}
-                    className={`${styles.pricing_plan} col-lg-4 col-md-4 col-sm-12 col-xs-12`}
+                    className={`${styles.pricing_plan} col-lg-3 col-md-3 col-sm-12 col-xs-12`}
                   >
                     <div className={`${styles.pricing_plan_inner}`}>
                       <div className={`${styles.pricing_plan_inner_cnt}`}>

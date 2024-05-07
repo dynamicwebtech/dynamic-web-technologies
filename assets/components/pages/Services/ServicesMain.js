@@ -100,7 +100,7 @@ export const ServicesMain = () => {
                   <ul>
                     <li>
                       <a
-                        href="/book_contact"
+                        href="/book_contact#bookForm"
                         className={`${styles.booking_link} orientation-change-element half-second`}
                       >
                         <span>Book A Project</span>
