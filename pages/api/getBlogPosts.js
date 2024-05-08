@@ -27,7 +27,7 @@ export default async function handler(req, res) {
   try {
     if (req.method === "POST") {
       // Use multer middleware to handle file upload
-      upload.single("file")(req, res, async (err) => {
+      upload.single("blogPostImg")(req, res, async (err) => {
         if (err) {
           console.error("Error uploading file:", err);
           res.status(500).json({ error: "Failed to upload file" });
@@ -36,13 +36,12 @@ export default async function handler(req, res) {
 
         try {
           client = await connectToDatabase();
-          const collection = client
-            .db("portfolio-projects")
-            .collection("projects");
+          const collection = client.db("blog-posts").collection("posts");
 
           const {
             blogID,
             blogPostName,
+            blogPostNameID,
             blogPostText,
             blogPostCreationDate,
             blogPostAuthor,
@@ -63,6 +62,7 @@ export default async function handler(req, res) {
           await collection.insertOne({
             blogID,
             blogPostName,
+            blogPostNameID,
             blogPostText,
             blogPostImg,
             blogPostCreationDate,

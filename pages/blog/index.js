@@ -20,6 +20,8 @@ import { LoginPopup } from "@/assets/components/global/All/LoginPopup.js";
 import { AdminModeIndicator } from "@/assets/components/global/All/AdminModeIndicator.js";
 
 import { TopHero } from "@/assets/components/pages/All/TopHero";
+import { AddBlogPost } from "@/assets/components/pages/Blog/AddBlogPost";
+import { BlogPosts } from "@/assets/components/pages/Blog/BlogPosts";
 
 import "../../assets/styles/modules/Blog/Blog.module.css";
 import styles from "../../assets/styles/modules/Blog/Blog.module.css";
@@ -91,6 +93,10 @@ export default function Blog({ PH_ICONS_DATA, PH_BLOG_DATA }) {
 
       <div id="PAGE_CNT">
         <TopHero object={TOP_HERO_OBJECT} />
+
+        {adminMode ? <AddBlogPost /> : null}
+
+        <BlogPosts />
       </div>
 
       <Footer />
