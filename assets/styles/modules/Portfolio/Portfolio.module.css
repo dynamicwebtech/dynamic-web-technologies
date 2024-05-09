@@ -690,6 +690,8 @@
   }
   .top_hero .overlay .overlay_cnt {
     max-width: 300px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
   .top_hero .overlay .overlay_cnt h2 {
     font-size: 37px;
