@@ -88,6 +88,8 @@
     height: 350px;
   }
   .top_hero .overlay .overlay_cnt {
+    padding-left: 20px;
+    padding-right: 20px;
     max-width: 450px;
   }
   .top_hero .overlay .overlay_cnt h2 {
