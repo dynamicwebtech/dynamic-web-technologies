@@ -24,6 +24,7 @@ export const AddBlogPost = () => {
   );
   const [blogPostName, setBlogPostName] = useState("");
   const [blogPostNameID, setBlogPostNameID] = useState("");
+  const [blogPostIntroText, setBlogPostIntroText] = useState("");
   const [blogPostText, setBlogPostText] = useState([]);
   const [blogPostCreationDate, setBlogPostCreationDate] =
     useState(CURRENT_DATE);
@@ -86,6 +87,7 @@ export const AddBlogPost = () => {
         formData.append("blogID", blogID);
         formData.append("blogPostName", blogPostName);
         formData.append("blogPostNameID", blogPostNameID);
+        formData.append("blogPostIntroText", blogPostIntroText);
         formData.append("blogPostText", blogPostText.join("\n"));
         formData.append("blogPostCreationDate", blogPostCreationDate);
         formData.append("blogPostAuthor", blogPostAuthor);
@@ -102,6 +104,7 @@ export const AddBlogPost = () => {
           setBlogID("BLOGID_" + Math.random().toString(36).substring(2, 10));
           setBlogPostNameID("");
           setBlogPostName("");
+          setBlogPostIntroText("");
           setBlogPostText([]);
           setBlogPostCreationDate(CURRENT_DATE);
           setBlogPostAuthor("");
@@ -199,7 +202,9 @@ export const AddBlogPost = () => {
   return (
     <section id="addBlogPost" className={`${styles.add_blog_post}`}>
       <div className={`${styles.add_blog_post_inner}`}>
+        <br />
         <h1>Add Blog Post</h1>
+        <br />
 
         <form
           onSubmit={handleFormSubmit}
@@ -207,6 +212,7 @@ export const AddBlogPost = () => {
             setBlogID("BLOGID_" + Math.random().toString(36).substring(2, 10));
             setBlogPostNameID("");
             setBlogPostName("");
+            setBlogPostIntroText("");
             setBlogPostText("");
             setBlogPostCreationDate("");
             setBlogPostAuthor("");
@@ -216,6 +222,7 @@ export const AddBlogPost = () => {
         >
           <div className={`${styles.form_set}`}>
             <span>Blog Post Name:</span>
+            <br />
             <input
               className="form-field"
               id="aBPFBlogPostName"
@@ -233,6 +240,29 @@ export const AddBlogPost = () => {
               }}
             />
           </div>
+          <br />
+          <div className={`${styles.form_set}`}>
+            <span>
+              Blog Post Intro Text{" "}
+              <span style={{ fontWeight: "bold" }}>
+                (This is what will appear at the top and act as the blog post's
+                description)
+              </span>
+              :
+            </span>
+            <br />
+            <textarea
+              className="form-field"
+              id="aBPFBlogPostIntroText"
+              name="blogPostIntroText"
+              placeholder="Blog Post Intro Text"
+              value={blogPostIntroText}
+              onChange={(e) => {
+                setBlogPostIntroText(e.target.value);
+              }}
+            />
+          </div>
+          <br />
           <div className={`${styles.form_set}`}>
             <span>
               Blog Post Text{" "}
@@ -243,6 +273,7 @@ export const AddBlogPost = () => {
               </span>
               :
             </span>
+            <br />
             <textarea
               className="form-field"
               id="aBPFBlogPostText"
@@ -256,8 +287,10 @@ export const AddBlogPost = () => {
               }}
             />
           </div>
+          <br />
           <div className={`${styles.form_set}`}>
             <span>Blog Post Author Name:</span>
+            <br />
             <input
               className="form-field"
               id="aBPFBlogPostAuthor"
@@ -270,8 +303,10 @@ export const AddBlogPost = () => {
               }}
             />
           </div>
+          <br />
           <div className={`${styles.form_set}`}>
             <span>Blog Post Image (ONLY IMAGES):</span>
+            <br />
             <input
               className="form-field"
               id="addMediaFile"
@@ -281,6 +316,7 @@ export const AddBlogPost = () => {
             />
           </div>
 
+          <br />
           <div className={`${styles.form_btns}`}>
             <button type={"reset"} className={`${styles.reset}`}>
               <span>CLEAR</span>

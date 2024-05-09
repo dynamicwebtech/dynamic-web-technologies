@@ -22,6 +22,7 @@ import { AdminModeIndicator } from "@/assets/components/global/All/AdminModeIndi
 import { TopHero } from "@/assets/components/pages/All/TopHero";
 import { AddBlogPost } from "@/assets/components/pages/Blog/AddBlogPost";
 import { BlogPosts } from "@/assets/components/pages/Blog/BlogPosts";
+import { BlogPostFilters } from "@/assets/components/pages/Blog/BlogPostFilters";
 
 import "../../assets/styles/modules/Blog/Blog.module.css";
 import styles from "../../assets/styles/modules/Blog/Blog.module.css";
@@ -74,6 +75,34 @@ export default function Blog({ PH_ICONS_DATA, PH_BLOG_DATA }) {
   console.log("Admin Mode Status: " + adminMode);
   console.log("Local Host Status: " + onLocalHost);
 
+  const [selectedYear, setSelectedYear] = useState("All");
+  const [selectedReadTime, setSelectedReadTime] = useState("All");
+  const [selectedAuthor, setSelectedAuthor] = useState("All");
+
+  const handleYearChange = (e) => {
+    setSelectedYear(e.target.value);
+  };
+
+  const handleReadTimeChange = (e) => {
+    setSelectedReadTime(e.target.value);
+  };
+
+  const handleAuthorChange = (e) => {
+    setSelectedAuthor(e.target.value);
+  };
+
+  const handleFiltersReset = (e) => {
+    e.preventDefault();
+
+    document.querySelectorAll(".blog-post-filter").forEach((filter) => {
+      filter.selectedIndex = 0;
+    });
+
+    setSelectedYear("All");
+    setSelectedReadTime("All");
+    setSelectedAuthor("All");
+  };
+
   const TOP_HERO_OBJECT = {
     styles: styles,
     bg: "https://raw.githubusercontent.com/dynamicwebtech/client_CDNS/main/dynamic-web-technologies/bgs/blog/blog-top-bg.webp",
@@ -96,7 +125,23 @@ export default function Blog({ PH_ICONS_DATA, PH_BLOG_DATA }) {
 
         {adminMode ? <AddBlogPost /> : null}
 
-        <BlogPosts />
+        {/**
+          <BlogPostFilters />
+        */}
+        <BlogPostFilters
+          selectedYear={selectedYear}
+          selectedReadTime={selectedReadTime}
+          selectedAuthor={selectedAuthor}
+          onYearChange={handleYearChange}
+          onReadTimeChange={handleReadTimeChange}
+          onAuthorChange={handleAuthorChange}
+          onFiltersReset={handleFiltersReset}
+        />
+        <BlogPosts
+          selectedYear={selectedYear}
+          selectedReadTime={selectedReadTime}
+          selectedAuthor={selectedAuthor}
+        />
       </div>
 
       <Footer />

@@ -19,6 +19,7 @@ import CheckUserDevice from "../assets/functions/dom/checkers/CheckUserDevice";
 import CheckScreenOrientation from "../assets/functions/dom/checkers/CheckScreenOrientation";
 import { fetchPortfolioProjects } from "@/assets/functions/async/fetchers/fetchPortfolioProjects";
 import { fetchReviews } from "@/assets/functions/async/fetchers/fetchReviews";
+import { BlogPostsProvider } from "@/assets/functions/contexts/blogPostsProvider";
 
 // Component Imports
 
@@ -305,7 +306,9 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <AnimatePresence mode="wait">
-      <Component {...pageProps} />
+      <BlogPostsProvider>
+        <Component {...pageProps} />
+      </BlogPostsProvider>
     </AnimatePresence>
   );
 }
