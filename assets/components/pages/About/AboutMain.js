@@ -41,13 +41,18 @@ export const AboutMain = () => {
                 </h2>
 
                 <p className="orientation-change-element half-second">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  ac libero vel nisi fermentum rutrum. Mauris ac est vitae lorem
-                  vehicula bibendum. Fusce sit amet libero id nulla luctus
-                  consectetur. In hac habitasse platea dictumst. Integer ut ante
-                  a magna commodo fermentum. Donec eleifend tortor ut purus
-                  vehicula, quis eleifend mauris placerat. Nullam faucibus
-                  ullamcorper quam nec ultrices.
+                  Dynamic Web Technologies is a dedicated team of passionate web
+                  developers, committed to empowering small businesses by
+                  addressing their digital requirements. Established in April
+                  2024 by Collin Westgate and Parker Phelps, our inception was
+                  driven by a collective observation: numerous small business
+                  owners within our community were grappling with inadequate
+                  brand representation and visibility, primarily stemming from
+                  the absence of a refined, professional online presence.
+                  Motivated by this realization, we swiftly acted, founding
+                  Dynamic Web Technologies. Our company stands as a beacon of
+                  reliability and proficiency, meticulously focused on
+                  propelling your success.
                 </p>
 
                 <a
@@ -84,13 +89,14 @@ export const AboutMain = () => {
                 </h2>
 
                 <p className="orientation-change-element half-second">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  ac libero vel nisi fermentum rutrum. Mauris ac est vitae lorem
-                  vehicula bibendum. Fusce sit amet libero id nulla luctus
-                  consectetur. In hac habitasse platea dictumst. Integer ut ante
-                  a magna commodo fermentum. Donec eleifend tortor ut purus
-                  vehicula, quis eleifend mauris placerat. Nullam faucibus
-                  ullamcorper quam nec ultrices.
+                  At Dynamic Web Technologies, our primary objective is to
+                  deliver unparalleled service excellence to our clients. We are
+                  dedicated to identifying optimal solutions tailored to address
+                  your unique challenges effectively. With a commitment to
+                  affordability without compromising on quality, each webpage
+                  crafted by our team embodies excellence. Our aspiration is to
+                  become an indispensable partner in fostering the sustained
+                  success of your business.
                 </p>
 
                 <a
@@ -142,13 +148,16 @@ export const AboutMain = () => {
                 </h2>
 
                 <p className="orientation-change-element half-second">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  ac libero vel nisi fermentum rutrum. Mauris ac est vitae lorem
-                  vehicula bibendum. Fusce sit amet libero id nulla luctus
-                  consectetur. In hac habitasse platea dictumst. Integer ut ante
-                  a magna commodo fermentum. Donec eleifend tortor ut purus
-                  vehicula, quis eleifend mauris placerat. Nullam faucibus
-                  ullamcorper quam nec ultrices.
+                  Despite our brief tenure, we have successfully assisted
+                  numerous small businesses and professionals in establishing
+                  their digital footprint. This achievement stands as a
+                  testament to our unwavering commitment to delivering
+                  unparalleled customer service, which lies at the heart of our
+                  core values. We firmly believe that our company possesses the
+                  capability to support your business irrespective of its stage,
+                  whether you're a startup or a well-established entity. Rest
+                  assured; we are equipped to cater to your needs
+                  comprehensively.
                 </p>
 
                 <a
