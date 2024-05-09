@@ -268,8 +268,8 @@ export const AddBlogPost = () => {
               Blog Post Text{" "}
               <span style={{ fontWeight: "bold" }}>
                 (Add "<span style={{ color: "red" }}>/NEW_TEXT/</span>" *
-                Forward Slash, NEW_TEXT, Forward Slash * to indicate a new
-                paragraph)
+                Forward Slash, NEW_TEXT, Forward Slash * at the end of each
+                paragraph to indicate a new one)
               </span>
               :
             </span>

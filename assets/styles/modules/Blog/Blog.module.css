@@ -439,6 +439,8 @@
   .blog_posts .blog_posts_inner .blog_post .blog_post_row .blog_post_R .blog_post_side_cnt .post_link_and_read_time {
     display: block;
     justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 40px;
   }
   .blog_posts .blog_posts_inner .blog_post .blog_post_row .blog_post_R .blog_post_side_cnt .post_link_and_read_time .post_read_time {
     margin-right: 0;
