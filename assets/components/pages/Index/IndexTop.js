@@ -102,10 +102,10 @@ export const IndexTop = () => {
           </h1>
 
           <p className="orientation-change-element half-second">
-            At Dynamic Web Technologies, nestled in the heart of vibrant North
-            Carolina, we're dedicated to crafting websites that illuminate your
-            brand's brilliance. With dependable support and unbeatable prices,
-            we're your dream web design agency.
+            At Dynamic Web Technologies, nestled in Winston-Salem, NC, we
+            illuminate your brand's brilliance with unbeatable web design and
+            support. Let us be your dream web design agency, delivering
+            excellence at every step.
           </p>
 
           <ul>
