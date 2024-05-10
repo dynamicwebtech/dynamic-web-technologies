@@ -88,9 +88,9 @@ export const IndexServices = () => {
           <div className={`${styles.index_services_inner_top_cnt}`}>
             <h2>Our Services.</h2>
             <p className="orientation-change-element half-second">
-              Dynamic Web Techologies offers a lot more than just website
-              building. Learn about the other different services we provide
-              below.
+              Dynamic Web Technologies offers a lot more than just website
+              building for local Winston-Salem businesses. Learn about the other
+              different services we provide below.
             </p>
             <a
               href="/services"

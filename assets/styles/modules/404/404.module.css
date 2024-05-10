@@ -1,0 +1,119 @@
+@font-face {
+  font-family: "Open Sans Extra Bold";
+  src: url("https://raw.githubusercontent.com/dynamicwebtech/client_CDNS/main/dynamic-web-technologies/fonts/OpenSans-ExtraBold.ttf");
+}
+@font-face {
+  font-family: "Open Sans Bold";
+  src: url("https://raw.githubusercontent.com/dynamicwebtech/client_CDNS/main/dynamic-web-technologies/fonts/OpenSans-Bold.ttf");
+}
+@font-face {
+  font-family: "Open Sans Semi Bold";
+  src: url("https://raw.githubusercontent.com/dynamicwebtech/client_CDNS/main/dynamic-web-technologies/fonts/OpenSans-SemiBold.ttf");
+}
+@font-face {
+  font-family: "Open Sans Medium";
+  src: url("https://raw.githubusercontent.com/dynamicwebtech/client_CDNS/main/dynamic-web-technologies/fonts/OpenSans-Medium.ttf");
+}
+@font-face {
+  font-family: "Open Sans Regular";
+  src: url("https://raw.githubusercontent.com/dynamicwebtech/client_CDNS/main/dynamic-web-technologies/fonts/OpenSans-Regular.ttf");
+}
+.not_found_inner {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden !important;
+  white-space: pre-wrap;
+  text-align: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.not_found_inner .not_found_inner_cnt {
+  padding: 25px;
+  padding-top: 45px;
+  padding-bottom: 45px;
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+  border-top: 3px solid #abc635;
+  border-bottom: 3px solid #abc635;
+  border-left: 3px solid #1684a7;
+  border-right: 3px solid #1684a7;
+  border-radius: 5px;
+}
+.not_found_inner .not_found_inner_cnt h1 {
+  font-family: "Open Sans Bold";
+  font-size: clamp(1.84rem, 2.14vw + 1.65rem, 2.95rem);
+}
+.not_found_inner .not_found_inner_cnt .not_found_under_heading_text {
+  font-family: "Open Sans Semi Bold";
+  font-size: clamp(1rem, 0.54vw + 1rem, 1.33rem);
+  margin-top: 15px;
+  margin-bottom: 15px;
+  display: block;
+}
+.not_found_inner .not_found_inner_cnt p {
+  font-family: "Open Sans Medium";
+  font-size: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
+  margin-bottom: 45px;
+}
+.not_found_inner .not_found_inner_cnt a {
+  border: 3px solid #1684a7;
+  color: #1684a7;
+  padding: 10px;
+  font-family: "Open Sans Bold";
+  text-decoration: none;
+  font-size: clamp(0.8rem, 0.24vw + 0.81rem, 1.04rem);
+}
+.not_found_inner .not_found_inner_cnt a:hover {
+  background-color: #1684a7;
+  color: white;
+}
+
+@media all and (max-width: 991px) {
+  .not_found_inner {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+@media all and (max-width: 768px) {
+  .not_found_inner {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+@media all and (max-width: 419px) {
+  .not_found_inner {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .not_found_inner .not_found_inner_cnt .not_found_under_heading_text {
+    font-size: 17px;
+  }
+  .not_found_inner .not_found_inner_cnt p {
+    font-size: 16px;
+  }
+}
+@media only screen and (min-device-width: 411px) and (max-device-width: 823px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .not_found_inner {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .not_found_inner .not_found_inner_cnt {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  .not_found_inner .not_found_inner_cnt .not_found_under_heading_text {
+    font-size: 17px;
+  }
+  .not_found_inner .not_found_inner_cnt p {
+    font-size: 16px;
+  }
+}/*# sourceMappingURL=404.module.css.map */

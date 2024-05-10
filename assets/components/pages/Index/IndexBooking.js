@@ -39,10 +39,10 @@ export const IndexBooking = () => {
                 </h2>
 
                 <p className="orientation-change-element half-second">
-                  Dynamic Web Technologies, based in North Carolina, is always
-                  prepared to tackle any project, ensuring your company sees
-                  real results. Reach out today to book your project and start
-                  your journey to digital success!
+                  Dynamic Web Technologies, based in Winston-Salem, NC, is
+                  always prepared to tackle any web design project, ensuring
+                  your company sees real results. Reach out today to book your
+                  project and start your journey to digital success!
                 </p>
 
                 <a

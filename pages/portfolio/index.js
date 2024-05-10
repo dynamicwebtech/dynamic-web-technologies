@@ -82,7 +82,7 @@ export default function Portfolio({ PH_ICONS_DATA, PH_PORTFOLIO_DATA }) {
     styles: styles,
     bg: "https://raw.githubusercontent.com/dynamicwebtech/client_CDNS/main/dynamic-web-technologies/bgs/portfolio/portfolio-top-bg.webp",
     heading: "Our Work.",
-    text: "Dynamic Web Technologies has many years of building websites and helping businesses gain more attention under its belt. Get a look at our previous work below to see what we can offer you!",
+    text: "Dynamic Web Technologies has many years of experience building websites and helping local Winston-Salem, NC, businesses gain more attention under its belt. Get a look at our previous work below to see what we can offer you!",
   };
 
   return (

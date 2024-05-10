@@ -15,7 +15,8 @@ import checkLocalHostStatus from "@/assets/hooks/checkLocalHostStatus";
 import { PageHead } from "@/assets/components/global/All/PageHead";
 
 // Style Imports
-// import "../assets/styles/modules/404/404.module.css";
+import "../assets/styles/modules/404/404.module.css";
+import styles from "../assets/styles/modules/404/404.module.css";
 
 const NotFound = () => {
   const router = useRouter();
@@ -30,8 +31,40 @@ const NotFound = () => {
   const PageHeadData = {
     pageID: "P_404",
     pageTitle: "DynamicWebTechnologies - 404",
-    pageDesc: "",
-    pageKeywords: [],
+    pageDesc: "This page does not exsist.",
+    pageKeywords: [
+      "DynamicWebTechnologies",
+      "Web design agency",
+      "Web design Winston Salem",
+      "Web design Greensboro",
+      "Web design Charlotte",
+      "Web design Durham",
+      "Web design Raleigh",
+      "WordPress web designer",
+      "WordPress web design",
+      "Ecommerce web design",
+      "Ecommerce web designer",
+      "Web designer near me",
+      "Affordable web designer",
+      "Affordable ecommerce website",
+      "Affordable WordPress website",
+      "Shopify web design",
+      "Shopify web designer",
+      "Affordable Shopify website",
+      "Local web designer",
+      "Cheap web designer",
+      "Cheap websites",
+      "Local logo maker",
+      "Local logo designers",
+      "Home improvement Web designers",
+      "HVAC web designers",
+      "Painting web designers",
+      "Web design services",
+      "North Carolina web designers",
+      "Local website builder",
+      "Local web designers near me",
+      "Local website designers",
+    ],
     pageRobots: "no index, no follow",
     pageOGTitle: "DynamicWebTechnologies - 404",
     pageOGType: "website",
@@ -86,7 +119,28 @@ const NotFound = () => {
     <div id="PAGE" className="page">
       <PageHead page_head_data={PageHeadData} icons_data={PageIconsData} />
 
-      <div id="PAGE_CNT"></div>
+      <div id="PAGE_CNT">
+        <section className={`${styles.not_found_inner}`}>
+          <div className={`${styles.not_found_inner_cnt}`}>
+            <h1 className="orientation-change-element half-second">404</h1>
+            <span
+              className={`${styles.not_found_under_heading_text} orientation-change-element half-second`}
+            >
+              Uh Oh! This page was not found.
+            </span>
+
+            <p className="orientation-change-element half-second">
+              The page you were looking for does not exsist. Please contact us
+              for additional assistance or you can go back to the Home page
+              using the link below.
+            </p>
+
+            <a href="/" className="orientation-change-element half-second">
+              <span>Go To Home Page</span>
+            </a>
+          </div>
+        </section>
+      </div>
     </div>
   );
 };

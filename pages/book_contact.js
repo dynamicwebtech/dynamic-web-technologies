@@ -9,6 +9,7 @@ import path from "path";
 // Data/Functions/Images Imports
 import checkAdminModeStatus from "@/assets/hooks/checkAdminModeStatus";
 import checkLocalHostStatus from "@/assets/hooks/checkLocalHostStatus";
+import RemoveStorageVariable from "@/assets/functions/data/storage/RemoveStorageVariable.js";
 
 // Component Imports
 import { PageHead } from "@/assets/components/global/All/PageHead";
@@ -26,7 +27,6 @@ import { BookContactInfo } from "@/assets/components/pages/BookContact/BookConta
 // Style Imports
 import "../assets/styles/modules/Book_Contact/Book_Contact.module.css";
 import styles from "../assets/styles/modules/Book_Contact/Book_Contact.module.css";
-import RemoveStorageVariable from "@/assets/functions/data/storage/RemoveStorageVariable.js";
 
 export async function getServerSideProps({ req }) {
   const PAGE_HEAD_DATA_DIRECTORY = "public/data/PageHead/";

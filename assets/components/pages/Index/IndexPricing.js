@@ -133,8 +133,8 @@ export const IndexPricing = () => {
             <h2>Our Project Pricing.</h2>
             <p className="orientation-change-element half-second">
               At Dynamic Web Technologies, our pricing is not just competitive;
-              it's among the best in all of North Carolina. Contact us today to
-              discover unbeatable value for your web design needs!
+              it's among the best in all of Winston-Salem, NC. Contact us today.
+              to discover unbeatable value for your web design needs!
             </p>
             <a
               href="/pricing"

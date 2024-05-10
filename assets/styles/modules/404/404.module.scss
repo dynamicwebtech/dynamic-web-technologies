@@ -26,12 +26,77 @@
 }
 
 // Desktop
+.not_found_inner {
+  height: 100%;
+  width: 100%;
+  @include displayElement(flex, center, center);
+  overflow: hidden !important;
+  white-space: pre-wrap;
+  text-align: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  .not_found_inner_cnt {
+    padding: 25px;
+    padding-top: 45px;
+    padding-bottom: 45px;
+    max-width: 780px;
+    @include quickCenter("relative");
+    border-top: 3px solid $Atlantis;
+    border-bottom: 3px solid $Atlantis;
+    border-left: 3px solid $EasternBlue;
+    border-right: 3px solid $EasternBlue;
+    border-radius: 5px;
+
+    h1 {
+      font-family: "Open Sans Bold";
+      font-size: $MinorHeading;
+    }
+
+    .not_found_under_heading_text {
+      font-family: "Open Sans Semi Bold";
+      font-size: $SmallText;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      display: block;
+    }
+
+    p {
+      font-family: "Open Sans Medium";
+      font-size: $Link;
+      margin-bottom: 45px;
+    }
+
+    a {
+      border: 3px solid $EasternBlue;
+      color: $EasternBlue;
+      padding: 10px;
+      font-family: "Open Sans Bold";
+      text-decoration: none;
+      font-size: $SmallLink;
+
+      &:hover {
+        background-color: $EasternBlue;
+        color: white;
+      }
+    }
+  }
+}
 
 // Responsive
 @media all and (max-width: 1995px) {
 }
 
 @media all and (max-width: 991px) {
+  .not_found_inner {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 }
 
 @media (min-width: 992px) {
@@ -39,14 +104,49 @@
 
 // Desktop Window (Smallest)
 @media all and (max-width: 768px) {
+  .not_found_inner {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 }
 
 // Smaller Devices (Phones)
 @media all and (max-width: 419px) {
+  .not_found_inner {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    .not_found_inner_cnt {
+      .not_found_under_heading_text {
+        font-size: 17px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+    }
+  }
 }
 
 // Pixel 2 XL
 @media only screen and (min-device-width: 411px) and (max-device-width: 823px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .not_found_inner {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    .not_found_inner_cnt {
+      padding-top: 25px;
+      padding-bottom: 25px;
+
+      .not_found_under_heading_text {
+        font-size: 17px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+    }
+  }
 }
 
 // Ipad

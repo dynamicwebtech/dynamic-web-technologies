@@ -35,9 +35,10 @@ export const IndexContact = () => {
 
                 <p className="orientation-change-element half-second">
                   Dynamic Web Technologies prioritizes customer experience,
-                  mirroring the renowned hospitality of North Carolina. We're
-                  always here to help with any issue or question, ensuring your
-                  journey with us is smooth and satisfying.
+                  mirroring the renowned hospitality of Winston-Salem, NC. We're
+                  always here to help with any issue or question regarding web
+                  design, ensuring your journey with us is smooth and
+                  satisfying.
                 </p>
 
                 <a
