@@ -3,6 +3,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import fs from "fs";
 import path from "path";
+import Link from "next/link";
 
 // Library Imports
 
@@ -135,9 +136,9 @@ const NotFound = () => {
               using the link below.
             </p>
 
-            <a href="/" className="orientation-change-element half-second">
+            <Link href="/" className="orientation-change-element half-second">
               <span>Go To Home Page</span>
-            </a>
+            </Link>
           </div>
         </section>
       </div>
