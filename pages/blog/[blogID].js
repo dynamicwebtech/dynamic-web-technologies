@@ -249,7 +249,7 @@ export default function BlogPost() {
         </Head>
       ) : (
         <Head>
-          <title>{`DynamicWebTechnologies - Blog Post`}</title>
+          <title>{`DynamicWebTechnologies - Articles/Blog Post`}</title>
 
           <meta name="keywords" content="n/a" />
           <meta name="description" content="n/a" />
@@ -263,7 +263,7 @@ export default function BlogPost() {
 
           <meta
             property="og:title"
-            content={`DynamicWebTechnologies - Blog Post`}
+            content={`DynamicWebTechnologies - Articles/Blog Post`}
           />
           <meta name="og:description" content="n/a" />
           <meta
