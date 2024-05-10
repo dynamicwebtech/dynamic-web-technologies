@@ -144,12 +144,12 @@ export const DesktopNav = () => {
                         href="/blog"
                         className="orientation-change-element half-second"
                       >
-                        <span>Blog</span>
+                        <span>Articles</span>
                       </a>
                     </li>
                   ) : (
                     <li>
-                      <span>Blog</span>
+                      <span>Articles</span>
                       <div className="nav-link-lines">
                         <span className={`${styles.top_line}`} />
                         <span className={`${styles.bottom_line}`} />

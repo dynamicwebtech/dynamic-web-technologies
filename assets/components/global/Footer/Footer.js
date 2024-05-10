@@ -136,12 +136,12 @@ export const Footer = () => {
                         href="/blog"
                         className="orientation-change-element half-second"
                       >
-                        <span>Blog</span>
+                        <span>Articles</span>
                       </a>
                     </li>
                   ) : (
                     <li>
-                      <span>Blog</span>
+                      <span>Articles</span>
                     </li>
                   )}
 

@@ -191,6 +191,8 @@
   position: absolute;
   top: 0;
   left: 0;
+  border: 2px solid rgba(128, 128, 128, 0.204);
+  border-radius: 5px;
 }
 .blog_posts .blog_posts_inner .blog_post .blog_post_row .blog_post_R {
   justify-content: flex-start;

@@ -106,7 +106,7 @@ export default function Blog({ PH_ICONS_DATA, PH_BLOG_DATA }) {
   const TOP_HERO_OBJECT = {
     styles: styles,
     bg: "https://raw.githubusercontent.com/dynamicwebtech/client_CDNS/main/dynamic-web-technologies/bgs/blog/blog-top-bg.webp",
-    heading: "Our Blog.",
+    heading: "Articles.",
     text: "Dynamic Web Technologies is a great source for those who would like to become more familiar with the web development and digital fields. By reading our blog posts, you can get a good idea as to how our services and department operates!",
   };
 

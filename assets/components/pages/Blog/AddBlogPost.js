@@ -89,7 +89,7 @@ export const AddBlogPost = () => {
         formData.append("blogPostNameID", blogPostNameID);
         formData.append("blogPostIntroText", blogPostIntroText);
         formData.append("blogPostText", blogPostText.join("\n"));
-        formData.append("blogPostCreationDate", blogPostCreationDate);
+        formData.append("blogPostCreationDate", CURRENT_DATE);
         formData.append("blogPostAuthor", blogPostAuthor);
         formData.append("blogPostImg", blogPostImg);
 
