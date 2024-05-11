@@ -68,6 +68,7 @@ export const PricingPackages = () => {
       hostingIncluded: [
         "15 Annual Revisions",
         "Web Maintenance",
+        "Content Management System",
         "Business Email",
         "Reliable Customer Support",
       ],
@@ -88,6 +89,7 @@ export const PricingPackages = () => {
       hostingIncluded: [
         "Unlimited Revisions",
         "Web Maintenance",
+        "Content Management System",
         "Business Email",
         "Reliable Customer Support",
       ],

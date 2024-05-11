@@ -70,6 +70,7 @@ export const IndexPricing = () => {
       hostingIncluded: [
         "15 Annual Revisions",
         "Web Maintenance",
+        "Content Management System",
         "Business Email",
         "Reliable Customer Support",
       ],
@@ -90,6 +91,7 @@ export const IndexPricing = () => {
       hostingIncluded: [
         "Unlimited Revisions",
         "Web Maintenance",
+        "Content Management System",
         "Business Email",
         "Reliable Customer Support",
       ],
@@ -201,7 +203,7 @@ export const IndexPricing = () => {
                         </ul>
 
                         <a
-                          href={`/pricing#${plan.planLink}`}
+                          href={`/pricing`}
                           className="orientation-change-element half-second"
                         >
                           <span>Learn More</span>

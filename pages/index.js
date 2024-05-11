@@ -28,6 +28,7 @@ import { AddPortfolioProjectForm } from "@/assets/components/global/All/AddPortf
 import { IndexBooking } from "@/assets/components/pages/Index/IndexBooking.js";
 import { IndexServices } from "@/assets/components/pages/Index/IndexServices.js";
 import { IndexPricing } from "@/assets/components/pages/Index/IndexPricing.js";
+import { IndexBlogArticles } from "@/assets/components/pages/Index/IndexBlogArticles.js";
 import { IndexContact } from "@/assets/components/pages/Index/IndexContact.js";
 
 // Style Imports
@@ -117,11 +118,11 @@ export default function Home({ PH_ICONS_DATA, PH_INDEX_DATA }) {
         <IndexTop />
         <IndexPortfolioProjects portfolioProjects={portfolioProjects} />
         {adminMode ? <AddPortfolioProjectForm styles={index_styles} /> : null}
-
         <IndexAbout />
         <IndexPricing />
         <IndexBooking />
         <IndexServices />
+        <IndexBlogArticles />
         <IndexContact />
       </div>
 

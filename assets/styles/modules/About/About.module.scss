@@ -151,7 +151,7 @@
   padding-bottom: 150px;
 
   .about_main_inner {
-    max-width: 1550px;
+    max-width: 1650px;
     @include quickCenter("relative");
 
     .about_main_inner_box {
@@ -235,6 +235,7 @@
           .about_main_inner_side_cnt {
             max-width: 650px;
             margin-left: auto;
+            margin-right: auto;
           }
         }
       }
@@ -307,6 +308,7 @@
           .about_main_inner_side_cnt {
             max-width: 650px;
             margin-left: auto;
+            margin-right: auto;
           }
         }
       }
