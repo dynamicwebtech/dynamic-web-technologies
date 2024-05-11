@@ -78,7 +78,7 @@ export default function Services({ PH_ICONS_DATA, PH_SERVICES_DATA }) {
 
   const TOP_HERO_OBJECT = {
     styles: styles,
-    bg: "https://raw.githubusercontent.com/dynamicwebtech/client_CDNS/main/dynamic-web-technologies/bgs/portfolio/portfolio-top-bg.webp",
+    bg: "https://raw.githubusercontent.com/dynamicwebtech/client_CDNS/main/dynamic-web-technologies/bgs/services/services-top-bg.webp",
     heading: "Services/Add-Ons.",
     text: "Dynamic Web Technologies provides many different services that are or can be included with your website. From business emails to logo making to Shopify websites, we can get what your website needs for your Winston-Salem business!",
   };
