@@ -14,9 +14,10 @@ export const AddBlogPost = () => {
   const router = useRouter();
 
   const DATE = new Date();
-  const CURRENT_DAY = DATE.getDay();
-  const CURRENT_MONTH = DATE.getMonth();
+  const CURRENT_DAY = DATE.getDate();
+  const CURRENT_MONTH = DATE.getMonth() + 1;
   const CURRENT_YEAR = DATE.getFullYear();
+
   const CURRENT_DATE = CURRENT_MONTH + "/" + CURRENT_DAY + "/" + CURRENT_YEAR;
 
   const [blogID, setBlogID] = useState(

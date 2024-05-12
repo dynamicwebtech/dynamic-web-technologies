@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import fs from "fs";
 import path from "path";
+import axios from "axios";
 
 // Library Imports
 
@@ -75,6 +76,9 @@ export default function Blog({ PH_ICONS_DATA, PH_BLOG_DATA }) {
   console.log("Admin Mode Status: " + adminMode);
   console.log("Local Host Status: " + onLocalHost);
 
+  const [blogPosts, setBlogPosts] = useState([]);
+  const [selectedPost, setSelectedPost] = useState("");
+  const [newBlogPostName, setNewBlogPostName] = useState("");
   const [selectedYear, setSelectedYear] = useState("All");
   const [selectedReadTime, setSelectedReadTime] = useState("All");
   const [selectedAuthor, setSelectedAuthor] = useState("All");
@@ -103,10 +107,94 @@ export default function Blog({ PH_ICONS_DATA, PH_BLOG_DATA }) {
     setSelectedAuthor("All");
   };
 
+  useEffect(() => {
+    fetchBlogPosts();
+  }, []);
+
+  const fetchBlogPosts = async () => {
+    try {
+      const response = await fetch("/api/getBlogPosts");
+      if (response.ok) {
+        const data = await response.json();
+        setBlogPosts(data);
+        setLoading(false);
+      } else {
+        console.error("Failed to fetch blog posts");
+      }
+    } catch (error) {
+      console.error("Error fetching blog posts:", error);
+    }
+  };
+
+  const handlePostChange = (e) => {
+    setSelectedPost(e.target.value);
+  };
+
+  const handleBlogPostDeleteSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      // Find the selected post data
+      const selectedPostData = blogPosts.find(
+        (post) => post.blogID === selectedPost
+      );
+
+      // Change the blogPostName to the input value
+      const updatedPostData = {
+        ...selectedPostData,
+        blogPostName: newBlogPostName,
+      };
+
+      // Store the updated post data in localStorage
+      localStorage.setItem("deletedBlogPost", JSON.stringify(updatedPostData));
+
+      // Call the API endpoint to store data in MongoDB database
+      const response = await fetch("/api/insertDeletedBlogPost", {
+        method: "POST",
+        body: JSON.stringify(updatedPostData),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      if (response.ok) {
+        // Blog post data inserted successfully into database
+        console.log("Blog post data inserted successfully into database");
+
+        // Delete the old blog post from the database
+        const deleteResponse = await fetch(
+          `/api/getBlogPosts?blogID=${selectedPostData.blogID}`,
+          {
+            method: "DELETE",
+          }
+        );
+
+        if (deleteResponse.ok) {
+          // Old blog post deleted successfully from database
+          console.log("Old blog post deleted successfully from database");
+
+          // You may want to refresh the list of blog posts after inserting and deleting
+          fetchBlogPosts();
+
+          window.location.reload();
+        } else {
+          // Handle error
+          console.error("Failed to delete old blog post from database");
+        }
+      } else {
+        // Handle error
+        console.error("Failed to insert blog post data into database");
+      }
+    } catch (error) {
+      // Handle error
+      console.error("Error deleting blog post:", error);
+    }
+  };
+
   const TOP_HERO_OBJECT = {
     styles: styles,
     bg: "https://raw.githubusercontent.com/dynamicwebtech/client_CDNS/main/dynamic-web-technologies/bgs/blog/blog-top-bg.webp",
-    heading: "Articles.",
+    heading: "Articles/Blog.",
     text: "Dynamic Web Technologies is a great source for those who would like to become more familiar with the web development and digital fields. By reading our blog posts, you can get a good idea as to how our services and department operates!",
   };
 
@@ -125,23 +213,56 @@ export default function Blog({ PH_ICONS_DATA, PH_BLOG_DATA }) {
 
         {adminMode ? <AddBlogPost /> : null}
 
+        {adminMode ? (
+          <div>
+            <select value={selectedPost} onChange={handlePostChange}>
+              <option value="">Select a Blog Post</option>
+              {/* Map over the fetched blog posts to generate options */}
+              {blogPosts.map((post) => (
+                <option key={post._id} value={post.blogID}>
+                  {post.blogPostName}
+                </option>
+              ))}
+            </select>
+
+            {selectedPost && (
+              <form onSubmit={handleBlogPostDeleteSubmit}>
+                <label>
+                  New Blog Post Name:
+                  <input
+                    type="text"
+                    value={newBlogPostName}
+                    onChange={(e) => setNewBlogPostName(e.target.value)}
+                  />
+                </label>
+
+                <button type="submit">Edit Selected</button>
+              </form>
+            )}
+          </div>
+        ) : null}
+
         {/**
           <BlogPostFilters />
         */}
-        <BlogPostFilters
-          selectedYear={selectedYear}
-          selectedReadTime={selectedReadTime}
-          selectedAuthor={selectedAuthor}
-          onYearChange={handleYearChange}
-          onReadTimeChange={handleReadTimeChange}
-          onAuthorChange={handleAuthorChange}
-          onFiltersReset={handleFiltersReset}
-        />
-        <BlogPosts
-          selectedYear={selectedYear}
-          selectedReadTime={selectedReadTime}
-          selectedAuthor={selectedAuthor}
-        />
+        {blogPosts.length > 0 && (
+          <BlogPostFilters
+            selectedYear={selectedYear}
+            selectedReadTime={selectedReadTime}
+            selectedAuthor={selectedAuthor}
+            onYearChange={handleYearChange}
+            onReadTimeChange={handleReadTimeChange}
+            onAuthorChange={handleAuthorChange}
+            onFiltersReset={handleFiltersReset}
+          />
+        )}
+        {blogPosts.length > 0 && (
+          <BlogPosts
+            selectedYear={selectedYear}
+            selectedReadTime={selectedReadTime}
+            selectedAuthor={selectedAuthor}
+          />
+        )}
       </div>
 
       <Footer />

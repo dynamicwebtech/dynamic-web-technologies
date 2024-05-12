@@ -1,5 +1,12 @@
+export const config = {
+  api: {
+    bodyParser: false,
+    sizeLimit: "5gb",
+  },
+};
+
 import multer from "multer";
-import { MongoClient } from "mongodb";
+import { MongoClient, ObjectId } from "mongodb";
 
 const upload = multer({
   storage: multer.memoryStorage(),
@@ -14,17 +21,13 @@ async function connectToDatabase() {
   return client; // Return the MongoClient instance directly
 }
 
-export const config = {
-  api: {
-    bodyParser: false,
-    sizeLimit: "5gb",
-  },
-};
-
 export default async function handler(req, res) {
   let client = null;
 
   try {
+    console.log("Request method:", req.method);
+    console.log("Request body:", req.body); // Log the request body to see if blogID is included
+
     if (req.method === "POST") {
       // Use multer middleware to handle file upload
       upload.single("blogPostImg")(req, res, async (err) => {
@@ -85,24 +88,34 @@ export default async function handler(req, res) {
         }
       });
     } else if (req.method === "DELETE") {
-      const { blogID } = req.query;
-      if (!blogID) {
-        return res.status(400).json({ error: "blogID parameter is required" });
+      const { blogID, selectedPost } = req.query;
+
+      if (!blogID && !selectedPost) {
+        return res
+          .status(400)
+          .json({ error: "blogID or selectedPost parameter is required" });
       }
 
       try {
         client = await connectToDatabase();
         const collection = client.db("blog-posts").collection("posts");
 
-        const result = await collection.deleteOne({ blogID: blogID });
+        let result;
+
+        if (blogID) {
+          result = await collection.deleteOne({ blogID: blogID });
+        } else if (selectedPost) {
+          result = await collection.deleteOne({ blogID: selectedPost });
+        }
+
         if (result.deletedCount === 1) {
           const blogPosts = await collection.find().toArray();
           return res.status(200).json({
             blogPosts,
-            message: "Media item deleted successfully!",
+            message: "Blog post deleted successfully!",
           });
         } else {
-          return res.status(404).json({ error: "Media item not found.." });
+          return res.status(404).json({ error: "Blog post not found" });
         }
       } catch (error) {
         console.error("Error deleting Blog post:", error);

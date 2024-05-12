@@ -79,7 +79,9 @@ export const BlogPosts = ({
     });
 
     return filteredPosts.map((bp) => {
-      const paragraphs = bp.blogPostText.split("/NEW_TEXT/");
+      const paragraphs = bp.blogPostText
+        ? bp.blogPostText.split("/NEW_TEXT/")
+        : [];
       const readTime = calculateReadTime(paragraphs.length);
 
       return (

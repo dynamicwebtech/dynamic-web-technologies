@@ -4,6 +4,7 @@
  *
  */
 
+import React from "react";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
@@ -37,7 +38,8 @@ export default function BlogPost() {
   useEffect(() => {
     const fetchData = async () => {
       if (blogID) {
-        const fetch_path = `/api/getBlogPosts`;
+        console.log(blogID);
+        const fetch_path = `/api/getBlogPosts?blogID=${blogID}`;
         try {
           const response = await fetch(fetch_path);
 
@@ -68,6 +70,8 @@ export default function BlogPost() {
 
   // console.log(blogPost.blogPostText);
 
+  // console.log("Blog ID from router query:", blogID);
+
   const deleteBlogPost = async (blogID) => {
     try {
       const RESPONSE = await fetch(`/api/getBlogPosts?blogID=${blogID}`, {
@@ -83,6 +87,23 @@ export default function BlogPost() {
     } catch (error) {
       console.error("Error deleting media:", error);
     }
+  };
+
+  const checkingForValidInput = (input) => {
+    if (
+      input.value !== "" &&
+      input.value !== null &&
+      input.value.length !== 0
+    ) {
+      return true;
+    } else {
+      return false;
+    }
+  };
+
+  const handleFileChange = (e) => {
+    const selectedFile = e.target.files[0];
+    setBlogPostImg(selectedFile);
   };
 
   return (

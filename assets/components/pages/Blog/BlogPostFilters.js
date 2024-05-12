@@ -41,7 +41,7 @@ export const BlogPostFilters = ({
   const readTimes = [
     ...new Set(
       blogPosts.map((bp) =>
-        calculateReadTime(bp.blogPostText.split("/NEW_TEXT/").length)
+        calculateReadTime((bp.blogPostText || "").split("/NEW_TEXT/").length)
       )
     ),
   ];
