@@ -79,6 +79,9 @@ export default function Blog({ PH_ICONS_DATA, PH_BLOG_DATA }) {
   const [blogPosts, setBlogPosts] = useState([]);
   const [selectedPost, setSelectedPost] = useState("");
   const [newBlogPostName, setNewBlogPostName] = useState("");
+  const [newBlogPostAuthor, setNewBlogPostAuthor] = useState("");
+  const [newBlogPostIntroText, setNewBlogPostIntroText] = useState("");
+  const [newBlogPostText, setNewBlogPostText] = useState([]);
   const [selectedYear, setSelectedYear] = useState("All");
   const [selectedReadTime, setSelectedReadTime] = useState("All");
   const [selectedAuthor, setSelectedAuthor] = useState("All");
@@ -107,25 +110,6 @@ export default function Blog({ PH_ICONS_DATA, PH_BLOG_DATA }) {
     setSelectedAuthor("All");
   };
 
-  useEffect(() => {
-    fetchBlogPosts();
-  }, []);
-
-  const fetchBlogPosts = async () => {
-    try {
-      const response = await fetch("/api/getBlogPosts");
-      if (response.ok) {
-        const data = await response.json();
-        setBlogPosts(data);
-        setLoading(false);
-      } else {
-        console.error("Failed to fetch blog posts");
-      }
-    } catch (error) {
-      console.error("Error fetching blog posts:", error);
-    }
-  };
-
   const handlePostChange = (e) => {
     setSelectedPost(e.target.value);
   };
@@ -134,16 +118,23 @@ export default function Blog({ PH_ICONS_DATA, PH_BLOG_DATA }) {
     e.preventDefault();
 
     try {
+      console.log("Selected post:", selectedPost);
+
       // Find the selected post data
       const selectedPostData = blogPosts.find(
         (post) => post.blogID === selectedPost
       );
+      console.log("Selected post data:", selectedPostData);
 
       // Change the blogPostName to the input value
       const updatedPostData = {
         ...selectedPostData,
         blogPostName: newBlogPostName,
+        blogPostAuthor: newBlogPostAuthor,
+        blogPostIntroText: newBlogPostIntroText,
+        blogPostText: newBlogPostText.join("\n"),
       };
+      console.log("Updated post data:", updatedPostData);
 
       // Store the updated post data in localStorage
       localStorage.setItem("deletedBlogPost", JSON.stringify(updatedPostData));
@@ -156,6 +147,7 @@ export default function Blog({ PH_ICONS_DATA, PH_BLOG_DATA }) {
           "Content-Type": "application/json",
         },
       });
+      console.log("API Response:", response);
 
       if (response.ok) {
         // Blog post data inserted successfully into database
@@ -168,10 +160,18 @@ export default function Blog({ PH_ICONS_DATA, PH_BLOG_DATA }) {
             method: "DELETE",
           }
         );
+        console.log("Delete Response:", deleteResponse);
 
         if (deleteResponse.ok) {
           // Old blog post deleted successfully from database
           console.log("Old blog post deleted successfully from database");
+
+          // Reset selectedPost and newBlogPostName states
+          setSelectedPost("");
+          setNewBlogPostName("");
+          setNewBlogPostAuthor("");
+          setNewBlogPostIntroText("");
+          setNewBlogPostText([]);
 
           // You may want to refresh the list of blog posts after inserting and deleting
           fetchBlogPosts();
@@ -188,6 +188,25 @@ export default function Blog({ PH_ICONS_DATA, PH_BLOG_DATA }) {
     } catch (error) {
       // Handle error
       console.error("Error deleting blog post:", error);
+    }
+  };
+
+  useEffect(() => {
+    fetchBlogPosts();
+  }, []);
+
+  const fetchBlogPosts = async () => {
+    try {
+      const response = await fetch("/api/getBlogPosts");
+      if (response.ok) {
+        const data = await response.json();
+        setBlogPosts(data);
+        setLoading(false);
+      } else {
+        console.error("Failed to fetch blog posts");
+      }
+    } catch (error) {
+      console.error("Error fetching blog posts:", error);
     }
   };
 
@@ -215,6 +234,14 @@ export default function Blog({ PH_ICONS_DATA, PH_BLOG_DATA }) {
 
         {adminMode ? (
           <div>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <span>Edit A Blog Post</span>
+            <br />
+            <br />
             <select value={selectedPost} onChange={handlePostChange}>
               <option value="">Select a Blog Post</option>
               {/* Map over the fetched blog posts to generate options */}
@@ -227,6 +254,26 @@ export default function Blog({ PH_ICONS_DATA, PH_BLOG_DATA }) {
 
             {selectedPost && (
               <form onSubmit={handleBlogPostDeleteSubmit}>
+                <span>
+                  <strong style={{ color: "red", fontWeight: "bold" }}>
+                    NOTE:
+                  </strong>
+                  You can only make one change submission per post. Afterwards,
+                  changing a second time will delete the post. If there is not
+                  any data you want to change from the current post, copy and
+                  paste the contents into their respected fields.
+                </span>
+                <br />
+                {localStorage.deletedBlogPost &&
+                  JSON.parse(localStorage.deletedBlogPost).blogPostName ===
+                    blogPosts.find((post) => post.blogID === selectedPost)
+                      .blogPostName && (
+                    <span style={{ color: "red", fontWeight: "bold" }}>
+                      WARNING: It has already been changed before. This post
+                      will be deleted if changed again!
+                    </span>
+                  )}
+                <br />
                 <label>
                   New Blog Post Name:
                   <input
@@ -235,7 +282,36 @@ export default function Blog({ PH_ICONS_DATA, PH_BLOG_DATA }) {
                     onChange={(e) => setNewBlogPostName(e.target.value)}
                   />
                 </label>
+                <br />
+                <label>
+                  New Blog Post Author:
+                  <input
+                    type="text"
+                    value={newBlogPostAuthor}
+                    onChange={(e) => setNewBlogPostAuthor(e.target.value)}
+                  />
+                </label>
 
+                <br />
+                <label>
+                  New Blog Post Intro Text:
+                  <textarea
+                    value={newBlogPostIntroText}
+                    onChange={(e) => setNewBlogPostIntroText(e.target.value)}
+                  />
+                </label>
+                <br />
+                <label>
+                  New Blog Post Text:
+                  <textarea
+                    value={newBlogPostText.join("\n")}
+                    onChange={(e) =>
+                      setNewBlogPostText(e.target.value.split("\n"))
+                    }
+                  />
+                </label>
+
+                <br />
                 <button type="submit">Edit Selected</button>
               </form>
             )}

@@ -30,7 +30,8 @@ export const BlogPosts = ({
       const response = await fetch("/api/getBlogPosts");
       if (response.ok) {
         const data = await response.json();
-        setBlogPosts(data);
+        setBlogPosts(data); // Assuming setBlogPosts is a state updater function
+        localStorage.setItem("Blog Posts", JSON.stringify(data)); // Store data in localStorage
         setLoading(false);
       } else {
         console.error("Failed to fetch blog posts");
