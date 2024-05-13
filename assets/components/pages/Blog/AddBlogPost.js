@@ -306,7 +306,13 @@ export const AddBlogPost = () => {
           </div>
           <br />
           <div className={`${styles.form_set}`}>
-            <span>Blog Post Image (ONLY IMAGES):</span>
+            <span>
+              Blog Post Image (ONLY IMAGES) |{" "}
+              <span style={{ fontWeight: "bold", color: "blue" }}>
+                1-600kbs size (Recommended)
+              </span>
+              :
+            </span>
             <br />
             <input
               className="form-field"

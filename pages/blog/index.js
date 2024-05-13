@@ -1,17 +1,12 @@
-// React/Next Imports
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import fs from "fs";
 import path from "path";
 import axios from "axios";
 
-// Library Imports
-
-// Data/Functions/Images Imports
 import checkAdminModeStatus from "@/assets/hooks/checkAdminModeStatus";
 import checkLocalHostStatus from "@/assets/hooks/checkLocalHostStatus";
 
-// Component Imports
 import { PageHead } from "@/assets/components/global/All/PageHead";
 import { AboveNav } from "../../assets/components/global/Nav/AboveNav";
 import { DesktopNav } from "@/assets/components/global/Nav/DesktopNav.js";
@@ -27,12 +22,11 @@ import { BlogPostFilters } from "@/assets/components/pages/Blog/BlogPostFilters"
 
 import "../../assets/styles/modules/Blog/Blog.module.css";
 import styles from "../../assets/styles/modules/Blog/Blog.module.css";
+import { initializeIndexedDB } from "@/assets/functions/async/indexDB";
 
 export async function getServerSideProps({ req }) {
   const PAGE_HEAD_DATA_DIRECTORY = "public/data/PageHead/";
-
   const UTF8 = "utf-8";
-
   const PH_ICONS_DATA_FP = path.join(
     process.cwd(),
     PAGE_HEAD_DATA_DIRECTORY,
@@ -73,9 +67,6 @@ export default function Blog({ PH_ICONS_DATA, PH_BLOG_DATA }) {
   const { onLocalHost } = checkLocalHostStatus();
   const { adminMode } = checkAdminModeStatus();
 
-  console.log("Admin Mode Status: " + adminMode);
-  console.log("Local Host Status: " + onLocalHost);
-
   const [blogPosts, setBlogPosts] = useState([]);
   const [selectedPost, setSelectedPost] = useState("");
   const [newBlogPostName, setNewBlogPostName] = useState("");
@@ -85,6 +76,8 @@ export default function Blog({ PH_ICONS_DATA, PH_BLOG_DATA }) {
   const [selectedYear, setSelectedYear] = useState("All");
   const [selectedReadTime, setSelectedReadTime] = useState("All");
   const [selectedAuthor, setSelectedAuthor] = useState("All");
+
+  const router = useRouter();
 
   const handleYearChange = (e) => {
     setSelectedYear(e.target.value);
@@ -118,15 +111,10 @@ export default function Blog({ PH_ICONS_DATA, PH_BLOG_DATA }) {
     e.preventDefault();
 
     try {
-      console.log("Selected post:", selectedPost);
-
-      // Find the selected post data
       const selectedPostData = blogPosts.find(
         (post) => post.blogID === selectedPost
       );
-      console.log("Selected post data:", selectedPostData);
 
-      // Change the blogPostName to the input value
       const updatedPostData = {
         ...selectedPostData,
         blogPostName: newBlogPostName,
@@ -134,12 +122,8 @@ export default function Blog({ PH_ICONS_DATA, PH_BLOG_DATA }) {
         blogPostIntroText: newBlogPostIntroText,
         blogPostText: newBlogPostText.join("\n"),
       };
-      console.log("Updated post data:", updatedPostData);
 
-      // Store the updated post data in localStorage
-      localStorage.setItem("deletedBlogPost", JSON.stringify(updatedPostData));
-
-      // Call the API endpoint to store data in MongoDB database
+      // Call the API endpoint to store updated post data in MongoDB database
       const response = await fetch("/api/insertDeletedBlogPost", {
         method: "POST",
         body: JSON.stringify(updatedPostData),
@@ -147,61 +131,45 @@ export default function Blog({ PH_ICONS_DATA, PH_BLOG_DATA }) {
           "Content-Type": "application/json",
         },
       });
-      console.log("API Response:", response);
+
+      console.log(response);
 
       if (response.ok) {
-        // Blog post data inserted successfully into database
-        console.log("Blog post data inserted successfully into database");
+        console.log("Blog post data updated successfully in database");
 
-        // Delete the old blog post from the database
-        const deleteResponse = await fetch(
-          `/api/getBlogPosts?blogID=${selectedPostData.blogID}`,
-          {
-            method: "DELETE",
-          }
-        );
-        console.log("Delete Response:", deleteResponse);
+        // Update local state
+        setSelectedPost("");
+        setNewBlogPostName("");
+        setNewBlogPostAuthor("");
+        setNewBlogPostIntroText("");
+        setNewBlogPostText([]);
 
-        if (deleteResponse.ok) {
-          // Old blog post deleted successfully from database
-          console.log("Old blog post deleted successfully from database");
+        // Refetch blog posts
+        fetchBlogPosts();
 
-          // Reset selectedPost and newBlogPostName states
-          setSelectedPost("");
-          setNewBlogPostName("");
-          setNewBlogPostAuthor("");
-          setNewBlogPostIntroText("");
-          setNewBlogPostText([]);
-
-          // You may want to refresh the list of blog posts after inserting and deleting
-          fetchBlogPosts();
-
-          window.location.reload();
-        } else {
-          // Handle error
-          console.error("Failed to delete old blog post from database");
-        }
+        window.location.reload();
       } else {
-        // Handle error
-        console.error("Failed to insert blog post data into database");
+        // Handle failed response
+        console.error("Failed to update blog post data in database");
       }
     } catch (error) {
-      // Handle error
-      console.error("Error deleting blog post:", error);
+      // Handle errors
+      console.error("Error updating blog post:", error);
     }
   };
 
   useEffect(() => {
     fetchBlogPosts();
+    initializeIndexedDB(blogPosts);
   }, []);
 
   const fetchBlogPosts = async () => {
     try {
       const response = await fetch("/api/getBlogPosts");
+
       if (response.ok) {
         const data = await response.json();
         setBlogPosts(data);
-        setLoading(false);
       } else {
         console.error("Failed to fetch blog posts");
       }
@@ -244,7 +212,6 @@ export default function Blog({ PH_ICONS_DATA, PH_BLOG_DATA }) {
             <br />
             <select value={selectedPost} onChange={handlePostChange}>
               <option value="">Select a Blog Post</option>
-              {/* Map over the fetched blog posts to generate options */}
               {blogPosts.map((post) => (
                 <option key={post._id} value={post.blogID}>
                   {post.blogPostName}
@@ -257,7 +224,7 @@ export default function Blog({ PH_ICONS_DATA, PH_BLOG_DATA }) {
                 <span>
                   <strong style={{ color: "red", fontWeight: "bold" }}>
                     NOTE:
-                  </strong>
+                  </strong>{" "}
                   You can only make one change submission per post. Afterwards,
                   changing a second time will delete the post. If there is not
                   any data you want to change from the current post, copy and
@@ -312,15 +279,14 @@ export default function Blog({ PH_ICONS_DATA, PH_BLOG_DATA }) {
                 </label>
 
                 <br />
+
+                <br />
                 <button type="submit">Edit Selected</button>
               </form>
             )}
           </div>
         ) : null}
 
-        {/**
-          <BlogPostFilters />
-        */}
         {blogPosts.length > 0 && (
           <BlogPostFilters
             selectedYear={selectedYear}

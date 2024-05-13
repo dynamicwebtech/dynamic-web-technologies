@@ -3863,10 +3863,12 @@
   .index_portfolio_projects {
     .index_portfolio_projects_inner {
       .index_portfolio_projects_inner_top {
-        max-width: 550px;
+        max-width: 750px;
+        @include quickCenter("relative");
 
         .index_portfolio_projects_inner_top_cnt {
-          max-width: 550px;
+          max-width: 750px;
+          @include quickCenter("relative");
           margin-bottom: 30px;
 
           h2 {
@@ -3896,7 +3898,8 @@
       }
 
       .index_portfolio_projects_inner_main {
-        max-width: 550px;
+        max-width: 750px;
+        @include quickCenter("relative");
 
         .project_inner {
           .project_inner_box {
@@ -3915,10 +3918,11 @@
                 .project_inner_side_cnt {
                   ul {
                     display: flex !important;
-                    justify-content: space-evenly;
+                    justify-content: flex-start;
 
                     li {
                       .demo_link {
+                        margin-right: 15px;
                         margin-bottom: 0 !important;
                       }
                     }
@@ -5637,7 +5641,7 @@
       }
 
       .index_pricing_inner_main {
-        max-width: 1150px;
+        max-width: 1350px;
         @include quickCenter("relative");
 
         .index_pricing_main_inner {

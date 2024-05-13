@@ -12,7 +12,7 @@ module.exports = {
     return config;
   },
 
-  //! This added clean urls and eliminates the .html extension aswell as linking
+  //! This added clean urls and eliminates the .html extension as well as linking
   //! CSS and JS with the trailingSlash
   assetPrefix: isProd ? "https://www.dynamicwebtechnologies.com" : "",
   trailingSlash: true,

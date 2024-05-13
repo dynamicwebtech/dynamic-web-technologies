@@ -1,5 +1,5 @@
 // Import necessary modules
-import { MongoClient } from "mongodb";
+import { MongoClient, ObjectId } from "mongodb";
 
 // Define a function to connect to the MongoDB database
 async function connectToDatabase() {
@@ -11,13 +11,13 @@ async function connectToDatabase() {
   return client; // Return the MongoClient instance directly
 }
 
-// Define the API handler function for storing data from localStorage
+// Define the API handler function for updating blog post data
 export default async function handler(req, res) {
   let client = null; // Initialize MongoDB client
 
   try {
     console.log("Request method:", req.method);
-    console.log("Request body:", req.body); // Log the request body to see if blogID is included
+    console.log("Request body:", req.body); // Log the request body to see if blogID and other fields are included
 
     // Ensure that the request method is POST
     if (req.method === "POST") {
@@ -29,28 +29,45 @@ export default async function handler(req, res) {
         // Use the parsed data received from the client-side directly
         const postData = req.body;
 
-        // Remove the duplicate document with the same _id
+        // Get the ID of the blog post to be updated
+        const postId = postData._id;
+
+        // Get the collection for blog posts
         const collection = client.db("blog-posts").collection("posts");
-        await collection.deleteOne({ _id: postData._id });
-        console.log("Removed duplicate document with _id:", postData._id);
 
-        // Insert the post data into the database collection
-        await collection.insertOne(postData);
-        console.log("Inserted post from localStorage into database");
+        // Find the existing document by its ID
+        const existingPost = await collection.findOne({
+          _id: new ObjectId(postId),
+        });
 
-        // Send a success response
-        res
-          .status(200)
-          .json({ message: "Blog post inserted into database successfully" });
+        if (existingPost) {
+          // Update the existing document with the new data
+          const updatedPost = {
+            ...existingPost,
+            blogPostName: postData.blogPostName,
+            blogPostAuthor: postData.blogPostAuthor,
+            blogPostIntroText: postData.blogPostIntroText,
+            blogPostText: postData.blogPostText,
+            // Add other fields to update as needed
+          };
+
+          // Update the document in the collection
+          await collection.updateOne(
+            { _id: new ObjectId(postId) },
+            { $set: updatedPost }
+          );
+          console.log("Updated blog post in the database");
+
+          // Send a success response
+          res.status(200).json({ message: "Blog post updated successfully" });
+        } else {
+          // If the blog post with the specified ID does not exist, return a 404 Not Found response
+          res.status(404).json({ error: "Blog post not found" });
+        }
       } catch (error) {
         // Handle any errors
-        console.error(
-          "Error saving Blog post from localStorage to database: ",
-          error
-        );
-        res
-          .status(500)
-          .json({ error: "Failed to save Blog post from localStorage." });
+        console.error("Error updating blog post:", error);
+        res.status(500).json({ error: "Failed to update blog post" });
       } finally {
         // Close the MongoDB client connection
         if (client) {

@@ -3038,10 +3038,14 @@
     max-width: 150px;
   }
   .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_top {
-    max-width: 550px;
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_top .index_portfolio_projects_inner_top_cnt {
-    max-width: 550px;
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 30px;
   }
   .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_top .index_portfolio_projects_inner_top_cnt h2 {
@@ -3066,7 +3070,9 @@
     max-width: 115px;
   }
   .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_main {
-    max-width: 550px;
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_main .project_inner .project_inner_box .project_inner_row .project_L .project_inner_side_cnt img {
     max-width: 80%;
@@ -3076,9 +3082,10 @@
   }
   .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_main .project_inner .project_inner_box .project_inner_row .project_R .project_inner_side_cnt ul {
     display: flex !important;
-    justify-content: space-evenly;
+    justify-content: flex-start;
   }
   .index_portfolio_projects .index_portfolio_projects_inner .index_portfolio_projects_inner_main .project_inner .project_inner_box .project_inner_row .project_R .project_inner_side_cnt ul li .demo_link {
+    margin-right: 15px;
     margin-bottom: 0 !important;
   }
   .index_pricing {
@@ -4402,7 +4409,7 @@
     max-width: 155px;
   }
   .index_pricing .index_pricing_inner .index_pricing_inner_main {
-    max-width: 1150px;
+    max-width: 1350px;
     margin-left: auto;
     margin-right: auto;
   }
