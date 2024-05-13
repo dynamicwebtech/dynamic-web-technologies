@@ -6,6 +6,7 @@ import axios from "axios";
 
 import checkAdminModeStatus from "@/assets/hooks/checkAdminModeStatus";
 import checkLocalHostStatus from "@/assets/hooks/checkLocalHostStatus";
+import { initializeIndexedDB } from "@/assets/functions/async/indexDB";
 
 import { PageHead } from "@/assets/components/global/All/PageHead";
 import { AboveNav } from "../../assets/components/global/Nav/AboveNav";
@@ -19,10 +20,10 @@ import { TopHero } from "@/assets/components/pages/All/TopHero";
 import { AddBlogPost } from "@/assets/components/pages/Blog/AddBlogPost";
 import { BlogPosts } from "@/assets/components/pages/Blog/BlogPosts";
 import { BlogPostFilters } from "@/assets/components/pages/Blog/BlogPostFilters";
+import { EditBlogPost } from "@/assets/components/pages/Blog/EditBlogPost";
 
 import "../../assets/styles/modules/Blog/Blog.module.css";
 import styles from "../../assets/styles/modules/Blog/Blog.module.css";
-import { initializeIndexedDB } from "@/assets/functions/async/indexDB";
 
 export async function getServerSideProps({ req }) {
   const PAGE_HEAD_DATA_DIRECTORY = "public/data/PageHead/";
@@ -185,6 +186,21 @@ export default function Blog({ PH_ICONS_DATA, PH_BLOG_DATA }) {
     text: "Dynamic Web Technologies is a great source for those who would like to become more familiar with the web development and digital fields. By reading our blog posts, you can get a good idea as to how our services and department operates!",
   };
 
+  const PROPERTY_OBJECT = {
+    selectedPost: selectedPost,
+    blogPosts: blogPosts,
+    submitFunction: handleBlogPostDeleteSubmit,
+    changeFunction: handlePostChange,
+    nameSetter: setNewBlogPostName,
+    authorSetter: setNewBlogPostAuthor,
+    introTextSetter: setNewBlogPostIntroText,
+    textSetter: setNewBlogPostText,
+    newName: newBlogPostName,
+    newAuthor: newBlogPostAuthor,
+    newIntroText: newBlogPostIntroText,
+    newText: newBlogPostText,
+  };
+
   return (
     <div id="PAGE" className="page">
       <PageHead page_head_data={PH_BLOG_DATA} icons_data={PH_ICONS_DATA} />
@@ -200,94 +216,7 @@ export default function Blog({ PH_ICONS_DATA, PH_BLOG_DATA }) {
 
         {adminMode ? <AddBlogPost /> : null}
 
-        {adminMode ? (
-          <div>
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <span>Edit A Blog Post</span>
-            <br />
-            <br />
-            <select value={selectedPost} onChange={handlePostChange}>
-              <option value="">Select a Blog Post</option>
-              {blogPosts.map((post) => (
-                <option key={post._id} value={post.blogID}>
-                  {post.blogPostName}
-                </option>
-              ))}
-            </select>
-
-            {selectedPost && (
-              <form onSubmit={handleBlogPostDeleteSubmit}>
-                {/**
-                <span>
-                  <strong style={{ color: "red", fontWeight: "bold" }}>
-                    NOTE:
-                  </strong>{" "}
-                  You can only make one change submission per post. Afterwards,
-                  changing a second time will delete the post. If there is not
-                  any data you want to change from the current post, copy and
-                  paste the contents into their respected fields.
-                </span>
-                <br />
-                {localStorage.deletedBlogPost &&
-                  JSON.parse(localStorage.deletedBlogPost).blogPostName ===
-                    blogPosts.find((post) => post.blogID === selectedPost)
-                      .blogPostName && (
-                    <span style={{ color: "red", fontWeight: "bold" }}>
-                      WARNING: It has already been changed before. This post
-                      will be deleted if changed again!
-                    </span>
-                  )}
-                */}
-                <br />
-                <label>
-                  New Blog Post Name:
-                  <input
-                    type="text"
-                    value={newBlogPostName}
-                    onChange={(e) => setNewBlogPostName(e.target.value)}
-                  />
-                </label>
-                <br />
-                <label>
-                  New Blog Post Author:
-                  <input
-                    type="text"
-                    value={newBlogPostAuthor}
-                    onChange={(e) => setNewBlogPostAuthor(e.target.value)}
-                  />
-                </label>
-
-                <br />
-                <label>
-                  New Blog Post Intro Text:
-                  <textarea
-                    value={newBlogPostIntroText}
-                    onChange={(e) => setNewBlogPostIntroText(e.target.value)}
-                  />
-                </label>
-                <br />
-                <label>
-                  New Blog Post Text:
-                  <textarea
-                    value={newBlogPostText.join("\n")}
-                    onChange={(e) =>
-                      setNewBlogPostText(e.target.value.split("\n"))
-                    }
-                  />
-                </label>
-
-                <br />
-
-                <br />
-                <button type="submit">Edit Selected</button>
-              </form>
-            )}
-          </div>
-        ) : null}
+        {adminMode ? <EditBlogPost propertyObject={PROPERTY_OBJECT} /> : null}
 
         {blogPosts.length > 0 && (
           <BlogPostFilters
@@ -300,13 +229,11 @@ export default function Blog({ PH_ICONS_DATA, PH_BLOG_DATA }) {
             onFiltersReset={handleFiltersReset}
           />
         )}
-        {blogPosts.length > 0 && (
-          <BlogPosts
-            selectedYear={selectedYear}
-            selectedReadTime={selectedReadTime}
-            selectedAuthor={selectedAuthor}
-          />
-        )}
+        <BlogPosts
+          selectedYear={selectedYear}
+          selectedReadTime={selectedReadTime}
+          selectedAuthor={selectedAuthor}
+        />
       </div>
 
       <Footer />

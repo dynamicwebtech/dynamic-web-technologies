@@ -178,9 +178,55 @@ export const BlogPosts = ({
   };
 
   return (
-    <section id="blogPosts" className={`${styles.blog_posts}`}>
-      <div className={`${styles.blog_posts_inner}`}>
-        {loading ? <p>Loading..</p> : renderBlogPosts()}
+    <section
+      id="blogPosts"
+      className={`${styles.blog_posts}`}
+      style={{ position: "relative", width: "100%", height: "100%" }}
+    >
+      <div
+        className={`${styles.blog_posts_inner}`}
+        style={{ position: "relative", width: "100%", height: "100%" }}
+      >
+        {loading ? (
+          <p
+            style={{
+              position: "absolute",
+              width: "100%",
+              height: "100%",
+              top: 0,
+              left: 0,
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              fontFamily: "Open Sans Semi Bold",
+              // paddingTop: "150px",
+              // paddingBottom: "150px",
+            }}
+          >
+            Loading..
+          </p>
+        ) : (
+          renderBlogPosts()
+        )}
+        {!loading && blogPosts.length <= 0 ? (
+          <div
+            style={{
+              position: "absolute",
+              width: "100%",
+              height: "100%",
+              top: 0,
+              left: 0,
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              fontFamily: "Open Sans Semi Bold",
+              // paddingTop: "150px",
+              // paddingBottom: "150px",
+            }}
+          >
+            <span>There are no blog posts.</span>
+          </div>
+        ) : null}
       </div>
     </section>
   );

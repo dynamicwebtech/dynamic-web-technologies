@@ -222,113 +222,113 @@ export const AddBlogPost = () => {
           }}
         >
           <div className={`${styles.form_set}`}>
-            <span>Blog Post Name:</span>
-            <br />
-            <input
-              className="form-field"
-              id="aBPFBlogPostName"
-              type="text"
-              name="blogPostName"
-              placeholder="Blog Post Name"
-              value={blogPostName}
-              onChange={(e) => {
-                const updatedBlogPostName = e.target.value.replace(/["']/g, ""); // Remove quotation marks
-                setBlogPostName(updatedBlogPostName);
-                setBlogPostNameID(
-                  "BPNID_" +
-                    updatedBlogPostName.toLowerCase().replace(/[\s,]/g, "")
-                );
-              }}
-            />
+            <label>
+              Blog Post Name:
+              <br />
+              <input
+                className="form-field"
+                id="aBPFBlogPostName"
+                type="text"
+                name="blogPostName"
+                placeholder="Blog Post Name"
+                value={blogPostName}
+                onChange={(e) => {
+                  const updatedBlogPostName = e.target.value.replace(
+                    /["']/g,
+                    ""
+                  ); // Remove quotation marks
+                  setBlogPostName(updatedBlogPostName);
+                  setBlogPostNameID(
+                    "BPNID_" +
+                      updatedBlogPostName.toLowerCase().replace(/[\s,]/g, "")
+                  );
+                }}
+              />
+            </label>
           </div>
           <br />
           <div className={`${styles.form_set}`}>
-            <span>
+            <label>
               Blog Post Intro Text{" "}
               <span style={{ fontWeight: "bold" }}>
                 (This is what will appear at the top and act as the blog post's
-                description)
+                description):
               </span>
-              :
-            </span>
-            <br />
-            <textarea
-              className="form-field"
-              id="aBPFBlogPostIntroText"
-              name="blogPostIntroText"
-              placeholder="Blog Post Intro Text"
-              value={blogPostIntroText}
-              onChange={(e) => {
-                setBlogPostIntroText(e.target.value);
-              }}
-            />
+              <br />
+              <textarea
+                className="form-field"
+                id="aBPFBlogPostIntroText"
+                name="blogPostIntroText"
+                placeholder="Blog Post Intro Text"
+                value={blogPostIntroText}
+                onChange={(e) => {
+                  setBlogPostIntroText(e.target.value);
+                }}
+              />
+            </label>
           </div>
           <br />
           <div className={`${styles.form_set}`}>
-            <span>
+            <label>
               Blog Post Text{" "}
               <span style={{ fontWeight: "bold" }}>
                 (Add "<span style={{ color: "red" }}>/NEW_TEXT/</span>" *
                 Forward Slash, NEW_TEXT, Forward Slash * at the end of each
-                paragraph to indicate a new one)
+                paragraph to indicate a new one):
               </span>
-              :
-            </span>
-            <br />
-            <textarea
-              className="form-field"
-              id="aBPFBlogPostText"
-              name="blogPostText"
-              placeholder="Blog Post Text"
-              value={blogPostText.join("\n")}
-              onChange={(e) => {
-                const text = e.target.value;
-                const paragraphs = text.split("\n");
-                setBlogPostText(paragraphs);
-              }}
-            />
+              <br />
+              <textarea
+                className="form-field"
+                id="aBPFBlogPostText"
+                name="blogPostText"
+                placeholder="Blog Post Text"
+                value={blogPostText.join("\n")}
+                onChange={(e) => {
+                  const text = e.target.value;
+                  const paragraphs = text.split("\n");
+                  setBlogPostText(paragraphs);
+                }}
+              />
+            </label>
           </div>
           <br />
           <div className={`${styles.form_set}`}>
-            <span>Blog Post Author Name:</span>
-            <br />
-            <input
-              className="form-field"
-              id="aBPFBlogPostAuthor"
-              type="text"
-              name="blogPostAuthor"
-              placeholder="Blog Post Author Name"
-              value={blogPostAuthor}
-              onChange={(e) => {
-                setBlogPostAuthor(e.target.value);
-              }}
-            />
+            <label>
+              Blog Post Author Name:
+              <br />
+              <input
+                className="form-field"
+                id="aBPFBlogPostAuthor"
+                type="text"
+                name="blogPostAuthor"
+                placeholder="Blog Post Author Name"
+                value={blogPostAuthor}
+                onChange={(e) => {
+                  setBlogPostAuthor(e.target.value);
+                }}
+              />
+            </label>
           </div>
           <br />
           <div className={`${styles.form_set}`}>
-            <span>
+            <label>
               Blog Post Image (ONLY IMAGES) |{" "}
               <span style={{ fontWeight: "bold", color: "blue" }}>
-                1-600kbs size (Recommended)
+                1-600kbs size (Recommended):
               </span>
-              :
-            </span>
-            <br />
-            <input
-              className="form-field"
-              id="addMediaFile"
-              type="file"
-              accept="image/*"
-              onChange={handleFileChange}
-            />
+              <br />
+              <input
+                className="form-field"
+                id="addMediaFile"
+                type="file"
+                accept="image/*"
+                onChange={handleFileChange}
+              />
+            </label>
           </div>
 
           <br />
           <div className={`${styles.form_btns}`}>
-            <button type={"reset"} className={`${styles.reset}`}>
-              <span>CLEAR</span>
-            </button>
-
             <button type={"submit"} className={`${styles.send}`}>
               <span>ADD</span>
             </button>
