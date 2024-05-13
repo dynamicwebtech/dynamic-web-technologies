@@ -221,6 +221,7 @@ export default function Blog({ PH_ICONS_DATA, PH_BLOG_DATA }) {
 
             {selectedPost && (
               <form onSubmit={handleBlogPostDeleteSubmit}>
+                {/**
                 <span>
                   <strong style={{ color: "red", fontWeight: "bold" }}>
                     NOTE:
@@ -240,6 +241,7 @@ export default function Blog({ PH_ICONS_DATA, PH_BLOG_DATA }) {
                       will be deleted if changed again!
                     </span>
                   )}
+                */}
                 <br />
                 <label>
                   New Blog Post Name:
