@@ -138,48 +138,55 @@ export const AddPortfolioProjectForm = (props) => {
           }}
         >
           <div className={`${STYLES.form_set}`}>
-            <span>Project Name:</span>
-            <input
-              className="form-field"
-              id="aPPFProjectName"
-              type="text"
-              name="projectName"
-              placeholder="Project Name"
-              value={projectName}
-              onChange={(e) => {
-                const updatedProjectName = e.target.value.replace(/["']/g, ""); // Remove quotation marks
-                setProjectName(updatedProjectName);
-                setProjectNameID(
-                  "PNID_" +
-                    updatedProjectName.toLowerCase().replace(/[\s,]/g, "")
-                );
-              }}
-            />
+            <label>
+              Project Name:
+              <input
+                className="form-field"
+                id="aPPFProjectName"
+                type="text"
+                name="projectName"
+                placeholder="Project Name"
+                value={projectName}
+                onChange={(e) => {
+                  const updatedProjectName = e.target.value.replace(
+                    /["']/g,
+                    ""
+                  ); // Remove quotation marks
+                  setProjectName(updatedProjectName);
+                  setProjectNameID(
+                    "PNID_" +
+                      updatedProjectName.toLowerCase().replace(/[\s,]/g, "")
+                  );
+                }}
+              />
+            </label>
           </div>
           <div className={`${STYLES.form_set}`}>
-            <span>Client Name:</span>
-            <input
-              className="form-field"
-              id="aPPFClientName"
-              type="text"
-              name="clientName"
-              placeholder="Client Name"
-              value={clientName}
-              onChange={(e) => {
-                setClientName(e.target.value);
-              }}
-            />
+            <label>
+              Client Name:
+              <input
+                className="form-field"
+                id="aPPFClientName"
+                type="text"
+                name="clientName"
+                placeholder="Client Name"
+                value={clientName}
+                onChange={(e) => {
+                  setClientName(e.target.value);
+                }}
+              />
+            </label>
           </div>
           <div className={`${STYLES.form_set}`}>
-            <span className="orientation-change-element half-second">
-              Add File (Only images):
-            </span>
-            <input
-              id="addMediaFile"
-              type="file"
-              accept="image/*"
-              onChange={handleFileChange}
-            />
+            <label className="orientation-change-element half-second">
+              Project Display (Only images):
+              <input
+                id="addMediaFile"
+                type="file"
+                accept="image/*"
+                onChange={handleFileChange}
+              />
+            </label>
           </div>
           {/**
           <div className={`${STYLES.form_set}`}>
@@ -197,22 +204,25 @@ export const AddPortfolioProjectForm = (props) => {
           </div>
           */}
           <div className={`${STYLES.form_set}`}>
-            <span>Link To Project:</span>
-            <input
-              className="form-field"
-              id="aPPFDemoLink"
-              type="text"
-              name="demoLink"
-              placeholder="Link To Project"
-              value={demoLink}
-              onChange={(e) => {
-                setDemoLink(e.target.value);
-              }}
-            />
+            <label>
+              Link To Project:
+              <input
+                className="form-field"
+                id="aPPFDemoLink"
+                type="text"
+                name="demoLink"
+                placeholder="Link To Project"
+                value={demoLink}
+                onChange={(e) => {
+                  setDemoLink(e.target.value);
+                }}
+              />
+            </label>
           </div>
           <div className={`${STYLES.form_set}`}>
-            <span>Project Description:</span>
-            {/**
+            <label>
+              Project Description:
+              {/**
               <input
               className="form-field"
               id="aPPFDemoLink"
@@ -225,29 +235,32 @@ export const AddPortfolioProjectForm = (props) => {
               }}
             />
             */}
-            <textarea
-              className="form-field"
-              id="aPPFDescription"
-              name="description"
-              placeholder="Project Description"
-              value={description}
-              onChange={(e) => {
-                setDescription(e.target.value);
-              }}
-            />
+              <textarea
+                className="form-field"
+                id="aPPFDescription"
+                name="description"
+                placeholder="Project Description"
+                value={description}
+                onChange={(e) => {
+                  setDescription(e.target.value);
+                }}
+              />
+            </label>
           </div>
           <div className={`${STYLES.form_set}`}>
-            <span>Client Review:</span>
-            <textarea
-              className="form-field"
-              id="aPPFReview"
-              name="review"
-              placeholder="Client Review"
-              value={review}
-              onChange={(e) => {
-                setReview(e.target.value);
-              }}
-            />
+            <label>
+              Client Review:
+              <textarea
+                className="form-field"
+                id="aPPFReview"
+                name="review"
+                placeholder="Client Review"
+                value={review}
+                onChange={(e) => {
+                  setReview(e.target.value);
+                }}
+              />
+            </label>
           </div>
 
           <div className={`${STYLES.form_btns}`}>

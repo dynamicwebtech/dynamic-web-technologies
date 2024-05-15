@@ -27,6 +27,7 @@ import { AddPortfolioProjectForm } from "@/assets/components/global/All/AddPortf
 // Style Imports
 import "../../assets/styles/modules/Portfolio/Portfolio.module.css";
 import styles from "../../assets/styles/modules/Portfolio/Portfolio.module.css";
+import all_styles from "../../assets/styles/modules/All/All.module.css";
 
 export async function getServerSideProps({ req }) {
   const PAGE_HEAD_DATA_DIRECTORY = "public/data/PageHead/";
@@ -100,7 +101,7 @@ export default function Portfolio({ PH_ICONS_DATA, PH_PORTFOLIO_DATA }) {
 
         <PortfolioProjects />
 
-        {adminMode ? <AddPortfolioProjectForm styles={styles} /> : null}
+        {adminMode ? <AddPortfolioProjectForm styles={all_styles} /> : null}
       </div>
 
       <Footer />

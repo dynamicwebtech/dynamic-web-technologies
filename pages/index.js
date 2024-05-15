@@ -34,6 +34,7 @@ import { IndexContact } from "@/assets/components/pages/Index/IndexContact.js";
 // Style Imports
 import "../assets/styles/modules/Index/Index.module.css";
 import index_styles from "../assets/styles/modules/Index/Index.module.css";
+import all_styles from "../assets/styles/modules/All/All.module.css";
 
 export async function getServerSideProps({ req }) {
   const PAGE_HEAD_DATA_DIRECTORY = "public/data/PageHead/";
@@ -117,7 +118,7 @@ export default function Home({ PH_ICONS_DATA, PH_INDEX_DATA }) {
       <div id="PAGE_CNT">
         <IndexTop />
         <IndexPortfolioProjects portfolioProjects={portfolioProjects} />
-        {adminMode ? <AddPortfolioProjectForm styles={index_styles} /> : null}
+        {adminMode ? <AddPortfolioProjectForm styles={all_styles} /> : null}
         <IndexAbout />
         <IndexPricing />
         <IndexBooking />
