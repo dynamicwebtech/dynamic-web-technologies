@@ -13,7 +13,8 @@ export const BookContactInfo = () => {
   const PLACEHOLDER_IMG =
     "https://raw.githubusercontent.com/dynamicwebtech/client_CDNS/main/dynamic-web-technologies/bgs/about/placeholder-user.jpg";
 
-  const COLLIN_PIC = "";
+  const COLLIN_PIC =
+    "https://raw.githubusercontent.com/dynamicwebtech/client_CDNS/main/dynamic-web-technologies/bgs/about/img-of-collin.jpg";
   const PARKER_PIC =
     "https://raw.githubusercontent.com/dynamicwebtech/client_CDNS/main/dynamic-web-technologies/bgs/about/img_of_parker.jpg";
 
@@ -23,7 +24,7 @@ export const BookContactInfo = () => {
       teamName: "Collin Westgate",
       teamRole: "(Owner/Developer)",
       teamPhone: "(336) 986-1842",
-      teamImg: PLACEHOLDER_IMG,
+      teamImg: COLLIN_PIC,
     },
     {
       teamID: "T_2",
