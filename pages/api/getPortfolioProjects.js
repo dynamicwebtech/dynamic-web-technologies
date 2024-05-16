@@ -29,11 +29,13 @@ export default async function handler(req, res) {
 
   try {
     if (req.method === "POST") {
-      // Use multer middleware to handle file upload
-      upload.single("file")(req, res, async (err) => {
+      upload.fields([
+        { name: "file", maxCount: 1 },
+        { name: "clientLogo", maxCount: 1 },
+      ])(req, res, async (err) => {
         if (err) {
-          console.error("Error uploading file:", err);
-          res.status(500).json({ error: "Failed to upload file" });
+          console.error("Error uploading files:", err);
+          res.status(500).json({ error: "Failed to upload files" });
           return;
         }
 
@@ -53,23 +55,31 @@ export default async function handler(req, res) {
             description,
             review,
           } = req.body;
-          const file = req.file;
+          const files = req.files;
+          const file = files["file"][0];
+          const clientLogo = files["clientLogo"][0];
 
-          if (!file) {
-            console.error("No file uploaded");
-            res.status(400).json({ error: "No file uploaded" });
+          if (!file || !clientLogo) {
+            console.error("Files not uploaded");
+            res.status(400).json({ error: "Files not uploaded" });
             return;
           }
 
           const type = "image";
-          const src = `data:${type};base64,${file.buffer.toString("base64")}`;
+          const client_logo_src = `data:${type};base64,${clientLogo.buffer.toString(
+            "base64"
+          )}`;
+          const display_src = `data:${type};base64,${file.buffer.toString(
+            "base64"
+          )}`;
 
           await collection.insertOne({
             itemID,
             projectName,
             projectNameID,
             clientName,
-            src,
+            client_logo_src,
+            display_src,
             // creationDate,
             demoLink,
             description,

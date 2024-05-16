@@ -124,7 +124,7 @@ export const IndexPortfolioProjects = (props) => {
                           >
                             <div className={`${styles.project_inner_side_cnt}`}>
                               <LazyLoadImage
-                                src={project.src}
+                                src={project.display_src}
                                 alt={`DynamicWebTechnologies - Image of ${project.projectName}.`}
                               />
                             </div>
@@ -147,6 +147,12 @@ export const IndexPortfolioProjects = (props) => {
                                 {project.creationDate}
                               </span>
                               */}
+                              {project.client_logo_src !== "N/A" ? (
+                                <LazyLoadImage
+                                  src={project.client_logo_src}
+                                  alt={`Dynamic Web Technologies - Logo of ${project.projectName}`}
+                                />
+                              ) : null}
                               <span
                                 className={`${styles.project_name} orientation-change-element half-second`}
                               >

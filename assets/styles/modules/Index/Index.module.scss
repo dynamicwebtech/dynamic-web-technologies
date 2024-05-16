@@ -319,7 +319,7 @@
         .project_inner_box {
           .project_inner_row {
             .project_inner_side {
-              height: 600px;
+              height: 730px;
               display: flex;
               align-items: center;
             }
@@ -353,6 +353,13 @@
                   font-size: $SmallLink;
                   opacity: 0.6;
                   margin-bottom: 12px;
+                }
+
+                img {
+                  max-width: 200px;
+                  border: 2px solid ghostwhite;
+                  margin-top: 10px;
+                  margin-bottom: 10px;
                 }
 
                 .creation_date {
@@ -1778,6 +1785,10 @@
                   margin-right: auto;
                   text-align: center;
 
+                  img {
+                    max-width: 170px;
+                  }
+
                   .project_name {
                     font-size: clamp(22px, 24px, 24px);
                   }
@@ -2294,6 +2305,10 @@
                   margin-left: auto;
                   margin-right: auto;
                   text-align: center;
+
+                  img {
+                    max-width: 150px;
+                  }
 
                   .project_name {
                     font-size: clamp(18px, 20px, 20px);
@@ -4453,7 +4468,7 @@
           .project_inner_box {
             .project_inner_row {
               .project_inner_side {
-                height: 400px;
+                height: 500px;
               }
 
               .project_L {
@@ -4471,6 +4486,10 @@
               .project_R {
                 max-width: 50%;
                 .project_inner_side_cnt {
+                  img {
+                    max-width: 170px;
+                  }
+
                   ul {
                     display: flex !important;
                     justify-content: flex-start;
@@ -5009,7 +5028,7 @@
           .project_inner_box {
             .project_inner_row {
               .project_inner_side {
-                height: 400px;
+                height: 540px;
               }
 
               .project_L {
@@ -5025,6 +5044,10 @@
               .project_R {
                 max-width: 50%;
                 .project_inner_side_cnt {
+                  img {
+                    max-width: 170px;
+                  }
+
                   ul {
                     display: flex !important;
                     justify-content: flex-start;
@@ -5563,7 +5586,7 @@
           .project_inner_box {
             .project_inner_row {
               .project_inner_side {
-                height: 400px;
+                height: 500px;
               }
 
               .project_L {

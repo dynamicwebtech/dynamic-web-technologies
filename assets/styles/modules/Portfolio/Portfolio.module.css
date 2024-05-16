@@ -122,6 +122,12 @@
   margin-left: 0;
   margin-right: auto;
 }
+.portfolio_projects .portfolio_projects_inner .portfolio_projects_inner_main .project_inner .project_inner_box .project_inner_row .project_R .project_inner_side_cnt img {
+  max-width: 200px;
+  border: 2px solid ghostwhite;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 .portfolio_projects .portfolio_projects_inner .portfolio_projects_inner_main .project_inner .project_inner_box .project_inner_row .project_R .project_inner_side_cnt .item_id {
   display: block;
   font-family: "Open Sans Semi Bold";
@@ -226,6 +232,12 @@
   margin-left: auto;
   margin-right: auto;
   display: block;
+}
+.portfolio_project .portfolio_project_inner .portfolio_project_inner_top .logo {
+  max-width: 300px;
+  margin-top: 35px;
+  margin-bottom: 15px;
+  border: 2px solid ghostwhite;
 }
 .portfolio_project .portfolio_project_inner .portfolio_project_inner_top .project_name {
   display: block;
@@ -495,6 +507,9 @@
     margin-left: auto;
     margin-right: auto;
   }
+  .portfolio_project .portfolio_project_inner .portfolio_project_inner_top .logo {
+    max-width: 240px;
+  }
   .portfolio_project .portfolio_project_inner .portfolio_project_inner_top .project_name {
     font-size: 26px;
   }
@@ -604,6 +619,9 @@
   .portfolio_projects .portfolio_projects_inner .portfolio_projects_inner_main .project_inner .project_inner_box .project_inner_row .project_R .project_inner_side_cnt .project_name {
     font-size: 24px;
   }
+  .portfolio_projects .portfolio_projects_inner .portfolio_projects_inner_main .project_inner .project_inner_box .project_inner_row .project_R .project_inner_side_cnt img {
+    max-width: 170px;
+  }
   .portfolio_projects .portfolio_projects_inner .portfolio_projects_inner_main .project_inner .project_inner_box .project_inner_row .project_R .project_inner_side_cnt ul {
     display: grid;
     justify-content: space-evenly;
@@ -631,6 +649,9 @@
     max-width: 95%;
     margin-left: auto;
     margin-right: auto;
+  }
+  .portfolio_project .portfolio_project_inner .portfolio_project_inner_top .logo {
+    max-width: 220px;
   }
   .portfolio_project .portfolio_project_inner .portfolio_project_inner_top .project_name {
     font-size: 24px;
@@ -746,6 +767,9 @@
     margin-right: auto;
     text-align: center;
   }
+  .portfolio_projects .portfolio_projects_inner .portfolio_projects_inner_main .project_inner .project_inner_box .project_inner_row .project_R .project_inner_side_cnt img {
+    max-width: 150px;
+  }
   .portfolio_projects .portfolio_projects_inner .portfolio_projects_inner_main .project_inner .project_inner_box .project_inner_row .project_R .project_inner_side_cnt .project_name {
     font-size: 20px;
   }
@@ -777,10 +801,14 @@
     margin-left: auto;
     margin-right: auto;
   }
+  .portfolio_project .portfolio_project_inner .portfolio_project_inner_top .logo {
+    max-width: 170px;
+  }
   .portfolio_project .portfolio_project_inner .portfolio_project_inner_top .project_name {
     font-size: 21px;
     padding-left: 20px;
     padding-right: 20px;
+    margin-top: 20px;
   }
   .portfolio_project .portfolio_project_inner .portfolio_project_inner_top .client_name {
     font-size: 16px;
@@ -902,10 +930,14 @@
     margin-left: auto;
     margin-right: auto;
   }
+  .portfolio_project .portfolio_project_inner .portfolio_project_inner_top .logo {
+    max-width: 210px;
+  }
   .portfolio_project .portfolio_project_inner .portfolio_project_inner_top .project_name {
     font-size: 23px;
     padding-left: 20px;
     padding-right: 20px;
+    margin-top: 20px;
   }
   .portfolio_project .portfolio_project_inner .portfolio_project_inner_top .client_name {
     font-size: 18px;
@@ -1068,10 +1100,14 @@
     margin-left: auto;
     margin-right: auto;
   }
+  .portfolio_project .portfolio_project_inner .portfolio_project_inner_top .logo {
+    max-width: 230px;
+  }
   .portfolio_project .portfolio_project_inner .portfolio_project_inner_top .project_name {
     font-size: 25px;
     padding-left: 20px;
     padding-right: 20px;
+    margin-top: 25px;
   }
   .portfolio_project .portfolio_project_inner .portfolio_project_inner_top .client_name {
     font-size: 19px;
@@ -1327,7 +1363,7 @@
     margin-top: 0;
   }
   .portfolio_projects .portfolio_projects_inner .portfolio_projects_inner_main .project_inner .project_inner_box .project_inner_row .project_inner_side {
-    height: 400px;
+    height: 500px;
   }
   .portfolio_projects .portfolio_projects_inner .portfolio_projects_inner_main .project_inner .project_inner_box .project_inner_row .project_L {
     max-width: 50%;
@@ -1340,6 +1376,9 @@
   }
   .portfolio_projects .portfolio_projects_inner .portfolio_projects_inner_main .project_inner .project_inner_box .project_inner_row .project_R {
     max-width: 50%;
+  }
+  .portfolio_projects .portfolio_projects_inner .portfolio_projects_inner_main .project_inner .project_inner_box .project_inner_row .project_R .project_inner_side_cnt img {
+    max-width: 170px;
   }
   .portfolio_projects .portfolio_projects_inner .portfolio_projects_inner_main .project_inner .project_inner_box .project_inner_row .project_R .project_inner_side_cnt ul {
     display: flex !important;
@@ -1471,7 +1510,7 @@
     margin-top: 0;
   }
   .portfolio_projects .portfolio_projects_inner .portfolio_projects_inner_main .project_inner .project_inner_box .project_inner_row .project_inner_side {
-    height: 400px;
+    height: 480px;
   }
   .portfolio_projects .portfolio_projects_inner .portfolio_projects_inner_main .project_inner .project_inner_box .project_inner_row .project_L {
     max-width: 50%;
@@ -1481,6 +1520,15 @@
   }
   .portfolio_projects .portfolio_projects_inner .portfolio_projects_inner_main .project_inner .project_inner_box .project_inner_row .project_R {
     max-width: 50%;
+  }
+  .portfolio_projects .portfolio_projects_inner .portfolio_projects_inner_main .project_inner .project_inner_box .project_inner_row .project_R .project_inner_side_cnt img {
+    max-width: 170px;
+  }
+  .portfolio_projects .portfolio_projects_inner .portfolio_projects_inner_main .project_inner .project_inner_box .project_inner_row .project_R .project_inner_side_cnt .project_name {
+    text-align: left;
+  }
+  .portfolio_projects .portfolio_projects_inner .portfolio_projects_inner_main .project_inner .project_inner_box .project_inner_row .project_R .project_inner_side_cnt .client_name {
+    text-align: left;
   }
   .portfolio_projects .portfolio_projects_inner .portfolio_projects_inner_main .project_inner .project_inner_box .project_inner_row .project_R .project_inner_side_cnt ul {
     display: flex !important;
@@ -1611,7 +1659,7 @@
     margin-right: auto;
   }
   .portfolio_projects .portfolio_projects_inner .portfolio_projects_inner_main .project_inner .project_inner_box .project_inner_row .project_inner_side {
-    height: 400px;
+    height: 500px;
   }
   .portfolio_projects .portfolio_projects_inner .portfolio_projects_inner_main .project_inner .project_inner_box .project_inner_row .project_L {
     max-width: 50%;
@@ -1653,10 +1701,15 @@
     margin-left: auto;
     margin-right: auto;
   }
+  .portfolio_project .portfolio_project_inner .portfolio_project_inner_top .logo {
+    max-width: 270px;
+    margin-top: 60px;
+  }
   .portfolio_project .portfolio_project_inner .portfolio_project_inner_top .project_name {
     font-size: 32px;
     padding-left: 20px;
     padding-right: 20px;
+    margin-top: 30px;
   }
   .portfolio_project .portfolio_project_inner .portfolio_project_inner_top .client_name {
     font-size: 19px;

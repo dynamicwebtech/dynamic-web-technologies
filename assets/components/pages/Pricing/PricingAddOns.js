@@ -72,7 +72,7 @@ export const PricingAddOns = () => {
                   <span
                     className={`${styles.add_on_price} orientation-change-element half-second`}
                   >
-                    ${item.addOnPrice}
+                    {/** ${item.addOnPrice} */}
                   </span>
                 </div>
               </div>

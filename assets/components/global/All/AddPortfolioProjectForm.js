@@ -13,6 +13,7 @@ export const AddPortfolioProjectForm = (props) => {
   const [projectNameID, setProjectNameID] = useState("");
   const [clientName, setClientName] = useState("");
   const [file, setFile] = useState(null);
+  const [clientLogo, setClientLogo] = useState(null);
   // const [creationDate, setCreationDate] = useState("");
   const [demoLink, setDemoLink] = useState("");
   const [description, setDescription] = useState("");
@@ -53,6 +54,12 @@ export const AddPortfolioProjectForm = (props) => {
     e.currentTarget.style.border = "2px solid white";
   };
 
+  const handleClientLogoChange = (e) => {
+    const selectedLogo = e.target.files[0];
+    setClientLogo(selectedLogo);
+    e.currentTarget.style.border = "2px solid white";
+  };
+
   const handleFormSubmit = async (e) => {
     e.preventDefault();
 
@@ -64,14 +71,19 @@ export const AddPortfolioProjectForm = (props) => {
       PROJECT_NAME.style.border = "2px solid white";
     }
 
-    if (CHECKING_PROJECT_NAME) {
+    if (CHECKING_PROJECT_NAME && file && clientLogo) {
       try {
         const formData = new FormData();
         formData.append("itemID", itemID);
         formData.append("projectName", projectName);
         formData.append("projectNameID", projectNameID);
         formData.append("clientName", clientName);
-        formData.append("file", file);
+        if (file) {
+          formData.append("file", file);
+        }
+        if (clientLogo) {
+          formData.append("clientLogo", clientLogo);
+        }
         // formData.append("creationDate", creationDate);
         formData.append("demoLink", demoLink);
         formData.append("description", description);
@@ -91,6 +103,7 @@ export const AddPortfolioProjectForm = (props) => {
           setProjectNameID("");
           setProjectName("");
           setClientName("");
+          setClientLogo(null);
           setFile(null);
           // setCreationDate("");
           setDemoLink("");
@@ -179,12 +192,25 @@ export const AddPortfolioProjectForm = (props) => {
           </div>
           <div className={`${STYLES.form_set}`}>
             <label className="orientation-change-element half-second">
+              Client Logo (Only images):
+              <input
+                id="addMediaFile"
+                type="file"
+                accept="image/*"
+                onChange={handleClientLogoChange}
+                name="clientLogo"
+              />
+            </label>
+          </div>
+          <div className={`${STYLES.form_set}`}>
+            <label className="orientation-change-element half-second">
               Project Display (Only images):
               <input
                 id="addMediaFile"
                 type="file"
                 accept="image/*"
                 onChange={handleFileChange}
+                name="file"
               />
             </label>
           </div>

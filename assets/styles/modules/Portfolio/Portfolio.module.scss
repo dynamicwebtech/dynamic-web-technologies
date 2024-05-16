@@ -140,6 +140,13 @@
                 margin-left: 0;
                 margin-right: auto;
 
+                img {
+                  max-width: 200px;
+                  border: 2px solid ghostwhite;
+                  margin-top: 10px;
+                  margin-bottom: 10px;
+                }
+
                 .item_id {
                   display: block;
                   font-family: "Open Sans Semi Bold";
@@ -260,6 +267,13 @@
         width: 100%;
         @include quickCenter("relative");
         display: block;
+      }
+
+      .logo {
+        max-width: 300px;
+        margin-top: 35px;
+        margin-bottom: 15px;
+        border: 2px solid ghostwhite;
       }
 
       .project_name {
@@ -593,6 +607,10 @@
           @include quickCenter("relative");
         }
 
+        .logo {
+          max-width: 240px;
+        }
+
         .project_name {
           font-size: clamp(24px, 26px, 26px);
         }
@@ -743,6 +761,10 @@
                     font-size: clamp(22px, 24px, 24px);
                   }
 
+                  img {
+                    max-width: 170px;
+                  }
+
                   ul {
                     display: grid;
                     justify-content: space-evenly;
@@ -779,6 +801,10 @@
         img {
           max-width: 95%;
           @include quickCenter("relative");
+        }
+
+        .logo {
+          max-width: 220px;
         }
 
         .project_name {
@@ -933,6 +959,10 @@
                   margin-right: auto;
                   text-align: center;
 
+                  img {
+                    max-width: 150px;
+                  }
+
                   .project_name {
                     font-size: clamp(18px, 20px, 20px);
                   }
@@ -975,10 +1005,15 @@
           @include quickCenter("relative");
         }
 
+        .logo {
+          max-width: 170px;
+        }
+
         .project_name {
           font-size: clamp(21px, 21px, 21px);
           padding-left: 20px;
           padding-right: 20px;
+          margin-top: 20px;
         }
 
         .client_name {
@@ -1153,10 +1188,15 @@
           @include quickCenter("relative");
         }
 
+        .logo {
+          max-width: 210px;
+        }
+
         .project_name {
           font-size: clamp(22px, 23px, 23px);
           padding-left: 20px;
           padding-right: 20px;
+          margin-top: 20px;
         }
 
         .client_name {
@@ -1367,10 +1407,15 @@
           @include quickCenter("relative");
         }
 
+        .logo {
+          max-width: 230px;
+        }
+
         .project_name {
           font-size: clamp(24px, 25px, 25px);
           padding-left: 20px;
           padding-right: 20px;
+          margin-top: 25px;
         }
 
         .client_name {
@@ -1711,7 +1756,7 @@
           .project_inner_box {
             .project_inner_row {
               .project_inner_side {
-                height: 400px;
+                height: 500px;
               }
 
               .project_L {
@@ -1729,6 +1774,10 @@
               .project_R {
                 max-width: 50%;
                 .project_inner_side_cnt {
+                  img {
+                    max-width: 170px;
+                  }
+
                   ul {
                     display: flex !important;
                     justify-content: flex-start;
@@ -1904,7 +1953,7 @@
           .project_inner_box {
             .project_inner_row {
               .project_inner_side {
-                height: 400px;
+                height: 480px;
               }
 
               .project_L {
@@ -1920,6 +1969,18 @@
               .project_R {
                 max-width: 50%;
                 .project_inner_side_cnt {
+                  img {
+                    max-width: 170px;
+                  }
+
+                  .project_name {
+                    text-align: left;
+                  }
+
+                  .client_name {
+                    text-align: left;
+                  }
+
                   ul {
                     display: flex !important;
                     justify-content: flex-start;
@@ -2095,7 +2156,7 @@
           .project_inner_box {
             .project_inner_row {
               .project_inner_side {
-                height: 400px;
+                height: 500px;
               }
 
               .project_L {
@@ -2151,10 +2212,16 @@
           @include quickCenter("relative");
         }
 
+        .logo {
+          max-width: 270px;
+          margin-top: 60px;
+        }
+
         .project_name {
           font-size: clamp(30px, 32px, 32px);
           padding-left: 20px;
           padding-right: 20px;
+          margin-top: 30px;
         }
 
         .client_name {

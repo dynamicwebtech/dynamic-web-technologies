@@ -34,7 +34,8 @@ export const PortfolioProject = ({ project }) => {
 
   const {
     itemID,
-    src,
+    display_src,
+    client_logo_src,
     projectName,
     projectNameID,
     // creationDate,
@@ -105,9 +106,17 @@ export const PortfolioProject = ({ project }) => {
           ) : null}
 
           <LazyLoadImage
-            src={src}
+            src={display_src}
             alt={`DyanmicWebTechnologies - Image of ${projectName}.`}
           />
+
+          {project.client_logo_src !== "N/A" ? (
+            <LazyLoadImage
+              className={`${styles.logo}`}
+              src={project.client_logo_src}
+              alt={`Dynamic Web Technologies - Logo of ${project.projectName}`}
+            />
+          ) : null}
 
           <span
             className={`${styles.project_name} orientation-change-element half-second`}
