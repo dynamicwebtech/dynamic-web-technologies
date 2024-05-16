@@ -36,7 +36,7 @@ export const PricingPackages = () => {
       planPrice: 999,
       planHostingPrice: 39.99,
       planIncluded: [
-        "1 Month Free Hosting!",
+        // "1 Month Free Hosting!",
         "4 Pages",
         "WordPress or Shopify",
         "Everything Starter offers",
@@ -81,7 +81,7 @@ export const PricingPackages = () => {
       planPrice: 2499 + "+",
       planHostingPrice: 39.99,
       planIncluded: [
-        "1 Month Free Hosting!",
+        "2 Month Free Hosting!",
         "6-10 Pages",
         "Website Logo",
         "Shopify Option * $44.99/month *",
