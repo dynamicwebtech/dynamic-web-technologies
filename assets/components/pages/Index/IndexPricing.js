@@ -246,7 +246,7 @@ export const IndexPricing = () => {
                     className={`${styles.add_on_side} ${styles.add_on_R} col-lg-6 col-md-6 col-sm-12 col-xs-12`}
                   >
                     <span className="orientation-change-element half-second">
-                      ${aO.addOnPrice}
+                      {/** ${aO.addOnPrice} */}
                     </span>
                   </div>
                 </div>
