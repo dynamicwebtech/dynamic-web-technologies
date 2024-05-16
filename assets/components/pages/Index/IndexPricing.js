@@ -41,7 +41,6 @@ export const IndexPricing = () => {
         // "1 Month Free Hosting!",
         "4 Pages",
         "WordPress or Shopify",
-        "Everything Starter offers",
         "Website Logo",
         "Shopify Option * $59.99/month *",
       ],
@@ -104,21 +103,28 @@ export const IndexPricing = () => {
       addOnName: "Logo Making",
       addOnDesc:
         "We can provide you with a very high-quality, professional-looking logo that fits your business.",
-      addOnPrice: 99.99,
+      // addOnPrice: 99.99,
     },
     {
       addOnID: "AO_2",
       addOnName: "Business Email",
       addOnDesc:
         "Business emails are always a good choice to show professionalism when starting a business. Let us help you get one!",
-      addOnPrice: 23.99 + "/month",
+      // addOnPrice: 23.99 + "/month",
     },
     {
       addOnID: "AO_3",
       addOnName: "Additional Page(s)",
       addOnDesc:
         "We can provide you with more pages than what our packages offer for a additional fee per page.",
-      addOnPrice: 149.99,
+      // addOnPrice: 149.99,
+    },
+    {
+      addOnID: "AO_4",
+      addOnName: "On-Page SEO",
+      addOnDesc:
+        "We can provide you with eyes on your website with our high quality SEO tactics.",
+      // addOnPrice: 149.99,
     },
     // {
     //   addOnID: "AO_3",
@@ -221,7 +227,7 @@ export const IndexPricing = () => {
         <div className={`${styles.index_pricing_inner_add_ons}`}>
           <div className={`${styles.index_pricing_inner_add_ons_inner}`}>
             <h2 className="orientation-change-element half-second">
-              Additional Add-Ons.
+              Additional Services.
             </h2>
 
             <div

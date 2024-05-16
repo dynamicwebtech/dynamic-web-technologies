@@ -13,21 +13,28 @@ export const PricingAddOns = () => {
       addOnName: "Logo Making",
       addOnDesc:
         "We can provide you with a very high-quality, professional-looking logo that fits your business.",
-      addOnPrice: 99.99,
+      // addOnPrice: 99.99,
     },
     {
       addOnID: "AO_2",
       addOnName: "Business Email",
       addOnDesc:
         "Business emails are always a good choice to show professionalism when starting a business. Let us help you get one!",
-      addOnPrice: 23.99 + "/month",
+      // addOnPrice: 23.99 + "/month",
     },
     {
       addOnID: "AO_3",
       addOnName: "Additional Page(s)",
       addOnDesc:
         "We can provide you with more pages than what our packages offer for a additional fee per page.",
-      addOnPrice: 149.99,
+      // addOnPrice: 149.99,
+    },
+    {
+      addOnID: "AO_4",
+      addOnName: "On-Page SEO",
+      addOnDesc:
+        "We can provide you with eyes on your website with our high quality SEO tactics.",
+      // addOnPrice: 149.99,
     },
     // {
     //   addOnID: "AO_3",
@@ -40,7 +47,7 @@ export const PricingAddOns = () => {
     <section id="pricingAddOns" className={`${styles.pricing_add_ons}`}>
       <div className={`${styles.pricing_add_ons_inner}`}>
         <h2 className="orientation-change-element half-second">
-          Additional Add-ons
+          Additional Services
         </h2>
 
         <div className={`${styles.pricing_add_ons_inner_main}`}>

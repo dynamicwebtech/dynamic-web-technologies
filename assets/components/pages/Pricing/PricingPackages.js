@@ -39,7 +39,6 @@ export const PricingPackages = () => {
         // "1 Month Free Hosting!",
         "4 Pages",
         "WordPress or Shopify",
-        "Everything Starter offers",
         "Website Logo",
         "Shopify Option * $59.99/month *",
       ],
