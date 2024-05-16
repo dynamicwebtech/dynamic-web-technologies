@@ -18,7 +18,7 @@ export const IndexPricing = () => {
       planPrice: 499,
       planHostingPrice: 29.99,
       planIncluded: [
-        "1 Month Free Hosting!",
+        // "1 Month Free Hosting!",
         "WordPress",
         "1-2 Pages",
         "Responsive Design",
