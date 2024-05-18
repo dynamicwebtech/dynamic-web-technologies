@@ -31,9 +31,16 @@ export const PricingAddOns = () => {
     },
     {
       addOnID: "AO_4",
-      addOnName: "On-Page SEO",
+      addOnName: "SEO",
       addOnDesc:
-        "We can provide you with eyes on your website with our high quality SEO tactics.",
+        "We can provide you with eyes on your website with our high quality Search Engine Optimization tactics.",
+      // addOnPrice: 149.99,
+    },
+    {
+      addOnID: "AO_5",
+      addOnName: "Content Writing",
+      addOnDesc:
+        "Our team of expert writers will provide your website with some of the best on-screen content related to your brand.",
       // addOnPrice: 149.99,
     },
     // {

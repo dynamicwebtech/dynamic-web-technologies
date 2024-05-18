@@ -25,6 +25,8 @@ const WEBSITE_CREATION = CDNBGReturn("services", "website-creation", "jpg");
 const RESPONSIVE_DESIGN = CDNBGReturn("services", "responsive-design", "webp");
 const SHOPIFY_WEBSITES = CDNBGReturn("services", "shopify-websites", "webp");
 const CONTENT_WRITING = CDNBGReturn("services", "content-writing", "webp");
+const SEO =
+  "https://raw.githubusercontent.com/dynamicwebtech/client_CDNS/main/dynamic-web-technologies/bgs/services/seo.webp";
 
 const BOOK_CONTACT_BG = CDNBGReturn("book-contact", "contact-bg", "webp");
 
@@ -40,5 +42,6 @@ export {
   RESPONSIVE_DESIGN,
   SHOPIFY_WEBSITES,
   CONTENT_WRITING,
+  SEO,
 };
 export { BOOK_CONTACT_BG };

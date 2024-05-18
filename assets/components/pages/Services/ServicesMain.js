@@ -11,6 +11,7 @@ import {
   RESPONSIVE_DESIGN,
   SHOPIFY_WEBSITES,
   CONTENT_WRITING,
+  SEO,
 } from "../../../cdns/CDNBgs";
 
 import styles from "../../../styles/modules/Services/Services.module.css";
@@ -26,39 +27,46 @@ export const ServicesMain = () => {
     },
     {
       serviceID: "S_2",
+      serviceName: "SEO",
+      serviceImg: SEO,
+      serviceDesc:
+        "Our premier SEO service is designed to propel your website to the forefront of search engine results, ensuring that your business gains maximum visibility and attracts a larger audience.",
+    },
+    {
+      serviceID: "S_3",
       serviceName: "Responsive Design",
       serviceImg: RESPONSIVE_DESIGN,
       serviceDesc:
         "Utilizing cutting-edge techniques and responsive design, our team ensures seamless adaptation to diverse mobile devices, ensuring consistent usability and exceptional user experience.",
     },
     {
-      serviceID: "S_3",
+      serviceID: "S_4",
       serviceName: "Logo Making",
       serviceImg: LOGO_MAKING,
       serviceDesc:
         "Our expert logo designers collaborate closely with you to understand your brand's narrative, values, and audience. We meticulously craft visually striking logos that resonate with your website visitors and customers, leaving a lasting impact.",
     },
     {
-      serviceID: "S_4",
+      serviceID: "S_5",
       serviceName: "Business Emails",
       serviceImg: BUSINESS_EMAILS,
       serviceDesc:
         "We personalize each email address to reflect your brand identity and boost your online presence. Whether for employees, departments, or specific functions, we offer tailored solutions to meet your needs.",
     },
     {
-      serviceID: "S_5",
+      serviceID: "S_6",
       serviceName: "Shopify Websites",
       serviceImg: SHOPIFY_WEBSITES,
       serviceDesc:
         "Our experienced Shopify experts collaborate with you to grasp your business goals, target audience, and unique selling points. We utilize Shopify's robust platform to craft a tailored website that effectively showcases your products or services.",
     },
-    // {
-    //   serviceID: "S_6",
-    //   serviceName: "Content Writing",
-    //   serviceImg: CONTENT_WRITING,
-    //   serviceDesc:
-    //     "Our skilled content writers create engaging content that drives action. From website copy to blog posts, product descriptions, and social media content, we tailor our writing to your brand voice and objectives.",
-    // },
+    {
+      serviceID: "S_6",
+      serviceName: "Content Writing",
+      serviceImg: CONTENT_WRITING,
+      serviceDesc:
+        "Our skilled content writers create engaging content that drives action. From website copy to blog posts, product descriptions, and social media content, we tailor our writing to your brand voice and objectives.",
+    },
   ];
 
   return (

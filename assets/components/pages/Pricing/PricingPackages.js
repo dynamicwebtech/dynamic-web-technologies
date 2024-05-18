@@ -61,7 +61,7 @@ export const PricingPackages = () => {
         "5-6 Pages",
         "Website Logo",
         //"Content Writing",
-        "On-Page SEO",
+        "SEO",
         "Shopify Option * $49.99/month *",
       ],
       hostingIncluded: [
@@ -83,6 +83,7 @@ export const PricingPackages = () => {
         "2 Month Free Hosting!",
         "6-10 Pages",
         "Website Logo",
+        "SEO",
         "Shopify Option * $44.99/month *",
       ],
       hostingIncluded: [
