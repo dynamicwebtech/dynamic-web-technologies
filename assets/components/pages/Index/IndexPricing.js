@@ -63,7 +63,7 @@ export const IndexPricing = () => {
         "5-6 Pages",
         "Website Logo",
         //"Content Writing",
-        "On-Page SEO",
+        "SEO",
         "Shopify Option * $49.99/month *",
       ],
       hostingIncluded: [
@@ -85,6 +85,8 @@ export const IndexPricing = () => {
         "2 Month Free Hosting!",
         "6-10 Pages",
         "Website Logo",
+        "SEO",
+        "Content Writing",
         "Shopify Option * $44.99/month *",
       ],
       hostingIncluded: [
