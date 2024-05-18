@@ -20,6 +20,7 @@ export const ServicesMain = () => {
   const SERVICES = [
     {
       serviceID: "S_1",
+      serviceSectionID: "websiteCreation",
       serviceName: "Website Creation",
       serviceImg: WEBSITE_CREATION,
       serviceDesc:
@@ -27,6 +28,7 @@ export const ServicesMain = () => {
     },
     {
       serviceID: "S_2",
+      serviceSectionID: "seo",
       serviceName: "SEO",
       serviceImg: SEO,
       serviceDesc:
@@ -34,6 +36,7 @@ export const ServicesMain = () => {
     },
     {
       serviceID: "S_3",
+      serviceSectionID: "responsiveDesign",
       serviceName: "Responsive Design",
       serviceImg: RESPONSIVE_DESIGN,
       serviceDesc:
@@ -41,6 +44,7 @@ export const ServicesMain = () => {
     },
     {
       serviceID: "S_4",
+      serviceSectionID: "logoMaking",
       serviceName: "Logo Making",
       serviceImg: LOGO_MAKING,
       serviceDesc:
@@ -48,6 +52,7 @@ export const ServicesMain = () => {
     },
     {
       serviceID: "S_5",
+      serviceSectionID: "businessEmails",
       serviceName: "Business Emails",
       serviceImg: BUSINESS_EMAILS,
       serviceDesc:
@@ -55,6 +60,7 @@ export const ServicesMain = () => {
     },
     {
       serviceID: "S_6",
+      serviceSectionID: "shopifyWebsites",
       serviceName: "Shopify Websites",
       serviceImg: SHOPIFY_WEBSITES,
       serviceDesc:
@@ -62,6 +68,7 @@ export const ServicesMain = () => {
     },
     {
       serviceID: "S_6",
+      serviceSectionID: "contentWriting",
       serviceName: "Content Writing",
       serviceImg: CONTENT_WRITING,
       serviceDesc:
@@ -77,7 +84,11 @@ export const ServicesMain = () => {
 
         <div className={`${styles.services_main_inner_box} container-fluid`}>
           {SERVICES.map((service) => (
-            <div key={service.serviceID} className={`${styles.service} row`}>
+            <div
+              key={service.serviceID}
+              id={service.serviceSectionID}
+              className={`${styles.service} row`}
+            >
               <div
                 className={`${styles.service_side} ${styles.service_L} col-lg-6 col-md-6 col-sm-12 col-xs-12`}
               >

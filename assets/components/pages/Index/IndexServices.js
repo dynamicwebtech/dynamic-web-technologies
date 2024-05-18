@@ -15,6 +15,7 @@ import {
   RESPONSIVE_DESIGN,
   SHOPIFY_WEBSITES,
   CONTENT_WRITING,
+  SEO,
 } from "../../../cdns/CDNBgs";
 
 import styles from "../../../styles/modules/Index/Index.module.css";
@@ -41,6 +42,14 @@ export const IndexServices = () => {
     },
     {
       serviceID: "S_2",
+      serviceName: "SEO",
+      serviceImg: SEO,
+      serviceText:
+        "Using high quality and solid analytic tactics, we will bring more eyes to your company and business with our SEO services.",
+      serviceLink: "/services#seo",
+    },
+    {
+      serviceID: "S_3",
       serviceName: "Responsive Design",
       serviceImg: RESPONSIVE_DESIGN,
       serviceText:
@@ -48,7 +57,7 @@ export const IndexServices = () => {
       serviceLink: "/services#responsiveDesign",
     },
     {
-      serviceID: "S_3",
+      serviceID: "S_4",
       serviceName: "Logo Making",
       serviceImg: LOGO_MAKING,
       serviceText:
@@ -56,7 +65,7 @@ export const IndexServices = () => {
       serviceLink: "/services#logoMaking",
     },
     {
-      serviceID: "S_4",
+      serviceID: "S_5",
       serviceName: "Business Emails",
       serviceImg: BUSINESS_EMAILS,
       serviceText:
@@ -64,21 +73,21 @@ export const IndexServices = () => {
       serviceLink: "/services#businessEmails",
     },
     {
-      serviceID: "S_5",
+      serviceID: "S_6",
       serviceName: "Shopify Websites",
       serviceImg: SHOPIFY_WEBSITES,
       serviceText:
         "Looking to start an e-commerce website? Let us get you started by providing you with a Shopify website.",
       serviceLink: "/services#shopifyWebsites",
     },
-    // {
-    //   serviceID: "S_6",
-    //   serviceName: "Content Writing",
-    //   serviceImg: CONTENT_WRITING,
-    //   serviceText:
-    //     "Show your users that you mean business. Let us provide you with high quality content that will grab the readers eye.",
-    //   serviceLink: "/services#contentWriting",
-    // },
+    {
+      serviceID: "S_7",
+      serviceName: "Content Writing",
+      serviceImg: CONTENT_WRITING,
+      serviceText:
+        "Show your users that you mean business. Let us provide you with high quality content that will grab the readers eye.",
+      serviceLink: "/services#contentWriting",
+    },
   ];
 
   return (
