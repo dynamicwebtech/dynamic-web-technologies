@@ -14,7 +14,7 @@ export const IndexPricing = () => {
       planID: "P_1",
       planName: "Starter",
       planDesc:
-        "The Starter package is the best option for those who want to gain the most bang for their buck. We will supply you with a 1-2 page website (either that be WordPress) along with a professional business email. You will also be given a free full month of hosting!",
+        "The Starter package is the best option for those who want to gain the most bang for their buck. We will supply you with a 1 page website (either that be WordPress) along with a professional business email!",
       planPrice: 499,
       planHostingPrice: 29.99,
       planIncluded: [
@@ -34,7 +34,7 @@ export const IndexPricing = () => {
       planID: "P_2",
       planName: "Basic",
       planDesc:
-        "The Basic package will give you the best of both worlds (starter and professional). We will supply you with 3-5 page website (either WordPress, Shopify) along with a professionally made logo for your website as well as a business email. You will also be given two full free months of hosting!",
+        "The Basic package will give you the best of both worlds (starter and professional). We will supply you with a 3-page website (either WordPress or Shopify) along with a professionally made logo for your website as well as a business email!",
       planPrice: 999,
       planHostingPrice: 39.99,
       planIncluded: [
@@ -42,6 +42,7 @@ export const IndexPricing = () => {
         "3 Pages",
         "WordPress or Shopify",
         "Website Logo",
+        "Content Management System",
         "Shopify Option * $59.99/month *",
       ],
       hostingIncluded: [
@@ -55,7 +56,7 @@ export const IndexPricing = () => {
       planID: "P_3",
       planName: "Professional",
       planDesc:
-        "The Professional package will give your company the best start for its success. We will supply you with a 5+ page website (either WordPress, Shopify or Handcoded) along with a logo and business email. You will also get 3 full free months of hosting!",
+        "The Professional package will give your company the best start for its success. We will supply you with a 6-page website (either WordPress or Shopify) along with a logo and business email!",
       planPrice: 1499,
       planHostingPrice: 39.99,
       planIncluded: [
@@ -63,14 +64,14 @@ export const IndexPricing = () => {
         "WordPress or Shopify",
         "1 Month Free Hosting!",
         "Website Logo",
+        "Content Management System",
         //"Content Writing",
         "SEO",
-        "Shopify Option * $49.99/month *",
+        "Shopify Option * $59.99/month *",
       ],
       hostingIncluded: [
         "10 Annual Revisions",
         "Web Maintenance",
-        "Content Management System",
         "Business Email",
         "Reliable Customer Support",
       ],
@@ -79,7 +80,7 @@ export const IndexPricing = () => {
       planID: "P_4",
       planName: "Enterprise",
       planDesc:
-        "The Enterprise package, designed to kickstart your journey to success. Gain access to a dynamic 5+ page website, built on either WordPress, Shopify, or meticulously handcrafted coding. Enhance your brand presence with a bespoke logo and dedicated business email. Plus, enjoy the advantage of three months of complimentary hosting!",
+        "The Enterprise package, designed to kickstart your journey to success. Gain access to a dynamic 10-page website, built on either WordPress, Shopify, or meticulously handcrafted coding. Enhance your brand presence with a bespoke logo and dedicated business email. Plus, enjoy the advantage of two months of complimentary hosting!",
       planPrice: 2499 + "+",
       planHostingPrice: 39.99,
       planIncluded: [
@@ -89,12 +90,12 @@ export const IndexPricing = () => {
         "Website Logo",
         "SEO",
         "Content Writing",
-        "Shopify Option * $44.99/month *",
+        "Content Management System",
+        "Shopify Option * $59.99/month *",
       ],
       hostingIncluded: [
         "10 Annual Revisions",
         "Web Maintenance",
-        "Content Management System",
         "Business Email",
         "Reliable Customer Support",
       ],
