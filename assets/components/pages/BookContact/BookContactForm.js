@@ -330,7 +330,7 @@ export const BookContactForm = () => {
                   type="text"
                   name="clientFN"
                   id="clientFN"
-                  placeholder="Enter Last Name"
+                  placeholder="Enter First Name"
                 />
               </div>
               <div
