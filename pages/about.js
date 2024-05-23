@@ -81,7 +81,7 @@ export default function About({ PH_ICONS_DATA, PH_ABOUT_DATA }) {
     styles: styles,
     bg: "https://raw.githubusercontent.com/dynamicwebtech/client_CDNS/main/dynamic-web-technologies/bgs/about/about-bg.webp",
     heading: "Who Are We?",
-    text: "Learn the background, goals, and achievements that Dynamic Web Technologies has made over the years we have been helping Winston-Salem, NC, companies with our services.",
+    text: "Learn the background, goals, and achievements that Dynamic Web Technologies has made. See how we have been helping Winston-Salem, NC, companies with our services.",
   };
 
   return (
