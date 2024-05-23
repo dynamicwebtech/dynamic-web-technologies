@@ -22,7 +22,7 @@ export const PricingPackages = () => {
         "Responsive Design",
       ],
       hostingIncluded: [
-        "10 Annual Revisions",
+        "5 Annual Revisions",
         "Web Maintenance",
         "Business Email",
         "Reliable Customer Support",
