@@ -15,6 +15,7 @@ import { MobileNav } from "@/assets/components/global/Nav/MobileNav.js";
 import { Footer } from "@/assets/components/global/Footer/Footer.js";
 import { LoginPopup } from "@/assets/components/global/All/LoginPopup.js";
 import { AdminModeIndicator } from "@/assets/components/global/All/AdminModeIndicator.js";
+import { CustomerChat } from "@/assets/components/global/All/CustomerChat";
 
 import { TopHero } from "@/assets/components/pages/All/TopHero";
 import { AddBlogPost } from "@/assets/components/pages/Blog/AddBlogPost";
@@ -210,6 +211,7 @@ export default function Blog({ PH_ICONS_DATA, PH_BLOG_DATA }) {
       <MobileNav />
       <LoginPopup />
       {adminMode ? <AdminModeIndicator /> : null}
+      <CustomerChat />
 
       <div id="PAGE_CNT">
         <TopHero object={TOP_HERO_OBJECT} />

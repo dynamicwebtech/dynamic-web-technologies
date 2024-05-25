@@ -18,6 +18,7 @@ import { MobileNav } from "@/assets/components/global/Nav/MobileNav.js";
 import { Footer } from "@/assets/components/global/Footer/Footer.js";
 import { LoginPopup } from "@/assets/components/global/All/LoginPopup.js";
 import { AdminModeIndicator } from "@/assets/components/global/All/AdminModeIndicator.js";
+import { CustomerChat } from "@/assets/components/global/All/CustomerChat.js";
 
 import { TopHero } from "@/assets/components/pages/All/TopHero.js";
 import { ServicesMain } from "@/assets/components/pages/Services/ServicesMain.js";
@@ -92,6 +93,7 @@ export default function Services({ PH_ICONS_DATA, PH_SERVICES_DATA }) {
       <MobileNav />
       <LoginPopup />
       {adminMode ? <AdminModeIndicator /> : null}
+      <CustomerChat />
 
       <div id="PAGE_CNT">
         <TopHero object={TOP_HERO_OBJECT} />

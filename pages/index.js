@@ -20,6 +20,7 @@ import { DesktopNav } from "@/assets/components/global/Nav/DesktopNav.js";
 import { MobileNav } from "@/assets/components/global/Nav/MobileNav.js";
 import { Footer } from "@/assets/components/global/Footer/Footer.js";
 import { AdminModeIndicator } from "@/assets/components/global/All/AdminModeIndicator.js";
+import { CustomerChat } from "@/assets/components/global/All/CustomerChat.js";
 
 import { IndexTop } from "@/assets/components/pages/Index/IndexTop.js";
 import { IndexAbout } from "@/assets/components/pages/Index/IndexAbout.js";
@@ -35,7 +36,7 @@ import { IndexContact } from "@/assets/components/pages/Index/IndexContact.js";
 import "../assets/styles/modules/Index/Index.module.css";
 import index_styles from "../assets/styles/modules/Index/Index.module.css";
 import all_styles from "../assets/styles/modules/All/All.module.css";
-import { CustomerChat } from "@/assets/components/global/All/CustomerChat.js";
+
 export async function getServerSideProps({ req }) {
   const PAGE_HEAD_DATA_DIRECTORY = "public/data/PageHead/";
 

@@ -16,6 +16,7 @@ import { DesktopNav } from "@/assets/components/global/Nav/DesktopNav.js";
 import { MobileNav } from "@/assets/components/global/Nav/MobileNav.js";
 import { Footer } from "@/assets/components/global/Footer/Footer.js";
 import { AdminModeIndicator } from "@/assets/components/global/All/AdminModeIndicator.js";
+import { CustomerChat } from "@/assets/components/global/All/CustomerChat";
 
 import { PortfolioProject } from "@/assets/components/pages/Portfolio/PortfolioProject";
 
@@ -236,6 +237,7 @@ export default function PortfolioProjectItemID() {
       <DesktopNav />
       <MobileNav />
       {adminMode ? <AdminModeIndicator /> : null}
+      <CustomerChat />
 
       <div id="PAGE_CNT">
         {/** 

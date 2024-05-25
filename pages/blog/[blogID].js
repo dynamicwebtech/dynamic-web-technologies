@@ -15,6 +15,7 @@ import { MobileNav } from "@/assets/components/global/Nav/MobileNav.js";
 import { Footer } from "@/assets/components/global/Footer/Footer.js";
 import { LoginPopup } from "@/assets/components/global/All/LoginPopup.js";
 import { AdminModeIndicator } from "@/assets/components/global/All/AdminModeIndicator.js";
+import { CustomerChat } from "@/assets/components/global/All/CustomerChat";
 
 import checkAdminModeStatus from "@/assets/hooks/checkAdminModeStatus";
 import checkLocalHostStatus from "@/assets/hooks/checkLocalHostStatus";
@@ -435,6 +436,7 @@ export default function BlogPost() {
       <MobileNav />
       <LoginPopup />
       {adminMode ? <AdminModeIndicator /> : null}
+      <CustomerChat />
 
       <div id="PAGE_CNT">
         <div className={`${styles.page_blog_post}`}>
