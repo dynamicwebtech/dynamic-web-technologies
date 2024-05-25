@@ -33,6 +33,7 @@
     "nprogress": "^0.2.0",
     "react": "^18",
     "react-dom": "^18",
+    "react-facebook": "^9.0.12",
     "react-icons": "^5.0.1",
     "react-intersection-observer": "^9.8.2",
     "react-lazy-load-image-component": "^1.6.0",

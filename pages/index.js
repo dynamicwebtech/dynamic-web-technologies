@@ -35,7 +35,7 @@ import { IndexContact } from "@/assets/components/pages/Index/IndexContact.js";
 import "../assets/styles/modules/Index/Index.module.css";
 import index_styles from "../assets/styles/modules/Index/Index.module.css";
 import all_styles from "../assets/styles/modules/All/All.module.css";
-
+import { CustomerChat } from "@/assets/components/global/All/CustomerChat.js";
 export async function getServerSideProps({ req }) {
   const PAGE_HEAD_DATA_DIRECTORY = "public/data/PageHead/";
 
@@ -114,6 +114,7 @@ export default function Home({ PH_ICONS_DATA, PH_INDEX_DATA }) {
       <DesktopNav />
       <MobileNav />
       {adminMode ? <AdminModeIndicator /> : null}
+      <CustomerChat />
 
       <div id="PAGE_CNT">
         <IndexTop />
