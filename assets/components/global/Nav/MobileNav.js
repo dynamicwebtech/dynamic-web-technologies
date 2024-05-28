@@ -171,12 +171,12 @@ export const MobileNav = () => {
               href="/pricing"
               className="orientation-change-element half-second"
             >
-              <span>Pricing</span>
+              <span>Plans</span>
             </a>
           </li>
         ) : (
           <li>
-            <span>Pricing</span>
+            <span>Plans</span>
           </li>
         )}
 

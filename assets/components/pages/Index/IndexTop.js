@@ -122,7 +122,7 @@ export const IndexTop = () => {
                 href="/pricing"
                 className={`${styles.pricing_link} orientation-change-element half-second`}
               >
-                <span>View Pricing</span>
+                <span>View Plans</span>
               </a>
             </li>
           </ul>

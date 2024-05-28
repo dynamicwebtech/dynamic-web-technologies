@@ -43,7 +43,8 @@ export const IndexPricing = () => {
         "WordPress or Shopify",
         "Website Logo",
         "Content Management System",
-        "Shopify Option * $59.99/month *",
+        "Shopify Option",
+        // "Shopify Option * $59.99/month *",
       ],
       hostingIncluded: [
         "10 Annual Revisions",
@@ -67,7 +68,8 @@ export const IndexPricing = () => {
         "Content Management System",
         //"Content Writing",
         "SEO",
-        "Shopify Option * $59.99/month *",
+        "Shopify Option",
+        // "Shopify Option * $59.99/month *",
       ],
       hostingIncluded: [
         "10 Annual Revisions",
@@ -91,7 +93,8 @@ export const IndexPricing = () => {
         "SEO",
         "Content Writing",
         "Content Management System",
-        "Shopify Option * $59.99/month *",
+        "Shopify Option",
+        // "Shopify Option * $59.99/month *",
       ],
       hostingIncluded: [
         "10 Annual Revisions",
@@ -175,6 +178,12 @@ export const IndexPricing = () => {
                     <div className={`${styles.pricing_plan_inner}`}>
                       <div className={`${styles.pricing_plan_inner_cnt}`}>
                         <span
+                          className={`${styles.plan_price} orientation-change-element half-second`}
+                        >
+                          {plan.planName}
+                        </span>
+                        {/**
+                        <span
                           className={`${styles.plan_type} orientation-change-element half-second`}
                         >
                           {plan.planName}
@@ -190,6 +199,7 @@ export const IndexPricing = () => {
                         >
                           Hosting: ${plan.planHostingPrice}/month
                         </span>
+                        */}
 
                         <span
                           className={`${styles.included_heading} orientation-change-element half-second`}

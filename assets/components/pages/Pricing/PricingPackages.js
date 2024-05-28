@@ -41,7 +41,8 @@ export const PricingPackages = () => {
         "WordPress or Shopify",
         "Website Logo",
         "Content Management System",
-        "Shopify Option * $59.99/month *",
+        "Shopify Option",
+        // "Shopify Option * $59.99/month *",
       ],
       hostingIncluded: [
         "10 Annual Revisions",
@@ -65,7 +66,8 @@ export const PricingPackages = () => {
         "Content Management System",
         //"Content Writing",
         "SEO",
-        "Shopify Option * $59.99/month *",
+        "Shopify Option",
+        // "Shopify Option * $59.99/month *",
       ],
       hostingIncluded: [
         "10 Annual Revisions",
@@ -89,7 +91,8 @@ export const PricingPackages = () => {
         "SEO",
         "Content Writing",
         "Content Management System",
-        "Shopify Option * $59.99/month *",
+        "Shopify Option",
+        // "Shopify Option * $59.99/month *",
       ],
       hostingIncluded: [
         "10 Annual Revisions",
@@ -113,22 +116,29 @@ export const PricingPackages = () => {
                   <div className={`${styles.pricing_package_side_cnt}`}>
                     <div className={`${styles.pricing_package_side_cnt_text}`}>
                       <span
-                        className={`${styles.plan_name} orientation-change-element half-second`}
+                        className={`${styles.plan_price} orientation-change-element half-second`}
                       >
                         {plan.planName}
                       </span>
 
+                      {/**
+                      <span
+                        className={`${styles.plan_name} orientation-change-element half-second`}
+                      >
+                        {plan.planName}
+                      </span>
                       <span
                         className={`${styles.plan_price} orientation-change-element half-second`}
                       >
                         ${plan.planPrice}
-                      </span>
+                      </span>  
 
                       <span
                         className={`${styles.plan_hosting_price} orientation-change-element half-second`}
                       >
                         <span>Hosting:</span>${plan.planHostingPrice}/month
                       </span>
+                    */}
                     </div>
                   </div>
                 </div>

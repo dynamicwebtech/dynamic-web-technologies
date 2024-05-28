@@ -81,8 +81,8 @@ export default function Pricing({ PH_ICONS_DATA, PH_PRICING_DATA }) {
   const TOP_HERO_OBJECT = {
     styles: styles,
     bg: "https://raw.githubusercontent.com/dynamicwebtech/client_CDNS/main/dynamic-web-technologies/bgs/pricing/pricing-top-bg.webp",
-    heading: "Project Pricing.",
-    text: "At Dynamic Web Technologies, we understand everyone is worried about the cost when it comes to having a website made. That is why we provide some of the best pricing along with awesome add-ons in Winston-Salem, NC.",
+    heading: "Project Plans.",
+    text: "At Dynamic Web Technologies, we understand everyone is worried about the cost when it comes to having a website made. That is why we provide some of the best plans along with awesome add-ons in Winston-Salem, NC.",
   };
 
   return (
