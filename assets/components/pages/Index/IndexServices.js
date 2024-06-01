@@ -102,10 +102,10 @@ export const IndexServices = () => {
               different services we provide below.
             </p>
             <a
-              href="/services"
+              href="/book_contact#contactForm"
               className="orientation-change-element half-second"
             >
-              <span>Learn More</span>
+              <span>Reach Out</span>
               <FaChevronRight className={`${styles.icon}`} />
             </a>
           </div>

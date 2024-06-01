@@ -45,10 +45,10 @@ export const IndexAbout = () => {
                 </p>
 
                 <a
-                  href="/about"
+                  href="/book_contact#contactForm"
                   className="orientation-change-element half-second"
                 >
-                  <span>Learn More</span>
+                  <span>Reach Out</span>
                   <FaChevronRight className={`${styles.icon}`} />
                 </a>
               </div>

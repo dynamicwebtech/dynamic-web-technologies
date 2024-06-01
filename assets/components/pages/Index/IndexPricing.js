@@ -155,10 +155,10 @@ export const IndexPricing = () => {
               to discover unbeatable value for your web design needs!
             </p>
             <a
-              href="/pricing"
+              href="/book_contact#contactForm"
               className="orientation-change-element half-second"
             >
-              <span>Learn More</span>
+              <span>Reach Out</span>
               <FaChevronRight className={`${styles.icon}`} />
             </a>
           </div>
