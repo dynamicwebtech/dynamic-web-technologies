@@ -151,6 +151,22 @@ export const PageHead = (props) => {
         name="msapplication-wide310x150logo"
         content={props.icons_data.ms310}
       />
+
+      <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-ZR9XZ1PDY5"
+      ></script>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+          
+            gtag('config', 'G-ZR9XZ1PDY5');
+            `,
+        }}
+      />
     </Head>
   );
 };
