@@ -49,6 +49,12 @@ export const PageHead = (props) => {
       <link
         rel="icon"
         type="image/png"
+        sizes="28x28"
+        href={props.icons_data.f28}
+      />
+      <link
+        rel="icon"
+        type="image/png"
         sizes="32x32"
         href={props.icons_data.f32}
       />
