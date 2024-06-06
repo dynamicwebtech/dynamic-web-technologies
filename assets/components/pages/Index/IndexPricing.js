@@ -148,11 +148,11 @@ export const IndexPricing = () => {
       <div className={`${styles.index_pricing_inner}`}>
         <div className={`${styles.index_pricing_inner_top}`}>
           <div className={`${styles.index_pricing_inner_top_cnt}`}>
-            <h2>Our Project Pricing.</h2>
+            <h2>Our Project Plans.</h2>
             <p className="orientation-change-element half-second">
-              At Dynamic Web Technologies, our pricing is not just competitive;
-              it's among the best in all of Winston-Salem, NC. Contact us today.
-              to discover unbeatable value for your web design needs!
+              At Dynamic Web Technologies, our plans are not just competitive;
+              they are among the best in all of Winston-Salem, NC. Contact us
+              today to discover unbeatable value for your web design needs!
             </p>
             <a
               href="/book_contact#contactForm"
