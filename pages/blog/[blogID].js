@@ -428,6 +428,36 @@ export default function BlogPost() {
             name="msapplication-wide310x150logo"
             content="https://raw.githubusercontent.com/dynamicwebtech/client_CDNS/main/dynamic-web-technologies/icons/tab-icons/ms-app/ms-app-icon-310x150.png"
           />
+
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-ZR9XZ1PDY5"
+          ></script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+          
+            gtag('config', 'G-ZR9XZ1PDY5');
+            `,
+            }}
+          />
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-EGG3DT01S0"
+          ></script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-EGG3DT01S0');
+            `,
+            }}
+          />
         </Head>
       )}
 
