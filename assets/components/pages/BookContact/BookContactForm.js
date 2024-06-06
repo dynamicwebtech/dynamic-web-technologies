@@ -241,6 +241,10 @@ export const BookContactForm = () => {
 
           sentSuccess = true;
 
+          gtag("event", "conversion", {
+            send_to: "AW-16571589254/sicECIjk97YZEIbF-d09",
+          });
+
           DeclareStorageVariable(
             "session",
             "Book/Contact Submission Sent",
