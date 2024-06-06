@@ -173,6 +173,20 @@ export const PageHead = (props) => {
             `,
         }}
       />
+      <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-EGG3DT01S0"
+      ></script>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-EGG3DT01S0');
+            `,
+        }}
+      />
     </Head>
   );
 };
