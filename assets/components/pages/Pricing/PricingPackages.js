@@ -121,24 +121,23 @@ export const PricingPackages = () => {
                         {plan.planName}
                       </span>
 
-                      {/**
                       <span
                         className={`${styles.plan_name} orientation-change-element half-second`}
                       >
-                        {plan.planName}
+                        Starting At
                       </span>
                       <span
                         className={`${styles.plan_price} orientation-change-element half-second`}
                       >
                         ${plan.planPrice}
-                      </span>  
+                      </span>
 
                       <span
                         className={`${styles.plan_hosting_price} orientation-change-element half-second`}
                       >
                         <span>Hosting:</span>${plan.planHostingPrice}/month
                       </span>
-                    */}
+                      {/***/}
                     </div>
                   </div>
                 </div>

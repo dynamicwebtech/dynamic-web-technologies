@@ -182,11 +182,10 @@ export const IndexPricing = () => {
                         >
                           {plan.planName}
                         </span>
-                        {/**
                         <span
                           className={`${styles.plan_type} orientation-change-element half-second`}
                         >
-                          {plan.planName}
+                          Starting At
                         </span>
                         <span
                           className={`${styles.plan_price} orientation-change-element half-second`}
@@ -199,7 +198,7 @@ export const IndexPricing = () => {
                         >
                           Hosting: ${plan.planHostingPrice}/month
                         </span>
-                        */}
+                        {/***/}
 
                         <span
                           className={`${styles.included_heading} orientation-change-element half-second`}
