@@ -19,7 +19,7 @@ export const IndexPricing = () => {
       planHostingPrice: 29.99,
       planIncluded: [
         // "1 Month Free Hosting!",
-        "1 Page",
+        "1-2 Page(s)",
         "WordPress",
         "Responsive Design",
       ],
@@ -39,7 +39,7 @@ export const IndexPricing = () => {
       planHostingPrice: 39.99,
       planIncluded: [
         // "1 Month Free Hosting!",
-        "3 Pages",
+        "3-4 Pages",
         "WordPress or Shopify",
         "Website Logo",
         "Content Management System",
@@ -61,7 +61,7 @@ export const IndexPricing = () => {
       planPrice: 1499,
       planHostingPrice: 39.99,
       planIncluded: [
-        "6 Pages",
+        "5-6 Pages",
         "WordPress or Shopify",
         "1 Month Free Hosting!",
         "Website Logo",
@@ -86,7 +86,7 @@ export const IndexPricing = () => {
       planPrice: 2499 + "+",
       planHostingPrice: 39.99,
       planIncluded: [
-        "10 Pages",
+        "7-10+ Pages",
         "WordPress, Shopify or Hand-coded",
         "2 Month Free Hosting!",
         "Website Logo",
