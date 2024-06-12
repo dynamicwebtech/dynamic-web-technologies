@@ -130,6 +130,7 @@ export const Footer = () => {
                     </li>
                   )}
 
+                  {/**
                   {router.pathname !== "/blog" ? (
                     <li>
                       <a
@@ -143,7 +144,8 @@ export const Footer = () => {
                     <li>
                       <span>Articles</span>
                     </li>
-                  )}
+                  )}  
+                  */}
 
                   {router.pathname !== "/book_contact" ? (
                     <li>

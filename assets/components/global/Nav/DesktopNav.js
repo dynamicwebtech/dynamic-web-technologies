@@ -138,7 +138,8 @@ export const DesktopNav = () => {
                     </li>
                   )}
 
-                  {router.pathname !== "/blog" ? (
+                  {/**
+                    {router.pathname !== "/blog" ? (
                     <li>
                       <a
                         href="/blog"
@@ -155,7 +156,8 @@ export const DesktopNav = () => {
                         <span className={`${styles.bottom_line}`} />
                       </div>
                     </li>
-                  )}
+                  )}  
+                  */}
 
                   {router.pathname !== "/book_contact" ? (
                     <li>
