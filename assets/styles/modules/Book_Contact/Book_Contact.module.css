@@ -341,6 +341,11 @@
     margin-top: 20px;
   }
 }
+@media (min-width: 992px) {
+  .book_contact_box .book_contact_row .book_contact_R .book_contact_info .book_contact_info_inner .team ul .messageMeBtn {
+    display: none !important;
+  }
+}
 @media all and (max-width: 768px) {
   .top_hero {
     height: 350px;

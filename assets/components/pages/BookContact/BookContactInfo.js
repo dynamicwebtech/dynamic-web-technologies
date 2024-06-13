@@ -37,12 +37,6 @@ export const BookContactInfo = () => {
 
   const router = useRouter();
 
-  function isDesktop() {
-    const userAgent = navigator.userAgent;
-    const desktopKeywords = ["Windows", "Macintosh", "Linux", "X11"];
-    return desktopKeywords.some((keyword) => userAgent.includes(keyword));
-  }
-
   // Checking for #contactInfo
   useEffect(() => {
     const HASH = router.asPath.split("#")[1];
@@ -104,16 +98,14 @@ export const BookContactInfo = () => {
                   </a>
                 </li>
 
-                {!isDesktop ? (
-                  <li>
-                    <a
-                      href={`sms:${team.teamPhone}`}
-                      className={`${styles.text_me} orientation-change-element half-second`}
-                    >
-                      <span>Message Me</span>
-                    </a>
-                  </li>
-                ) : null}
+                <li className={`${styles.messageMeBtn}`}>
+                  <a
+                    href={`sms:${team.teamPhone}`}
+                    className={`${styles.text_me} orientation-change-element half-second`}
+                  >
+                    <span>Message Me</span>
+                  </a>
+                </li>
               </ul>
             </div>
           ))}
